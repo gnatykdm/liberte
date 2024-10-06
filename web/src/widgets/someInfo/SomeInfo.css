@@ -1,0 +1,64 @@
+/* SomeInfo.css */
+.info {
+    display: flex;
+    justify-content: space-between; 
+    background-color: #445761;
+    border-radius: 50px;
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 90%;
+}
+
+.info-container {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    overflow: hidden; 
+    padding: 20px; 
+    flex: 1; 
+}
+
+.info-content {
+    text-align: left; 
+    color: #dbdde0;
+}
+
+.service-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px; 
+    color: #dbdde0; 
+    font-weight: bold;
+    margin-bottom: 10px; 
+}
+
+.service-features ul {
+    list-style-type: disc; 
+    padding-left: 20px; 
+}
+
+.service-features li {
+    margin: 5px 0; 
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; 
+    color: #ffffff; 
+}
+
+@media (max-width: 768px) {
+    .info {
+        padding: 10px; 
+        flex-direction: column; 
+    }
+
+    .info-container {
+        margin-bottom: 20px; 
+    }
+
+    .service-name {
+        font-size: 18px; 
+    }
+
+    .service-features li {
+        font-size: 14px; 
+    }
+}

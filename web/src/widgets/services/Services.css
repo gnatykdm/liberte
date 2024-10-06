@@ -1,0 +1,116 @@
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.service-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    width: calc(45% - 20px);
+    box-sizing: border-box;
+}
+
+.logo-background {
+    background-color: #dbdde0;
+    border-radius: 50px;
+    padding: 10px; 
+    width: 310px;
+    height: 310px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-logo img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-top: 5px;
+}
+
+.service-name {
+    font-family: 'Oswald', sans-serif;
+    color: #000000;
+    font-weight: bold;
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+.service-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5156e5;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.service-description img {
+    width: 20px;
+    height: auto;
+}
+
+.description-link {
+    color: #5156e5;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.description-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .service-content {
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+        margin: 10px;
+    }
+
+    .logo-background {
+        background-color: #dbdde0;
+        border-radius: 50px;
+        padding: 5px; 
+        width: 160px;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-name {
+        color: #000000;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .service-logo img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50px;
+        margin-top: 5px;
+    }
+
+    .service-description {
+        flex-direction: row;
+        justify-content: center;
+        font-size: 15px;
+    }
+}

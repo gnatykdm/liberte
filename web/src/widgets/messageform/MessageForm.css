@@ -1,0 +1,92 @@
+.message-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message-content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.forward-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 3px solid hsl(238, 74%, 61%);
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: hsl(238, 74%, 61%);
+    outline: none;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    padding: 15px 20px;
+    background-color: hsl(238, 74%, 61%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #4248c1;
+}
+
+
+@media (max-width: 768px) {
+    .message-form {
+        max-width: 80%;
+        padding: 15px;
+        border-radius: 30px;
+    }
+
+    .message-content {
+        font-size: 23px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    .submit-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

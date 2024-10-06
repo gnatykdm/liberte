@@ -1,0 +1,152 @@
+.ordercall {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: hsl(238, 74%, 61%) 5px solid;
+    width: 60%;
+    height: 70px;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    gap: 30px;
+}
+
+.libert-logo img {
+    max-width: 70%;
+    height: auto;
+}
+
+.order-call-content {
+    text-align: center;
+    margin-right: 50px;
+    padding: 0;
+    font-size: 15px;
+}
+
+.order-call-button {
+    background-color: #5156e5;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0;
+    height: 30px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-call-button:hover {
+    background-color: #4248c1;
+}
+
+@media (max-width: 768px) {
+    .ordercall {
+        width: 90%;
+        height: 80px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .libert-logo img {
+        max-width: 95px;
+        height: auto;
+        margin-top: 5px;
+    }
+
+    .order-call-content {
+        margin: 0;
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .order-call-button {
+        width: auto;
+        padding: 5px 10px;
+        font-size: 10px;
+        height: 50px;
+        margin-top: 0px;
+        border-radius: 15px;
+        margin-right: 20px;
+    }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 50px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #5156e5;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-right: 10px;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+input[type="text-name"], input[type="tel"] {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus {
+    border-color: hsl(238, 74%, 61%);
+    outline: none;
+}
+
+.order-button {
+    padding: 15px 30px;
+    background-color: hsl(238, 74%, 61%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 97.5%;
+    margin-top: 20px;
+}
+
+.order-button:hover {
+    background-color: #4248c1;
+}

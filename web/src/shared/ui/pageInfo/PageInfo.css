@@ -1,0 +1,34 @@
+.text-block {
+    position: relative; 
+    margin: 20px 0; 
+    margin-left: 50px; 
+}
+
+.text {
+    font-family: 'Oswald', sans-serif; 
+    font-size: 30px; 
+    font-weight: bold; 
+    color: #000000; 
+    display: inline-block; 
+    padding-bottom: 5px; 
+}
+
+.line {
+    width: 20%; 
+    height: 6px; 
+    background-color: #5156e5; 
+    position: absolute; 
+    left: 0; 
+    bottom: -10px; 
+}
+
+@media (max-width: 768px) {
+    .line {
+        width: 60%; 
+        height: 6px; 
+        background-color: #5156e5; 
+        position: absolute; 
+        left: 0; 
+        bottom: -10px; 
+    }
+}
