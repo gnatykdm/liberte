@@ -11,8 +11,8 @@
 	<groupId>com.liberte</groupId>
 	<artifactId>liberte</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>liberte</name>
-	<description>Liberte Server Side</description>
+	<name>libert</name>
+	<description>Libert Server Side</description>
 	<url/>
 	<licenses>
 		<license/>
