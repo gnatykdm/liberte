@@ -1,0 +1,313 @@
+.header {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 80px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header.dark {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 200px;
+    width: auto;
+}
+
+.language-switcher {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.flag-icon {
+    width: 30px;
+    height: auto;
+}
+
+.arrow-icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+}
+
+.navigation {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+
+.nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s ease font-weight 0.2s ease;
+}
+
+.nav-link.dark {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.2s ease font-weight 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #6366f1;
+    font-weight: bold;
+}
+
+.call-order-btn {
+    background-color: #6366f1;
+    color: #fff;
+    border: none;
+    width: auto;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    border:#6366f1 2px solid;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.call-order-btn:hover {
+    color: #6366f1;
+    border: #6366f1 2px solid;
+    background-color: #1c1b24;
+}
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.theme-icon {
+    width: 35px;
+    height: auto;
+    margin-right: 30px;
+}
+
+.theme-icon.dark {
+    width: 35px;
+    height: auto;
+    margin-right: 30px;
+    background-image: url('../../assets/icons/moon.png');
+}
+
+.toggle-switch {
+    width: 50px; 
+    height: 25px; 
+    border-radius: 12.5px; 
+    background-color: #c4c4c4;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    top: 1px; /* Adjusted top position */
+    left: 1px; /* Adjusted left position */
+    width: 23px; /* Adjusted width */
+    height: 23px; /* Adjusted height */
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-switch.active {
+    background-color: #6366f1;
+}
+
+.toggle-switch.active::after {
+    transform: translateX(25px); /* Adjusted translation */
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 50px;
+    gap: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-actions {
+        margin-top: 10px;
+    }
+}
+
+.language-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.flag-icon {
+    width: 30px;
+    height: auto;
+}
+
+.arrow-icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+}
+
+.arrow-icon.dark {
+    background-image: url('../../assets/icons/arrow-down-white.png');
+    background-size: cover; /* Ensure the background image covers the element */
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position below the parent element */
+    left: 0;
+    color: #000000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin-top: 5px; /* Small margin to create space between the parent and dropdown */
+}
+
+.dropdown-item, .dropdown-item-services {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover, .dropdown-item-services:hover {
+    background-color: #f4f4f4;
+    color: #6366f1;
+}
+
+.navlink {
+    position: relative;
+    cursor: pointer;
+}
+
+.service-dropdown {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.service-dropdown:hover {
+    background-color: #f4f4f4;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 50px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #5156e5;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-right: 10px;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+input[type="text-name"], input[type="tel"] {
+    width: 90%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus {
+    border-color: hsl(238, 74%, 61%);
+    outline: none;
+}
+
+.order-button {
+    padding: 15px 30px;
+    background-color: hsl(238, 74%, 61%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    border: #6366f1 2px solid;
+    width: 97.5%;
+    margin-top: 20px;
+}
+
+.order-button:hover {
+    color: #6366f1;
+    border: #6366f1 2px solid;
+    background-color: #1c1b24;
+}

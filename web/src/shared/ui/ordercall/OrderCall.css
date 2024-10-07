@@ -100,6 +100,7 @@
     text-align: center;
     position: relative;
     font-size: 25px;
+    color: #1c1b24;
 }
 
 .modal-close {
@@ -142,11 +143,14 @@ input[type="text"]:focus, input[type="tel"]:focus {
     border-radius: 50px;
     cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
+    border: #6366f1 2px solid;
     width: 97.5%;
     margin-top: 20px;
 }
 
 .order-button:hover {
-    background-color: #4248c1;
+    color: #6366f1;
+    border: #6366f1 2px solid;
+    background-color: #1c1b24;
 }

@@ -8,6 +8,7 @@ import MessageForm from './widgets/messageform/MessageForm';
 import PageInfo from './shared/ui/pageInfo/PageInfo';
 import ContactInfo from './widgets/contactInfo/ContactInfo';
 import Services from './widgets/services/Services';
+import Header from './shared/ui/header/Header'; 
 import './App.css'
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <meta charSet="UTF-8" />
         <link rel="icon" href={liberticon} type="image/png" />
       </Helmet>
+      <Header></Header>
     </div>
   );
 }
