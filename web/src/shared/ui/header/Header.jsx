@@ -4,6 +4,8 @@ import libert_logo from '../../assets/images/libertlogo-removebg-preview.png';
 import ukraine_flag from '../../assets/icons/ukraine.png';
 import arrow_black from '../../assets/icons/arrow-down-black.png';
 import arrow_white from '../../assets/icons/arrow-down-white.png';
+import instagram_logo from '../../assets/icons/instagramwhite.png';
+import telegram_logo from '../../assets//icons/telegramwhite.png';
 import sun from '../../assets/icons/sun.png';
 import moon from '../../assets/icons/moon.png';
 import './Header.css';
@@ -86,7 +88,7 @@ const Header = () => {
                                 <h3>Замовити дзвінок</h3>
                                 <form onSubmit={handleSubmit}>
                                     <input
-                                        type="text"
+                                        type="text-name"
                                         placeholder="Ваше ім'я"
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
@@ -114,37 +116,49 @@ const Header = () => {
                         <div className="bar"></div>
                     </div>
                 </div>
-            </div>
-
-            {/* Mobile Menu Modal */}
+            </div>   
             {isMobileMenuOpen && (
-                <div className="mobile-menu-overlay">
-                    <div className="mobile-menu">
-                        <button className="mobile-menu-close" onClick={toggleMobileMenu}>×</button>
-                        <nav className="mobile-navigation">
-                            <a href="#" className="mobile-nav-link">Головна</a>
-                            <div className="mobile-nav-link" onClick={toggleServicesDropdown}>
-                                Послуги
-                                {isServicesDropdownOpen && (
-                                    <div className="dropdown-menu">
-                                        <div className="dropdown-item-services">
-                                            <div className="service-dropdown">FULFILMENT</div>
-                                        </div>
-                                        <div className="dropdown-item-services">
-                                            <div className="service-dropdown">Негабаритні перевезення</div>
-                                        </div>
-                                    </div>
-                                )}
-                            </div>
-                            <a href="#" className="mobile-nav-link">Про нас</a>
-                            <a href="#" className="mobile-nav-link">Контакти</a>
-                            <button className="call-order-btn" onClick={handleModalOpen}>ЗАМОВИТИ ДЗВІНОК</button>
-                        </nav>
-                    </div>
-                </div>
+               <div className="mobile-menu-overlay">
+               <div className="mobile-menu">
+                 <button className="burger-menu" onClick={toggleMobileMenu}>
+                   <span className="burger-line"></span>
+                   <span className="burger-line"></span>
+                   <span className="burger-line"></span>
+                 </button>
+                 <div className="modal-overlay-header">libert</div>
+                 <nav className="mobile-navigation">
+                   <a href="#" className="mobile-nav-link">Головна</a>
+                   <a href="#" className="mobile-nav-link">Про нас</a>
+                   <a href="#" className="mobile-nav-link">Контакти</a>
+                   <div className="mobile-nav-link dropdown-toggle" onClick={toggleServicesDropdown}>
+                     Послуги
+                     {isServicesDropdownOpen && (
+                       <div className="dropdown-menu-mobile show">
+                         <div className="dropdown-item-services-mobile">
+                           <div className="service-dropdown-mobile">FULFILMENT</div>
+                         </div>
+                         <div className="dropdown-item-services-mobile">
+                           <div className="service-dropdown-mobile">Негабаритні перевезення</div>
+                         </div>
+                       </div>
+                     )}
+                   </div>
+                   <div className="mobile-modal-footer">
+                     <div className="mobile-modal-footer-description">Libert у соціальних мережах</div>
+                     <div className="social-media-mobile">
+                       <img src={instagram_logo} alt="instagram" />
+                       <img src={telegram_logo} alt="telegram" />
+                     </div>
+                     <div className="mobile-modal-footer-bottom">
+                       <p>2024 © Libert Group | All rights reserved.</p>
+                     </div>
+                   </div>
+                 </nav>
+               </div>
+             </div>             
             )}
         </header>
     );
-};
+}
 
 export default Header;

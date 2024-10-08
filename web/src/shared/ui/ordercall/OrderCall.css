@@ -130,7 +130,7 @@ input[type="text-name"], input[type="tel"] {
     transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="tel"]:focus {
+input[type="text-name"]:focus, input[type="tel"]:focus {
     border-color: hsl(238, 74%, 61%);
     outline: none;
 }
