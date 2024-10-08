@@ -37,7 +37,7 @@ const OrderCall = () => {
                 <p>Гарантуємо доставку до вашого місця, щоб ви <br/> могли зосередитися на важливих справах.</p>
             </div>
             <div className="order-call-button" onClick={handleModalOpen}>
-                <h4>Замовити дзвінок</h4>
+                <h4>контакт</h4>
             </div>
 
             {isModalOpen && (

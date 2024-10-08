@@ -29,6 +29,7 @@
 .logo-section {
     display: flex;
     align-items: center;
+    margin-left: 30px;
 }
 
 .logo {
@@ -461,7 +462,7 @@
     margin: 10% auto;
     padding: 30px;
     border-radius: 50px;
-    width: 80%;
+    width: 95%;
     max-width: 500px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -488,9 +489,10 @@
 }
 
 input[type="text-name"], input[type="tel"] {
-    width: 90%;
+    width: 100%;
     padding: 15px;
     margin: 10px 0;
+    margin-top: 20px;
     border: 2px solid #ccc;
     border-radius: 50px;
     font-size: 16px;

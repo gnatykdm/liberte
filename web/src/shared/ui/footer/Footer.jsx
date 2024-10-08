@@ -18,21 +18,20 @@ const Footer = () => {
             </Helmet>
 
             <div className="footer-container">
-                <div className="footer-column services">
+                <div className="footer-column contacts">
                     <div className="footer-column-name">
                         <h3>Послуги</h3>
-                        <img src={arrow_logo} alt="arrow" width={20} height={20}/>
+                        <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
                     </div>
                     <ul>
                         <li>Негабаритні Перевезення</li>
                         <li>Fulfillment</li>
                     </ul>
                 </div>
-
-                <div className="footer-column navigation">
+                <div className="footer-column contacts">
                     <div className="footer-column-name">
                         <h3>Головне меню</h3>
-                        <img src={arrow_logo} alt="arrow" width={20} height={20}/>
+                        <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
                     </div>
                     <ul>
                         <li>Головна</li>
@@ -41,11 +40,10 @@ const Footer = () => {
                         <li>Контакти</li>
                     </ul>
                 </div>
-
                 <div className="footer-column contacts">
                     <div className="footer-column-name">
                         <h3>Наші контакти</h3>
-                        <img src={arrow_logo} alt="arrow" width={20} height={20}/>
+                        <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
                     </div>
                     <ul>
                         <li><img src={phone_logo} alt="phone" /> +48 883 104 082 </li>
