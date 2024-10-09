@@ -9,37 +9,37 @@ import './MainPage.css';
 
 const MainPage = () => {
     return (
-        <div className="main-page">
+        <div className="main-page-desc">
             <Helmet>
                 <title>Libert - Головна</title>
             </Helmet>
 
             <Header />
-            <main>
-                <div className="company-main-container">
-                    <div className="main-content">
-                        <div className="text-container">
-                            <div className="company-main-name">
-                                <span>ЛОГІСТИЧНІ</span> <br />
-                                <span className="highlight">РІШЕННЯ</span> <span>ДЛЯ</span> <br/> 
-                                <span>ВАШОГО БІЗНЕСУ</span>
-                            </div>
-                            <p className="company-main-description">
-                                Ми компанія LIBERT Group, пропонуємо послуги з транспортування
-                                негабаритних вантажів та документального супроводу. Перевозимо від комбайнів 
-                                закінчуючи інфраструктурними проектами.
+            
+            
+                <div className="main-content">
+                    <div className="text-content-main">
+                        <div className="company-main-name-desc">
+                            логістичні <br/>
+                            <div className="highlites">рішення</div> для <br/>
+                            вашого бізнесу
+                        </div>
+                        <div className="text-container-main">
+                            <p>
+                                Ми компанія LIBERT Group, пропонуємо послуги з транспортування<br/> 
+                                негабаритних вантажів та документального супроводу. Перевозимо <br/> 
+                                від комбайнів закінчуючи інфраструктурними проектами.
                             </p>
-                            <button className="start-work-btn">почати співпрацю</button>
                         </div>
-                        <div className="main-photo-container">
-                            <img src={main_photo} alt="Логістичні рішення" className="main-photo" />
-                        </div>
+                        <button className="main-btn-desc">Почати співпрацю</button>
                     </div>
-                </div>
-            </main>
-            <Services></Services>
-            <center><OrderCall></OrderCall></center>
-            <center><Footer/></center>
+                    <img src={main_photo} alt="photo" className="main-photo-desc" />
+                </div> 
+            <center>
+                <Services />
+                <OrderCall />
+                <Footer />
+            </center>
         </div>
     );
 };

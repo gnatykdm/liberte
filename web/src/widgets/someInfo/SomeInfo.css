@@ -7,6 +7,7 @@
     padding: 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     width: 90%;
+    color: #dbdde0;
 }
 
 .info-container {
@@ -24,12 +25,21 @@
     color: #dbdde0;
 }
 
-.service-name {
+.service-name, .service-question {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px; 
+    font-size: 35px; 
+    color: #dbdde0; 
+    font-weight: bold;
+    display: inline;
+}
+
+.service-second {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; 
     color: #dbdde0; 
     font-weight: bold;
     margin-bottom: 10px; 
+    margin-top: 10px;
 }
 
 .service-features ul {
@@ -41,7 +51,7 @@
     margin: 5px 0; 
     font-family: 'Montserrat', sans-serif;
     font-size: 16px; 
-    color: #ffffff; 
+    color: #dbdde0; 
 }
 
 @media (max-width: 768px) {

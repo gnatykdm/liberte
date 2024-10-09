@@ -14,8 +14,8 @@ const SomeInfo = () => {
             <div className="info-container">
                 <div className="info-content">
                     <div className="service-name">
-                        Що таке FULFILLMENT? <br />
-                        FULFILLMENT включає такі етапи як:
+                        <div className="service-question">Що таке FULFILLMENT?</div> <br />
+                        <span className="service-second">FULFILLMENT включає такі етапи як:</span>
                     </div>
                     <div className="service-features">
                         <ul>
@@ -33,8 +33,8 @@ const SomeInfo = () => {
             <div className="info-container">
                 <div className="info-content">
                     <div className="service-name">
-                        Що таке FULFILLMENT? <br />
-                        FULFILLMENT включає такі етапи як:
+                    <div className="service-question">Що таке FULFILLMENT?</div> <br />
+                        <span className="service-second">FULFILLMENT включає такі етапи як:</span>
                     </div>
                     <div className="service-features">
                         <ul>

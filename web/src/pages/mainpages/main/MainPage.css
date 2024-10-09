@@ -1,175 +1,103 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-span {
-    margin: 0;
-}
-
-/* General Page Styling */
-.main-page {
+.main-page-desc {
     background-color: #dbdde0;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* Main Container */
-.company-main-container {
-    display: flex;
-    justify-content: left;
-}
-
-/* Layout: Split Text and Image Side by Side */
 .main-content {
     display: flex;
-    justify-content: left;
-    gap: 30px; /* Increased spacing for better separation */
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-/* Text Container */
-.text-container {
-    flex: 1;
-    max-width: 800px;
+.text-content-main {
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
 }
 
-/* Main Headline */
-.company-main-name span {
-    font-family: 'Oswald', sans-serif;
-    font-size:58px; /* Slightly bigger for a bolder headline */
+/* Main Slogan Desktop */
+.company-main-name-desc, .highlites {
+    font-family: 'Oswald' sans-serif;
     font-weight: bold;
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
-/* Highlight Color for 'Solutions' */
-.highlight {
+
+/* Highlite */
+.highlites {
+    display: inline;
     color: #5156e5;
 }
 
-/* Company Description */
-.company-main-description {
+.text-container-main {
+    font-size: 23px;
+    line-height: 1.6;
+    margin-left: 5px;
+}
+
+.main-btn-desc {
+    background-color: #5156e5;
+    width: 400px;
+    height: 50px;
+    margin-left: 3px;
     font-size: 18px;
-    margin-bottom: 30px;
-    line-height: 1.7; /* More line-height for better readability */
-    color: #555;
-}
-
-/* Main Image Styling */
-.main-photo-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 80px;
-}
-
-.main-photo {
-    max-width: 100%;
-    width: 650px; /* Slightly bigger width for better emphasis on the image */
-    height: auto;
-    object-fit: contain;
-}
-
-/* Start Work Button */
-.start-work-btn {
-    background-color: #6366f1;
-    color: #fff;
-    padding: 15px 50px; /* Increased padding for a more prominent button */
-    font-size: 18px;
-    font-weight: bold;
-    border: 2px solid #6366f1;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
     text-transform: uppercase;
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
-}
-
-.start-work-btn:hover {
-    background-color: #1c1b24;
-    border-color: #1c1b24;
     color: #ffffff;
-    box-shadow: 0 6px 20px rgba(28, 27, 36, 0.3);
+    padding: 10px;
+    border:#5156e5 4px solid;
+    border-radius: 40px;
+    transition: background-color 0.3s ease transform 0.3 ease color 0.3s ease;
 }
 
+.main-btn-desc:hover {
+    background-color: #000000;
+    color: #5156e5;
+    transform: scale(1.05);
+}
 
+.main-photo-desc {
+    width: auto;
+    height: 550px;
+    margin-right: 50px;
+}
 
-/* Responsive Design for Mobile (Max width: 768px) */
-@media (max-width: 768px) {
-    body, html,main {
-        width: 100%;
-        margin: 0; /* Запрещает горизонтальный скролл */
+@media (max-width:768px) {
+    .main-photo-desc {
+        display: none;
     }
 
-    .main-content {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
+    .text-content-main {
+        margin-left: 25px;
     }
 
-    /* Main Headline */
-    .company-main-name span {
-        font-size: 45px;
-        text-align: left;
-        width: 100%;
-        margin: 0;
-
+    .company-main-name-desc, .highlites {
+        font-family: 'Oswald' sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+        text-transform: uppercase;
+        line-height: 1.1;
     }
 
-    /* Company Description */
-    .company-main-description {
-        font-size: 1px;
-        text-align: left;
-        margin-bottom: 20px;
-        padding: 0 10px; /* Добавляем паддинг для текстового блока */
-        width: 100%;
-        line-height: 1.7;
+    .text-container-main {
+        font-size: 25px;
+        line-height: 1.6;
+        margin-left: 5px;
+        width: 350px;
     }
-
-    /* Start Work Button */
-    .start-work-btn {
-        width: 90%;
-        margin: 20px auto;
-        padding: 12px 0;
-        font-size: 18px;
-        text-align: center;
-        border-radius: 40px;
-        margin: 0;
-    }
-
-    .start-work-btn:hover {
+    
+    .main-btn-desc {
         background-color: #5156e5;
-        box-shadow: 0 6px 20px rgba(81, 86, 229, 0.3);
-    }
-
-    /* Main Photo Container */
-    .main-photo-container {
-        order: 1;
-        display: flex;
-        justify-content: left;
-        margin-right: 100px;
-        width: 100%; /* Ограничиваем ширину контейнера */
-        margin-bottom: 0;
-    }
-
-    .main-photo {
-        max-width: 100%;
-        height: auto;
-        width: 90%;
-        object-fit: contain;
-    }
-
-    /* Text Container */
-    .text-container {
-        order: 2;
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Центруем контент на мобильных устройствах */
-        gap: 10px;
+        width: 300px;
+        height: 50px;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #ffffff;
+        padding: 10px;
+        border:#5156e5 4px solid;
+        border-radius: 40px;
+        transition: background-color 0.3s ease transform 0.3 ease color 0.3s ease;
     }
 }
-

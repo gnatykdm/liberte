@@ -1,0 +1,45 @@
+.main-about-us-page {
+    margin: 0;
+    padding: 0;
+    background-color: #dbdde0;
+}
+
+.main-content-about {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.text-container-about {
+    font-size: 23px;
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    margin-top: 20px;
+}
+
+.about-us-some {
+    margin-top: 20px;
+}
+
+.main-photo-about {
+    width: 550px;
+    height: auto;
+    margin-right: 100px;
+ 
+}
+
+@media (max-width:768px) {
+    .main-photo-about {
+        display: none;
+    }
+
+    .text-container-about {
+        width: 350px;
+        margin-left: 30px;
+        font-size: 18px;
+    }
+}

@@ -10,7 +10,7 @@ import ContactInfo from './widgets/contactInfo/ContactInfo';
 import Services from './widgets/services/Services';
 import MainPage from './pages/mainpages/main/MainPage';
 import Header from './shared/ui/header/Header'; 
-import MainAboutUs from './pages/mainpages/about/MainAboutUs';
+import MainAboutUs from './pages/mainpages/about/MainAboutUS';
 import photo from './shared/assets/images/DeWatermark.ai_1727849070458-removebg-preview.png';
 import './App.css'
 
