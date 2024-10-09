@@ -8,8 +8,10 @@ import MessageForm from './widgets/messageform/MessageForm';
 import PageInfo from './shared/ui/pageInfo/PageInfo';
 import ContactInfo from './widgets/contactInfo/ContactInfo';
 import Services from './widgets/services/Services';
-import MainPage from './pages/mainpages/MainPage';
+import MainPage from './pages/mainpages/main/MainPage';
 import Header from './shared/ui/header/Header'; 
+import MainAboutUs from './pages/mainpages/about/MainAboutUs';
+import photo from './shared/assets/images/DeWatermark.ai_1727849070458-removebg-preview.png';
 import './App.css'
 
 const App = () => {
@@ -19,7 +21,7 @@ const App = () => {
         <meta charSet="UTF-8" />
         <link rel="icon" href={liberticon} type="image/png" />
       </Helmet>
-      <MainPage></MainPage>
+      <MainAboutUs></MainAboutUs>
     </div>
   );
 }

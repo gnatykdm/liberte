@@ -1,10 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Header from "../../shared/ui/header/Header";
-import OrderCall from "../../shared/ui/ordercall/OrderCall";
-import Services from "../../widgets/services/Services";
-import Footer from "../../shared/ui/footer/Footer";
-import main_photo from '../../shared/assets/images/DeWatermark.ai_1727849070458-removebg-preview.png';
+import Header from "../../../shared/ui/header/Header";
+import OrderCall from "../../../shared/ui/ordercall/OrderCall";
+import Services from "../../../widgets/services/Services";
+import Footer from "../../../shared/ui/footer/Footer";
+import main_photo from '../../../shared/assets/images/DeWatermark.ai_1727849070458-removebg-preview.png';
 import './MainPage.css';
 
 const MainPage = () => {
