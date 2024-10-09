@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import Header from "../../../shared/ui/header/Header";
+import { Link } from "react-router-dom";
 import OrderCall from "../../../shared/ui/ordercall/OrderCall";
 import Services from "../../../widgets/services/Services";
 import Footer from "../../../shared/ui/footer/Footer";
@@ -15,8 +16,6 @@ const MainPage = () => {
             </Helmet>
 
             <Header />
-            
-            
                 <div className="main-content">
                     <div className="text-content-main">
                         <div className="company-main-name-desc">
@@ -31,10 +30,11 @@ const MainPage = () => {
                                 від комбайнів закінчуючи інфраструктурними проектами.
                             </p>
                         </div>
-                        <button className="main-btn-desc">Почати співпрацю</button>
+                        <button className="btn-main-desc">Почати співпрацю</button>
                     </div>
                     <img src={main_photo} alt="photo" className="main-photo-desc" />
                 </div> 
+
             <center>
                 <Services />
                 <OrderCall />

@@ -9,6 +9,7 @@ import telegram_logo from '../../assets//icons/telegramwhite.png';
 import sun from '../../assets/icons/sun.png';
 import moon from '../../assets/icons/moon.png';
 import './Header.css';
+import { Link } from "react-router-dom";
 
 const Header = () => {
     // State variables
@@ -52,7 +53,7 @@ const Header = () => {
                             <div className="dropdown-menu">
                                 <div className="dropdown-item">English</div>
                                 <div className="dropdown-item">Українська</div>
-                                <div className="dropdown-item">Русский</div>
+                                <div className="dropdown-item">Polska</div>
                             </div>
                         )}
                     </div>
@@ -60,7 +61,7 @@ const Header = () => {
 
                 {/* Navigation */}
                 <nav className="navigation">
-                    <a href="#" className={`nav-link ${isDarkMode ? 'dark' : ''}`}>Головна</a>
+                    <Link to={"/"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>Головне</Link>
                     <div className={`nav-link ${isDarkMode ? 'dark' : ''}`} onClick={toggleServicesDropdown}>
                         Послуги
                         {isServicesDropdownOpen && (
@@ -74,8 +75,8 @@ const Header = () => {
                             </div>
                         )}
                     </div>
-                    <a href="#" className={`nav-link ${isDarkMode ? 'dark' : ''}`}>Про нас</a>
-                    <a href="#" className={`nav-link ${isDarkMode ? 'dark' : ''}`}>Контакти</a>
+                    <Link to={"/about"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>Про нас</Link>
+                    <Link to={"/contact"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>Контакти</Link>
                 </nav>
 
                 {/* Header Actions */}

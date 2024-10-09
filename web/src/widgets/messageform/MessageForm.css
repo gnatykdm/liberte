@@ -40,7 +40,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
 }
 
 textarea {
-    height: 150px;
+    height: 170px;
     resize: vertical;
 }
 
@@ -56,10 +56,12 @@ textarea {
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     transition: background-color 0.3s ease;
+    border: hsl(238, 74%, 61%) 4px solid;
 }
 
 .submit-button:hover {
-    background-color: #4248c1;
+    background-color: #000000;
+    color: hsl(238, 74%, 61%);
 }
 
 

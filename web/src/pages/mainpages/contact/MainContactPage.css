@@ -1,0 +1,44 @@
+.main-contact-page {
+    margin: 0;
+    padding: 0;
+    background-color: #dbdde0;
+}
+
+.main-contact {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.contact-form {
+    margin-left: 60px;
+}
+
+.contact-photo {
+    width: auto;
+    height: 550px;
+    margin-right: 150px;
+}
+
+.contact-info {
+    margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+    .contact-photo {
+        display: none;
+    }
+
+    .contact-form {
+        margin: 0;
+        align-items: center;
+    }
+
+    .main-contact {
+        margin-bottom: 40px;
+    }
+}
