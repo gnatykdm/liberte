@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import logo from '../../assets/images/libertlogo-removebg-preview.png';
 import './OrderCall.css';
 
-const OrderCall = () => {
+const OrderCall = ({ part1, part2, order_call, order, name_type, tel_type }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);  
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
@@ -34,33 +34,33 @@ const OrderCall = () => {
                 <img src={logo} alt="logo" />
             </div>
             <div className="order-call-content">
-                <p>Гарантуємо доставку до вашого місця, щоб ви <br/> могли зосередитися на важливих справах.</p>
+                <p> { part1 } <br/> { part2 }.</p>
             </div>
             <div className="order-call-button" onClick={handleModalOpen}>
-                <h4>контакт</h4>
+                <h4>{ order }</h4>
             </div>
 
             {isModalOpen && (
                 <div className="modal-overlay">
                     <div className="modal modal-content">
                         <button className="modal-close" onClick={handleModalClose}>×</button>
-                        <h3>Замовити дзвінок</h3>
+                        <h3>{ order_call }</h3>
                         <form onSubmit={handleSubmit}>
                             <input 
                                 type="text-name" 
-                                placeholder="Ваше ім'я" 
+                                placeholder={ name_type } 
                                 value={name} 
                                 onChange={(e) => setName(e.target.value)} 
                                 required 
                             />
                             <input 
                                 type="tel" 
-                                placeholder="Ваш телефон" 
+                                placeholder={ tel_type } 
                                 value={phone} 
                                 onChange={(e) => setPhone(e.target.value)} 
                                 required 
                             />
-                            <button type="submit" className="order-button">Замовити</button>
+                            <button type="submit" className="order-button">{ order }</button>
                         </form>
                     </div>
                 </div>

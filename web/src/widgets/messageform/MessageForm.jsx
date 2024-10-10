@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import './MessageForm.css';
 
-const MessageForm = () => {
+const MessageForm = ( { header, name_type, email_type, message_content, message_type, send } ) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
@@ -32,39 +32,39 @@ const MessageForm = () => {
             </Helmet>
 
             <div className="message-content">
-                Надішліть нам повідомлення
+                { header }
             </div>
             <div className="forward-form">
                 <form onSubmit={handleSubmit}>
                     <input 
                         type="text" 
-                        placeholder="Ваше ім'я" 
+                        placeholder={ name_type }
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required 
                     />
                     <input 
                         type="email" 
-                        placeholder="Електронна пошта" 
+                        placeholder={ email_type } 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required 
                     />
                     <input 
                         type="text" 
-                        placeholder="Тема Повідомлення" 
+                        placeholder={ message_content } 
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                         required 
                     />
                     <textarea 
                         name="content" 
-                        placeholder="Повідомлення..."
+                        placeholder={ message_type }
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         required
                     />
-                    <button type="submit" className="submit-button">Надіслати</button>
+                    <button type="submit" className="submit-button">{ send }</button>
                 </form>
             </div>
         </div>

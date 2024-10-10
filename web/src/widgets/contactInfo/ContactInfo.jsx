@@ -5,9 +5,9 @@ import phone_logo from '../../shared/assets/icons/phonewhite.png';
 import instagram_logo from '../../shared/assets/icons/instagramwhite.png';
 import './ContactInfo.css'; // Подключаем CSS файл
 
-const ContactInfo = () => {
+const ContactInfo = ({ contact }) => {
     return (
-        <div className="contact-info">
+        <div className="contact-info-desc">
             <Helmet>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -15,7 +15,7 @@ const ContactInfo = () => {
             </Helmet>
 
             <div className="contact-text">
-                Переважаєте в інший спосіб?
+                { contact }
             </div>
             <div className="contact-content">
                 <div className="contact-item">

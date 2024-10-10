@@ -5,7 +5,7 @@ import arrow from '../../shared/assets/icons/right-arrow_purple.png';
 import { Helmet } from "react-helmet";
 import './Services.css';
 
-const Services = () => {
+const Services = ({ more }) => {
     return (
         <div className="services-container">
             <Helmet>
@@ -21,7 +21,7 @@ const Services = () => {
                 </div>
                 <div className="service-name">FULFILLMENT</div>
                 <div className="service-description">
-                    <a href="#" className="description-link">Дізнатись більше</a>
+                    <a href="#" className="description-link">{ more }</a>
                     <img src={arrow} alt="arrow" />
                 </div>
             </div>
@@ -33,7 +33,7 @@ const Services = () => {
                 </div>
                 <div className="service-name">LOGISTICS</div>
                 <div className="service-description">
-                    <a href="#" className="description-link">Дізнатись більше</a>
+                    <a href="#" className="description-link">{ more }</a>
                     <img src={arrow} alt="arrow" />
                 </div>
             </div>

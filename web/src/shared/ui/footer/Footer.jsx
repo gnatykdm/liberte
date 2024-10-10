@@ -7,8 +7,9 @@ import mail_logo from '../../assets/icons/email.png';
 import arrow_logo from '../../assets/icons/right-arrow.png';
 import { Helmet } from "react-helmet";
 import './Footer.css';
+import { Link } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ service_drop, head, head2, services, about, contacts }) => {
     return (
         <div className="footer">
             <Helmet>
@@ -24,25 +25,25 @@ const Footer = () => {
                         <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
                     </div>
                     <ul>
-                        <li>Негабаритні Перевезення</li>
+                        <li>{ service_drop }</li>
                         <li>Fulfillment</li>
                     </ul>
                 </div>
                 <div className="footer-column contacts">
                     <div className="footer-column-name">
-                        <h3>Головне меню</h3>
+                        <h3>{ head2 }</h3>
                         <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
                     </div>
                     <ul>
-                        <li>Головна</li>
-                        <li>Про Нас</li>
-                        <li>Послуги</li>
-                        <li>Контакти</li>
+                        <li><Link to={"/"} style={{ textDecoration: 'none', color: '#ffffff' }}>{ head }</Link></li>
+                        <li><Link to={"/about"} style={{ textDecoration: 'none', color: '#ffffff' }}>{ about }</Link></li>
+                        <li><Link to={"#"} style={{ textDecoration: 'none', color: '#ffffff' }}>{ services }</Link></li>
+                        <li><Link to={"/contacts"} style={{ textDecoration: 'none', color: '#ffffff' }}>{ contacts }</Link></li>
                     </ul>
                 </div>
                 <div className="footer-column contacts">
                     <div className="footer-column-name">
-                        <h3>Наші контакти</h3>
+                        <h3>{ head2 }</h3>
                         <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
                     </div>
                     <ul>

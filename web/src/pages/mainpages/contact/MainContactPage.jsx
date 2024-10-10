@@ -1,7 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import MainMap from "../../../shared/ui/map/MainMap";
 import Header from "../../../shared/ui/header/Header";
-import main_photo from '../../../shared/assets/images/DeWatermark.ai_1727849070458-removebg-preview.png';
+import ukraine_flag from '../../../shared/assets/icons/ukraine.png';
 import MessageForm from "../../../widgets/messageform/MessageForm";
 import ContactInfo from "../../../widgets/contactInfo/ContactInfo";
 import PageInfo from "../../../shared/ui/pageInfo/PageInfo";
@@ -15,20 +16,44 @@ const MainContactPage = () => {
                 <title>Libert - Контакти</title>
             </Helmet>
 
-            <Header/>
+            <Header image={ukraine_flag}
+                    head={"Головна"}
+                    services={"Послуги"} 
+                    service_drop={"Негабаритні перевезення"}
+                    about={"Про нас"}
+                    contacts={"Контакти"}
+                    call={"Замовити дзвінок"}
+                    order={"Замовити"}
+                    social_networks={"Libert у соціальних мережах"}/>
+
             <div className="some-age-info"><PageInfo text="Контакти"></PageInfo></div>
             <div className="main-contact">
                 <div className="contact-form">
-                    <MessageForm></MessageForm>
+                    <MessageForm
+                        header={"Надішліть нам повідомлення"}
+                        name_type={"Ваше ім'я"}
+                        email_type={"Електронна пошта"}
+                        message_content={"Тема Повідомлення"}
+                        message_type={"Повідомлення..."}
+                        send={"Надіслати"}
+                    />
                 </div>
-                <img src={main_photo} alt="photo" className="contact-photo" />
-            </div>
-
+                <div className="map-contact">
+                    <MainMap/>
+                </div>
+            </div>            
+    
             <center>
                 <div className="contact-info">
-                    <ContactInfo/>
+                    <ContactInfo contact={"Переважаєте в інший спосіб?"} />
                 </div>
-                <Footer/>
+                
+                <Footer
+                    service_drop={"Негабаритні Перевезення"}
+                    head={"Головне меню"}
+                    head2={"Наші контакти"}
+                    services={"Послуги"}
+                    contacts={"Контакти"}/>
             </center>
         </div>
     );

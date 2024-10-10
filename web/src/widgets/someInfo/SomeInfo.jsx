@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import './SomeInfo.css';
 
-const SomeInfo = () => {
+const SomeInfo = ({ question, answer, a1, a2, a3, a4, a5, a6 }) => {
     return (
         <div className="info">
             <Helmet>
@@ -14,17 +14,17 @@ const SomeInfo = () => {
             <div className="info-container">
                 <div className="info-content">
                     <div className="service-name">
-                        <div className="service-question">Що таке FULFILLMENT?</div> <br />
-                        <span className="service-second">FULFILLMENT включає такі етапи як:</span>
+                        <div className="service-question">{ question }</div> <br />
+                        <span className="service-second">{ answer }</span>
                     </div>
                     <div className="service-features">
                         <ul>
-                            <li> Організація ввезення товару </li>
-                            <li> Прийом товару на склад </li>
-                            <li> Курєрська доставка до отримувача </li>
-                            <li> Зберігання товару </li>
-                            <li> Пакування товару на склад </li>
-                            <li> Оформлення супровідних документів </li>
+                            <li> { a1 } </li>
+                            <li> { a2 } </li>
+                            <li> { a3 }</li>
+                            <li> { a4 } </li>
+                            <li> { a5 } </li>
+                            <li> { a6 } </li>
                         </ul>
                     </div>
                 </div>
@@ -33,17 +33,17 @@ const SomeInfo = () => {
             <div className="info-container">
                 <div className="info-content">
                     <div className="service-name">
-                    <div className="service-question">Що таке FULFILLMENT?</div> <br />
-                        <span className="service-second">FULFILLMENT включає такі етапи як:</span>
+                        <div className="service-question">{ question }</div> <br />
+                        <span className="service-second">{ answer }</span>
                     </div>
                     <div className="service-features">
                         <ul>
-                            <li> Організація ввезення товару </li>
-                            <li> Прийом товару на склад </li>
-                            <li> Курєрська доставка до отримувача </li>
-                            <li> Зберігання товару </li>
-                            <li> Пакування товару на склад </li>
-                            <li> Оформлення супровідних документів </li>
+                            <li> { a1 } </li>
+                            <li> { a2 } </li>
+                            <li> { a3 }</li>
+                            <li> { a4 } </li>
+                            <li> { a5 } </li>
+                            <li> { a6 } </li>
                         </ul>
                     </div>
                 </div>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import libert_logo from '../../assets/images/libertlogo-removebg-preview.png';
-import ukraine_flag from '../../assets/icons/ukraine.png';
 import arrow_black from '../../assets/icons/arrow-down-black.png';
 import arrow_white from '../../assets/icons/arrow-down-white.png';
 import instagram_logo from '../../assets/icons/instagramwhite.png';
@@ -11,7 +10,7 @@ import moon from '../../assets/icons/moon.png';
 import './Header.css';
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ image, head, services, service_drop, about, contacts, call, order, social_networks }) => {
     // State variables
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
@@ -47,7 +46,7 @@ const Header = () => {
                 <div className="logo-section">
                     <img src={libert_logo} alt="Libert Logo" className="logo" />
                     <div className="language-switcher" onClick={toggleLanguageDropdown}>
-                        <img src={ukraine_flag} alt="Ukrainian Flag" className="flag-icon" />
+                        <img src={image} alt="Ukrainian Flag" className="flag-icon" />
                         <img src={isDarkMode ? arrow_white : arrow_black} alt="Arrow Down" className={`arrow-icon ${isDarkMode ? 'dark' : ''}`} />
                         {isLanguageDropdownOpen && (
                             <div className="dropdown-menu">
@@ -61,32 +60,32 @@ const Header = () => {
 
                 {/* Navigation */}
                 <nav className="navigation">
-                    <Link to={"/"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>Головне</Link>
+                    <Link to={"/"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>{ head }</Link>
                     <div className={`nav-link ${isDarkMode ? 'dark' : ''}`} onClick={toggleServicesDropdown}>
-                        Послуги
+                        { services }
                         {isServicesDropdownOpen && (
                             <div className="dropdown-menu">
                                 <div className="dropdown-item-services">
                                     <div className="service-dropdown">FULFILMENT</div>
                                 </div>
                                 <div className="dropdown-item-services">
-                                    <div className="service-dropdown">Негабаритні перевезення</div>
+                                    <div className="service-dropdown">{ service_drop }</div>
                                 </div>
                             </div>
                         )}
                     </div>
-                    <Link to={"/about"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>Про нас</Link>
-                    <Link to={"/contact"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>Контакти</Link>
+                    <Link to={"/about"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>{ about }</Link>
+                    <Link to={"/contact"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>{ contacts }</Link>
                 </nav>
 
                 {/* Header Actions */}
                 <div className="header-actions">
-                    <button className="call-order-btn" onClick={handleModalOpen}>ЗАМОВИТИ ДЗВІНОК</button>
+                    <button className="call-order-btn" onClick={handleModalOpen}>{ call }</button>
                     {isModalOpen && (
                         <div className="modal-overlay">
                             <div className="modal modal-content">
                                 <button className="modal-close" onClick={handleModalClose}>×</button>
-                                <h3>Замовити дзвінок</h3>
+                                <h3>{ call }</h3>
                                 <form onSubmit={handleSubmit}>
                                     <input
                                         type="text-name"
@@ -102,7 +101,7 @@ const Header = () => {
                                         onChange={(e) => setPhone(e.target.value)}
                                         required
                                     />
-                                    <button type="submit" className="order-button">Замовити</button>
+                                    <button type="submit" className="order-button">{ order }</button>
                                 </form>
                             </div>
                         </div>
@@ -128,24 +127,24 @@ const Header = () => {
                  </button>
                  <div className="modal-overlay-header">libert</div>
                  <nav className="mobile-navigation">
-                   <a href="#" className="mobile-nav-link">Головна</a>
-                   <a href="#" className="mobile-nav-link">Про нас</a>
-                   <a href="#" className="mobile-nav-link">Контакти</a>
+                    <Link to='/' className="mobile-nav-link">{ head }</Link>
+                    <Link to='/about' className="mobile-nav-link">{ about }</Link>
+                    <Link to='/contact' className="mobile-nav-link">{ contacts }</Link>
                    <div className="mobile-nav-link dropdown-toggle" onClick={toggleServicesDropdown}>
-                     Послуги
+                     { services }
                      {isServicesDropdownOpen && (
                        <div className="dropdown-menu-mobile show">
                          <div className="dropdown-item-services-mobile">
                            <div className="service-dropdown-mobile">FULFILMENT</div>
                          </div>
                          <div className="dropdown-item-services-mobile">
-                           <div className="service-dropdown-mobile">Негабаритні перевезення</div>
+                           <div className="service-dropdown-mobile">{ service_drop }</div>
                          </div>
                        </div>
                      )}
                    </div>
                    <div className="mobile-modal-footer">
-                     <div className="mobile-modal-footer-description">Libert у соціальних мережах</div>
+                     <div className="mobile-modal-footer-description"> {social_networks} </div>
                      <div className="social-media-mobile">
                        <img src={instagram_logo} alt="instagram" />
                        <img src={telegram_logo} alt="telegram" />

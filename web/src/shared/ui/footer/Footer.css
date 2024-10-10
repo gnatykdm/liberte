@@ -2,13 +2,14 @@
     background-color: #5156e5;
     color: white;
     font-family: 'Montserrat', sans-serif;
-    padding: 50px 20px;
+    padding: 10px;
     border-radius: 90px;
     max-width: 100%;
     width: 92%;
     height: auto; 
     transform: translateY(100%); 
     animation: slideIn 0.5s forwards; 
+    margin-top: 60px;
 }
 
 @keyframes slideIn {

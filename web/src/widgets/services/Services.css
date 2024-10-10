@@ -72,11 +72,9 @@
 @media (max-width: 768px) {
     .services-container {
         display: flex;
-        justify-content: center;
     }
 
     .service-content {
-        align-items: center;
         width: 45%;
         margin: 10px;
     }
@@ -88,8 +86,7 @@
         width: 260px;
         height: 260px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+
     }
 
     .service-name {
@@ -100,8 +97,8 @@
     }
 
     .service-logo img {
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
         object-fit: cover;
         border-radius: 50px;
         margin-top: 5px;
@@ -109,25 +106,23 @@
 
     .service-description {
         justify-content: center;
-        font-size: 15px;
+        font-size: 18px;
+        margin: 0;
     }
 
     .logo-background {
         background-color: #ffffff;
         border-radius: 50px;
-        padding: 10px; 
-        width: 150px;
-        height: 150px;
+        padding: 30px; 
+        width: 135px;
+        height: 135px;
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
 }
 
 @media (max-width: 450px) {
     .services-container {
         display: flex;
-        justify-content: center;
     }
 
     .service-content {
@@ -143,8 +138,6 @@
         width: 70px;
         height: 70px;
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .service-name {
@@ -176,3 +169,54 @@
         display: flex;
     }
 }
+
+@media (max-width: 350px) {
+    .services-container {
+        display: flex;
+    }
+
+    .service-content {
+        align-items: center;
+        width: 45%;
+        margin: 10px;
+    }
+
+    .logo-background {
+        background-color: #dbdde0;
+        border-radius: 50px;
+        padding: 5px; 
+        width: 70px;
+        height: 70px;
+        display: flex;
+    }
+
+    .service-name {
+        color: #000000;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+
+    .service-logo img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50px;
+        margin-top: 5px;
+    }
+
+    .service-description {
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .logo-background {
+        background-color: #ffffff;
+        border-radius: 50px;
+        padding: 10px; 
+        width: 100px;
+        height: 100px;
+        display: flex;
+    }
+}
+
