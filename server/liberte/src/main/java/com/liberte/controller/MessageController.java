@@ -6,11 +6,12 @@ import com.liberte.service.IMessageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
 
 @RestController
 @RequestMapping("3i7Xry7tEKF5ZtdzT8Wn1zXToUABR5JpjBpSfxmn8asEaBmoblFeS4yIfrHEWvk5/api/message")
@@ -20,6 +21,7 @@ public class MessageController {
     private IMessageService messageService;
     private Logger logger = LoggerFactory.getLogger(MessageController.class);
 
+    @CrossOrigin(origins = "http://localhost:3000") // Replace with your frontend's origin
     @PostMapping("/save")
     public HttpStatus sendMessage(@RequestBody MessageDto m) {
         if (m == null) {
@@ -27,7 +29,7 @@ public class MessageController {
             return HttpStatus.BAD_REQUEST;
         }
 
-        MessageEntity message = new MessageEntity(m.getSenderEmail(), m.getMessageTheme(), m.getMessageContent());
+        MessageEntity message = new MessageEntity(m.getSenderName(), m.getSenderEmail(), m.getMessageTheme(), m.getMessageContent());
 
         messageService.saveMessage(message);
         messageService.sendMessage(message);

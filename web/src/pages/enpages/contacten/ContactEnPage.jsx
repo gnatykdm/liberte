@@ -25,7 +25,12 @@ const ContactEnPage = () => {
                             contacts={"Contacts"}
                             call={"Request a Call"}
                             order={"Order"}
-                            social_networks={"Libert on Social Media"}/>
+                            social_networks={"Libert on Social Media"}
+                            name_type={"Your name"}
+                            tel_type={"Your phone number"}
+                            main_link={"/en"}
+                            about_link={"/about/en"}
+                            contact_link={"/contact/en"}/>
         
                     <div className="some-age-info"><PageInfo text="Contacts"></PageInfo></div>
                     <div className="main-contact">
@@ -54,7 +59,10 @@ const ContactEnPage = () => {
                             head={"Main Menu"}
                             head2={"Our Contacts"}
                             services={"Services"}
-                            contacts={"Contacts"}/>
+                            contacts={"Contacts"}
+                            main_link={"/en"}
+                            about_link={"/about/en"}
+                            contact_link={"/contact/en"}/>
                     </center>
                 </div>
     );

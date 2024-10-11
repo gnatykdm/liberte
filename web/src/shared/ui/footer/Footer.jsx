@@ -9,7 +9,9 @@ import { Helmet } from "react-helmet";
 import './Footer.css';
 import { Link } from "react-router-dom";
 
-const Footer = ({ service_drop, head, head2, services, about, contacts }) => {
+const Footer = ({ service_drop, head, head2, services, about, contacts,
+    main_link, about_link, contact_link
+ }) => {
     return (
         <div className="footer">
             <Helmet>
@@ -21,7 +23,7 @@ const Footer = ({ service_drop, head, head2, services, about, contacts }) => {
             <div className="footer-container">
                 <div className="footer-column contacts">
                     <div className="footer-column-name">
-                        <h3>Послуги</h3>
+                        <h3>{ services }</h3>
                         <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
                     </div>
                     <ul>
@@ -35,10 +37,10 @@ const Footer = ({ service_drop, head, head2, services, about, contacts }) => {
                         <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
                     </div>
                     <ul>
-                        <li><Link to={"/"} style={{ textDecoration: 'none', color: '#ffffff' }}>{ head }</Link></li>
-                        <li><Link to={"/about"} style={{ textDecoration: 'none', color: '#ffffff' }}>{ about }</Link></li>
+                        <li><Link to={main_link} style={{ textDecoration: 'none', color: '#ffffff' }}>{ head }</Link></li>
+                        <li><Link to={about_link} style={{ textDecoration: 'none', color: '#ffffff' }}>{ about }</Link></li>
                         <li><Link to={"#"} style={{ textDecoration: 'none', color: '#ffffff' }}>{ services }</Link></li>
-                        <li><Link to={"/contacts"} style={{ textDecoration: 'none', color: '#ffffff' }}>{ contacts }</Link></li>
+                        <li><Link to={contact_link} style={{ textDecoration: 'none', color: '#ffffff' }}>{ contacts }</Link></li>
                     </ul>
                 </div>
                 <div className="footer-column contacts">

@@ -10,7 +10,9 @@ import moon from '../../assets/icons/moon.png';
 import './Header.css';
 import { Link } from "react-router-dom";
 
-const Header = ({ image, head, services, service_drop, about, contacts, call, order, social_networks }) => {
+const Header = ({ image, head, services, service_drop, about, contacts, call, order, social_networks, name_type, tel_type,
+    main_link, about_link, contact_link
+ }) => {
     // State variables
     const [isDarkMode, setIsDarkMode] = useState(false);
     const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
@@ -50,9 +52,9 @@ const Header = ({ image, head, services, service_drop, about, contacts, call, or
                         <img src={isDarkMode ? arrow_white : arrow_black} alt="Arrow Down" className={`arrow-icon ${isDarkMode ? 'dark' : ''}`} />
                         {isLanguageDropdownOpen && (
                             <div className="dropdown-menu">
-                                <div className="dropdown-item">English</div>
-                                <div className="dropdown-item">Українська</div>
-                                <div className="dropdown-item">Polska</div>
+                                <div className="dropdown-item"><Link to="/en">English</Link></div>
+                                <div className="dropdown-item"><Link to="/">Українська</Link></div>
+                                <div className="dropdown-item"><Link to="/pl">Polski</Link></div>
                             </div>
                         )}
                     </div>
@@ -60,7 +62,7 @@ const Header = ({ image, head, services, service_drop, about, contacts, call, or
 
                 {/* Navigation */}
                 <nav className="navigation">
-                    <Link to={"/"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>{ head }</Link>
+                    <Link to={main_link} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>{ head }</Link>
                     <div className={`nav-link ${isDarkMode ? 'dark' : ''}`} onClick={toggleServicesDropdown}>
                         { services }
                         {isServicesDropdownOpen && (
@@ -74,8 +76,8 @@ const Header = ({ image, head, services, service_drop, about, contacts, call, or
                             </div>
                         )}
                     </div>
-                    <Link to={"/about"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>{ about }</Link>
-                    <Link to={"/contact"} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>{ contacts }</Link>
+                    <Link to={about_link} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>{ about }</Link>
+                    <Link to={contact_link} className={`nav-link ${isDarkMode ? 'dark' : ''}`}>{ contacts }</Link>
                 </nav>
 
                 {/* Header Actions */}
@@ -89,14 +91,14 @@ const Header = ({ image, head, services, service_drop, about, contacts, call, or
                                 <form onSubmit={handleSubmit}>
                                     <input
                                         type="text-name"
-                                        placeholder="Ваше ім'я"
+                                        placeholder={name_type}
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}
                                         required
                                     />
                                     <input
                                         type="tel"
-                                        placeholder="Ваш телефон"
+                                        placeholder={tel_type}
                                         value={phone}
                                         onChange={(e) => setPhone(e.target.value)}
                                         required
@@ -127,9 +129,9 @@ const Header = ({ image, head, services, service_drop, about, contacts, call, or
                  </button>
                  <div className="modal-overlay-header">libert</div>
                  <nav className="mobile-navigation">
-                    <Link to='/' className="mobile-nav-link">{ head }</Link>
-                    <Link to='/about' className="mobile-nav-link">{ about }</Link>
-                    <Link to='/contact' className="mobile-nav-link">{ contacts }</Link>
+                    <Link to={main_link} className="mobile-nav-link">{ head }</Link>
+                    <Link to={about_link} className="mobile-nav-link">{ about }</Link>
+                    <Link to={contact_link} className="mobile-nav-link">{ contacts }</Link>
                    <div className="mobile-nav-link dropdown-toggle" onClick={toggleServicesDropdown}>
                      { services }
                      {isServicesDropdownOpen && (

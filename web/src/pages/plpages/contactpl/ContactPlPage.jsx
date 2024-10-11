@@ -24,7 +24,9 @@ const ContactPlPage = () => {
             contacts={"Kontakty"}
             call={"Zamów rozmowę"}
             order={"Zamów"}
-            social_networks={"Libert w mediach społecznościowych"}/>
+            social_networks={"Libert w mediach społecznościowych"}
+            name_type={"Imie"}
+            tel_type={"Numer telefonu"}/>
 
     <div className="some-age-info"><PageInfo text="Kontakty"></PageInfo></div>
     
@@ -54,7 +56,10 @@ const ContactPlPage = () => {
             head={"Menu główne"}
             head2={"Nasze kontakty"}
             services={"Usługi"}
-            contacts={"Kontakty"}/>
+            contacts={"Kontakty"}
+            main_link={"/pl"}
+            about_link={"/about/pl"}
+            contact_link={"/contact/pl"}/>
     </center>
 </div>
     );

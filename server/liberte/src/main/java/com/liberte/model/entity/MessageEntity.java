@@ -18,6 +18,9 @@ public class MessageEntity implements Cloneable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long messageId;
 
+    @Column(name = "sender_name", nullable = false)
+    private String senderName;
+
     @Column(name = "sender_mail", nullable = false)
     private String senderMail;
 
@@ -30,12 +33,13 @@ public class MessageEntity implements Cloneable {
     @Column(name = "sent_time", nullable = false)
     private LocalDateTime sentTime;
 
-    public MessageEntity(String senderMail, String messageTheme, String messageContent) {
+    public MessageEntity(String senderName, String senderMail, String messageTheme, String messageContent) {
         if (messageContent == null || senderMail == null) {
             throw new NullPointerException("Mail data can't be Empty");
         }
 
         if (isMail(senderMail)) {
+            this.senderName = senderName;
             this.messageTheme = messageTheme;
             this.senderMail = senderMail;
             this.messageContent = messageContent;

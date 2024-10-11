@@ -24,7 +24,12 @@ const MainPlPage = () => {
             contacts={"Kontakty"}
             call={"Zamów rozmowę"}
             order={"Zamów"}
-            social_networks={"Libert w mediach społecznościowych"}/>
+            social_networks={"Libert w mediach społecznościowych"}
+            name_type={"Imie"}
+            tel_type={"Numer telefonu"}
+            main_link={"/pl"}
+            about_link={"/about/pl"}
+            contact_link={"/contact/pl"}/>
 
     <div className="main-content">
         <div className="text-content-main">
@@ -65,7 +70,10 @@ const MainPlPage = () => {
             head={"Menu główne"}
             head2={"Nasze kontakty"}
             services={"Usługi"}
-            contacts={"Kontakty"}/>
+            contacts={"Kontakty"}
+            main_link={"/pl"}
+            about_link={"/about/pl"}
+            contact_link={"/contact/pl"}/>
     </center>
 </div>
     );

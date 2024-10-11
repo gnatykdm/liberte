@@ -24,7 +24,12 @@ const MainPage = () => {
                     contacts={"Контакти"}
                     call={"Замовити дзвінок"}
                     order={"Замовити"}
-                    social_networks={"Libert у соціальних мережах"}/>
+                    social_networks={"Libert у соціальних мережах"}
+                    name_type={"Ваше ім'я"}
+                    tel_type={"Ваш номер телефону"}
+                    main_link={"/"}
+                    about_link={"/about"}
+                    contact_link={"/contact"}/>
 
                 <div className="main-content">
                     <div className="text-content-main">
@@ -65,7 +70,10 @@ const MainPage = () => {
                     head={"Головне меню"}
                     head2={"Наші контакти"}
                     services={"Послуги"}
-                    contacts={"Контакти"}/>
+                    contacts={"Контакти"}
+                    main_link={"/"}
+                    about_link={"/about"}
+                    contact_link={"/contact"}/>
             </center>
         </div>
     );

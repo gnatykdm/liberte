@@ -26,7 +26,12 @@ const MainAboutUS = () => {
                     contacts={"Контакти"}
                     call={"Замовити дзвінок"}
                     order={"Замовити"}
-                    social_networks={"Libert у соціальних мережах"}/>
+                    social_networks={"Libert у соціальних мережах"}
+                    name_type={"Ваше ім'я"}
+                    tel_type={"Ваш номер телефону"}
+                    main_link={"/"}
+                    about_link={"/about"}
+                    contact_link={"/contact"}/>
 
             <div className="some-age-info"><PageInfo text="Про компанію"></PageInfo></div>
             
@@ -69,7 +74,10 @@ const MainAboutUS = () => {
                     head={"Головне меню"}
                     head2={"Наші контакти"}
                     services={"Послуги"}
-                    contacts={"Контакти"}/>
+                    contacts={"Контакти"}
+                    main_link={"/"}
+                    about_link={"/about"}
+                    contact_link={"/contact"}/>
             </center>
         </div>
     );

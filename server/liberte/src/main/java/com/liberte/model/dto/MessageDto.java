@@ -8,14 +8,16 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class MessageDto {
+    private String senderName;
     private String senderEmail;
     private String messageTheme;
     private String messageContent;
 
-    public MessageDto(String senderEmail, String messageTheme,  String messageContent) {
+    public MessageDto(String senderName, String senderEmail, String messageTheme,  String messageContent) {
         if (isMail(senderEmail)) {
             this.senderEmail = senderEmail;
         }
+        this.senderName = senderName;
         this.messageTheme = messageTheme;
         this.messageContent = messageContent;
     }
