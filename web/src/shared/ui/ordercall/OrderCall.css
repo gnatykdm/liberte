@@ -15,6 +15,10 @@
     margin-bottom: 50px;
 }
 
+.ordercall.dark {
+    background-color: #1c1b24;
+}
+
 .libert-logo img {
     max-width: 70%;
     height: auto;
@@ -25,6 +29,10 @@
     margin-right: 50px;
     padding: 0;
     font-size: 15px;
+}
+
+.order-call-content.dark {
+    color: #ffffff;
 }
 
 .order-call-button {
@@ -47,7 +55,7 @@
 
 .order-call-button:hover {
     background-color: #1c1b24;
-    color: #5156e5;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -124,7 +132,7 @@
     transform: scale(1.2);
 }
 
-input[type="text-name"], input[type="tel"] {
+input[type="text-type"], input[type="tel-type"] {
     width: 90%;
     padding: 15px;
     margin: 10px 0;
@@ -135,7 +143,7 @@ input[type="text-name"], input[type="tel"] {
     transition: border-color 0.3s ease;
 }
 
-input[type="text-name"]:focus, input[type="tel"]:focus {
+input[type="text-type"]:focus, input[type="tel-type"]:focus {
     border-color: hsl(238, 74%, 61%);
     outline: none;
 }
@@ -151,10 +159,10 @@ input[type="text-name"]:focus, input[type="tel"]:focus {
     border: #6366f1 2px solid;
     width: 97.5%;
     margin-top: 20px;
+    text-transform: uppercase;
 }
 
 .order-button:hover {
-    color: #5156e5;
-    border: #5156e5 2px solid;
+    color: #ffffff;
     background-color: #1c1b24;
 }

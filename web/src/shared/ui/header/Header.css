@@ -6,11 +6,17 @@
     align-items: center;
     padding: 10px 20px;
     height: 80px;
+    width: 90%;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.active {
+    color: #5156e5;
+    font-weight: bold;
+}
+
 .header.dark {
-    background-color: #1a1a1a;
+    background-color: #1c1b24;
     color: #ffffff;
 }
 
@@ -56,7 +62,7 @@
 
 .arrow-icon.dark {
     background-image: url('../../assets/icons/arrow-down-white.png');
-    background-size: cover; /* Ensure the background image covers the element */
+    background-size: cover; 
 }
 
 /* Navigation */
@@ -81,6 +87,11 @@
     color: #fff;
 }
 
+.nav-link.active {
+    color: #5156e5;
+    font-weight: bold;
+}
+
 .nav-link:hover {
     color: #6366f1;
 }
@@ -90,35 +101,68 @@
     position: absolute;
     top: 100%; /* Position below the parent element */
     left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 200px;
+    color: #ffffff;
+    background-color: #000000;
+    border: 3px solid #5156e5;
+    border-radius: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     margin-top: 5px; /* Small margin to create space between the parent and dropdown */
 }
 
-.dropdown-item, .dropdown-item-services {
+/* Dropdown Item Layout */
+.dropdown-item {
+    display: flex;   
+    margin-top: 5px;           /* Use flexbox to align items */
+    align-items: center;         /* Center items vertically */
     padding: 10px 20px;
     cursor: pointer;
-    color: #1c1b24;
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
     transition: background-color 0.2s ease;
 }
 
-.dropdown-item:hover, .dropdown-item-services:hover {
-    background-color: #f4f4f4;
+/* Styling for text link */
+.dropdown-language {
+    padding-left: 10px;          /* Add space between icon and text */
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.2 ease, color 0.2 ease;
+}
+
+/* Icon style */
+.dropdown-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;          /* Space between flag and text */
+}
+
+.dropdown-language:hover {
+    color: #5156e5;
+    border-radius: 30px;
+}
+
+.dropdown-item:hover {
+    background-color: #333;
     color: #5156e5;
 }
 
+/* Service dropdown styles */
 .service-dropdown {
     padding: 10px 20px;
+    border-radius: 30px;
+    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
 
 .service-dropdown:hover {
-    background-color: #f4f4f4;
+    background-color: #333;
+    color: #5156e5;
 }
+
 
 /* Call Order Button */
 .call-order-btn {
@@ -132,12 +176,13 @@
     font-weight: 600;
     border-radius: 10px;
     border: #5156e5 2px solid;
+    text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .call-order-btn:hover {
-    color: #5156e5;
+    color: #ffffff;
     background-color: #1c1b24;
 }
 
@@ -182,11 +227,11 @@
 }
 
 .toggle-switch.active {
-    background-color: #6366f1;
+    background-color: #6366f1; /* Background when active */
 }
 
 .toggle-switch.active::after {
-    transform: translateX(25px); /* Adjusted translation */
+    transform: translateX(25px); /* Move to the right when active */
 }
 
 /* Header Actions */
@@ -380,13 +425,14 @@
     padding: 15px 25px;
     width: 80%;
     cursor: pointer;
+    text-transform: uppercase;
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .mobile-nav-link:hover {
-    color: #5156e5;
+    color: #ffffff;
     transform: scale(1.05); /* Smooth scaling effect */
 }
 
@@ -589,10 +635,10 @@ input[type="text-name"]:focus, input[type="tel"]:focus {
     border: #5156e5 2px solid;
     width: 97.5%;
     margin-top: 20px;
+    text-transform: uppercase;
 }
 
 .order-button:hover {
-    color: #5156e5;
-    border: #5156e5 2px solid;
+    color: #ffffff;
     background-color: #1c1b24;
 }

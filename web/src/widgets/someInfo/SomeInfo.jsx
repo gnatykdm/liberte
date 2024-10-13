@@ -2,9 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import './SomeInfo.css';
 
-const SomeInfo = ({ question, answer, a1, a2, a3, a4, a5, a6 }) => {
+const SomeInfo = ({ question, answer, a1, a2, a3, a4, a5, a6, isDarkMode }) => {
     return (
-        <div className="info">
+        <div className={`info ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

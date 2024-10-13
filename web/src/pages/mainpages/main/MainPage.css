@@ -2,6 +2,11 @@
     background-color: #dbdde0;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+.main-page-desc.dark {
+    background-color: #1c1b24;
 }
 
 .main-content {
@@ -25,6 +30,10 @@
     line-height: 1.2;
 }
 
+.company-main-name-desc.dark {
+    color: #ffffff;
+}
+
 .main-photo-desc {
     width: auto;
     height: 550px;
@@ -43,6 +52,10 @@
     margin-left: 5px;
 }
 
+.text-container-main.dark {
+    color: #ffffff;
+}
+
 /* Style for the button */
 .btn-main-desc {
     background-color: #5156e5;
@@ -54,7 +67,7 @@
     padding: 10px;
     text-transform: uppercase;
     color: #ffffff;
-    border: 4px solid #5156e5;
+    border: 2px solid #5156e5;
     border-radius: 40px;
     transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
     display: flex; /* Ensures alignment for the link */
@@ -64,7 +77,7 @@
 }
 
 .btn-main-desc:hover {
-    background-color: #000000;
+    background-color: #1c1b24;
     color: #5156e5;
     transform: scale(1.05);
 }

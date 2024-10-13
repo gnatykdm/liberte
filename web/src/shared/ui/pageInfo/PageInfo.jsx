@@ -2,9 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import './PageInfo.css';
 
-const PageInfo = ({ text }) => {
+const PageInfo = ({ text, isDarkMode }) => {
     return (
-        <div className="text-block">
+        <div className={`text-block ${isDarkMode ? 'dark' : ''}`}>
 
             <Helmet>
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -12,10 +12,10 @@ const PageInfo = ({ text }) => {
                 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"/>
             </Helmet>
 
-            <div className="text">
+            <div className={`text ${isDarkMode ? 'dark' : ''}`}>
                 {text}
             </div>
-            <div className="line"></div> {/* Добавляем div для линии */}
+            <div className="line"></div> 
         </div>
     );
 }

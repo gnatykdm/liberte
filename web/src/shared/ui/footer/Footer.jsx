@@ -10,7 +10,7 @@ import './Footer.css';
 import { Link } from "react-router-dom";
 
 const Footer = ({ service_drop, head, head2, services, about, contacts,
-    main_link, about_link, contact_link
+    main_link, about_link, contact_link, head3
  }) => {
     return (
         <div className="footer">
@@ -38,14 +38,13 @@ const Footer = ({ service_drop, head, head2, services, about, contacts,
                     </div>
                     <ul>
                         <li><Link to={main_link} style={{ textDecoration: 'none', color: '#ffffff' }}>{ head }</Link></li>
-                        <li><Link to={about_link} style={{ textDecoration: 'none', color: '#ffffff' }}>{ about }</Link></li>
-                        <li><Link to={"#"} style={{ textDecoration: 'none', color: '#ffffff' }}>{ services }</Link></li>
                         <li><Link to={contact_link} style={{ textDecoration: 'none', color: '#ffffff' }}>{ contacts }</Link></li>
+                        <li><Link to={about_link} style={{ textDecoration: 'none', color: '#ffffff' }}>{ about }</Link></li>
                     </ul>
                 </div>
                 <div className="footer-column contacts">
                     <div className="footer-column-name">
-                        <h3>{ head2 }</h3>
+                        <h3>{ head3 }</h3>
                         <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
                     </div>
                     <ul>

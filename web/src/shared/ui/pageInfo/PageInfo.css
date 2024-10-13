@@ -12,6 +12,10 @@
     padding-bottom: 5px; 
 }
 
+.text.dark {
+    color: #ffffff;
+}
+
 .line {
     width: 20%; 
     height: 6px; 

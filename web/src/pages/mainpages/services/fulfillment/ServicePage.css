@@ -1,14 +1,14 @@
-.main-about-us-page {
+.service-page {
     margin: 0;
     padding: 0;
     background-color: #dbdde0;
 }
 
-.main-about-us-page.dark {
+.service-page.dark {
     background-color: #1c1b24;
 }
 
-.main-content-about {
+.service-content-about {
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,7 +16,7 @@
     margin-bottom: 100px;
 }
 
-.text-container-about {
+.service-container-about {
     font-size: 23px;
     width: 650px;
     display: flex;
@@ -25,24 +25,19 @@
     margin-top: 15px;
 }
 
-.text-container-about.dark {
+.service-container-about.dark {
     color: #ffffff;
 }
 
-.about-us-some {
-    margin-top: 20px;
-}
 
-.main-photo-about {
-    width: 600px;
+.service-img-page img {
+    width: 700px;
     height: auto;
     margin-right: 100px;
+    border-radius: 40px;
  
 }
 
-.map {
-    margin-right: 120px;
-}
 
 @media (max-width:768px) {
     .map {
@@ -53,5 +48,9 @@
         width: 350px;
         margin-left: 30px;
         font-size: 18px;
+    }
+
+    .service-img-page {
+        display: none;
     }
 }

@@ -1,5 +1,6 @@
 .main-map-page {
     background-color: white;
+    border-radius: 30px;
 }
 
 .map-section {
@@ -14,9 +15,11 @@
     border: 3px solid #5156e5;
     overflow: hidden; /* To prevent the iframe from exceeding the rounded corners */
     background-color: white;
+    border-radius: 30px;
 }
 
 #gmap-canvas {
+    border-radius: 30px;
     width: 650px;
     height: 650px;
     border: none; /* Removes default iframe border */

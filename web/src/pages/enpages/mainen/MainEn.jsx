@@ -7,7 +7,7 @@ import OrderCall from "../../../shared/ui/ordercall/OrderCall";
 import Services from "../../../widgets/services/Services";
 import Footer from "../../../shared/ui/footer/Footer";
 import main_photo from '../../../shared/assets/images/DeWatermark.ai_1727849070458-removebg-preview.png';
-import './MainEn.css';
+import '../../mainpages/main/MainPage.css';
 
 const MainEn = () => {
     return (

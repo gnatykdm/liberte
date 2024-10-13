@@ -4,6 +4,10 @@
     background-color: #dbdde0;
 }
 
+.main-contact-page.dark {
+    background-color: #1c1b24;
+}
+
 .main-contact {
     margin: 0;
     padding: 0;

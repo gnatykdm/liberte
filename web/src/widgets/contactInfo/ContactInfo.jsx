@@ -5,9 +5,9 @@ import phone_logo from '../../shared/assets/icons/phonewhite.png';
 import instagram_logo from '../../shared/assets/icons/instagramwhite.png';
 import './ContactInfo.css'; // Подключаем CSS файл
 
-const ContactInfo = ({ contact }) => {
+const ContactInfo = ({ contact, isDarkMode }) => {
     return (
-        <div className="contact-info-desc">
+        <div className={`contact-info-desc ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

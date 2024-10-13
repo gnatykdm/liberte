@@ -18,205 +18,118 @@
 }
 
 .logo-background {
-    background-color: #ffffff;
-    border-radius: 50px;
-    padding: 10px; 
     width: 350px;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 5px;
+    height: 365px;
+    border-radius: 40px;
+    background-color: #5156e5;
+    position: relative; /* Required for absolute positioning of text */
+    overflow: hidden; /* Hide overflow of the image */
+    transition: background-color 0.5s ease, border 0.5s ease;
 }
 
+.logo-background:hover {
+    background-color: #1c1b24; /* Set background color when hovered */
+    border: #5156e5 2px solid; /* Add border with color and thickness */
+    border-radius: 40px; /* Keep the same border radius when hovered */
+}
 
-.service-logo img {
-    width: 300px;
-    height: 300px;
+.service-image {
+    width: 100%; /* Make image responsive */
+    height: 100%;
     object-fit: cover;
-    border-radius: 50px;
-    margin-top: 5px;
+    border-radius: 40px;
+    transition: opacity 0.5s ease; /* Smooth transition for the image */
 }
 
-.service-name {
-    font-family: 'Oswald', sans-serif;
-    color: #000000;
-    font-weight: bold;
-    font-size: 35px;
-    margin: 20px 0;
+.service-text {
+    cursor: pointer; /* Pointer cursor for clickable link */
+    color: #5156e5; /* Text color */
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%) scale(1); /* Center and initial scale */
+    font-weight: bold; 
+    font-size: 20px; 
+    opacity: 0; /* Hidden by default */
+    text-decoration: none; /* Remove default underline from link */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
 }
 
-.service-description {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #5156e5;
-    margin-top: 5px;
-    font-family: 'Montserrat', sans-serif;
+.service-text:hover {
+    transform: scale(1.2); /* Additional scaling effect on hover */
 }
 
-.service-description img {
-    width: 20px;
-    height: auto;
+.logo-background:hover .service-text {
+    opacity: 1; /* Make text visible on hover */
+    transform: translate(-50%, -50%) scale(1.2); /* Scale up on hover */
 }
 
-.description-link {
-    color: #5156e5;
-    text-decoration: none;
-    margin-right: 5px;
+.service-text:hover {
+    color: #3d43d0; /* Change color on hover if desired */
 }
 
-.description-link:hover {
-    text-decoration: underline;
+.logo-background:hover .service-image {
+    opacity: 0; /* Hide the image on hover */
+    background-color: #1c1b24; /* Set background color when hovered */
+    border: #5156e5 2px solid; /* Add border with color and thickness */
+    border-radius: 40px; /* Keep the same border radius */
+    transition: opacity 0.5s ease, background-color 0.5s ease, border 0.5s ease; /* Smooth transition for all properties */
 }
 
+/* Media queries (for mobile responsiveness) */
 @media (max-width: 768px) {
-    .services-container {
-        display: flex;
-    }
-
     .service-content {
-        width: 45%;
-        margin: 10px;
+        width: calc(100% - 20px); /* Make service-content take full width */
+        margin: 10px 0; /* Add some margin for spacing */
     }
 
     .logo-background {
-        background-color: #dbdde0;
-        border-radius: 50px;
-        padding: 5px; 
-        width: 260px;
-        height: 260px;
-        display: flex;
-
+        width: 260px; /* Adjust size for smaller screens */
+        height: 275px; /* Adjust height accordingly */
+        border-radius: 30px; /* Adjust border-radius for smaller elements */
     }
 
-    .service-name {
-        color: #000000;
-        font-weight: bold;
-        font-size: 20px;
-        margin: 20px 0;
-    }
-
-    .service-logo img {
-        width: 180px;
-        height: 180px;
+    .service-image {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        border-radius: 50px;
-        margin-top: 5px;
+        border-radius: 30px; /* Match border-radius */
     }
 
-    .service-description {
-        justify-content: center;
-        font-size: 18px;
-        margin: 0;
-    }
-
-    .logo-background {
-        background-color: #ffffff;
-        border-radius: 50px;
-        padding: 30px; 
-        width: 135px;
-        height: 135px;
-        display: flex;
+    .service-text {
+        font-size: 16px; /* Adjust text size for smaller screens */
     }
 }
 
 @media (max-width: 450px) {
-    .services-container {
-        display: flex;
-    }
-
-    .service-content {
-        align-items: center;
-        width: 45%;
-        margin: 10px;
-    }
-
     .logo-background {
-        background-color: #dbdde0;
-        border-radius: 50px;
-        padding: 5px; 
-        width: 70px;
-        height: 70px;
-        display: flex;
+        width: 180px; /* Further reduce size for very small screens */
+        height: 200px;
+        border-radius: 20px;
     }
 
-    .service-name {
-        color: #000000;
-        font-weight: bold;
-        font-size: 20px;
-        margin: 20px 0;
+    .service-text {
+        font-size: 14px; /* Further reduce text size */
     }
 
-    .service-logo img {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
-        border-radius: 50px;
-        margin-top: 5px;
-    }
-
-    .service-description {
-        justify-content: center;
-        font-size: 15px;
-    }
-
-    .logo-background {
-        background-color: #ffffff;
-        border-radius: 50px;
-        padding: 10px; 
-        width: 100px;
-        height: 100px;
-        display: flex;
+    .service-image {
+        border-radius: 20px;
     }
 }
 
 @media (max-width: 350px) {
-    .services-container {
-        display: flex;
-    }
-
-    .service-content {
-        align-items: center;
-        width: 45%;
-        margin: 10px;
-    }
-
     .logo-background {
-        background-color: #dbdde0;
-        border-radius: 50px;
-        padding: 5px; 
-        width: 70px;
-        height: 70px;
-        display: flex;
+        width: 150px; /* Adjust for extra small screens */
+        height: 170px;
+        border-radius: 15px;
     }
 
-    .service-name {
-        color: #000000;
-        font-weight: bold;
-        font-size: 20px;
-        margin: 20px 0;
+    .service-text {
+        font-size: 12px; /* Reduce text size for extra small screens */
     }
 
-    .service-logo img {
-        width: 80px;
-        height: 80px;
-        object-fit: cover;
-        border-radius: 50px;
-        margin-top: 5px;
-    }
-
-    .service-description {
-        justify-content: center;
-        font-size: 15px;
-    }
-
-    .logo-background {
-        background-color: #ffffff;
-        border-radius: 50px;
-        padding: 10px; 
-        width: 100px;
-        height: 100px;
-        display: flex;
+    .service-image {
+        border-radius: 15px;
     }
 }
-

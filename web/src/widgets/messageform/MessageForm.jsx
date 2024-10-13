@@ -4,7 +4,7 @@ import './MessageForm.css';
 import { MessageRequest } from '../../entity/messagedto/MessageRequest';
 import { MessageDto } from '../../entity/messagedto/MessageDto'; 
 
-const MessageForm = ({ header, name_type, email_type, message_content, message_type, send }) => {
+const MessageForm = ({ header, name_type, email_type, message_content, message_type, send, isDarkMode }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
@@ -39,31 +39,32 @@ const MessageForm = ({ header, name_type, email_type, message_content, message_t
     };
 
     return (
-        <div className="message-form">
+        <div className={`message-form ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
             </Helmet>
 
-            <div className="message-content">
+            <div className={`message-content ${isDarkMode ? 'dark' : ''}`}>
                 {header}
             </div>
-            <div className="forward-form">
-                <form onSubmit={handleSubmit}>
+            <div className={`forward-form ${isDarkMode ? 'dark' : ''}`}>
+                <form onSubmit={handleSubmit} className={`${isDarkMode ? 'dark' : ''}`}>
                     <input 
                         type="text" 
                         placeholder={name_type}
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         required 
-                    />
+                        className={`${isDarkMode ? 'dark' : ''}`}/>
                     <input 
                         type="email" 
                         placeholder={email_type} 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required 
+                        className={`${isDarkMode ? 'dark' : ''}`}
                     />
                     <input 
                         type="text" 
@@ -71,6 +72,7 @@ const MessageForm = ({ header, name_type, email_type, message_content, message_t
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
                         required 
+                        className={`${isDarkMode ? 'dark' : ''}`}
                     />
                     <textarea 
                         name="content" 
@@ -78,6 +80,7 @@ const MessageForm = ({ header, name_type, email_type, message_content, message_t
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         required
+                        className={`${isDarkMode ? 'dark' : ''}`}
                     />
                     <button type="submit" className="submit-button">{send}</button>
                 </form>

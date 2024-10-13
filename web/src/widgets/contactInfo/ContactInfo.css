@@ -1,12 +1,16 @@
 /* ContactInfo.css */
 .contact-info-desc {
-    background-color: #445761; 
-    padding: 15px; 
+    background-color: #000000; 
+    padding: 25px; 
     border-radius: 40px;
     text-align: left; 
     color: white; 
-    width: 85%;
+    width: 88%;
     margin: 0;
+}
+
+.contact-info-desc.dark {
+    background-color: #333;
 }
 
 .contact-text {

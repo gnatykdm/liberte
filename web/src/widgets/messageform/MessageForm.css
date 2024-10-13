@@ -5,7 +5,11 @@
     background-color: #f9f9f9;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    width: 450px;
+}
+
+.message-form.dark {
+    background-color: #333;
 }
 
 .message-content {
@@ -18,11 +22,17 @@
     font-weight: bold;
 }
 
+.message-content.dark {
+    color:#ffffff;
+}
+
 .forward-form form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
+
+
 
 input[type="text"], input[type="email"], textarea {
     width: 100%;
@@ -45,6 +55,12 @@ textarea {
     resize: vertical;
 }
 
+input[type="text"].dark, input[type="email"].dark, textarea.dark {
+    color: #ffffff;
+    background-color: #333;
+}
+
+
 .submit-button {
     padding: 15px 20px;
     background-color: hsl(238, 74%, 61%);
@@ -61,8 +77,8 @@ textarea {
 }
 
 .submit-button:hover {
-    background-color: #000000;
-    color: hsl(238, 74%, 61%);
+    background-color: #333;
+    color: #ffffff;
 }
 
 
@@ -71,6 +87,7 @@ textarea {
         max-width: 90%;
         padding: 15px;
         border-radius: 30px;
+        width: 350px;
         margin-left: 30px;
     }
 

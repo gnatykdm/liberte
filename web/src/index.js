@@ -12,6 +12,8 @@ import ContactPlPage from './pages/plpages/contactpl/ContactPlPage';
 import MainEn from './pages/enpages/mainen/MainEn';
 import ContactEnPage from './pages/enpages/contacten/ContactEnPage';
 import MainEnAbout from './pages/enpages/abouten/MainEnAbout';
+import HeadService from './pages/mainpages/services/head/HeadService';
+import FulFillment from './pages/mainpages/services/fulfillment/FulFillment';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +59,16 @@ const router = createBrowserRouter([
   {
     path: '/contact/pl',
     element: <ContactPlPage/>
+  },
+
+  {
+    path: '/service',
+    element: <HeadService/>
+  },
+
+  {
+    path: '/fulfillment',
+    element: <FulFillment/>
   }
 ])
 
