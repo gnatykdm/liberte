@@ -96,12 +96,16 @@ const MainAboutUS = () => {
                 <Footer
                     service_drop={"Негабаритні Перевезення"}
                     head={"Головне меню"}
-                    head2={"Наші контакти"}
+                    head2={"Cторінки"}
+                    head3={"Наші контакти"}
                     services={"Послуги"}
                     contacts={"Контакти"}
                     main_link={"/"}
                     about_link={"/about"}
                     contact_link={"/contact"}
+                    about="Про Нас"
+                    service1_link={"/service"}
+                    service2_link={"/fulfillment"}
                 />
             </center>
         </div>

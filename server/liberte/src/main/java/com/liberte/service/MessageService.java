@@ -12,9 +12,9 @@ import java.util.List;
 @Service
 public class MessageService implements IMessageService {
 
-    @Autowired
-    private IMailUtil mailUtil;
     private final Logger logger = LoggerFactory.getLogger(MessageService.class);
+
+    @Autowired
     private final IMessageRepository messageRepository;
 
     @Autowired
@@ -28,14 +28,6 @@ public class MessageService implements IMessageService {
             logger.error("saveMessage: MessageEntity can't be null");
         }
         messageRepository.save(m);
-    }
-
-    @Override
-    public void sendMessage(MessageEntity m) {
-        if (m == null) {
-            logger.error("sendMessageL MessageEntity can't be null");
-        }
-        mailUtil.sendMail(m);
     }
 
     @Override

@@ -10,7 +10,7 @@ import './Footer.css';
 import { Link } from "react-router-dom";
 
 const Footer = ({ service_drop, head, head2, services, about, contacts,
-    main_link, about_link, contact_link, head3
+    main_link, about_link, contact_link, head3, service1_link, service2_link
  }) => {
     return (
         <div className="footer">
@@ -27,8 +27,8 @@ const Footer = ({ service_drop, head, head2, services, about, contacts,
                         <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
                     </div>
                     <ul>
-                        <li>{ service_drop }</li>
-                        <li>Fulfillment</li>
+                        <li><Link to={service1_link} className="li-link">{ service_drop }</Link></li>
+                        <li><Link to={service2_link} className="li-link">Fulfillment</Link> </li>
                     </ul>
                 </div>
                 <div className="footer-column contacts">
@@ -49,11 +49,11 @@ const Footer = ({ service_drop, head, head2, services, about, contacts,
                     </div>
                     <ul>
                         <li><img src={phone_logo} alt="phone" /> +48 883 104 082 </li>
-                        <li><img src={mail_logo} alt="mail" /> help@libertgroup.pl </li>
+                        <li><img src={mail_logo} alt="mail" /> manager@libertgroup.pl </li>
                         <li><img src={adress_logo} alt="address" /> Adres</li>
                     </ul>
                     <div className="social-media">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <a href="https://www.instagram.com/libert.fulfillment/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <img src={instagram_logo} alt="Instagram"/>
                         </a>
                         <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" aria-label="Telegram">

@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import door_logo from '../../shared/assets/images/doors-removebg-preview.png';
 import logistic_logo from '../../shared/assets/images/logistic-removebg-preview.png';
 import { Helmet } from "react-helmet";
 import './Services.css';
 
-const Services = ({ isDarkMode }) => {
+const Services = ({ isDarkMode, service_name, service1_link, service2_link }) => {
     return (
         <div className="services-container">
             <Helmet>
@@ -16,7 +17,7 @@ const Services = ({ isDarkMode }) => {
                 <div className={`service-logo ${isDarkMode ? 'dark' : ''}`}>
                     <div className={`logo-background ${isDarkMode ? 'dark' : ''}`}>
                         <img src={door_logo} alt="door" className="service-image" />
-                        <span className="service-text">FULFILLMENT</span>
+                        <span className="service-text"><Link to={service1_link} className="service-text-link">FULFILLMENT</Link></span>
                     </div>
                 </div>
             </div>
@@ -24,7 +25,7 @@ const Services = ({ isDarkMode }) => {
                 <div className={`service-logo ${isDarkMode ? 'dark' : ''}`}>
                     <div className={`logo-background ${isDarkMode ? 'dark' : ''}`}>
                         <img src={logistic_logo} alt="logistic" className="service-image" />
-                        <span className="service-text">Негабаритні перевезення</span>
+                        <span className="service-text"><Link to={service2_link} className="service-text-link">{ service_name }</Link></span>
                     </div>
                 </div>
             </div>

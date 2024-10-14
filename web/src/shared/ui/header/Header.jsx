@@ -15,7 +15,7 @@ import './Header.css';
 import { Link, useLocation } from "react-router-dom";  // Import useLocation
 
 const Header = ({ image, head, services, service_drop, about, contacts, call, order, social_networks, name_type, tel_type,
-    main_link, about_link, contact_link, toggleTheme, isDarkMode }) => {
+    main_link, about_link, contact_link, toggleTheme, isDarkMode, service1_link, service2_link }) => {
     
     // State variables
     const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
@@ -109,10 +109,10 @@ const Header = ({ image, head, services, service_drop, about, contacts, call, or
                         {isServicesDropdownOpen && (
                             <div className="dropdown-menu">
                                 <div className="dropdown-item-services">
-                                    <div className="service-dropdown">FULFILLMENT</div>
+                                    <div className="service-dropdown"><Link to={service1_link} className={"service-dropdown-link"}>FULFILLMENT</Link></div>
                                 </div>
                                 <div className="dropdown-item-services">
-                                    <div className="service-dropdown">{ service_drop }</div>
+                                    <div className="service-dropdown"><Link to={service2_link} className={"service-dropdown-link"}>{ service_drop }</Link></div>
                                 </div>
                             </div>
                         )}

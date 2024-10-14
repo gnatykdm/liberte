@@ -45,7 +45,7 @@ public class MailUtil implements IMailUtil {
     }
 
     @Override
-    public void sendMail(MessageEntity m) {
+    public void sendMail(String from, String to, String theme, String content) {
         if (mailReceivers == null || mailReceivers.isEmpty()) {
             logger.error("No mail receivers loaded. Cannot send emails.");
             return;
@@ -59,14 +59,14 @@ public class MailUtil implements IMailUtil {
         });
 
         try {
-            logger.info("Sending email from: " + m.getSenderMail());
+            logger.info("Sending email from: " + from);
 
             for (String recipient : mailReceivers) {
                 MimeMessage message = new MimeMessage(session);
-                message.setFrom(new InternetAddress(m.getSenderMail()));
+                message.setFrom(new InternetAddress(from));
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
-                message.setSubject(m.getMessageTheme());
-                message.setText(m.getMessageContent());
+                message.setSubject(theme);
+                message.setText(content);
                 message.setSentDate(new Date());
 
                 logger.info("Sending email to: " + recipient);

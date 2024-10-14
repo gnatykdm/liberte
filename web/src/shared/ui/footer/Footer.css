@@ -121,6 +121,11 @@
     font-size: 14px;
 }
 
+.li-link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 @media screen and (max-width: 768px) {
     .footer {
         width: 90%;

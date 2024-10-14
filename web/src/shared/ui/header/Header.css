@@ -163,6 +163,11 @@
     color: #5156e5;
 }
 
+.service-dropdown-link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 
 /* Call Order Button */
 .call-order-btn {

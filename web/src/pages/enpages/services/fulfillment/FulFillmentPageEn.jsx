@@ -1,14 +1,14 @@
 import React, { useState } from 'react'; 
 import Header from '../../../../shared/ui/header/Header';
 import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
-import flag from '../../../../shared/assets/icons/ukraine.png';
+import flag from '../../../../shared/assets/icons/united-kingdom.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
 import service_img from '../../../../shared/assets/images/service.jpg';
-import './ServicePage.css';
+import '../../../mainpages/services/fulfillment/ServicePage.css';
 
-const FulFillment = () => {
+const FulFillmentPageEn = () => {
 
        
        const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -31,24 +31,24 @@ const FulFillment = () => {
             </Helmet>
 
             <Header 
-                image={flag}
-                head={"Головна"}
-                services={"Послуги"} 
-                service_drop={"Негабаритні перевезення"}
-                about={"Про нас"}
-                contacts={"Контакти"}
-                call={"Замовити дзвінок"}
-                order={"Замовити"}
-                social_networks={"Libert у соціальних мережах"}
-                name_type={"Ваше ім'я"}
-                tel_type={"Ваш номер телефону"}
-                main_link={"/"}
-                about_link={"/about"}
-                contact_link={"/contact"}
-                toggleTheme={toggleTheme} 
-                isDarkMode={isDarkMode}
-                service1_link={"/fulfillment"}
-                service2_link={"/service"}
+            image={flag}
+            head={"Home"}
+            services={"Services"} 
+            service_drop={"Oversized Transportation"}
+            about={"About Us"}
+            contacts={"Contacts"}
+            call={"Request a Call"}
+            order={"Order"}
+            social_networks={"Libert on Social Media"}
+            name_type={"Your Name"}
+            tel_type={"Your Phone Number"}
+            main_link={"/en"}
+            about_link={"/about/en"}
+            contact_link={"/contact/en"}
+            service1_link={"/fulfillment/en"}
+            service2_link={"/service/en"}
+            toggleTheme={toggleTheme} // Passing function for theme toggling
+            isDarkMode={isDarkMode} // Passing theme state
             />
 
             <div className="some-age-info">
@@ -71,32 +71,29 @@ const FulFillment = () => {
 
             <center>
                 <OrderCall
-                    part1={"Гарантуємо доставку до вашого місця, щоб ви"}
-                    part2={"могли зосередитися на важливих справах "}
-                    order_call={"Замовити дзвінок"}
-                    order={"Замовити"}
-                    name_type={"Ваше ім'я"}
-                    tel_type={"Ваш телефон"}
-                    toggleTheme={toggleTheme}
-                    isDarkMode={isDarkMode}
-                />
-
-                <Footer
-                    service_drop={"Негабаритні Перевезення"}
-                    head={"Головне меню"}
-                    head2={"Cторінки"}
-                    head3={"Наші контакти"}
-                    services={"Послуги"}
-                    contacts={"Контакти"}
-                    main_link={"/"}
-                    about_link={"/about"}
-                    contact_link={"/contact"}
-                    about="Про Нас"
-                    service1_link={"/service"}
-                    service2_link={"/fulfillment"}
-                />
+                    part1={"We guarantee delivery to your location so you"}
+                    part2={"can focus on important tasks"}
+                    order_call={"Request a Call"}
+                    order={"Order"}
+                    name_type={"Your Name"}
+                    tel_type={"Your Phone"}
+                    isDarkMode={isDarkMode}/>
+    
+            <Footer
+                service_drop={"Oversized Transportation"}
+                head={"Main Menu"}
+                head2={"Pages"}
+                services={"Services"}
+                contacts={"Contacts"}
+                main_link={"/en"}
+                about_link={"/about/en"}
+                contact_link={"/contact/en"}
+                head3={"Our Contacts"}
+                about={"About Us"}
+                service1_link={"/service/en"}
+                service2_link={"/fulfillment/en"}/>
             </center>
         </div>
     );
 }
-export default FulFillment;
+export default FulFillmentPageEn;

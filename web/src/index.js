@@ -14,6 +14,10 @@ import ContactEnPage from './pages/enpages/contacten/ContactEnPage';
 import MainEnAbout from './pages/enpages/abouten/MainEnAbout';
 import HeadService from './pages/mainpages/services/head/HeadService';
 import FulFillment from './pages/mainpages/services/fulfillment/FulFillment';
+import FulFillmentPageEn from './pages/enpages/services/fulfillment/FulFillmentPageEn';
+import HeadServicePageEn from './pages/enpages/services/head/HeadServicePageEn';
+import FulFillmentPagePl from './pages/plpages/services/fulfillment/FulFillmentPagePl';
+import HeadServicePagePl from './pages/plpages/services/head/HeadServicePagePl';
 
 const router = createBrowserRouter([
   {
@@ -69,6 +73,26 @@ const router = createBrowserRouter([
   {
     path: '/fulfillment',
     element: <FulFillment/>
+  },
+
+  {
+    path: '/fulfillment/en',
+    element: <FulFillmentPageEn/>
+  },
+
+  {
+    path: '/service/en',
+    element: <HeadServicePageEn/>
+  },
+
+  {
+    path: '/fulfillment/pl',
+    element: <FulFillmentPagePl/>
+  },
+
+  {
+    path: '/service/pl',
+    element: <HeadServicePagePl/>
   }
 ])
 

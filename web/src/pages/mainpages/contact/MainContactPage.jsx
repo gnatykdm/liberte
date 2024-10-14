@@ -26,66 +26,70 @@ const MainContactPage = () => {
 
     return (
         <div className={`main-contact-page ${isDarkMode ? 'dark' : ''}`}>
-            <Helmet>
-                <title>Libert - Контакти</title>
-            </Helmet>
-
-            <Header 
-                image={ukraine_flag}
-                head={"Головна"}
-                services={"Послуги"} 
-                service_drop={"Негабаритні перевезення"}
-                about={"Про нас"}
-                contacts={"Контакти"}
-                call={"Замовити дзвінок"}
-                order={"Замовити"}
-                social_networks={"Libert у соціальних мережах"}
-                name_type={"Ваше ім'я"}
-                tel_type={"Ваш номер телефону"}
+        <Helmet>
+            <title>Libert - Contacts</title>
+        </Helmet>
+    
+        <Header 
+            image={ukraine_flag}
+            head={"Home"}
+            services={"Services"} 
+            service_drop={"Oversized Transportation"}
+            about={"About Us"}
+            contacts={"Contacts"}
+            call={"Request a Call"}
+            order={"Order"}
+            social_networks={"Libert on Social Media"}
+            name_type={"Your Name"}
+            tel_type={"Your Phone Number"}
+            main_link={"/"}
+            about_link={"/about"}
+            contact_link={"/contact"}
+            toggleTheme={toggleTheme} // Passing function for theme toggling
+            isDarkMode={isDarkMode} // Passing theme state
+        />
+    
+        <div className="some-age-info">
+            <PageInfo text="Contacts" isDarkMode={isDarkMode} />
+        </div>
+        <div className="main-contact">
+            <div className="contact-form">
+                <MessageForm
+                    header={"Send us a Message"}
+                    name_type={"Your Name"}
+                    email_type={"Email"}
+                    message_content={"Message Subject"}
+                    message_type={"Message..."}
+                    send={"Send"}
+                    isDarkMode={isDarkMode}
+                />
+            </div>
+            <div className="map-contact">
+                <MainMap />
+            </div>
+        </div>            
+    
+        <center>
+            <div className="contact-info">
+                <ContactInfo contact={"Prefer a different way?"} isDarkMode={isDarkMode} />
+            </div>
+    
+            <Footer
+                service_drop={"Oversized Transportation"}
+                head={"Main Menu"}
+                head2={"Pages"}
+                head3={"Our Contacts"}
+                services={"Services"}
+                contacts={"Contacts"}
                 main_link={"/"}
                 about_link={"/about"}
                 contact_link={"/contact"}
-                toggleTheme={toggleTheme} // Передаем функцию для переключения темы
-                isDarkMode={isDarkMode} // Передаем состояние темы
+                about="About Us"
+                service1_link={"/service"}
+                service2_link={"/fulfillment"}
             />
-
-            <div className="some-age-info">
-                <PageInfo text="Контакти" isDarkMode={isDarkMode} />
-            </div>
-            <div className="main-contact">
-                <div className="contact-form">
-                    <MessageForm
-                        header={"Надішліть нам повідомлення"}
-                        name_type={"Ваше ім'я"}
-                        email_type={"Електронна пошта"}
-                        message_content={"Тема Повідомлення"}
-                        message_type={"Повідомлення..."}
-                        send={"Надіслати"}
-                        isDarkMode={isDarkMode}
-                    />
-                </div>
-                <div className="map-contact">
-                    <MainMap />
-                </div>
-            </div>            
-
-            <center>
-                <div className="contact-info">
-                    <ContactInfo contact={"Переважаєте в інший спосіб?"} isDarkMode={isDarkMode} />
-                </div>
-                
-                <Footer
-                    service_drop={"Негабаритні Перевезення"}
-                    head={"Головне меню"}
-                    head2={"Наші контакти"}
-                    services={"Послуги"}
-                    contacts={"Контакти"}
-                    main_link={"/"}
-                    about_link={"/about"}
-                    contact_link={"/contact"}
-                />
-            </center>
-        </div>
+        </center>
+    </div>    
     );
 }
 

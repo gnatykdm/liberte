@@ -24,7 +24,7 @@ const HeadService = () => {
     return (
             <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - FulFillment</title>
+                <title>Libert - Негабаритні перевезення</title>
             </Helmet>
 
             <Header 
@@ -43,7 +43,9 @@ const HeadService = () => {
                 about_link={"/about"}
                 contact_link={"/contact"}
                 toggleTheme={toggleTheme} 
-                isDarkMode={isDarkMode} 
+                isDarkMode={isDarkMode}
+                service1_link={"/fulfillment"}
+                service2_link={"/service"}
             />
 
             <div className="some-age-info">
@@ -79,12 +81,16 @@ const HeadService = () => {
                 <Footer
                     service_drop={"Негабаритні Перевезення"}
                     head={"Головне меню"}
-                    head2={"Наші контакти"}
+                    head2={"Cторінки"}
+                    head3={"Наші контакти"}
                     services={"Послуги"}
                     contacts={"Контакти"}
                     main_link={"/"}
                     about_link={"/about"}
                     contact_link={"/contact"}
+                    about="Про Нас"
+                    service1_link={"/service"}
+                    service2_link={"/fulfillment"}
                 />
             </center>
         </div>

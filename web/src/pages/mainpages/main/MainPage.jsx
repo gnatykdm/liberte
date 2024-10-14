@@ -6,14 +6,13 @@ import ukraine_flag from '../../../shared/assets/icons/ukraine.png';
 import OrderCall from "../../../shared/ui/ordercall/OrderCall";
 import Services from "../../../widgets/services/Services";
 import Footer from "../../../shared/ui/footer/Footer";
-import main_photo from '../../../shared/assets/images/DeWatermark.ai_1727849070458-removebg-preview.png';
+import main_photo from '../../../shared/assets/images/headimg.png';
 import './MainPage.css';
 
 const MainPage = () => {
-    // Инициализация состояния темной темы из localStorage
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
-        return savedTheme === 'true'; // Преобразуем значение к булевому типу
+        return savedTheme === 'true'; 
     });
 
     const toggleTheme = () => {
@@ -45,8 +44,10 @@ const MainPage = () => {
                 main_link={"/"}
                 about_link={"/about"}
                 contact_link={"/contact"}
-                toggleTheme={toggleTheme} // Передаем функцию для переключения темы
-                isDarkMode={isDarkMode} // Передаем состояние темы
+                toggleTheme={toggleTheme} 
+                isDarkMode={isDarkMode}
+                service1_link={"/fulfillment"}
+                service2_link={"/service"}
             />
 
             <div className="main-content">
@@ -73,7 +74,12 @@ const MainPage = () => {
             </div>
 
             <center>
-                <Services isDarkMode={isDarkMode} />
+                <Services 
+                    isDarkMode={isDarkMode}
+                    service_name={"Негабаритні Перевезення"}
+                    service1_link={"/fulfillment"}
+                    service2_link={"/service"} 
+                 />
                 <OrderCall
                     part1={"Гарантуємо доставку до вашого місця, щоб ви"}
                     part2={"могли зосередитися на важливих справах "}
@@ -94,6 +100,8 @@ const MainPage = () => {
                     about_link={"/about"}
                     contact_link={"/contact"}
                     about="Про Нас"
+                    service1_link={"/service"}
+                    service2_link={"/fulfillment"}
                 />
             </center>
         </div>

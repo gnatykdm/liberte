@@ -3,6 +3,8 @@ import React from "react";
 import { useState } from "react";
 import { Helmet } from "react-helmet";
 import logo from '../../assets/images/libertlogo-removebg-preview.png';
+import { MobileMessage } from "../../../entity/messagedto/MobileMessage";
+import { MobileMessageDto } from '../../../entity/messagedto/MobileMessageDto';
 import './OrderCall.css';
 
 const OrderCall = ({ part1, part2, order_call, order, name_type, tel_type, isDarkMode}) => {
@@ -18,12 +20,27 @@ const OrderCall = ({ part1, part2, order_call, order, name_type, tel_type, isDar
         setIsModalOpen(false);
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('Имя:', name, 'Телефон:', phone);
-        setIsModalOpen(false); 
-    };
+    // Instance of the message service
+    const messageService = new MobileMessage();
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log("Name:", name);
+        console.log("Phone:", phone);
+        
+        const messageDto = new MobileMessageDto(name, phone);
+
+        try {
+            await messageService.saveMessage(messageDto);
+            console.log("Message sent successfully!");
+
+            setName('');
+            setPhone('');
+            
+        } catch (error) {
+            console.error("Error sending message:", error);
+        }
+    };
     return (
         <div className={`ordercall ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>

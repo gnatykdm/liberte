@@ -28,7 +28,7 @@ const ContactInfo = ({ contact, isDarkMode }) => {
                 </div>
                 <div className="contact-item">
                     <img src={instagram_logo} alt="instagram" />
-                    <a href="https://instagram.com/yourusername" className="contact-link">Instagram</a>
+                    <a href="https://www.instagram.com/libert.fulfillment/" className="contact-link">Instagram</a>
                 </div>
             </div>
         </div>

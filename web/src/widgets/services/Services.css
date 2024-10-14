@@ -17,6 +17,11 @@
     box-sizing: border-box;
 }
 
+.service-content .service-text-link {
+    text-decoration: none;
+    color: #5156e5;
+}
+
 .logo-background {
     width: 350px;
     padding: 5px;
