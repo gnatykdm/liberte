@@ -614,7 +614,7 @@
 }
 
 input[type="text-name"], input[type="tel"] {
-    width: 100%;
+    width: 90%;
     padding: 15px;
     margin: 10px 0;
     margin-top: 20px;

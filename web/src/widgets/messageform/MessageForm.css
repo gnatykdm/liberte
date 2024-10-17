@@ -60,6 +60,15 @@ input[type="text"].dark, input[type="email"].dark, textarea.dark {
     background-color: #333;
 }
 
+.sent-message-text {
+    color: #000000;
+    text-align: center;
+}
+
+.sent-message-text.dark {
+    color: #ffffff;
+}
+
 
 .submit-button {
     padding: 15px 20px;

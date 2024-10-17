@@ -5,12 +5,13 @@ import phone_logo from '../../assets/icons/phonewhite.png';
 import telegram_logo from '../../assets/icons/telegramwhite.png';
 import mail_logo from '../../assets/icons/email.png';
 import arrow_logo from '../../assets/icons/right-arrow.png';
+import viber_logo from '../../assets/icons/viber.png';
 import { Helmet } from "react-helmet";
 import './Footer.css';
 import { Link } from "react-router-dom";
 
 const Footer = ({ service_drop, head, head2, services, about, contacts,
-    main_link, about_link, contact_link, head3, service1_link, service2_link
+    main_link, about_link, contact_link, head3, service1_link, service2_link, fulfillment
  }) => {
     return (
         <div className="footer">
@@ -22,19 +23,9 @@ const Footer = ({ service_drop, head, head2, services, about, contacts,
 
             <div className="footer-container">
                 <div className="footer-column contacts">
-                    <div className="footer-column-name">
-                        <h3>{ services }</h3>
-                        <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
-                    </div>
-                    <ul>
-                        <li><Link to={service1_link} className="li-link">{ service_drop }</Link></li>
-                        <li><Link to={service2_link} className="li-link">Fulfillment</Link> </li>
-                    </ul>
-                </div>
-                <div className="footer-column contacts">
-                    <div className="footer-column-name">
+                <div className="footer-column-name">
                         <h3>{ head2 }</h3>
-                        <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
+                        <img src={arrow_logo} alt="arrow" width={15} height={15} className="footer-img"/>
                     </div>
                     <ul>
                         <li><Link to={main_link} style={{ textDecoration: 'none', color: '#ffffff' }}>{ head }</Link></li>
@@ -43,14 +34,26 @@ const Footer = ({ service_drop, head, head2, services, about, contacts,
                     </ul>
                 </div>
                 <div className="footer-column contacts">
-                    <div className="footer-column-name">
-                        <h3>{ head3 }</h3>
-                        <img src={arrow_logo} alt="arrow" width={20} height={20} className="footer-img"/>
+                <div className="footer-column-name">
+                        <h3>{ services }</h3>
+                        <img src={arrow_logo} alt="arrow" width={15} height={15} className="footer-img"/>
                     </div>
                     <ul>
-                        <li><img src={phone_logo} alt="phone" /> +48 883 104 082 </li>
+                        <li><Link to={service1_link} className="li-link">{ service_drop }</Link></li>
+                        <li><Link to={service2_link} className="li-link">{ fulfillment }</Link> </li>
+                    </ul>
+                </div>
+                <div className="footer-column contacts">
+                    <div className="footer-column-name">
+                        <h3>{ head3 }</h3>
+                        <img src={arrow_logo} alt="arrow" width={15} height={15} className="footer-img"/>
+                    </div>
+                    <ul>
+                        <li><img src={phone_logo} alt="phone" /> +380 634 076 931 - viber </li>
+                        <li><img src={phone_logo} alt="phone" /> +48 883 104 083 - whatsapp/telegram </li>
+                        <li><img src={adress_logo} alt="address" />Rzeszow, Przemysłowa 6 - Poland</li>
                         <li><img src={mail_logo} alt="mail" /> manager@libertgroup.pl </li>
-                        <li><img src={adress_logo} alt="address" /> Adres</li>
+                        
                     </ul>
                     <div className="social-media">
                         <a href="https://www.instagram.com/libert.fulfillment/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -58,6 +61,9 @@ const Footer = ({ service_drop, head, head2, services, about, contacts,
                         </a>
                         <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
                             <img src={telegram_logo} alt="Telegram" />
+                        </a>
+                        <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                            <img src={viber_logo} alt="Viber" />
                         </a>
                     </div>
                 </div>

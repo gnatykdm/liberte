@@ -2,39 +2,62 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import './MessageForm.css';
 import { MessageRequest } from '../../entity/messagedto/MessageRequest';
-import { MessageDto } from '../../entity/messagedto/MessageDto'; 
+import { MessageDto } from '../../entity/messagedto/MessageDto';
 
-const MessageForm = ({ header, name_type, email_type, message_content, message_type, send, isDarkMode }) => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [subject, setSubject] = useState('');
-    const [message, setMessage] = useState('');
+const MessageForm = ({ header, name_type, email_type, message_content, message_type, send, isDarkMode, messageSending, messageOk, messageError }) => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
 
-    // Instance of the message service
+    const [messageStatus, setMessageStatus] = useState('');
+    const [isMessageSent, setIsMessageSent] = useState(false);
+
     const messageService = new MessageRequest();
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevState) => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Имя:", name);
-        console.log("Email:", email);
-        console.log("Тема:", subject);
-        console.log("Сообщение:", message);
 
-        // Create a new MessageDto object with form data
+        const { name, email, subject, message } = formData;
         const messageDto = new MessageDto(name, email, subject, message);
 
+        // Display "sending" status
+        setMessageStatus(messageSending);
+
+        // Clear the form after submission
+        setFormData({ name: '', email: '', subject: '', message: '' });
+
         try {
-            // Call the saveMessage method to send the message to the server
             await messageService.saveMessage(messageDto);
             console.log("Message sent successfully!");
 
-            // Reset form fields after successful submission
-            setName('');
-            setEmail('');
-            setSubject('');
-            setMessage('');
+            // Display "message sent" status and hide it after 3 seconds
+            setMessageStatus(messageOk);
+            setIsMessageSent(true);
+
+            setTimeout(() => {
+                setIsMessageSent(false);
+                setMessageStatus('');
+            }, 3000);
+
         } catch (error) {
             console.error("Error sending message:", error);
+            setMessageStatus(messageError);
+
+            // Reset message status after 3 seconds
+            setTimeout(() => {
+                setMessageStatus('');
+            }, 3000);
         }
     };
 
@@ -53,36 +76,47 @@ const MessageForm = ({ header, name_type, email_type, message_content, message_t
                 <form onSubmit={handleSubmit} className={`${isDarkMode ? 'dark' : ''}`}>
                     <input 
                         type="text" 
+                        name="name"
                         placeholder={name_type}
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required 
-                        className={`${isDarkMode ? 'dark' : ''}`}/>
-                    <input 
-                        type="email" 
-                        placeholder={email_type} 
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        value={formData.name}
+                        onChange={handleChange}
                         required 
                         className={`${isDarkMode ? 'dark' : ''}`}
+                        aria-label="Name"
+                    />
+                    <input 
+                        type="email" 
+                        name="email"
+                        placeholder={email_type} 
+                        value={formData.email}
+                        onChange={handleChange}
+                        required 
+                        className={`${isDarkMode ? 'dark' : ''}`}
+                        aria-label="Email"
                     />
                     <input 
                         type="text" 
+                        name="subject"
                         placeholder={message_content} 
-                        value={subject}
-                        onChange={(e) => setSubject(e.target.value)}
+                        value={formData.subject}
+                        onChange={handleChange}
                         required 
                         className={`${isDarkMode ? 'dark' : ''}`}
+                        aria-label="Subject"
                     />
                     <textarea 
-                        name="content" 
+                        name="message" 
                         placeholder={message_type}
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
+                        value={formData.message}
+                        onChange={handleChange}
                         required
                         className={`${isDarkMode ? 'dark' : ''}`}
+                        aria-label="Message"
                     />
                     <button type="submit" className="submit-button">{send}</button>
+
+                    {/* Status message */}
+                    {messageStatus && <div className={`sent-message-text ${isDarkMode ? 'dark' : ''}`}>{messageStatus}</div>}
                 </form>
             </div>
         </div>

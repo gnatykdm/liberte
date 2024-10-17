@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     background-color: #dbdde0;
+    overflow-x: hidden;
 }
 
 .main-about-us-page.dark {

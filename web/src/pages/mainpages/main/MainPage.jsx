@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"; // Импортируйте useEffect
+import React, { useState } from "react"; 
 import { Helmet } from "react-helmet";
 import Header from "../../../shared/ui/header/Header";
 import { Link } from "react-router-dom";
@@ -17,9 +17,9 @@ const MainPage = () => {
 
     const toggleTheme = () => {
         setIsDarkMode(prevMode => {
-            const newMode = !prevMode; // Переключаем состояние
-            localStorage.setItem('isDarkMode', newMode); // Сохраняем новое состояние в localStorage
-            return newMode; // Возвращаем новое состояние
+            const newMode = !prevMode; 
+            localStorage.setItem('isDarkMode', newMode);
+            return newMode; 
         });
     };
 
@@ -48,6 +48,7 @@ const MainPage = () => {
                 isDarkMode={isDarkMode}
                 service1_link={"/fulfillment"}
                 service2_link={"/service"}
+                messageStatus={"Повідомлення Відправлено"}
             />
 
             <div className="main-content">
@@ -59,9 +60,9 @@ const MainPage = () => {
                     </div>
                     <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
                         <p>
-                            Ми компанія LIBERT Group, пропонуємо послуги з транспортування<br />
-                            негабаритних вантажів та документального супроводу. Перевозимо <br />
-                            від комбайнів закінчуючи інфраструктурними проектами.
+                            LIBERT Group надає два основні види послуг: <b>кур'єрську</b> доставку і <br/>
+                            перевезення <b>негабаритних</b> вантажів. Ми прагнемо забезпечити <br/> нашим клієнтам сервіс найвищої якості,
+                            аби кожне перевезення відповідало вашим очікуванням.
                         </p>
                     </div>
                     <button className="btn-main-desc">
@@ -81,13 +82,15 @@ const MainPage = () => {
                     service2_link={"/service"} 
                  />
                 <OrderCall
-                    part1={"Гарантуємо доставку до вашого місця, щоб ви"}
-                    part2={"могли зосередитися на важливих справах "}
+                    part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}
+                    part2={"індивідуальний підхід, щоб зробити логістику максимально простою для вас"}
                     order_call={"Замовити дзвінок"}
-                    order={"Замовити"}
+                    order={"Замовити дзвінок"}
                     name_type={"Ваше ім'я"}
                     tel_type={"Ваш телефон"}
                     isDarkMode={isDarkMode}
+                    messageSuccess={"Повідомлення Відправлено"}
+                    messageError={"Проблема із відправкою"}
                 />
                 <Footer
                     service_drop={"Негабаритні Перевезення"}
@@ -102,6 +105,7 @@ const MainPage = () => {
                     about="Про Нас"
                     service1_link={"/service"}
                     service2_link={"/fulfillment"}
+                    fulfillment={"Кур'єрська доставка"}
                 />
             </center>
         </div>

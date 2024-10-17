@@ -25,7 +25,7 @@
 }
 
 .order-call-content {
-    text-align: center;
+    text-align: left;
     margin-right: 50px;
     padding: 0;
     font-size: 15px;
@@ -165,4 +165,11 @@ input[type="text-type"]:focus, input[type="tel-type"]:focus {
 .order-button:hover {
     color: #ffffff;
     background-color: #1c1b24;
+}
+
+.sent-message-text-modal {
+    margin-top: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    justify-content: center;
 }

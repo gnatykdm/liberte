@@ -5,6 +5,10 @@
     overflow-x: hidden;
 }
 
+b {
+    color: #5156e5;
+}
+
 .main-page-desc.dark {
     background-color: #1c1b24;
 }
