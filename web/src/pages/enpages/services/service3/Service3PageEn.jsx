@@ -1,13 +1,13 @@
 import React, { useState } from 'react'; 
-import Header from '../../../shared/ui/header/Header';
-import OrderCall from '../../../shared/ui/ordercall/OrderCall';
-import Footer from '../../../shared/ui/footer/Footer';
-import PageInfo from '../../../shared/ui/pageInfo/PageInfo';
-import flag from '../../../shared/assets/icons/united-kingdom.png';
-import MainMap from '../../../shared/ui/map/MainMap';
+import Header from '../../../../shared/ui/header/Header';
+import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
+import flag from '../../../../shared/assets/icons/united-kingdom.png';
+import Footer from '../../../../shared/ui/footer/Footer';
+import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
+import service_img from '../../../../shared/assets/images/fulfillment.jpg';
 
-const MainEnAbout = () => {
+const Service3PageEn = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
@@ -22,9 +22,9 @@ const MainEnAbout = () => {
     };
 
     return (
-        <div className={`main-about-us-page ${isDarkMode ? 'dark' : ''}`}>
+        <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - About Us</title>
+                <title>Libert - Oversized Transport</title>
             </Helmet>
 
             <Header 
@@ -58,25 +58,32 @@ const MainEnAbout = () => {
             />
 
             <div className="some-age-info">
-                <PageInfo text="About the Company" isDarkMode={isDarkMode} />
+                <PageInfo text="Oversized Transport" isDarkMode={isDarkMode} />
             </div>
             
-            <div className={`main-content-about ${isDarkMode ? 'dark' : ''}`}>
+            <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
-                    <p>LIBERT Group is a team of professionals who have combined their years of experience to create a company that offers a full range of logistics solutions. We specialize in international courier delivery, oversized cargo transport, and comprehensive customs agency services.</p>
-                    <p className="about-us-some">
-                    Our clients receive not only reliability and accuracy in every operation but also a personalized approach to every inquiry. We ensure continuity and high efficiency in all aspects of logistics so that your goods always arrive on time and safely.
+                    <p>
+                        We offer oversized cargo transport services and accompanying documentation. 
+                        We transport everything from combines to infrastructure objects. Our completed projects listed on the European Commission website speak for themselves.
+                        We provide a full cycle of logistical solutions, including obtaining permits, route planning, and organizing escort for cargo with specialized transport means.
                     </p>
+
+                    <p>
+                        Our many years of experience allow us to quickly resolve any issues related to oversized cargo transport while adhering to international safety and quality standards.
+                        Trust us with your cargo – we guarantee reliability, professionalism, and timely execution of commitments.
+                    </p>
+                    
                 </div>
-                <div className="map">
-                    <MainMap />
+                <div className="service-img-page">
+                    <img src={service_img} alt="service"/>
                 </div>
             </div>
 
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make logistics as easy as possible for you."}
+                    part2={"a personalized approach to make logistics as simple as possible for you."}
                     order_call={"Order a Call"}
                     order={"Order a Call"}
                     name_type={"Your Name"}
@@ -110,6 +117,6 @@ const MainEnAbout = () => {
             </center>
         </div>
     );
-};
+}
 
-export default MainEnAbout;
+export default Service3PageEn;

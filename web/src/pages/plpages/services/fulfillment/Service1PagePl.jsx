@@ -29,13 +29,14 @@ const FulFillmentPagePl = () => {
                 <title>Libert - FulFillment</title>
             </Helmet>
 
+           
             <Header 
                 image={flag}
-                head={"Strona główna"}
+                head={"Strona Główna"}
                 services={"Usługi"} 
-                service_drop={"Transport ponadgabarytowy"}
+                service_drop={"Transport Nienormatywny"}
                 about={"O nas"}
-                contacts={"Kontakt"}
+                contacts={"Kontakty"}
                 call={"Zamów rozmowę"}
                 order={"Zamów"}
                 social_networks={"Libert w mediach społecznościowych"}
@@ -44,10 +45,11 @@ const FulFillmentPagePl = () => {
                 main_link={"/pl"}
                 about_link={"/about/pl"}
                 contact_link={"/contact/pl"}
-                service1_link={"fulfillment/pl"}
-                service2_link={"service/pl"}
-                toggleTheme={toggleTheme} // Przekazywanie funkcji przełączania motywu
-                isDarkMode={isDarkMode} // Przekazywanie stanu motywu
+                toggleTheme={toggleTheme} 
+                isDarkMode={isDarkMode}
+                service1_link={"/fulfillment/pl"}
+                service2_link={"/service/pl"}
+                messageStatus={"Wiadomość wysłana"}
             />
 
             <div className="some-age-info">
@@ -69,28 +71,33 @@ const FulFillmentPagePl = () => {
             </div>
 
             <center>
-                <OrderCall
-                    part1={"Gwarantujemy dostawę do Twojej lokalizacji, abyś"}
-                    part2={"mógł się skupić na ważnych zadaniach"}
+            <OrderCall
+                    part1={"Twoje zadowolenie to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
+                    part2={"indywidualne podejście, aby logistyka była maksymalnie prosta dla Ciebie"}
                     order_call={"Zamów rozmowę"}
-                    order={"Zamów"}
+                    order={"Zamów rozmowę"}
                     name_type={"Twoje imię"}
-                    tel_type={"Twój numer telefonu"}
-                    isDarkMode={isDarkMode}/>
+                    tel_type={"Twój telefon"}
+                    isDarkMode={isDarkMode}
+                    messageSuccess={"Wiadomość wysłana"}
+                    messageError={"Problem z wysłaniem"}
+                    />
 
-                <Footer
-                    service_drop={"Transport ponadgabarytowy"}
-                    head={"Menu główne"}
+<Footer
+                    service_drop={"Transport Nienormatywny"}
+                    head={"Menu Główne"}
                     head2={"Strony"}
+                    head3={"Nasze Kontakty"}
                     services={"Usługi"}
-                    contacts={"Kontakt"}
+                    contacts={"Kontakty"}
                     main_link={"/pl"}
                     about_link={"/about/pl"}
                     contact_link={"/contact/pl"}
-                    head3={"Nasze kontakty"}
-                    about={"O nas"}
+                    about="O Nas"
                     service1_link={"/service/pl"}
-                    service2_link={"/fulfillment/pl"}/>
+                    service2_link={"/fulfillment/pl"}
+                    fulfillment={"Kurierzy"}
+                />
             </center>
         </div>
     );

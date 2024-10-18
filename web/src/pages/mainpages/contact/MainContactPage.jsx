@@ -30,24 +30,36 @@ const MainContactPage = () => {
             <title>Libert - Контакти</title>
         </Helmet>
     
+
         <Header 
-            image={ukraine_flag}
-            head={"Головна"}
-            services={"Послуги"} 
-            service_drop={"Транспортування негабаритів"}
-            about={"Про нас"}
-            contacts={"Контакти"}
-            call={"Замовити дзвінок"}
-            order={"Замовити"}
-            social_networks={"Libert у соцмережах"}
-            name_type={"Ваше ім'я"}
-            tel_type={"Ваш номер телефону"}
-            main_link={"/"}
-            about_link={"/about"}
-            contact_link={"/contact"}
-            toggleTheme={toggleTheme} 
-            isDarkMode={isDarkMode} 
-        />
+                image={ukraine_flag}
+                head={"Головна"}
+                services={"Послуги"} 
+                service_drop={"Негабаритні перевезення"}
+                about={"Про нас"}
+                contacts={"Контакти"}
+                call={"Замовити дзвінок"}
+                order={"Замовити"}
+                social_networks={"Libert у соціальних мережах"}
+                name_type={"Ваше ім'я"}
+                tel_type={"Ваш номер телефону"}
+                main_link={"/"}
+                about_link={"/about"}
+                contact_link={"/contact"}
+                toggleTheme={toggleTheme} 
+                isDarkMode={isDarkMode}
+                messageStatus={"Повідомлення Відправлено"}
+                service1="FulFillment"
+                service2="Міжнародна кур'єрська доставка"
+                service3="Негабаритні перевезення"
+                service4="Послуги митного агенства"
+                service5="Складська Логістика"
+                service1_link={"/service1"}
+                service2_link={"/service2"}
+                service3_link={"/service3"}
+                service4_link={"/service4"}
+                service5_link={"/service5"}
+            />
     
         <div className="some-age-info">
             <PageInfo text="Контакти" isDarkMode={isDarkMode} />
@@ -78,19 +90,26 @@ const MainContactPage = () => {
             </div>
     
             <Footer
-                service_drop={"Транспортування негабаритів"}
-                head={"Головне меню"}
-                head2={"Сторінки"}
-                head3={"Наші контакти"}
+                head="Головне меню"
+                head2="Меню"
+                head3="Наші контакти"
                 services={"Послуги"}
-                contacts={"Контакти"}
-                main_link={"/"}
-                about_link={"/about"}
-                contact_link={"/contact"}
-                about="Про нас"
-                service1_link={"/service"}
-                service2_link={"/fulfillment"}
-            />
+                contacts="Контакти"
+                main_link="/"
+                about_link="/about"
+                contact_link="/contact"
+                about="Про Нас"
+                service1="FulFillment"
+                service2="Міжнародна кур'єрська доставка"
+                service3="Негабаритні перевезення"
+                service4="Послуги митного агенства"
+                service5="Складська Логістика"
+                service1_link={"/service1"}
+                service2_link={"/service2"}
+                service3_link={"/service3"}
+                service4_link={"/service4"}
+                service5_link={"/service5"}
+                />
         </center>
     </div>    
     );

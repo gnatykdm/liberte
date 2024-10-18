@@ -8,10 +8,8 @@ import { Helmet } from 'react-helmet';
 import service_img from '../../../../shared/assets/images/service.jpg';
 import '../../../mainpages/services/fulfillment/ServicePage.css';
 
-const FulFillmentPageEn = () => {
-
-       
-       const [isDarkMode, setIsDarkMode] = useState(() => {
+const Service1PageEn = () => {
+    const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
     });
@@ -25,36 +23,37 @@ const FulFillmentPageEn = () => {
     };
 
     return (
-            <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
+        <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - FulFillment</title>
+                <title>Libert - Fulfillment</title>
             </Helmet>
 
             <Header 
-            image={flag}
-            head={"Home"}
-            services={"Services"} 
-            service_drop={"Oversized Transportation"}
-            about={"About Us"}
-            contacts={"Contacts"}
-            call={"Request a Call"}
-            order={"Order"}
-            social_networks={"Libert on Social Media"}
-            name_type={"Your Name"}
-            tel_type={"Your Phone Number"}
-            main_link={"/en"}
-            about_link={"/about/en"}
-            contact_link={"/contact/en"}
-            service1_link={"/fulfillment/en"}
-            service2_link={"/service/en"}
-            toggleTheme={toggleTheme} // Passing function for theme toggling
-            isDarkMode={isDarkMode} // Passing theme state
+                image={flag}
+                head={"Home"}
+                services={"Services"} 
+                service_drop={"Oversized Transport"}
+                about={"About Us"}
+                contacts={"Contact"}
+                call={"Order a Call"}
+                order={"Order"}
+                social_networks={"Libert on Social Media"}
+                name_type={"Your Name"}
+                tel_type={"Your Phone Number"}
+                main_link={"/en"}
+                about_link={"/about/en"}
+                contact_link={"/contact/en"}
+                toggleTheme={toggleTheme} 
+                isDarkMode={isDarkMode}
+                service1_link={"/fulfillment/en"}
+                service2_link={"/service/en"}
+                messageStatus={"Message Sent"}
             />
 
             <div className="some-age-info">
                 <PageInfo text="FULFILLMENT" isDarkMode={isDarkMode} />
             </div>
-            
+
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur reprehenderit assumenda maiores sint, 
@@ -71,29 +70,35 @@ const FulFillmentPageEn = () => {
 
             <center>
                 <OrderCall
-                    part1={"We guarantee delivery to your location so you"}
-                    part2={"can focus on important tasks"}
-                    order_call={"Request a Call"}
-                    order={"Order"}
+                    part1={"Your satisfaction is our goal. We ensure accuracy, reliability, and"}
+                    part2={"a personalized approach to make logistics as simple as possible for you."}
+                    order_call={"Order a Call"}
+                    order={"Order a Call"}
                     name_type={"Your Name"}
                     tel_type={"Your Phone"}
-                    isDarkMode={isDarkMode}/>
-    
-            <Footer
-                service_drop={"Oversized Transportation"}
-                head={"Main Menu"}
-                head2={"Pages"}
-                services={"Services"}
-                contacts={"Contacts"}
-                main_link={"/en"}
-                about_link={"/about/en"}
-                contact_link={"/contact/en"}
-                head3={"Our Contacts"}
-                about={"About Us"}
-                service1_link={"/service/en"}
-                service2_link={"/fulfillment/en"}/>
+                    isDarkMode={isDarkMode}
+                    messageSuccess={"Message Sent"}
+                    messageError={"Problem Sending"}
+                />
+
+                <Footer
+                    service_drop={"Oversized Transport"}
+                    head={"Main Menu"}
+                    head2={"Pages"}
+                    head3={"Our Contacts"}
+                    services={"Services"}
+                    contacts={"Contact"}
+                    main_link="/en"
+                    about_link="/about/en"
+                    contact_link="/contact/en"
+                    about="About Us"
+                    service1_link={"/service/en"}
+                    service2_link={"/fulfillment/en"}
+                    fulfillment={"Couriers"}
+                />
             </center>
         </div>
     );
 }
-export default FulFillmentPageEn;
+
+export default Service1PageEn;

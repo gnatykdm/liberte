@@ -96,7 +96,41 @@ input[type="text"].dark, input[type="email"].dark, textarea.dark {
         max-width: 90%;
         padding: 15px;
         border-radius: 30px;
-        width: 350px;
+        width: 375px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+    }
+
+    .message-content {
+        font-size: 30px;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+
+    .submit-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 468px) {
+    .message-form {
+        max-width: 90%;
+        padding: 15px;
+        border-radius: 30px;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
         margin-left: 30px;
     }
 

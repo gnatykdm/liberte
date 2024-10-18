@@ -1,13 +1,13 @@
 import React, { useState } from 'react'; 
-import Header from '../../../shared/ui/header/Header';
-import OrderCall from '../../../shared/ui/ordercall/OrderCall';
-import Footer from '../../../shared/ui/footer/Footer';
-import PageInfo from '../../../shared/ui/pageInfo/PageInfo';
-import flag from '../../../shared/assets/icons/united-kingdom.png';
-import MainMap from '../../../shared/ui/map/MainMap';
+import Header from '../../../../shared/ui/header/Header';
+import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
+import flag from '../../../../shared/assets/icons/united-kingdom.png';
+import Footer from '../../../../shared/ui/footer/Footer';
+import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
+import service_img from '../../../../shared/assets/images/fulfillment.jpg';
 
-const MainEnAbout = () => {
+const Service5PageEn = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
@@ -22,9 +22,9 @@ const MainEnAbout = () => {
     };
 
     return (
-        <div className={`main-about-us-page ${isDarkMode ? 'dark' : ''}`}>
+        <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - About Us</title>
+                <title>Libert - Warehouse Logistics</title>
             </Helmet>
 
             <Header 
@@ -58,25 +58,30 @@ const MainEnAbout = () => {
             />
 
             <div className="some-age-info">
-                <PageInfo text="About the Company" isDarkMode={isDarkMode} />
+                <PageInfo text="Warehouse Logistics" isDarkMode={isDarkMode} />
             </div>
             
-            <div className={`main-content-about ${isDarkMode ? 'dark' : ''}`}>
+            <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
-                    <p>LIBERT Group is a team of professionals who have combined their years of experience to create a company that offers a full range of logistics solutions. We specialize in international courier delivery, oversized cargo transport, and comprehensive customs agency services.</p>
-                    <p className="about-us-some">
-                    Our clients receive not only reliability and accuracy in every operation but also a personalized approach to every inquiry. We ensure continuity and high efficiency in all aspects of logistics so that your goods always arrive on time and safely.
-                    </p>
+                    <p>Warehouse logistics includes the following services:</p>
+                    <ul>
+                        <li>customs-licensed warehouses in Poland,</li>
+                        <li>storage of goods without the need to pay duties and taxes until they are released for free circulation,</li>
+                        <li>labeling, packaging, and repackaging of goods according to the requirements of the destination country,</li>
+                        <li>management of batch numbers, series, and expiration dates of stored goods,</li>
+                        <li>insurance of goods during storage.</li>
+                    </ul>
+                    <p>These services help reduce costs, optimize logistics processes, and ensure the safety of goods during storage.</p>
                 </div>
-                <div className="map">
-                    <MainMap />
+                <div className="service-img-page">
+                    <img src={service_img} alt="warehouse services"/>
                 </div>
             </div>
 
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make logistics as easy as possible for you."}
+                    part2={"a personalized approach to simplify logistics for you."}
                     order_call={"Order a Call"}
                     order={"Order a Call"}
                     name_type={"Your Name"}
@@ -110,6 +115,6 @@ const MainEnAbout = () => {
             </center>
         </div>
     );
-};
+}
 
-export default MainEnAbout;
+export default Service5PageEn;

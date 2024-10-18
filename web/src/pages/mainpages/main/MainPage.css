@@ -5,7 +5,8 @@
     overflow-x: hidden;
 }
 
-b {
+.some-cont {
+    font-weight: bold;
     color: #5156e5;
 }
 
@@ -25,7 +26,6 @@ b {
     margin-top: 50px;
 }
 
-/* Main Slogan Desktop */
 .company-main-name-desc, .highlites {
     font-family: 'Oswald' sans-serif;
     font-weight: bold;
@@ -51,7 +51,7 @@ b {
 }
 
 .text-container-main {
-    font-size: 23px;
+    font-size: 20px;
     line-height: 1.6;
     margin-left: 5px;
 }

@@ -17,7 +17,8 @@ import { Link, useLocation } from "react-router-dom";
 
 const Header = ({ 
     image, head, services, service_drop, about, contacts, call, order, social_networks, name_type, tel_type, 
-    main_link, about_link, contact_link, toggleTheme, isDarkMode, service1_link, service2_link, messageStatus 
+    main_link, about_link, contact_link, toggleTheme, isDarkMode, service1_link, service2_link, messageStatus,
+    service1, service2, service3, service4, service5, service3_link, service4_link, service5_link
 }) => {
     const [dropdownStates, setDropdownStates] = useState({
         isLanguageDropdownOpen: false,
@@ -130,10 +131,19 @@ const Header = ({
                         {dropdownStates.isServicesDropdownOpen && (
                             <div className="dropdown-menu">
                                 <div className="dropdown-item-services">
-                                    <Link to={service1_link} className="service-dropdown-link">FULFILLMENT</Link>
+                                    <Link to={service1_link} className="service-dropdown-link">{ service1 }</Link>
                                 </div>
                                 <div className="dropdown-item-services">
-                                    <Link to={service2_link} className="service-dropdown-link">{service_drop}</Link>
+                                    <Link to={service2_link} className="service-dropdown-link">{service2}</Link>
+                                </div>
+                                <div className="dropdown-item-services">
+                                    <Link to={service3_link} className="service-dropdown-link">{service3}</Link>
+                                </div>
+                                <div className="dropdown-item-services">
+                                    <Link to={service4_link} className="service-dropdown-link">{service4}</Link>
+                                </div>
+                                <div className="dropdown-item-services">
+                                    <Link to={service5_link} className="service-dropdown-link">{service5}</Link>
                                 </div>
                             </div>
                         )}

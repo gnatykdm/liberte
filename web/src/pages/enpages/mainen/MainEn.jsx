@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; 
 import { Helmet } from "react-helmet";
 import Header from "../../../shared/ui/header/Header";
 import { Link } from "react-router-dom";
 import flag from '../../../shared/assets/icons/united-kingdom.png';
 import OrderCall from "../../../shared/ui/ordercall/OrderCall";
-import Services from "../../../widgets/services/Services";
 import Footer from "../../../shared/ui/footer/Footer";
 import main_photo from '../../../shared/assets/images/headimg.png';
 
 const MainEn = () => {
-
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
@@ -18,93 +16,107 @@ const MainEn = () => {
     const toggleTheme = () => {
         setIsDarkMode(prevMode => {
             const newMode = !prevMode; 
-            localStorage.setItem('isDarkMode', newMode); 
+            localStorage.setItem('isDarkMode', newMode);
             return newMode; 
         });
     };
 
     return (
         <div className={`main-page-desc ${isDarkMode ? 'dark' : ''}`}>
-        <Helmet>
-            <title>Libert - Home</title>
-        </Helmet>
-    
-        <Header 
-        image={flag}
-        head={"Home"}
-        services={"Services"} 
-        service_drop={"Oversized Transportation"}
-        about={"About Us"}
-        contacts={"Contacts"}
-        call={"Request a Call"}
-        order={"Order"}
-        social_networks={"Libert on Social Media"}
-        name_type={"Your Name"}
-        tel_type={"Your Phone Number"}
-        main_link={"/en"}
-        about_link={"/about/en"}
-        contact_link={"/contact/en"}
-        service1_link={"fulfillment/en"}
-        service2_link={"service/en"}
-        toggleTheme={toggleTheme} // Passing function for theme toggling
-        isDarkMode={isDarkMode} // Passing theme state
-        />
-    
-        <div className="main-content">
-            <div className="text-content-main">
-                <div className={`company-main-name-desc ${isDarkMode ? 'dark' : ''}`}>
-                    logistical <br />
-                    <div className="highlites">solutions</div> for <br />
-                    your business
-                </div>
-                <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
-                    <p>
-                        We are LIBERT Group, offering transportation services for<br />
-                        oversized cargo and document support. We transport <br />
-                        everything from combines to infrastructure projects.
-                    </p>
-                </div>
-                <button className="btn-main-desc">
-                    <Link to="/contact/en" style={{ textDecoration: 'none', color: '#ffffff' }}>
-                        start cooperation
-                    </Link>
-                </button>
-            </div>
-            <img src={main_photo} alt="photo" className="main-photo-desc" />
-        </div>
-    
-        <center>
-            <Services 
-                isDarkMode={isDarkMode}
-                service_name={"Oversized Transportation"}
-                service1_link={"/fulfillment/en"}
-                service2_link={"/service/en"} 
-             />
-            <OrderCall
-                part1={"We guarantee delivery to your location so you can"}
-                part2={"focus on important matters "}
-                order_call={"Request a Call"}
+            <Helmet>
+                <title>Libert - Home Page</title>
+            </Helmet>
+
+            <Header 
+                image={flag}
+                head={"Home"}
+                services={"Services"} 
+                service_drop={"Oversized Transport"}
+                about={"About Us"}
+                contacts={"Contact"}
+                call={"Order a Call"}
                 order={"Order"}
+                social_networks={"Libert on Social Media"}
                 name_type={"Your Name"}
-                tel_type={"Your Phone"}
-                isDarkMode={isDarkMode}
-            />
-            <Footer
-                service_drop={"Oversized Transportation"}
-                head={"Main Menu"}
-                head2={"Pages"}
-                head3={"Our Contacts"}
-                services={"Services"}
-                contacts={"Contacts"}
+                tel_type={"Your Phone Number"}
                 main_link={"/en"}
                 about_link={"/about/en"}
                 contact_link={"/contact/en"}
-                about="About Us"
-                service1_link={"/service/en"}
-                service2_link={"/fulfillment/en"}
+                toggleTheme={toggleTheme} 
+                isDarkMode={isDarkMode}
+                messageStatus={"Message Sent"}
+                service1="Fulfillment"
+                service2="International Courier Delivery"
+                service3="Oversized Transport"
+                service4="Customs Agency Services"
+                service5="Warehouse Logistics"
+                service1_link={"/service1/en"}
+                service2_link={"/service2/en"}
+                service3_link={"/service3/en"}
+                service4_link={"/service4/en"}
+                service5_link={"/service5/en"}
             />
-        </center>
-    </div>    
+
+            <div className="main-content">
+                <div className="text-content-main">
+                    <div className={`company-main-name-desc ${isDarkMode ? 'dark' : ''}`}>
+                        logistical <br />
+                        <div className="highlites">solutions</div> for <br />
+                        your business
+                    </div>
+                    <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
+                        <p>
+                            LIBERT Group offers two main types of services: <b className="some-cont">courier delivery</b> and <br/>
+                            transport of <b className="some-cont">oversized</b> cargo. We strive to provide our clients with the highest quality services,
+                            ensuring that every order meets your expectations.
+                        </p>
+                    </div>
+                    <button className="btn-main-desc">
+                        <Link to="/contact" style={{ textDecoration: 'none', color: '#ffffff' }}>
+                            start collaboration
+                        </Link>
+                    </button>
+                </div>
+                <img src={main_photo} alt="photo" className="main-photo-desc" />
+            </div>
+
+            <center>
+                <OrderCall
+                    part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
+                    part2={"a personalized approach to make logistics as simple as possible for you."}
+                    order_call={"Order a Call"}
+                    order={"Order a Call"}
+                    name_type={"Your Name"}
+                    tel_type={"Your Phone"}
+                    isDarkMode={isDarkMode}
+                    messageSuccess={"Message Sent"}
+                    messageError={"Problem Sending"}
+                />
+              <Footer
+                head="Main Menu"
+                head2="Menu"
+                head3="Our Contacts"
+                services={"Services"}
+                contacts="Contact"
+                main_link="/en"
+                about_link="/about/en"
+                contact_link="/contact/en"
+                about="About Us"
+                service1="Fulfillment"
+                service2="International Courier Delivery"
+                service3="Oversized Transport"
+                service4="Customs Agency Services"
+                service5="Warehouse Logistics"
+                service1_link={"/service1/en"}
+                service2_link={"/service2/en"}
+                service3_link={"/service3/en"}
+                service4_link={"/service4/en"}
+                service5_link={"/service5/en"}
+                />
+
+            </center>
+        </div>
     );
-}
+};
+
 export default MainEn;

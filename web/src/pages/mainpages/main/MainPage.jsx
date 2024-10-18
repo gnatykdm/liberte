@@ -46,9 +46,17 @@ const MainPage = () => {
                 contact_link={"/contact"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                service1_link={"/fulfillment"}
-                service2_link={"/service"}
                 messageStatus={"Повідомлення Відправлено"}
+                service1="FulFillment"
+                service2="Міжнародна кур'єрська доставка"
+                service3="Негабаритні перевезення"
+                service4="Послуги митного агенства"
+                service5="Складська Логістика"
+                service1_link={"/service1"}
+                service2_link={"/service2"}
+                service3_link={"/service3"}
+                service4_link={"/service4"}
+                service5_link={"/service5"}
             />
 
             <div className="main-content">
@@ -60,8 +68,8 @@ const MainPage = () => {
                     </div>
                     <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
                         <p>
-                            LIBERT Group надає два основні види послуг: <b>кур'єрську</b> доставку і <br/>
-                            перевезення <b>негабаритних</b> вантажів. Ми прагнемо забезпечити <br/> нашим клієнтам сервіс найвищої якості,
+                            LIBERT Group надає два основні види послуг: <b className="some-cont">кур'єрську</b> доставку і <br/>
+                            перевезення <b className="some-cont">негабаритних</b> вантажів. Ми прагнемо забезпечити <br/> нашим клієнтам сервіс найвищої якості,
                             аби кожне перевезення відповідало вашим очікуванням.
                         </p>
                     </div>
@@ -75,12 +83,6 @@ const MainPage = () => {
             </div>
 
             <center>
-                <Services 
-                    isDarkMode={isDarkMode}
-                    service_name={"Негабаритні Перевезення"}
-                    service1_link={"/fulfillment"}
-                    service2_link={"/service"} 
-                 />
                 <OrderCall
                     part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}
                     part2={"індивідуальний підхід, щоб зробити логістику максимально простою для вас"}
@@ -92,21 +94,28 @@ const MainPage = () => {
                     messageSuccess={"Повідомлення Відправлено"}
                     messageError={"Проблема із відправкою"}
                 />
-                <Footer
-                    service_drop={"Негабаритні Перевезення"}
-                    head={"Головне меню"}
-                    head2={"Cторінки"}
-                    head3={"Наші контакти"}
-                    services={"Послуги"}
-                    contacts={"Контакти"}
-                    main_link={"/"}
-                    about_link={"/about"}
-                    contact_link={"/contact"}
-                    about="Про Нас"
-                    service1_link={"/service"}
-                    service2_link={"/fulfillment"}
-                    fulfillment={"Кур'єрська доставка"}
+              <Footer
+                head="Головне меню"
+                head2="Меню"
+                head3="Наші контакти"
+                services={"Послуги"}
+                contacts="Контакти"
+                main_link="/"
+                about_link="/about"
+                contact_link="/contact"
+                about="Про Нас"
+                service1="FulFillment"
+                service2="Міжнародна кур'єрська доставка"
+                service3="Негабаритні перевезення"
+                service4="Послуги митного агенства"
+                service5="Складська Логістика"
+                service1_link={"/service1"}
+                service2_link={"/service2"}
+                service3_link={"/service3"}
+                service4_link={"/service4"}
+                service5_link={"/service5"}
                 />
+
             </center>
         </div>
     );

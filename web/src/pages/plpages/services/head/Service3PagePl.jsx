@@ -1,14 +1,14 @@
-import React, { useState } from "react"; 
-import { Helmet } from "react-helmet";
-import Header from "../../../shared/ui/header/Header";
-import { Link } from "react-router-dom";
-import flag from '../../../shared/assets/icons/poland.png';
-import OrderCall from "../../../shared/ui/ordercall/OrderCall";
-import Footer from "../../../shared/ui/footer/Footer";
-import main_photo from '../../../shared/assets/images/headimg.png';
+import React, { useState } from 'react'; 
+import Header from '../../../../shared/ui/header/Header';
+import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
+import flag from '../../../../shared/assets/icons/poland.png';
+import Footer from '../../../../shared/ui/footer/Footer';
+import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
+import { Helmet } from 'react-helmet';
+import service_img from '../../../../shared/assets/images/fulfillment.jpg';
 
-const MainPlPage = () => {
-    const [isDarkMode, setIsDarkMode] = useState(() => {
+const Service3PagePl = () => {
+       const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
     });
@@ -16,16 +16,17 @@ const MainPlPage = () => {
     const toggleTheme = () => {
         setIsDarkMode(prevMode => {
             const newMode = !prevMode; 
-            localStorage.setItem('isDarkMode', newMode);
+            localStorage.setItem('isDarkMode', newMode); 
             return newMode; 
         });
     };
 
     return (
-        <div className={`main-page-desc ${isDarkMode ? 'dark' : ''}`}>
+            <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - Strona główna</title>
+                <title>Libert - Transport ponadgabarytowy</title>
             </Helmet>
+
 
             <Header 
                 image={flag}
@@ -57,31 +58,31 @@ const MainPlPage = () => {
                 service5_link={"/service5/pl"}
             />
 
-            <div className="main-content">
-                <div className="text-content-main">
-                    <div className={`company-main-name-desc ${isDarkMode ? 'dark' : ''}`}>
-                        logistyczne <br />
-                        <div className="highlites">rozwiązania</div> dla <br />
-                        Twojego biznesu
-                    </div>
-                    <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
-                        <p>
-                            LIBERT Group oferuje dwa podstawowe rodzaje usług: <b className="some-cont">dostawę kurierską</b> i <br/>
-                            transport <b className="some-cont">ponadgabarytowych</b> ładunków. Dążymy do zapewnienia <br/> naszym klientom usług najwyższej jakości,
-                            aby każde zlecenie spełniało Twoje oczekiwania.
-                        </p>
-                    </div>
-                    <button className="btn-main-desc">
-                        <Link to="/contact" style={{ textDecoration: 'none', color: '#ffffff' }}>
-                            rozpocznij współpracę
-                        </Link>
-                    </button>
+            <div className="some-age-info">
+                <PageInfo text="Transport ponadgabarytowy" isDarkMode={isDarkMode} />
+            </div>
+            
+            <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
+                <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
+                    <p>
+                    Oferujemy usługi transportu ładunków ponadgabarytowych oraz dokumentacji towarzyszącej.
+                    Przewozimy od kombajnów po obiekty infrastrukturalne. Nasze zrealizowane projekty na stronie Komisji Europejskiej mówią same za siebie.
+                    Zapewniamy pełny cykl rozwiązań logistycznych, w tym uzgodnienie zezwoleń, planowanie tras oraz organizację eskorty ładunków specjalistycznymi środkami transportu. 
+                    </p>
+
+                    <p>
+                        Nasze wieloletnie doświadczenie pozwala nam szybko rozwiązywać wszelkie problemy związane z transportem ładunków ponadgabarytowych, przestrzegając międzynarodowych standardów bezpieczeństwa i jakości.
+                        Zaufaj nam z Twoim ładunkiem – gwarantujemy niezawodność, profesjonalizm i terminowe realizowanie zobowiązań.
+                    </p>
+                    
                 </div>
-                <img src={main_photo} alt="photo" className="main-photo-desc" />
+                <div className="service-img-page">
+                    <img src={service_img} alt="service"/>
+                </div>
             </div>
 
             <center>
-                <OrderCall
+            <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
                     part2={"indywidualne podejście, aby logistyka była dla Ciebie jak najprostsza."}
                     order_call={"Zamówienie rozmowy"}
@@ -92,7 +93,8 @@ const MainPlPage = () => {
                     messageSuccess={"Wiadomość wysłana"}
                     messageError={"Problem z wysłaniem"}
                 />
-              <Footer
+
+                <Footer
                 head="Główne menu"
                 head2="Menu"
                 head3="Nasze kontakty"
@@ -113,10 +115,8 @@ const MainPlPage = () => {
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
                 />
-
             </center>
         </div>
     );
-};
-
-export default MainPlPage;
+}
+export default Service3PagePl;

@@ -1,13 +1,13 @@
 import React, { useState } from 'react'; 
-import Header from '../../../shared/ui/header/Header';
-import OrderCall from '../../../shared/ui/ordercall/OrderCall';
-import Footer from '../../../shared/ui/footer/Footer';
-import PageInfo from '../../../shared/ui/pageInfo/PageInfo';
-import flag from '../../../shared/assets/icons/poland.png';
-import MainMap from '../../../shared/ui/map/MainMap';
+import Header from '../../../../shared/ui/header/Header';
+import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
+import flag from '../../../../shared/assets/icons/poland.png';
+import Footer from '../../../../shared/ui/footer/Footer';
+import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
+import service_img from '../../../../shared/assets/images/fulfillment.jpg';
 
-const AboutPlPage = () => {
+const Service5PagePl = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
@@ -22,9 +22,9 @@ const AboutPlPage = () => {
     };
 
     return (
-        <div className={`main-about-us-page ${isDarkMode ? 'dark' : ''}`}>
+        <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - O nas</title>
+                <title>Libert - Logistyka magazynowa</title>
             </Helmet>
 
             <Header 
@@ -58,29 +58,30 @@ const AboutPlPage = () => {
             />
 
             <div className="some-age-info">
-                <PageInfo text="O firmie" isDarkMode={isDarkMode} />
+                <PageInfo text="Logistyka Magazynowa" isDarkMode={isDarkMode} />
             </div>
             
-            <div className={`main-content-about ${isDarkMode ? 'dark' : ''}`}>
+            <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
-                    <p>LIBERT Group to zespół profesjonalistów, którzy połączyli swoje wieloletnie doświadczenie, aby stworzyć firmę, <br/> 
-                    która oferuje pełen zakres rozwiązań logistycznych. Specjalizujemy się w międzynarodowej dostawie kurierskiej, <br/> 
-                    transporcie ponadgabarytowych ładunków oraz świadczeniu kompleksowych usług agencji celnych.</p>
-                    <p className="about-us-some">
-                    Nasi klienci otrzymują nie tylko niezawodność i dokładność w każdej operacji, ale również indywidualne podejście do każdego zapytania. Zapewniamy ciągłość 
-                    i wysoką efektywność we wszystkich aspektach logistyki, aby Twoje towary zawsze docierały na miejsce na czas i bezpiecznie.
-                    </p>
+                    <p>Logistyka magazynowa obejmuje następujące usługi:</p>
+                    <ul>
+                        <li>magazyny z licencją celną w Polsce,</li>
+                        <li>przechowywanie towarów bez konieczności płacenia cła i podatków do momentu ich zwolnienia do swobodnego obrotu,</li>
+                        <li>etykietowanie, pakowanie i przepakowywanie towarów zgodnie z wymaganiami kraju przeznaczenia,</li>
+                        <li>zarządzanie numerami partii, serii i terminami przydatności towarów, które są przechowywane,</li>
+                        <li>ubezpieczenie towarów na czas przechowywania.</li>
+                    </ul>
+                    <p>Te usługi pozwalają obniżyć koszty, zoptymalizować procesy logistyczne oraz zapewnić bezpieczeństwo towarów podczas przechowywania.</p>
                 </div>
-                <div className="map">
-                    <MainMap />
+                <div className="service-img-page">
+                    <img src={service_img} alt="usługi"/>
                 </div>
             </div>
 
             <center>
-                
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
-                    part2={"indywidualne podejście, aby logistyka była dla Ciebie jak najprostsza."}
+                    part2={"indywidualne podejście, aby uprościć logistykę dla Ciebie."}
                     order_call={"Zamówienie rozmowy"}
                     order={"Zamówienie rozmowy"}
                     name_type={"Twoje imię"}
@@ -114,6 +115,5 @@ const AboutPlPage = () => {
             </center>
         </div>
     );
-};
-
-export default AboutPlPage;
+}
+export default Service5PagePl;

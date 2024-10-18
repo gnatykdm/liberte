@@ -1,13 +1,13 @@
 import React, { useState } from 'react'; 
-import Header from '../../../shared/ui/header/Header';
-import OrderCall from '../../../shared/ui/ordercall/OrderCall';
-import Footer from '../../../shared/ui/footer/Footer';
-import PageInfo from '../../../shared/ui/pageInfo/PageInfo';
-import flag from '../../../shared/assets/icons/united-kingdom.png';
-import MainMap from '../../../shared/ui/map/MainMap';
+import Header from '../../../../shared/ui/header/Header';
+import flag from '../../../../shared/assets/icons/united-kingdom.png';
+import Footer from '../../../../shared/ui/footer/Footer';
+import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
+import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
+import service_img from '../../../../shared/assets/images/fulfillment.jpg';
 
-const MainEnAbout = () => {
+const Service2PageEn = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
@@ -22,9 +22,9 @@ const MainEnAbout = () => {
     };
 
     return (
-        <div className={`main-about-us-page ${isDarkMode ? 'dark' : ''}`}>
+        <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - About Us</title>
+                <title>Libert - International Courier Delivery</title>
             </Helmet>
 
             <Header 
@@ -58,25 +58,29 @@ const MainEnAbout = () => {
             />
 
             <div className="some-age-info">
-                <PageInfo text="About the Company" isDarkMode={isDarkMode} />
+                <PageInfo text="International Courier Delivery" isDarkMode={isDarkMode} />
             </div>
             
-            <div className={`main-content-about ${isDarkMode ? 'dark' : ''}`}>
+            <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
-                    <p>LIBERT Group is a team of professionals who have combined their years of experience to create a company that offers a full range of logistics solutions. We specialize in international courier delivery, oversized cargo transport, and comprehensive customs agency services.</p>
-                    <p className="about-us-some">
-                    Our clients receive not only reliability and accuracy in every operation but also a personalized approach to every inquiry. We ensure continuity and high efficiency in all aspects of logistics so that your goods always arrive on time and safely.
-                    </p>
+                    <p>International courier delivery includes:</p>
+                    <ul>
+                        <li>Courier Delivery: We offer services that combine accuracy, reliability, and a personalized approach for convenient logistics.</li>
+                        <li>Collaboration with Courier Companies: We work with Ukrainian and European partners, which allows us to reduce delivery costs.</li>
+                        <li>Personal Savings on Delivery: Through our partnerships, you receive better rates than when organizing delivery on your own.</li>
+                        <li>Quality and Speed: We ensure delivery without compromising quality and speed. Delivery time ranges from 2 to 14 working days, depending on the destination country.</li>
+                    </ul>
+                    <p>Our team is ready to assist you in all aspects of international delivery, ensuring that your cargo always arrives on time and intact.</p>
                 </div>
-                <div className="map">
-                    <MainMap />
+                <div className="service-img-page">
+                    <img src={service_img} alt="International Courier Services"/>
                 </div>
             </div>
 
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make logistics as easy as possible for you."}
+                    part2={"a personalized approach to make international delivery as easy as possible for you."}
                     order_call={"Order a Call"}
                     order={"Order a Call"}
                     name_type={"Your Name"}
@@ -110,6 +114,6 @@ const MainEnAbout = () => {
             </center>
         </div>
     );
-};
+}
 
-export default MainEnAbout;
+export default Service2PageEn;

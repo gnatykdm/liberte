@@ -1,36 +1,35 @@
-import React, { useState, useEffect } from 'react'; // Импортируйте useEffect
-import './MainAboutUs.css';
-import Header from '../../../shared/ui/header/Header';
-import OrderCall from '../../../shared/ui/ordercall/OrderCall';
-import Footer from '../../../shared/ui/footer/Footer';
-import PageInfo from '../../../shared/ui/pageInfo/PageInfo';
-import ukraine_flag from '../../../shared/assets/icons/ukraine.png';
-import SomeInfo from '../../../widgets/someInfo/SomeInfo';
-import MainMap from '../../../shared/ui/map/MainMap';
+import React, { useState } from 'react'; 
+import Header from '../../../../shared/ui/header/Header';
+import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
+import flag from '../../../../shared/assets/icons/ukraine.png';
+import Footer from '../../../../shared/ui/footer/Footer';
+import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
+import service_img from '../../../../shared/assets/images/fulfillment.jpg';
 
-const MainAboutUS = () => {
-    const [isDarkMode, setIsDarkMode] = useState(() => {
+const Service3Page = () => {
+       const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
     });
 
     const toggleTheme = () => {
         setIsDarkMode(prevMode => {
-            const newMode = !prevMode; // Переключаем состояние
-            localStorage.setItem('isDarkMode', newMode); // Сохраняем новое состояние в localStorage
-            return newMode; // Возвращаем новое состояние
+            const newMode = !prevMode; 
+            localStorage.setItem('isDarkMode', newMode); 
+            return newMode; 
         });
     };
 
     return (
-        <div className={`main-about-us-page ${isDarkMode ? 'dark' : ''}`}>
+            <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - Про Нас</title>
+                <title>Libert - Негабаритні перевезення</title>
             </Helmet>
 
+
             <Header 
-                image={ukraine_flag}
+                image={flag}
                 head={"Головна"}
                 services={"Послуги"} 
                 service_drop={"Негабаритні перевезення"}
@@ -60,27 +59,30 @@ const MainAboutUS = () => {
             />
 
             <div className="some-age-info">
-                <PageInfo text="Про компанію" isDarkMode={isDarkMode} />
+                <PageInfo text="Негабаритні Перевезення" isDarkMode={isDarkMode} />
             </div>
             
-            <div className={`main-content-about ${isDarkMode ? 'dark' : ''}`}>
+            <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
-                    <p>LIBERT Group – це команда професіоналів, які об'єднали свій багаторічний досвід для створення компанії, <br/> 
-                    що пропонує повний спектр логістичних рішень. Ми спеціалізуємося на міжнародній кур'єрській доставці, <br/> 
-                    транспортуванні негабаритних вантажів і наданні комплексних послуг митних брокерів.</p>
-                    <p className="about-us-some">
-                    Наші клієнти отримують не лише надійність та точність у кожній операції, але й індивідуальний підхід до кожного запиту. Ми забезпечуємо безперервність 
-                    і високу ефективність у всіх аспектах логістики, щоб ваші товари завжди досягали пункту призначення вчасно та безпечно.
+                    <p>
+                    Надаємо послуги з транспортування негабаритних вантажів та документального супроводу.
+                    Перевозимо від комбайнів до інфраструктурних об’єктів. За нас говорять реалізовані проекти на сайті Єврокомісії.
+                    Забезпечуємо повний цикл логістичних рішень, включаючи узгодження дозволів, планування маршрутів, а також організацію супроводу вантажів спеціалізованими транспортними засобами. 
                     </p>
+
+                    <p>
+                        Наш багаторічний досвід дозволяє оперативно вирішувати будь-які питання, пов'язані з транспортуванням негабариту, дотримуючись міжнародних стандартів безпеки та якості.
+                        Довірте нам свій вантаж – ми гарантуємо надійність, професіоналізм та своєчасне виконання зобов'язань.
+                    </p>
+                    
                 </div>
-                <div className="map">
-                    <MainMap />
+                <div className="service-img-page">
+                    <img src={service_img} alt="service"/>
                 </div>
             </div>
 
             <center>
-                
-                <OrderCall
+            <OrderCall
                     part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}
                     part2={"індивідуальний підхід, щоб зробити логістику максимально простою для вас"}
                     order_call={"Замовити дзвінок"}
@@ -92,7 +94,7 @@ const MainAboutUS = () => {
                     messageError={"Проблема із відправкою"}
                 />
 
-            <Footer
+                <Footer
                 head="Головне меню"
                 head2="Меню"
                 head3="Наші контакти"
@@ -113,9 +115,8 @@ const MainAboutUS = () => {
                 service4_link={"/service4"}
                 service5_link={"/service5"}
                 />
-        </center>
+            </center>
         </div>
     );
-};
-
-export default MainAboutUS;
+}
+export default Service3Page;

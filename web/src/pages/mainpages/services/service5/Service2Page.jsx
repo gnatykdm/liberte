@@ -1,15 +1,13 @@
-import React, { useState, useEffect } from 'react'; // Импортируйте useEffect
-import './MainAboutUs.css';
-import Header from '../../../shared/ui/header/Header';
-import OrderCall from '../../../shared/ui/ordercall/OrderCall';
-import Footer from '../../../shared/ui/footer/Footer';
-import PageInfo from '../../../shared/ui/pageInfo/PageInfo';
-import ukraine_flag from '../../../shared/assets/icons/ukraine.png';
-import SomeInfo from '../../../widgets/someInfo/SomeInfo';
-import MainMap from '../../../shared/ui/map/MainMap';
+import React, { useState } from 'react'; 
+import Header from '../../../../shared/ui/header/Header';
+import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
+import flag from '../../../../shared/assets/icons/ukraine.png';
+import Footer from '../../../../shared/ui/footer/Footer';
+import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
+import service_img from '../../../../shared/assets/images/fulfillment.jpg';
 
-const MainAboutUS = () => {
+const Service2Page = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
@@ -17,20 +15,20 @@ const MainAboutUS = () => {
 
     const toggleTheme = () => {
         setIsDarkMode(prevMode => {
-            const newMode = !prevMode; // Переключаем состояние
-            localStorage.setItem('isDarkMode', newMode); // Сохраняем новое состояние в localStorage
-            return newMode; // Возвращаем новое состояние
+            const newMode = !prevMode; 
+            localStorage.setItem('isDarkMode', newMode); 
+            return newMode; 
         });
     };
 
     return (
-        <div className={`main-about-us-page ${isDarkMode ? 'dark' : ''}`}>
+        <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - Про Нас</title>
+                <title>Libert - Міжнародна кур’єрська доставка</title>
             </Helmet>
 
             <Header 
-                image={ukraine_flag}
+                image={flag}
                 head={"Головна"}
                 services={"Послуги"} 
                 service_drop={"Негабаритні перевезення"}
@@ -60,29 +58,29 @@ const MainAboutUS = () => {
             />
 
             <div className="some-age-info">
-                <PageInfo text="Про компанію" isDarkMode={isDarkMode} />
+                <PageInfo text="Міжнародна Кур’єрська Доставка" isDarkMode={isDarkMode} />
             </div>
             
-            <div className={`main-content-about ${isDarkMode ? 'dark' : ''}`}>
+            <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
-                    <p>LIBERT Group – це команда професіоналів, які об'єднали свій багаторічний досвід для створення компанії, <br/> 
-                    що пропонує повний спектр логістичних рішень. Ми спеціалізуємося на міжнародній кур'єрській доставці, <br/> 
-                    транспортуванні негабаритних вантажів і наданні комплексних послуг митних брокерів.</p>
-                    <p className="about-us-some">
-                    Наші клієнти отримують не лише надійність та точність у кожній операції, але й індивідуальний підхід до кожного запиту. Ми забезпечуємо безперервність 
-                    і високу ефективність у всіх аспектах логістики, щоб ваші товари завжди досягали пункту призначення вчасно та безпечно.
-                    </p>
+                    <p>Міжнародна кур’єрська доставка включає в себе:</p>
+                    <ul>
+                        <li>Кур'єрська доставка: Ми надаємо послуги, що поєднують точність, надійність і персоналізований підхід для зручної логістики.</li>
+                        <li>Співпраця з кур'єрськими службами: Працюємо з українськими та європейськими партнерами, що дає змогу знижувати витрати на доставку.</li>
+                        <li>Економія на доставці: Завдяки нашій співпраці, ви отримуєте вигідніші ціни, ніж при самостійній організації доставки.</li>
+                        <li>Якість і швидкість: Ми забезпечуємо доставку без компромісів щодо якості та швидкості. Тривалість доставки становить від 2 до 14 робочих днів, залежно від країни призначення.</li>
+                    </ul>
+                    <p>Наша команда готова допомогти вам з усіма аспектами міжнародної доставки, щоб ваші вантажі завжди прибували вчасно та в цілості.</p>
                 </div>
-                <div className="map">
-                    <MainMap />
+                <div className="service-img-page">
+                    <img src={service_img} alt="International courier services"/>
                 </div>
             </div>
 
             <center>
-                
                 <OrderCall
                     part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}
-                    part2={"індивідуальний підхід, щоб зробити логістику максимально простою для вас"}
+                    part2={"індивідуальний підхід, щоб зробити міжнародну доставку максимально простою для вас."}
                     order_call={"Замовити дзвінок"}
                     order={"Замовити дзвінок"}
                     name_type={"Ваше ім'я"}
@@ -113,9 +111,8 @@ const MainAboutUS = () => {
                 service4_link={"/service4"}
                 service5_link={"/service5"}
                 />
-        </center>
+            </center>
         </div>
     );
-};
-
-export default MainAboutUS;
+}
+export default Service2Page;
