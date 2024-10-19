@@ -95,7 +95,7 @@
 
 .social-media {
     margin-top: 20px;
-    margin-right: 275px;
+    margin-right: 140px;
 }
 
 .social-media img {
@@ -156,14 +156,12 @@
 
     .social-media {
         justify-content: center;
-        align-items: center;
-        margin-left: 120px;
+        width: auto;
+        margin: 0;
     }
 
     .social-media img {
-        width: 30px;
-        justify-content: center;
-        align-items: center;
+        width: 40px;
     }
 
     .footer-bottom p {

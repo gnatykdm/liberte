@@ -115,6 +115,9 @@ const MainPlPage = () => {
                 service3_link={"/service3/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
+                languagelink_1={"/en"}
+                languagelink_2={"/"}
+                languagelink_3={"/pl"}
                 />
 
             </center>

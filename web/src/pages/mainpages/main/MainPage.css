@@ -117,21 +117,24 @@
     }
 
     .text-container-main {
-        font-size: 25px;
+        font-size: 20px;
         line-height: 1.6;
-        margin-left: 5px;
-        width: 350px;
+        margin-left: 0;
+        width: auto;
     }
     
     .btn-main-desc {
         background-color: #5156e5;
-        width: 300px;
-        height: 50px;
-        font-size: 18px;
+        max-width: 95%;
+        width: auto;
         margin-left: 0;
+        height: a;
+        font-size: 18px;
         font-weight: bold;
         text-transform: uppercase;
         align-content: center;
+        justify-content: center;
+        align-items: center;
         color: #ffffff;
         padding: 10px;
         border:#5156e5 4px solid;

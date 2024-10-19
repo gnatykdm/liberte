@@ -87,11 +87,10 @@ const MainContactPage = () => {
             </div>
         </div>            
     
-        <center>
-            <div className="contact-info">
+        <div className="contact-info">
                 <ContactInfo contact={"Надаєте перевагу іншим методам зв'яку?"} isDarkMode={isDarkMode} />
-            </div>
-    
+        </div>
+        <center>
             <Footer
                 head="Головне меню"
                 head2="Меню"

@@ -51,13 +51,14 @@
     }
 
     .text-container-about {
-        width: 350px;
-        margin-left: 30px;
+        width: auto;
+        margin: 0;
         font-size: 18px;
     }
 
     .main-content-about {
-        display: flex;
-        flex-direction: column;
+        width: auto;
+        justify-content: center;
+        margin-top: 20px;
     }
 }

@@ -5,8 +5,10 @@
     border-radius: 40px;
     text-align: left; 
     color: white; 
-    width: 88%;
-    margin: 0;
+    width: 85%;
+    margin: 0 auto; /* Center the component */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
 }
 
 .contact-info-desc.dark {
@@ -18,27 +20,33 @@
     font-size: 20px; 
     margin-bottom: 20px; 
     font-weight: bold; 
+    text-align: center; /* Center the text for better aesthetics */
 }
 
-.contact-content {
+.contact-content ul {
     display: flex; 
+    flex-direction: column;
     gap: 10px; 
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
 }
 
-.contact-item {
-    display: flex; 
-    align-items: center; 
-    gap: 10px; 
+.contact-content li {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Add padding for better touch targets */
+    border-radius: 10px; /* Rounded corners for list items */
+    transition: background-color 0.3s; /* Smooth transition for hover */
 }
 
-.contact-item img {
-    width: 30px; 
-    height: auto; 
-    transition: transform 0.3s ease; 
+.contact-content li:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
 }
 
-.contact-item img:hover {
-    transform: scale(1.2); 
+.contact-content img {
+    width: 25px; 
+    height: 25px; /* Ensure images are square */
+    margin-right: 10px; /* Space between image and text */
 }
 
 .phone_number {
@@ -52,32 +60,33 @@
     text-decoration: none; 
     font-family: 'Montserrat', sans-serif;
     font-size: 16px; 
+    margin-left: 10px;
+    transition: color 0.3s; /* Smooth transition for color */
 }
 
 .contact-link:hover {
     text-decoration: underline; 
+    color: hsl(238, 74%, 61%); /* Change color on hover for better visibility */
 }
 
 @media (max-width: 768px) {
     .contact-info-desc {
-        width: 85%;
-    }
-    .contact-text {
-        font-size: 16px;
-        text-align: center; 
-        margin: 0;
+        width: 95%; /* Use more width on smaller screens */
+        padding: 15px; /* Reduce padding for mobile */
+        margin-left: 20px;
     }
 
-    .contact-content {
-        margin: 0;
-        margin-top: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+    .contact-text {
+        font-size: 18px; 
+        margin-bottom: 15px; 
+    }
+
+    .contact-content ul {
+        gap: 8px; /* Slightly smaller gap on mobile */
     }
 
     .phone_number {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .contact-item img {

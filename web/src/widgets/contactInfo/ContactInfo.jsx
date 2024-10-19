@@ -3,7 +3,8 @@ import { Helmet } from "react-helmet";
 import telegram_logo from '../../shared/assets/icons/telegramwhite.png';
 import phone_logo from '../../shared/assets/icons/phonewhite.png';
 import instagram_logo from '../../shared/assets/icons/instagramwhite.png';
-import './ContactInfo.css'; // Подключаем CSS файл
+import mail_logo from '../../shared/assets/icons/email.png';
+import './ContactInfo.css'; 
 
 const ContactInfo = ({ contact, isDarkMode }) => {
     return (
@@ -17,19 +18,19 @@ const ContactInfo = ({ contact, isDarkMode }) => {
             <div className="contact-text">
                 { contact }
             </div>
+
             <div className="contact-content">
-                <div className="contact-item">
-                    <img src={phone_logo} alt="phone" />
-                    <div className="phone_number"> +380982359020 </div>
-                </div>
-                <div className="contact-item">
-                    <img src={telegram_logo} alt="telegram" />
-                    <a href="https://t.me/yourusername" className="contact-link">Telegram</a>
-                </div>
-                <div className="contact-item">
-                    <img src={instagram_logo} alt="instagram" />
-                    <a href="https://www.instagram.com/libert.fulfillment/" className="contact-link">Instagram</a>
-                </div>
+                <ul>
+                    <li><img src={mail_logo} alt="mail" width={25} height={25} /> manager@libertgroup.pl</li>
+                    <li><img src={phone_logo} alt="phone" width={25} height={25} /> +380 634 076 931 - Viber</li>
+                    <li><img src={phone_logo} alt="phone" width={25} height={25} /> +48 883 104 083 - WhatsApp/Telegram</li>
+                    <li><img src={telegram_logo} alt="telegram" width={25} height={25} />
+                        <a href="https://t.me/rybusik07" className="contact-link">Telegram</a>
+                    </li>
+                    <li><img src={instagram_logo} alt="instagram" width={25} height={25} />
+                        <a href="https://www.instagram.com/libert.courier/" className="contact-link">Instagram</a>
+                    </li>
+                </ul>
             </div>
         </div>
     );

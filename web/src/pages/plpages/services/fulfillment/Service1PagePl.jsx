@@ -100,19 +100,25 @@ const Service1PagePl = () => {
                     />
 
             <Footer
-                    service_drop={"Transport Nienormatywny"}
-                    head={"Menu Główne"}
-                    head2={"Strony"}
-                    head3={"Nasze Kontakty"}
-                    services={"Usługi"}
-                    contacts={"Kontakty"}
-                    main_link={"/pl"}
-                    about_link={"/about/pl"}
-                    contact_link={"/contact/pl"}
-                    about="O Nas"
-                    service1_link={"/service/pl"}
-                    service2_link={"/fulfillment/pl"}
-                    fulfillment={"Kurierzy"}
+                head="Główne menu"
+                head2="Menu"
+                head3="Nasze kontakty"
+                services={"Usługi"}
+                contacts="Kontakt"
+                main_link="/pl"
+                about_link="/about/pl"
+                contact_link="/contact/pl"
+                about="O nas"
+                service1="FulFillment"
+                service2="Międzynarodowa dostawa kurierska"
+                service3="Transport ponadgabarytowy"
+                service4="Usługi agencji celnej"
+                service5="Logistyka magazynowa"
+                service1_link={"/service1/pl"}
+                service2_link={"/service2/pl"}
+                service3_link={"/service3/pl"}
+                service4_link={"/service4/pl"}
+                service5_link={"/service5/pl"}
                 />
             </center>
         </div>

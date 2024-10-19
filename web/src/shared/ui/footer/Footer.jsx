@@ -7,7 +7,6 @@ import phone_logo from '../../assets/icons/phonewhite.png';
 import telegram_logo from '../../assets/icons/telegramwhite.png';
 import mail_logo from '../../assets/icons/email.png';
 import arrow_logo from '../../assets/icons/right-arrow.png';
-import viber_logo from '../../assets/icons/viber.png';
 import './Footer.css';
 
 // Reusable Footer Column Component
@@ -27,17 +26,13 @@ const FooterColumn = ({ title, links, arrow }) => (
   </div>
 );
 
-// Reusable Social Media Icons Component
 const SocialMediaIcons = () => (
   <div className="social-media">
-    <a href="https://www.instagram.com/libert.fulfillment/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <a href="https://www.instagram.com/libert.courier/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
       <img src={instagram_logo} alt="Instagram" />
     </a>
-    <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+    <a href="https://t.me/rybusik07" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
       <img src={telegram_logo} alt="Telegram" />
-    </a>
-    <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" aria-label="Viber">
-      <img src={viber_logo} alt="Viber" />
     </a>
   </div>
 );
@@ -77,10 +72,10 @@ const Footer = ({ head, head2, services, about, contacts, main_link, about_link,
             <img src={arrow_logo} alt="arrow" width={15} height={15} className="footer-img" />
           </div>
           <ul>
+            <li><img src={mail_logo} alt="mail" /> manager@libertgroup.pl</li>
             <li><img src={phone_logo} alt="phone" /> +380 634 076 931 - viber</li>
             <li><img src={phone_logo} alt="phone" /> +48 883 104 083 - whatsapp/telegram</li>
             <li><img src={adress_logo} alt="address" /> Rzeszow, Przemysłowa 6 - Poland</li>
-            <li><img src={mail_logo} alt="mail" /> manager@libertgroup.pl</li>
           </ul>
           <SocialMediaIcons />
         </div>

@@ -23,6 +23,10 @@
     margin-left: 80px;
 }
 
+.contact-info {
+    margin-right: 60px;
+}
+
 .map-contact {
     margin-right: 170px;
 }
@@ -40,5 +44,14 @@
 
     .main-contact {
         margin-bottom: 40px;
+    }
+
+    .contact-info {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 0;
+        margin-left: 5px;
+
     }
 }

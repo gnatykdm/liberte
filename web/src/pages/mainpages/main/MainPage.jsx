@@ -57,6 +57,9 @@ const MainPage = () => {
                 service3_link={"/service3"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
+                languagelink_1={"/en"}
+                languagelink_2={"/"}
+                languagelink_3={"/pl"}
             />
 
             <div className="main-content">

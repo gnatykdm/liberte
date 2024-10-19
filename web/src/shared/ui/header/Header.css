@@ -280,7 +280,7 @@
 /* Mobile Menu Overlay */
 .mobile-menu-overlay {
     position: fixed;
-    width: 100%;
+    width: auto;
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px); /* Adding blur effect */
@@ -299,7 +299,7 @@
     border-radius: 20px; /* More rounded corners */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Adding shadow for depth */
     position: relative;
-    width: 100%;
+    width: auto;
     max-width: 400px;
     color: #fff;
     
@@ -375,7 +375,7 @@
     border-radius: 20px; /* More rounded corners */
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Adding shadow for depth */
     position: relative;
-    width: 100%;
+    width: auto;
     color: #fff;
     
 }
@@ -416,7 +416,6 @@
     right: 100px;
     gap: 20px;
     justify-content: center;
-    margin-right: 50px;
 }
 
 .mobile-nav-link {

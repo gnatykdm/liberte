@@ -98,20 +98,26 @@ const Service1PageEn = () => {
                     messageError={"Problem Sending"}
                 />
 
-                <Footer
-                    service_drop={"Oversized Transport"}
-                    head={"Main Menu"}
-                    head2={"Pages"}
-                    head3={"Our Contacts"}
-                    services={"Services"}
-                    contacts={"Contact"}
-                    main_link="/en"
-                    about_link="/about/en"
-                    contact_link="/contact/en"
-                    about="About Us"
-                    service1_link={"/service/en"}
-                    service2_link={"/fulfillment/en"}
-                    fulfillment={"Couriers"}
+            <Footer
+                head="Main Menu"
+                head2="Menu"
+                head3="Our Contacts"
+                services={"Services"}
+                contacts="Contact"
+                main_link="/en"
+                about_link="/about/en"
+                contact_link="/contact/en"
+                about="About Us"
+                service1="Fulfillment"
+                service2="International Courier Delivery"
+                service3="Oversized Transport"
+                service4="Customs Agency Services"
+                service5="Warehouse Logistics"
+                service1_link={"/service1/en"}
+                service2_link={"/service2/en"}
+                service3_link={"/service3/en"}
+                service4_link={"/service4/en"}
+                service5_link={"/service5/en"}
                 />
             </center>
         </div>

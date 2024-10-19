@@ -100,20 +100,26 @@ const Service1Page = () => {
                     />
 
             <Footer
-                    service_drop={"Негабаритні перевезення"}
-                    head={"Головне меню"}
-                    head2={"Сторінки"}
-                    head3={"Наші контакти"}
-                    services={"Послуги"}
-                    contacts={"Контакти"}
-                    main_link={"/ua"}
-                    about_link={"/about/ua"}
-                    contact_link={"/contact/ua"}
-                    about="Про нас"
-                    service1_link={"/service/ua"}
-                    service2_link={"/fulfillment/ua"}
-                    fulfillment={"Кур’єри"}
-                />
+                head="Головне меню"
+                head2="Меню"
+                head3="Наші контакти"
+                services={"Послуги"}
+                contacts="Контакти"
+                main_link="/"
+                about_link="/about"
+                contact_link="/contact"
+                about="Про Нас"
+                service1="FulFillment"
+                service2="Міжнародна кур'єрська доставка"
+                service3="Негабаритні перевезення"
+                service4="Послуги митного агенства"
+                service5="Складська Логістика"
+                service1_link={"/service1"}
+                service2_link={"/service2"}
+                service3_link={"/service3"}
+                service4_link={"/service4"}
+                service5_link={"/service5"}
+            />
             </center>
         </div>
     );

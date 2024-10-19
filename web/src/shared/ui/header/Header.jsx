@@ -46,6 +46,11 @@ const Header = ({
         setIsMessageSent(false); 
     };
 
+    const handleLinkClick = (e) => {
+        e.stopPropagation(); // Prevents the click from bubbling up to the parent element
+    };
+    
+
     const handleModalClose = () => setIsModalOpen(false);
 
     useEffect(() => {
@@ -211,19 +216,38 @@ const Header = ({
                             <div className="mobile-nav-link dropdown-toggle" onClick={() => toggleDropdown('isServicesDropdownOpen')}>
                                 {services}
                                 {dropdownStates.isServicesDropdownOpen && (
-                                    <div className="dropdown-menu-mobile show">
-                                        <div className="dropdown-item-services-mobile">FULFILLMENT</div>
-                                        <div className="dropdown-item-services-mobile">{service_drop}</div>
+                                <div className="dropdown-menu-mobile show">
+                                    <div className="dropdown-item-services-mobile">
+                                        <Link to={service1_link} className="service-dropdown-link" onClick={handleLinkClick}>{service2}</Link>
                                     </div>
+                                    <div className="dropdown-item-services-mobile">
+                                        <Link to={service3_link} className="service-dropdown-link" onClick={handleLinkClick}>{service3}</Link>
+                                    </div>
+                                    <div className="dropdown-item-services-mobile">
+                                        <Link to={service4_link} className="service-dropdown-link" onClick={handleLinkClick}>{service4}</Link>
+                                    </div>
+                                    <div className="dropdown-item-services-mobile">
+                                        <Link to={service5_link} className="service-dropdown-link" onClick={handleLinkClick}>{service5}</Link>
+                                    </div>
+                                    <div className="dropdown-item-services-mobile">
+                                        <Link to={service1_link} className="service-dropdown-link" onClick={handleLinkClick}>{service1}</Link>
+                                    </div>
+                                </div>
                                 )}
+
                             </div>
                         </nav>
                         <div className="mobile-modal-footer">
                             <div className="mobile-modal-footer-description">{social_networks}</div>
                             <div className="social-media-mobile">
+                                <a href="https://www.instagram.com/libert.courier/" target="_blank" rel="noopener noreferrer">
                                 <img src={instagram_logo} alt="Instagram" />
-                                <img src={telegram_logo} alt="Telegram" />
+                                </a>
+                                <a href="https://t.me/rybusik07" target="_blank" rel="noopener noreferrer">
+                                    <img src={telegram_logo} alt="Telegram" />
+                                </a>
                             </div>
+
                             <div className="mobile-modal-footer-bottom">
                                 <p>2024 © Libert Group | All rights reserved.</p>
                             </div>
@@ -235,4 +259,4 @@ const Header = ({
     );
 }
 
-export default Header;
+export default Header; 

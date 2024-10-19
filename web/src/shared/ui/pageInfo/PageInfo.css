@@ -39,4 +39,8 @@
     .text-block {
         margin-left: 32px;
     }
+
+    .text {
+        font-size: 25px;
+    }
 }
