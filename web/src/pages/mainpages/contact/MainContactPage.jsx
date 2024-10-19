@@ -59,6 +59,9 @@ const MainContactPage = () => {
                 service3_link={"/service3"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
+                languagelink_1={"/contact/en"}
+                languagelink_2={"/contact"}
+                languagelink_3={"/contact/pl"}
             />
     
         <div className="some-age-info">
@@ -86,7 +89,7 @@ const MainContactPage = () => {
     
         <center>
             <div className="contact-info">
-                <ContactInfo contact={"Віддаєте перевагу іншому способу?"} isDarkMode={isDarkMode} />
+                <ContactInfo contact={"Надаєте перевагу іншим методам зв'яку?"} isDarkMode={isDarkMode} />
             </div>
     
             <Footer

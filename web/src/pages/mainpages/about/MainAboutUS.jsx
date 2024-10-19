@@ -57,6 +57,9 @@ const MainAboutUS = () => {
                 service3_link={"/service3"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
+                languagelink_1={"/about/en"}
+                languagelink_2={"/about"}
+                languagelink_3={"/about/pl"}
             />
 
             <div className="some-age-info">

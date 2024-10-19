@@ -56,6 +56,9 @@ const ContactPlPage = () => {
                 service3_link={"/service3/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
+                languagelink_1={"/contact/en"}
+                languagelink_2={"/contact"}
+                languagelink_3={"/contact/pl"}
             />
         
             <div className="some-age-info">
@@ -83,7 +86,7 @@ const ContactPlPage = () => {
         
             <center>
                 <div className="contact-info">
-                    <ContactInfo contact={"Preferujesz inny sposób?"} isDarkMode={isDarkMode} />
+                    <ContactInfo contact={"Preferujesz inne metody kontaktu?"} isDarkMode={isDarkMode} />
                 </div>
         
                 <Footer

@@ -1,6 +1,5 @@
 package com.liberte.util;
 
-import com.liberte.model.entity.MessageEntity;
 import jakarta.annotation.PostConstruct;
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;

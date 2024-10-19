@@ -5,7 +5,7 @@ import flag from '../../../../shared/assets/icons/poland.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
-import service_img from '../../../../shared/assets/images/fulfillment.jpg';
+import service_img from '../../../../shared/assets/images/headimg.png';
 
 const Service5PagePl = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -55,6 +55,9 @@ const Service5PagePl = () => {
                 service3_link={"/service3/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
+                languagelink_1={"/service5/en"}
+                languagelink_2={"/service5"}
+                languagelink_3={"/service5/pl"}
             />
 
             <div className="some-age-info">

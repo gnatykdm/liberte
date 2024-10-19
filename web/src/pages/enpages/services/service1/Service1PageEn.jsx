@@ -5,7 +5,7 @@ import flag from '../../../../shared/assets/icons/united-kingdom.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
-import service_img from '../../../../shared/assets/images/service.jpg';
+import service_img from '../../../../shared/assets/images/headimg.png';
 import '../../../mainpages/services/fulfillment/ServicePage.css';
 
 const Service1PageEn = () => {
@@ -45,9 +45,20 @@ const Service1PageEn = () => {
                 contact_link={"/contact/en"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                service1_link={"/fulfillment/en"}
-                service2_link={"/service/en"}
                 messageStatus={"Message Sent"}
+                service1="Fulfillment"
+                service2="International Courier Delivery"
+                service3="Oversized Transport"
+                service4="Customs Agency Services"
+                service5="Warehouse Logistics"
+                service1_link={"/service1/en"}
+                service2_link={"/service2/en"}
+                service3_link={"/service3/en"}
+                service4_link={"/service4/en"}
+                service5_link={"/service5/en"}
+                languagelink_1={"/service1/en"}
+                languagelink_2={"/service1"}
+                languagelink_3={"/service1/pl"}
             />
 
             <div className="some-age-info">
@@ -55,14 +66,20 @@ const Service1PageEn = () => {
             </div>
 
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
-                <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur reprehenderit assumenda maiores sint, 
-                        <br/> non nesciunt nemo a atque, quae quis asperiores! Voluptatibus obcaecati aspernatur 
-                        <br/> adipisci, nihil nostrum quibusdam velit at.</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum modi est deserunt ipsa adipisci 
-                        <br/> delectus culpa perspiciatis placeat illum, magnam cumque, necessitatibus rem molestias facilis!
-                        <br/> Inventore distinctio modi dignissimos consectetur?</p>
-                </div>
+            <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
+                <p>As part of the fulfillment service, we offer:</p>
+                    <ul>
+                        <li>receiving parcels,</li>
+                        <li>quantity and quality control of goods,</li>
+                        <li>storage of products in the warehouse,</li>
+                        <li>order picking and packaging,</li>
+                        <li>printing of courier labels,</li>
+                        <li>shipment and delivery of parcels to end consumers,</li>
+                        <li>return processing.</li>
+                    </ul>
+            </div>
+            
+
                 <div className="service-img-page">
                     <img src={service_img} alt="service"/>
                 </div>

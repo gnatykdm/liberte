@@ -55,6 +55,9 @@ const MainEn = () => {
                 service3_link={"/service3/en"}
                 service4_link={"/service4/en"}
                 service5_link={"/service5/en"}
+                languagelink_1={"/en"}
+                languagelink_2={"/"}
+                languagelink_3={"/pl"}
             />
 
             <div className="main-content">

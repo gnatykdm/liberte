@@ -48,7 +48,7 @@ public class MessageController {
         messageService.saveMessage(message);
 
         List<String> mailReceivers = readMailFile("mails.txt");
-        String yourEmail = mailReceivers.isEmpty() ? "default_email@example.com" : mailReceivers.get(0); // Використання першої адреси
+        String yourEmail = mailReceivers.isEmpty() ? "default_email@example.com" : mailReceivers.get(0);
 
         String emailContent = generateEmailContent(m);
         mailUtil.sendMail(yourEmail, yourEmail, message.getMessageTheme(), emailContent);
@@ -68,10 +68,10 @@ public class MessageController {
         MessagePhoneEntity message = new MessagePhoneEntity(m.getSenderName(), m.getSenderPhone());
         mobileMessageService.saveMobileMessage(message);
         List<String> mailReceivers = readMailFile("mails.txt");
-        String yourEmail = mailReceivers.isEmpty() ? "default_email@example.com" : mailReceivers.get(0); // Використання першої адреси
+        String yourEmail = mailReceivers.isEmpty() ? "default_email@example.com" : mailReceivers.get(0);
 
         String emailContent = generateMobileEmailContent(m);
-        mailUtil.sendMail(yourEmail, yourEmail, "Cрочний Дзвінок - Liber-Site", emailContent);
+        mailUtil.sendMail(yourEmail, yourEmail,  "Терміновий Дзвінок - Libert-Site", emailContent);
 
         logger.info("MessageController: Mobile message was sent from: " + m.getSenderName());
         return HttpStatus.OK;
@@ -96,7 +96,7 @@ public class MessageController {
 
     private String generateEmailContent(MessageDto m) {
         StringBuilder sb = new StringBuilder();
-        sb.append("---- Нове повідомлення з Liberte ----\n\n");
+        sb.append("---- Нове повідомлення з Libert ----\n\n");
         sb.append("Відправник: ").append(m.getSenderName()).append(" (").append(m.getSenderEmail()).append(")\n");
         sb.append("Тема: ").append(m.getMessageTheme()).append("\n");
         sb.append("Зміст повідомлення:\n").append(m.getMessageContent()).append("\n");
@@ -107,7 +107,7 @@ public class MessageController {
 
     private String generateMobileEmailContent(MobileMessageDto m) {
         StringBuilder sb = new StringBuilder();
-        sb.append("---- Нове термінове повідомлення з Liberte ----\n\n");
+        sb.append("---- Нове термінове повідомлення з Libert ----\n\n");
         sb.append("Відправник: ").append(m.getSenderName()).append("\n");
         sb.append("Телефон: ").append(m.getSenderPhone()).append("\n");
         sb.append("-------------------------------------\n");

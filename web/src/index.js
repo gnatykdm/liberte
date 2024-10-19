@@ -17,7 +17,7 @@ import Service1Page from './pages/mainpages/services/fulfillment/Service1Page.js
 import Service5Page from './pages/mainpages/services/service3/Service5Page.jsx';
 import Service4Page from './pages/mainpages/services/service4/Service4Page.jsx';
 import Service2Page from './pages/mainpages/services/service5/Service2Page.jsx';
-import Service1PagePl from './pages/mainpages/services/fulfillment/Service1Page.jsx';
+import Service1PagePl from './pages/plpages/services/fulfillment/Service1PagePl.jsx';
 import Service2PagePl from './pages/plpages/services/service2/Service2PagePl.jsx';
 import Service3PagePl from './pages/plpages/services/head/Service3PagePl.jsx';
 import Service4PagePl from './pages/plpages/services/service4/Service4PagePl.jsx';

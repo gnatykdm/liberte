@@ -18,7 +18,7 @@ import { Link, useLocation } from "react-router-dom";
 const Header = ({ 
     image, head, services, service_drop, about, contacts, call, order, social_networks, name_type, tel_type, 
     main_link, about_link, contact_link, toggleTheme, isDarkMode, service1_link, service2_link, messageStatus,
-    service1, service2, service3, service4, service5, service3_link, service4_link, service5_link
+    service1, service2, service3, service4, service5, service3_link, service4_link, service5_link, languagelink_1, languagelink_2, languagelink_3
 }) => {
     const [dropdownStates, setDropdownStates] = useState({
         isLanguageDropdownOpen: false,
@@ -109,15 +109,15 @@ const Header = ({
                             <div className="dropdown-menu">
                                 <div className="dropdown-item">
                                     <img src={britain_flag} alt="kingdom" />
-                                    <Link to="/en" className="dropdown-language">English</Link>
+                                    <Link to={languagelink_1} className="dropdown-language">English</Link>
                                 </div>
                                 <div className="dropdown-item">
                                     <img src={ukraine_flag} alt="ukraine" />
-                                    <Link to="/" className="dropdown-language">Українська</Link>
+                                    <Link to={languagelink_2} className="dropdown-language">Українська</Link>
                                 </div>
                                 <div className="dropdown-item">
                                     <img src={poland_flag} alt="poland" />
-                                    <Link to="/pl" className="dropdown-language">Polski</Link>
+                                    <Link to={languagelink_3} className="dropdown-language">Polski</Link>
                                 </div>
                             </div>
                         )}
@@ -131,9 +131,6 @@ const Header = ({
                         {dropdownStates.isServicesDropdownOpen && (
                             <div className="dropdown-menu">
                                 <div className="dropdown-item-services">
-                                    <Link to={service1_link} className="service-dropdown-link">{ service1 }</Link>
-                                </div>
-                                <div className="dropdown-item-services">
                                     <Link to={service2_link} className="service-dropdown-link">{service2}</Link>
                                 </div>
                                 <div className="dropdown-item-services">
@@ -144,6 +141,9 @@ const Header = ({
                                 </div>
                                 <div className="dropdown-item-services">
                                     <Link to={service5_link} className="service-dropdown-link">{service5}</Link>
+                                </div>
+                                <div className="dropdown-item-services">
+                                    <Link to={service1_link} className="service-dropdown-link">{service1}</Link>
                                 </div>
                             </div>
                         )}
