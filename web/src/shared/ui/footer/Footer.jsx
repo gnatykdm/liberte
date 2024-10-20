@@ -19,12 +19,13 @@ const FooterColumn = ({ title, links, arrow }) => (
     <ul>
       {links.map((link, index) => (
         <li key={index}>
-          <Link to={link.path} className="li-link">{link.label}</Link>
+          <Link to={link.path} className="li-link" onClick={window.scrollTo(0,0)}>{link.label}</Link>
         </li>
       ))}
     </ul>
   </div>
 );
+
 
 const SocialMediaIcons = () => (
   <div className="social-media">

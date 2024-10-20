@@ -37,7 +37,7 @@
 
 .footer-column ul {
     padding: 0; 
-    list-style: none; 
+    list-style: decimal; 
 }
 
 .footer-column-name img h3 {
@@ -59,8 +59,9 @@
     cursor: pointer;
 }
 
+
 .footer-column ul li::before {
-    content: "*"; 
+    content: '•';
     position: absolute; 
     left: 0; 
     color: white; 

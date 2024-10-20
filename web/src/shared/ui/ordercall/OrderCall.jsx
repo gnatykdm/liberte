@@ -20,17 +20,19 @@ const OrderCall = ({
     const [formData, setFormData] = useState({ name: '', phone: '' });
     const [messageStatus, setMessageStatus] = useState('');
     const [statusTimeout, setStatusTimeout] = useState(null);
+    const [isMessageSent, setIsMessageSent] = useState(false); // Добавляем состояние для отслеживания отправки
 
     const messageService = new MobileMessage();
 
     const handleModalOpen = () => {
         setIsModalOpen(true);
+        setIsMessageSent(false); // Сбрасываем статус отправки при открытии модального окна
     };
 
     const handleModalClose = () => {
         setIsModalOpen(false);
-        setMessageStatus(''); 
-        clearTimeout(statusTimeout); 
+        setMessageStatus('');
+        clearTimeout(statusTimeout);
     };
 
     const handleInputChange = (e) => {
@@ -43,17 +45,18 @@ const OrderCall = ({
         const { name, phone } = formData;
 
         const messageDto = new MobileMessageDto(name, phone);
-        setFormData({ name: '', phone: '' });
 
         try {
             await messageService.saveMessage(messageDto);
+            setFormData({ name: '', phone: '' });
             setMessageStatus(messageSuccess);
+            setIsMessageSent(true); 
 
             const timeoutId = setTimeout(() => {
                 setMessageStatus('');
             }, 3000);
 
-            setStatusTimeout(timeoutId); 
+            setStatusTimeout(timeoutId);
         } catch (error) {
             console.error("Error sending message:", error);
             setMessageStatus(messageError);
@@ -104,34 +107,35 @@ const OrderCall = ({
                             onClick={handleModalClose}
                             aria-label="Close modal"
                         >×</button>
-                        <h3>{order_call}</h3>
-                        <form onSubmit={handleSubmit}>
-                            <input
-                                type="text-name"
-                                name="name"
-                                placeholder={name_type}
-                                value={formData.name}
-                                onChange={handleInputChange}
-                                required
-                                aria-label="Name"
-                            />
-                            <input
-                                type="tel"
-                                name="phone"
-                                placeholder={tel_type}
-                                value={formData.phone}
-                                onChange={handleInputChange}
-                                required
-                                aria-label="Phone Number"
-                            />
-                            <button type="submit" className="order-button">{order}</button>
-                        </form>
-                        {messageStatus && (
-                            <div 
-                                className={`sent-message-text-modal ${isDarkMode ? 'dark' : ''}`} 
-                                role="alert"
-                            >
-                                {messageStatus}
+                        {/* Условный рендеринг формы или сообщения об успешной отправке */}
+                        {isMessageSent ? (
+                            <div className="message-sent">
+                                <h4>{messageSuccess}</h4> {/* Сообщение вместо формы */}
+                            </div>
+                        ) : (
+                            <div className="message-order-sent-form">
+                                <h3>{order_call}</h3>
+                                <form onSubmit={handleSubmit}>
+                                <input
+                                    type="text-name"
+                                    name="name"
+                                    placeholder={name_type}
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                    required
+                                    aria-label="Name"
+                                />
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder={tel_type}
+                                    value={formData.phone}
+                                    onChange={handleInputChange}
+                                    required
+                                    aria-label="Phone Number"
+                                />
+                                <button type="submit" className="order-button">{order}</button>
+                            </form>
                             </div>
                         )}
                     </div>

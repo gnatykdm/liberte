@@ -37,10 +37,11 @@
     }
 
     .text-block {
-        margin-left: 32px;
+        margin-left: 20px;
     }
 
     .text {
         font-size: 25px;
+        margin: 0;
     }
 }

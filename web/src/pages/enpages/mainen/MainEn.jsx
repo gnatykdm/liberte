@@ -75,7 +75,7 @@ const MainEn = () => {
                         </p>
                     </div>
                     <button className="btn-main-desc">
-                        <Link to="/contact" style={{ textDecoration: 'none', color: '#ffffff' }}>
+                        <Link to="/contact/en" style={{ textDecoration: 'none', color: '#ffffff' }}>
                             start collaboration
                         </Link>
                     </button>

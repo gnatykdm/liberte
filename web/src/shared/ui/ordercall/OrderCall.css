@@ -58,36 +58,6 @@
     color: #ffffff;
 }
 
-@media (max-width: 768px) {
-    .ordercall {
-        width: 87%;
-        height: 55px;
-        padding: 10px;
-        align-items: center;
-    }
-
-    .libert-logo img {
-        height: auto;
-        width: 400px;
-        margin-top: 5px;
-        align-items: left;
-    }
-
-    .order-call-content {
-        display: none;
-    }
-
-    .order-call-button {
-        width: 250px;
-        padding: 15px;
-        font-size: 15px;
-        height: 30px;
-        margin-top: 0px;
-        border-radius: 15px;
-        margin-right: 20px;
-    }
-}
-
 /* Modal Styles */
 .modal-overlay {
     display: block;
@@ -108,13 +78,14 @@
     padding: 30px;
     border-radius: 50px;
     width: 80%;
+    height: 400px;
     max-width: 500px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
     position: relative;
     font-size: 25px;
     color: #ffffff;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .modal-close {
@@ -174,4 +145,43 @@ input[type="text-type"]:focus, input[type="tel-type"]:focus {
     color: #ffffff;
     font-size: 14px;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .ordercall {
+        width: 87%;
+        height: 55px;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .libert-logo img {
+        height: auto;
+        width: 400px;
+        margin-top: 5px;
+        align-items: left;
+    }
+
+    .order-call-content {
+        display: none;
+    }
+
+    .order-call-button {
+        width: 250px;
+        padding: 15px;
+        font-size: 15px;
+        height: 30px;
+        margin-top: 0px;
+        border-radius: 15px;
+        margin-right: 20px;
+    }
+
+    .modal-content {
+        margin: 0;
+    }
+}
+
+.message-sent {
+    font-weight: bold;
+    margin-top: 170px;
 }

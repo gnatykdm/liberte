@@ -213,29 +213,28 @@ const Header = ({
                             <Link to={main_link} className={`mobile-nav-link ${isActiveLink(main_link)}`}>{head}</Link>
                             <Link to={about_link} className={`mobile-nav-link ${isActiveLink(about_link)}`}>{about}</Link>
                             <Link to={contact_link} className={`mobile-nav-link ${isActiveLink(contact_link)}`}>{contacts}</Link>
-                            <div className="mobile-nav-link dropdown-toggle" onClick={() => toggleDropdown('isServicesDropdownOpen')}>
-                                {services}
-                                {dropdownStates.isServicesDropdownOpen && (
-                                <div className="dropdown-menu-mobile show">
-                                    <div className="dropdown-item-services-mobile">
-                                        <Link to={service1_link} className="service-dropdown-link" onClick={handleLinkClick}>{service2}</Link>
-                                    </div>
-                                    <div className="dropdown-item-services-mobile">
-                                        <Link to={service3_link} className="service-dropdown-link" onClick={handleLinkClick}>{service3}</Link>
-                                    </div>
-                                    <div className="dropdown-item-services-mobile">
-                                        <Link to={service4_link} className="service-dropdown-link" onClick={handleLinkClick}>{service4}</Link>
-                                    </div>
-                                    <div className="dropdown-item-services-mobile">
-                                        <Link to={service5_link} className="service-dropdown-link" onClick={handleLinkClick}>{service5}</Link>
-                                    </div>
-                                    <div className="dropdown-item-services-mobile">
-                                        <Link to={service1_link} className="service-dropdown-link" onClick={handleLinkClick}>{service1}</Link>
-                                    </div>
+                            <div className="mobile-nav-link dropdown-toggle" onClick={(e) => { e.stopPropagation(); toggleDropdown('isServicesDropdownOpen'); }}>
+                                    {services}
+                                    {dropdownStates.isServicesDropdownOpen && (
+                                        <div className="dropdown-menu-mobile show" ref={servicesDropdownRef}>
+                                            <div className="dropdown-item-services-mobile">
+                                                <Link to={service1_link} className="service-dropdown-link" onClick={handleLinkClick}>{service1}</Link>
+                                            </div>
+                                            <div className="dropdown-item-services-mobile">
+                                                <Link to={service2_link} className="service-dropdown-link" onClick={handleLinkClick}>{service2}</Link>
+                                            </div>
+                                            <div className="dropdown-item-services-mobile">
+                                                <Link to={service3_link} className="service-dropdown-link" onClick={handleLinkClick}>{service3}</Link>
+                                            </div>
+                                            <div className="dropdown-item-services-mobile">
+                                                <Link to={service4_link} className="service-dropdown-link" onClick={handleLinkClick}>{service4}</Link>
+                                            </div>
+                                            <div className="dropdown-item-services-mobile">
+                                                <Link to={service5_link} className="service-dropdown-link" onClick={handleLinkClick}>{service5}</Link>
+                                            </div>
+                                        </div>
+                                    )}
                                 </div>
-                                )}
-
-                            </div>
                         </nav>
                         <div className="mobile-modal-footer">
                             <div className="mobile-modal-footer-description">{social_networks}</div>
