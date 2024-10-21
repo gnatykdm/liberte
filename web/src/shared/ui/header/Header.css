@@ -279,45 +279,51 @@
 
 /* Mobile Menu Overlay */
 .mobile-menu-overlay {
-    position: fixed;
-    width: auto;
+    position: fixed; /* Stays fixed on the screen */
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px); /* Adding blur effect */
     z-index: 1000;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Center content vertically and horizontally */
     transition: opacity 0.5s ease; /* Smooth fade-in */
     opacity: 1;
-    overflow-y: hidden;
 }
 
 /* Mobile Menu Container */
 .mobile-menu {
     background: #1c1b24;
     padding: 30px;
-    border-radius: 20px; /* More rounded corners */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Adding shadow for depth */
-    position: relative;
-    width: auto;
-    max-width: 400px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    width: 90%; /* Adjust the width for mobile responsiveness */
+    max-width: 400px; /* Set a max-width to keep it from becoming too wide */
+    height: auto; /* Ensure it adapts to content height */
     color: #fff;
-    
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ensure text stays centered */
 }
 
+/* Burger Menu */
 .burger-menu {
     position: absolute;
     background: none;
     top: 25px;
-    right: 150px;
+    right: 20px;
     cursor: pointer;
     width: 40px;
     height: 25px; /* Adjusted height for better line spacing */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Evenly spaces the lines */
-    z-index: 1000; /* Keeps it above other elements */     /* Removes the background */
+    z-index: 1000; /* Keeps it above other elements */
     border: none;
     gap: 7px;
 }
@@ -330,7 +336,6 @@
     border-radius: 30px; /* Slight rounding for a modern touch */
     transition: background-color 0.3s ease; /* Smooth color transition */
 }
-
 
 /* Mobile Menu Button */
 .mobile-menu-button {
@@ -351,62 +356,6 @@
     background-color: #ffffff;
 }
 
-/* Mobile Menu Overlay */
-.mobile-menu-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px); /* Adding blur effect */
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s ease; /* Smooth fade-in */
-    opacity: 1;
-}
-
-/* Mobile Menu Container */
-.mobile-menu {
-    height: 100%;
-    background: #1c1b24;
-    padding: 30px;
-    border-radius: 20px; /* More rounded corners */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Adding shadow for depth */
-    position: relative;
-    width: auto;
-    color: #fff;
-    
-}
-
-.burger-menu {
-    position: absolute;
-    background: none;
-    top: 25px;
-    right: 20px;
-    cursor: pointer;
-    width: 40px;
-    height: 25px; /* Adjusted height for better line spacing */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Evenly spaces the lines */
-    z-index: 1000; /* Keeps it above other elements */     /* Removes the background */
-    border: none;
-    gap: 7px;
-}
-
-/* Burger Lines */
-.burger-line {
-    width: 100%;
-    height: 12px; /* Thinner lines for a sleek look */
-    background-color: #5156e5;
-    border-radius: 30px; /* Slight rounding for a modern touch */
-    transition: background-color 0.3s ease; /* Smooth color transition */
-}
-
-
 /* Navigation Links */
 .mobile-navigation {
     margin-top: 100px;
@@ -414,7 +363,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    right: 100px;
     gap: 20px;
     justify-content: center;
 }
@@ -430,6 +378,7 @@
     width: 80%;
     cursor: pointer;
     margin-top: 5px;
+    justify-content: center;
     text-transform: uppercase;
     text-align: center;
     transition: all 0.3s ease;
@@ -503,7 +452,8 @@
 }
 
 
-@media (max-width: 768px) {
+
+@media (max-width: 1305px) {
     .navigation, .call-order-btn {
         display: none;
     }

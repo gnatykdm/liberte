@@ -39,6 +39,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
+@media screen and (max-width: 1305px) {
+    .service-img-page  {
+        display: none;
+    }
+}
 
 
 @media (max-width:768px) {

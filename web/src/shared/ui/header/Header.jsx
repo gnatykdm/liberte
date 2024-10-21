@@ -160,35 +160,47 @@ const Header = ({
                 <div className="header-actions">
                     <button className="call-order-btn" onClick={handleModalOpen}>{call}</button>
                     {isModalOpen && (
-                        <div className="modal-overlay">
-                            <div className="modal modal-content">
-                                <button className="modal-close" onClick={handleModalClose} aria-label="Close Modal">×</button>
-                                <h3>{call}</h3>
-                                <form onSubmit={handleSubmit}>
-                                    <input
-                                        type="text-name"
-                                        name="name"
-                                        placeholder={name_type}
-                                        value={formData.name}
-                                        onChange={handleInputChange}
-                                        required
-                                        aria-label="Name"
-                                    />
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        placeholder={tel_type}
-                                        value={formData.phone}
-                                        onChange={handleInputChange}
-                                        required
-                                        aria-label="Phone"
-                                    />
-                                    <button type="submit" className="order-button">{order}</button>
-                                </form>
-                                {isMessageSent && <p className={`sent-message-text-modal ${isDarkMode ? 'dark' : ''}`}>{ messageStatus }</p>}
+                <div className="modal-overlay">
+                    <div className="modal modal-content" role="dialog" aria-modal="true">
+                        <button 
+                            className="modal-close" 
+                            onClick={handleModalClose}
+                            aria-label="Close modal"
+                        >×</button>
+                        {/* Условный рендеринг формы или сообщения об успешной отправке */}
+                        {isMessageSent ? (
+                            <div className="message-sent">
+                                <h4>{messageStatus}</h4> {/* Сообщение вместо формы */}
                             </div>
-                        </div>
-                    )}
+                        ) : (
+                            <div className="message-order-sent-form">
+                                <h3>{order}</h3>
+                                <form onSubmit={handleSubmit}>
+                                <input
+                                    type="text-name"
+                                    name="name"
+                                    placeholder={name_type}
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                    required
+                                    aria-label="Name"
+                                />
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    placeholder={tel_type}
+                                    value={formData.phone}
+                                    onChange={handleInputChange}
+                                    required
+                                    aria-label="Phone Number"
+                                />
+                                <button type="submit" className="order-button">{order}</button>
+                            </form>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
                     <div className="theme-switcher" onClick={toggleTheme}>
                         <img src={isDarkMode ? moon : sun} alt="Theme Icon" className="theme-icon" />
                         <div className={`toggle-switch ${isDarkMode ? 'active' : ''}`}></div>

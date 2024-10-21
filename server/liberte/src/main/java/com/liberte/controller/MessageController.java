@@ -36,7 +36,7 @@ public class MessageController {
     private IMailUtil mailUtil;
     private Logger logger = LoggerFactory.getLogger(MessageController.class);
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "http://3.71.185.65:80")
     @PostMapping("/save")
     public HttpStatus sendMessage(@RequestBody MessageDto m) {
         if (m == null) {
@@ -57,7 +57,7 @@ public class MessageController {
         return HttpStatus.OK;
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "http://3.71.185.65:80")
     @PostMapping("/savemobile")
     public HttpStatus sendMessageMobile(@RequestBody MobileMessageDto m) {
         if (m == null) {

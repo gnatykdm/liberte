@@ -2,7 +2,7 @@ import axios from 'axios';
  
 export class MobileMessage {
     constructor() {
-        this.apiUrl = 'http://localhost:8080/3i7Xry7tEKF5ZtdzT8Wn1zXToUABR5JpjBpSfxmn8asEaBmoblFeS4yIfrHEWvk5/api/message/savemobile';
+        this.apiUrl = 'http://3.71.185.65:8080/3i7Xry7tEKF5ZtdzT8Wn1zXToUABR5JpjBpSfxmn8asEaBmoblFeS4yIfrHEWvk5/api/message/savemobile';
     }
 
     async saveMessage(mobileMessageDto) {
