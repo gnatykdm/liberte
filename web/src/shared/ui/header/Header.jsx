@@ -16,7 +16,7 @@ import { MobileMessageDto } from "../../../entity/messagedto/MobileMessageDto";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = ({ 
-    image, head, services, service_drop, about, contacts, call, order, social_networks, name_type, tel_type, 
+    image, head, services, photo_link, about, contacts, call, order, social_networks, name_type, tel_type, 
     main_link, about_link, contact_link, toggleTheme, isDarkMode, service1_link, service2_link, messageStatus,
     service1, service2, service3, service4, service5, service3_link, service4_link, service5_link, languagelink_1, languagelink_2, languagelink_3
 }) => {
@@ -47,7 +47,7 @@ const Header = ({
     };
 
     const handleLinkClick = (e) => {
-        e.stopPropagation(); // Prevents the click from bubbling up to the parent element
+        e.stopPropagation(); 
     };
     
 
@@ -106,7 +106,7 @@ const Header = ({
 
             <div className="header-container">
                 <div className="logo-section">
-                    <img src={libert_logo} alt="Libert Logo" className="logo" />
+                    <Link to={photo_link}><img src={libert_logo} alt="Libert Logo" className="logo" /></Link>
                     <div className="language-switcher" onClick={() => toggleDropdown('isLanguageDropdownOpen')} ref={languageDropdownRef}>
                         <img src={image} alt="Current Flag" className="flag-icon" />
                         <img src={isDarkMode ? arrow_white : arrow_black} alt="Arrow" className={`arrow-icon ${isDarkMode ? 'dark' : ''}`} />
@@ -223,8 +223,6 @@ const Header = ({
                         </button>
                         <nav className="mobile-navigation">
                             <Link to={main_link} className={`mobile-nav-link ${isActiveLink(main_link)}`}>{head}</Link>
-                            <Link to={about_link} className={`mobile-nav-link ${isActiveLink(about_link)}`}>{about}</Link>
-                            <Link to={contact_link} className={`mobile-nav-link ${isActiveLink(contact_link)}`}>{contacts}</Link>
                             <div className="mobile-nav-link dropdown-toggle" onClick={(e) => { e.stopPropagation(); toggleDropdown('isServicesDropdownOpen'); }}>
                                     {services}
                                     {dropdownStates.isServicesDropdownOpen && (
@@ -247,6 +245,8 @@ const Header = ({
                                         </div>
                                     )}
                                 </div>
+                            <Link to={about_link} className={`mobile-nav-link ${isActiveLink(about_link)}`}>{about}</Link>
+                            <Link to={contact_link} className={`mobile-nav-link ${isActiveLink(contact_link)}`}>{contacts}</Link>
                         </nav>
                         <div className="mobile-modal-footer">
                             <div className="mobile-modal-footer-description">{social_networks}</div>

@@ -60,6 +60,7 @@ const MainPage = () => {
                 languagelink_1={"/en"}
                 languagelink_2={"/"}
                 languagelink_3={"/pl"}
+                photo_link={"/"}
             />
 
             <div className="main-content">

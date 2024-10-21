@@ -32,6 +32,21 @@
 }
 
 
+@media (max-width: 1305px) {
+    .map-contact {
+        margin-right: 80px;
+        justify-content: right;
+    }
+
+    .contact-info {
+        margin-right: 20px;
+    }
+
+    .contact-form {
+        margin-left: 50px;
+    }
+}
+
 @media (max-width: 768px) {
     .map-contact {
         display: none;

@@ -118,6 +118,7 @@ const MainPlPage = () => {
                 languagelink_1={"/en"}
                 languagelink_2={"/"}
                 languagelink_3={"/pl"}
+                photo_link={"/pl"}
                 />
 
             </center>

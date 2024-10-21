@@ -58,6 +58,7 @@ const MainEnAbout = () => {
                 languagelink_1={"/about/en"}
                 languagelink_2={"/about"}
                 languagelink_3={"/about/pl"}
+                photo_link={"/en"}
             />
 
             <div className="some-age-info">

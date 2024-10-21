@@ -58,6 +58,7 @@ const Service4PagePl = () => {
                 languagelink_1={"/service4/en"}
                 languagelink_2={"/service4"}
                 languagelink_3={"/service4/pl"}
+                photo_link={"/pl"}
             />
 
             <div className="some-age-info">

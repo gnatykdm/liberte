@@ -28,7 +28,7 @@
     justify-content: space-around;
     flex-wrap: nowrap; 
     width: 100%; 
-    margin-left: 110px;
+    margin-left: 80px;
 }
 
 .footer-column {
@@ -127,9 +127,24 @@
     color: #ffffff;
 }
 
+@media (max-width: 1305px) {
+    .footer-container {
+        margin-left: 30px;
+    }
+
+    .footer-column ul li {
+        font-size: 15px;
+    }
+
+    .social-media {
+        margin-right: 50px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .footer {
-        width: 90%;
+        max-width: 85%;
+        width: auto;
         padding: 30px 10px;
         border-radius: 40px;
     }

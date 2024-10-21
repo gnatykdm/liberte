@@ -62,6 +62,7 @@ const MainContactPage = () => {
                 languagelink_1={"/contact/en"}
                 languagelink_2={"/contact"}
                 languagelink_3={"/contact/pl"}
+                photo_link={"/"}
             />
     
         <div className="some-age-info">

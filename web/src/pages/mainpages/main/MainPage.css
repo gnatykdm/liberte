@@ -99,7 +99,31 @@
 }
 
 
-@media (max-width:768px) {
+@media  (max-width: 1390px) {
+    .company-main-name-desc, .highlites {
+        font-family: 'Oswald' sans-serif;
+        font-weight: bold;
+        font-size: 50px;
+        text-transform: uppercase;
+        line-height: 1.2;
+    }
+
+    .text-container-main {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-left: 5px;
+    }
+
+    .main-photo-desc {
+        width: auto;
+        height: 450px;
+        margin-right: 100px;
+    }
+
+    
+}
+
+@media (max-width:769px) {
     .main-photo-desc {
         display: none;
     }

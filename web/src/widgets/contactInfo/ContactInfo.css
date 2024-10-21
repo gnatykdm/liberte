@@ -71,7 +71,8 @@
 
 @media (max-width: 768px) {
     .contact-info-desc {
-        width: 95%; /* Use more width on smaller screens */
+        max-width: 90%;
+        width: auto; /* Use more width on smaller screens */
         padding: 15px; /* Reduce padding for mobile */
         margin-left: 20px;
     }
