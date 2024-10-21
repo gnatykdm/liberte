@@ -72,8 +72,8 @@
 @media (max-width: 768px) {
     .contact-info-desc {
         max-width: 90%;
-        width: auto; /* Use more width on smaller screens */
-        padding: 15px; /* Reduce padding for mobile */
+        width: auto; 
+        padding: 15px; 
         margin-left: 20px;
     }
 
@@ -83,7 +83,7 @@
     }
 
     .contact-content ul {
-        gap: 8px; /* Slightly smaller gap on mobile */
+        gap: 8px; 
     }
 
     .phone_number {

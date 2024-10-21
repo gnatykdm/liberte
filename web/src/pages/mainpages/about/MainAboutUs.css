@@ -45,10 +45,15 @@
     margin-right: 120px;
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1345px) {
     .text-container-about {
         font-size: 20px;
         width: 500px;
+        margin-right: 20px;
+    }
+
+    .main-photo-about {
+        width: 300px;
     }
 }
 

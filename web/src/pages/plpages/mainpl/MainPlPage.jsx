@@ -70,7 +70,7 @@ const MainPlPage = () => {
                     <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
                         <p>
                             LIBERT Group oferuje dwa podstawowe rodzaje usług: <b className="some-cont">dostawę kurierską</b> i <br/>
-                            transport <b className="some-cont">ponadgabarytowych</b> ładunków. Dążymy do zapewnienia <br/> naszym klientom usług najwyższej jakości,
+                            transport <b className="some-cont">ponadgabarytowych ładunków</b>. Dążymy do zapewnienia <br/> naszym klientom usług najwyższej jakości,
                             aby każde zlecenie spełniało Twoje oczekiwania.
                         </p>
                     </div>

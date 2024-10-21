@@ -147,6 +147,12 @@ input[type="text-type"]:focus, input[type="tel-type"]:focus {
     justify-content: center;
 }
 
+@media (max-width: 1305px) {
+    .order-call-content {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 768px) {
     .ordercall {
         width: 87%;

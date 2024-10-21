@@ -72,8 +72,8 @@ const MainPage = () => {
                     </div>
                     <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
                         <p>
-                            LIBERT Group надає два основні види послуг: <b className="some-cont">кур'єрську</b> доставку і <br/>
-                            перевезення <b className="some-cont">негабаритних</b> вантажів. Ми прагнемо забезпечити <br/> нашим клієнтам сервіс найвищої якості,
+                            LIBERT Group надає два основні види послуг: <b className="some-cont">кур'єрську доставку</b>  і <br/>
+                            перевезення <b className="some-cont">негабаритних вантажів</b>. Ми прагнемо забезпечити <br/> нашим клієнтам сервіс найвищої якості,
                             аби кожне перевезення відповідало вашим очікуванням.
                         </p>
                     </div>
@@ -87,6 +87,13 @@ const MainPage = () => {
             </div>
 
             <center>
+
+                <Services
+                    isDarkMode={isDarkMode}
+                    service_name={"Міжнародна Доставка"}
+                    service1_link={"/service1"}
+                    service2_link={"/service5"}
+                 />
                 <OrderCall
                     part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}
                     part2={"індивідуальний підхід, щоб зробити логістику максимально простою для вас"}

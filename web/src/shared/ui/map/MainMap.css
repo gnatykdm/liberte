@@ -24,7 +24,7 @@
     border: none; /* Removes default iframe border */
 }
 
-@media (max-width:1305px) {
+@media (max-width:1345px) {
     .gmap-frame {
         height: 490px;
         width: 490px;

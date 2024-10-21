@@ -141,6 +141,20 @@
     }
 }
 
+@media (max-width: 1100px) {
+    .footer-container {
+        margin-left: 20px;
+    }
+
+    .footer-column ul li {
+        font-size: 13px;
+    }
+
+    .social-media {
+        margin-right: 50px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .footer {
         max-width: 85%;

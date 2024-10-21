@@ -51,7 +51,7 @@
 }
 
 .text-container-main {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
     margin-left: 5px;
 }
@@ -112,15 +112,37 @@
         font-size: 15px;
         line-height: 1.6;
         margin-left: 5px;
+        max-width: 500px;
+        width: auto;
     }
 
     .main-photo-desc {
         width: auto;
         height: 450px;
         margin-right: 100px;
+    }    
+}
+
+@media (max-width: 1100px) {
+    .company-main-name-desc, .highlites {
+        font-family: 'Oswald' sans-serif;
+        font-weight: bold;
+        font-size: 40px;
+        text-transform: uppercase;
+        line-height: 1.2;
     }
 
-    
+    .text-container-main {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-left: 5px;
+    }
+
+    .main-photo-desc {
+        width: auto;
+        height: 400px;
+        margin-right: 100px;
+    }
 }
 
 @media (max-width:769px) {

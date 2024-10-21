@@ -23,14 +23,13 @@
 }
 
 .logo-background {
-    width: 350px;
+    width: auto;
+    height: 330px;
     padding: 15px;
-    height: 365px;
     border-radius: 40px;
     background-color: #ffffff;
     position: relative; /* Required for absolute positioning of text */
     overflow: hidden; /* Hide overflow of the image */
-    transition: background-color 0.5s ease, border 0.5s ease;
 }
 
 .logo-background:hover {
@@ -40,11 +39,8 @@
 }
 
 .service-image {
-    width: 100%; /* Make image responsive */
-    height: 100%;
     object-fit: cover;
-    border-radius: 40px;
-    transition: opacity 0.5s ease; /* Smooth transition for the image */
+    border-radius: 40px; /* Smooth transition for the image */
 }
 
 .service-text {
@@ -55,10 +51,10 @@
     left: 50%; 
     transform: translate(-50%, -50%) scale(1); /* Center and initial scale */
     font-weight: bold; 
-    font-size: 20px; 
+    font-size: 35px; 
     opacity: 0; /* Hidden by default */
     text-decoration: none; /* Remove default underline from link */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+    transition: transform 0.3s ease; /* Smooth transitions */
 }
 
 .service-text:hover {
