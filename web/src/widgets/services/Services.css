@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px;
+    margin: 10px;
     margin-top: 100px;
 }
 
@@ -81,18 +81,19 @@
 /* Media queries (for mobile responsiveness) */
 @media (max-width: 768px) {
     .service-content {
-        width: calc(100% - 20px); /* Make service-content take full width */
-        margin: 10px 0; /* Add some margin for spacing */
+        display: flex;
+        margin: 20px 0; /* Add some margin for spacing */
     }
 
     .logo-background {
-        width: 260px; /* Adjust size for smaller screens */
-        height: 275px; /* Adjust height accordingly */
-        border-radius: 30px; /* Adjust border-radius for smaller elements */
+        width: 150px; /* Adjust size for smaller screens */
+        height: 150px; /* Adjust height accordingly */
+        border-radius: 30px;
+        padding-right: 30px; /* Adjust border-radius for smaller elements */
     }
 
     .service-image {
-        width: 100%;
+        width: auto;
         height: 100%;
         object-fit: cover;
         border-radius: 30px; /* Match border-radius */

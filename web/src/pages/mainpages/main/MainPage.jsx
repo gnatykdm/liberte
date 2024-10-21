@@ -92,7 +92,13 @@ const MainPage = () => {
                     isDarkMode={isDarkMode}
                     service_name={"Міжнародна Доставка"}
                     service1_link={"/service1"}
-                    service2_link={"/service5"}
+                    service2_link={"/service2"}
+                    service3_link={"/service4"}
+                    service4_link={"/service5"}
+                    service1_name={"FULFILLMENT"}
+                    service2_name={"Міжнародна кур'єрьска доставка"}
+                    service3_name={"Послуги митного агентства"}
+                    service4_name={"Складська логістика"}
                  />
                 <OrderCall
                     part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}

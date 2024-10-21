@@ -7,7 +7,9 @@ import envelope_log from '../../shared/assets/images/envelope_logo.png';
 import carbox_logo from '../../shared/assets/images/carbox_logo.png';
 import './Services.css';
 
-const Services = ({ isDarkMode, service_name, service1_link, service2_link }) => {
+const Services = ({ isDarkMode, service1_name, service2_name, service3_name, service4_name, service1_link, service2_link,
+    service3_link, service4_link
+ }) => {
     return (
         <div className="services-container">
             <Helmet>
@@ -19,7 +21,7 @@ const Services = ({ isDarkMode, service_name, service1_link, service2_link }) =>
                 <div className={`service-logo ${isDarkMode ? 'dark' : ''}`}>
                     <div className={`logo-background ${isDarkMode ? 'dark' : ''}`}>
                         <img src={doors_logo} alt="door" className="service-image" width={320} height={320}/>
-                        <span className="service-text"><Link to={service1_link} className="service-text-link">FULFILLMENT</Link></span>
+                        <span className="service-text"><Link to={service1_link} className="service-text-link">{service1_name}</Link></span>
                     </div>
                 </div>
             </div>
@@ -27,7 +29,7 @@ const Services = ({ isDarkMode, service_name, service1_link, service2_link }) =>
                 <div className={`service-logo ${isDarkMode ? 'dark' : ''}`}>
                     <div className={`logo-background ${isDarkMode ? 'dark' : ''}`}>
                         <img src={carbox_logo} alt="logistic" className="service-image" width={320} height={320}/>
-                        <span className="service-text"><Link to={service2_link} className="service-text-link">{ service_name }</Link></span>
+                        <span className="service-text"><Link to={service2_link} className="service-text-link">{ service2_name }</Link></span>
                     </div>
                 </div>
             </div>
@@ -35,7 +37,7 @@ const Services = ({ isDarkMode, service_name, service1_link, service2_link }) =>
                 <div className={`service-logo ${isDarkMode ? 'dark' : ''}`}>
                     <div className={`logo-background ${isDarkMode ? 'dark' : ''}`}>
                         <img src={envelope_log} alt="logistic" className="service-image" width={320} height={320}/>
-                        <span className="service-text"><Link to={service2_link} className="service-text-link">{ service_name }</Link></span>
+                        <span className="service-text"><Link to={service3_link} className="service-text-link">{ service3_name }</Link></span>
                     </div>
                 </div>
             </div>
@@ -43,7 +45,7 @@ const Services = ({ isDarkMode, service_name, service1_link, service2_link }) =>
                 <div className={`service-logo ${isDarkMode ? 'dark' : ''}`}>
                     <div className={`logo-background ${isDarkMode ? 'dark' : ''}`}>
                         <img src={garage_logo} alt="logistic" className="service-image" width={320} height={320}/>
-                        <span className="service-text"><Link to={service2_link} className="service-text-link">{ service_name }</Link></span>
+                        <span className="service-text"><Link to={service4_link} className="service-text-link">{ service4_name }</Link></span>
                     </div>
                 </div>
             </div>
