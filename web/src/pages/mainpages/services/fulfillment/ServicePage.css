@@ -30,17 +30,21 @@
     color: #ffffff;
 }
 
-
-.service-img-page img {
-    width: 600px;
-    height: auto;
-    margin-right: 80px;
-    border-radius: 40px;
+.service-image-desc {
+    justify-content: right;
+    margin-right: 250px;
+    margin-top: 30px;
 }
 
-@media screen and (max-width: 1305px) {
-    .service-img-page  {
-        display: none;
+.logo-service-background-desc {
+    margin-right: 160px;
+    margin-top: 40px;
+}
+
+@media (max-width: 1305px) {
+    .service-image-desc {
+        width: 400px;
+        height: auto;
     }
 }
 
@@ -58,7 +62,7 @@
         margin-top: 20px;
     }
 
-    .service-img-page {
+    .service-image-desc {
         display: none;
     }
 }

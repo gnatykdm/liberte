@@ -6,6 +6,7 @@ import flag from '../../../shared/assets/icons/poland.png';
 import OrderCall from "../../../shared/ui/ordercall/OrderCall";
 import Footer from "../../../shared/ui/footer/Footer";
 import main_photo from '../../../shared/assets/images/headimg.png';
+import Services from "../../../widgets/services/Services";
 
 const MainPlPage = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -84,6 +85,22 @@ const MainPlPage = () => {
             </div>
 
             <center>
+
+            <Services
+                isDarkMode={isDarkMode}
+                service1_link={"/service1/pl"}
+                service2_link={"/service3/pl"}
+                service3_link={"/service4/pl"}
+                service4_link={"/service5/pl"}
+                service5_link={"/service2/pl"}
+                service1_name={"FULFILLMENT"}
+                service2_name={"Transport ponadgabarytowy"}
+                service3_name={"Usługi agencji celnej"}
+                service4_name={"Logistyka magazynowa"}
+                service5_name={"Międzynarodowa dostawa kurierska"}
+            />
+
+
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
                     part2={"indywidualne podejście, aby logistyka była dla Ciebie jak najprostsza."}

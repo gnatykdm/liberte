@@ -5,7 +5,7 @@ import Footer from '../../../../shared/ui/footer/Footer';
 import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
-import service_img from '../../../../shared/assets/images/headimg.png';
+import international_logo from '../../../../shared/assets/images/internation_delivery_logo.png';
 
 const Service2PageEn = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -63,8 +63,8 @@ const Service2PageEn = () => {
 
             <div className="some-age-info">
                 <PageInfo text="International Courier Delivery" isDarkMode={isDarkMode} />
-            </div>
-            
+            </div>    
+
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
                     <p>International courier delivery includes:</p>
@@ -76,8 +76,10 @@ const Service2PageEn = () => {
                     </ul>
                     <p>Our team is ready to assist you in all aspects of international delivery, ensuring that your cargo always arrives on time and intact.</p>
                 </div>
-                <div className="service-img-page">
-                    <img src={service_img} alt="International Courier Services"/>
+                <div className="service-image">
+                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
+                        <img src={international_logo} alt="logistic" className="service-image"/>
+                    </div>
                 </div>
             </div>
 

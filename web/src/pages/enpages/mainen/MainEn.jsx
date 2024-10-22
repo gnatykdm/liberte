@@ -6,6 +6,7 @@ import flag from '../../../shared/assets/icons/united-kingdom.png';
 import OrderCall from "../../../shared/ui/ordercall/OrderCall";
 import Footer from "../../../shared/ui/footer/Footer";
 import main_photo from '../../../shared/assets/images/headimg.png';
+import Services from "../../../widgets/services/Services";
 
 const MainEn = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -85,6 +86,22 @@ const MainEn = () => {
             </div>
 
             <center>
+
+            <Services
+                isDarkMode={isDarkMode}
+                service1_link={"/service1/en"}
+                service2_link={"/service3/en"}
+                service3_link={"/service4/en"}
+                service4_link={"/service5/en"}
+                service5_link={"/service2/en"}
+                service1_name={"FULFILLMENT"}
+                service2_name={"Oversized transportation"}
+                service3_name={"Customs agency services"}
+                service4_name={"Warehouse logistics"}
+                service5_name={"International courier delivery"}
+            />
+
+
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
                     part2={"a personalized approach to make logistics as simple as possible for you."}

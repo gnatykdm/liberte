@@ -5,7 +5,7 @@ import flag from '../../../../shared/assets/icons/poland.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
-import service_img from '../../../../shared/assets/images/headimg.png';
+import carbox_logo from '../../../../shared/assets/images/carbox_logo.png';
 
 const Service3PagePl = () => {
        const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -80,8 +80,10 @@ const Service3PagePl = () => {
                     </p>
                     
                 </div>
-                <div className="service-img-page">
-                    <img src={service_img} alt="service"/>
+                <div className="service-image">
+                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
+                        <img src={carbox_logo} alt="logistic" className="service-image"/>
+                    </div>
                 </div>
             </div>
 

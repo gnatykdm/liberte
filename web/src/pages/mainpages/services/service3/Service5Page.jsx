@@ -5,7 +5,7 @@ import flag from '../../../../shared/assets/icons/ukraine.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
-import service_img from '../../../../shared/assets/images/headimg.png';
+import garage_logo from '../../../../shared/assets/images/garage_logo.png';
 
 const Service5Page = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -77,8 +77,10 @@ const Service5Page = () => {
                     </ul>
                     <p>Ці послуги дозволяють знизити витрати, оптимізувати логістичні процеси та забезпечити безпеку товарів під час зберігання.</p>
                 </div>
-                <div className="service-img-page">
-                    <img src={service_img} alt="service"/>
+                <div className="service-image">
+                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
+                        <img src={garage_logo} alt="logistic" className="service-image"/>
+                    </div>
                 </div>
             </div>
 

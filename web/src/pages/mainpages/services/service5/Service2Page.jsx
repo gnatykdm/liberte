@@ -5,7 +5,7 @@ import flag from '../../../../shared/assets/icons/ukraine.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
-import service_img from '../../../../shared/assets/images/headimg.png';
+import international_delivery_logo from '../../../../shared/assets/images/internation_delivery_logo.png';
 
 const Service2Page = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -79,8 +79,10 @@ const Service2Page = () => {
                     </ul>
                     <p>Наша команда готова допомогти вам з усіма аспектами міжнародної доставки, щоб ваші вантажі завжди прибували вчасно та в цілості.</p>
                 </div>
-                <div className="service-img-page">
-                    <img src={service_img} alt="International courier services"/>
+                <div className="service-image">
+                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
+                        <img src={international_delivery_logo} alt="logistic" className="service-image"/>
+                    </div>
                 </div>
             </div>
 

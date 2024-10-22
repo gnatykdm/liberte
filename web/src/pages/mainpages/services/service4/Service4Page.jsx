@@ -5,7 +5,7 @@ import flag from '../../../../shared/assets/icons/ukraine.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
-import service_img from '../../../../shared/assets/images/headimg.png';
+import envelope_logo from '../../../../shared/assets/images/envelope_logo.png';
 
 const Service3Page = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -78,8 +78,10 @@ const Service3Page = () => {
                     </ul>
                     <p>Наша команда експертів допоможе вам ефективно вирішити всі питання, пов'язані з митним оформленням, забезпечуючи швидке та професійне обслуговування.</p>
                 </div>
-                <div className="service-img-page">
-                    <img src={service_img} alt="customs services"/>
+                <div className="service-image">
+                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
+                        <img src={envelope_logo} alt="logistic" className="service-image"/>
+                    </div>
                 </div>
             </div>
 

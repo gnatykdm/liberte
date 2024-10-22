@@ -5,7 +5,7 @@ import flag from '../../../../shared/assets/icons/united-kingdom.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
-import service_img from '../../../../shared/assets/images/headimg.png';
+import garage_logo from '../../../../shared/assets/images/garage_logo.png';
 
 const Service5PageEn = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -77,8 +77,10 @@ const Service5PageEn = () => {
                     </ul>
                     <p>These services help reduce costs, optimize logistics processes, and ensure the safety of goods during storage.</p>
                 </div>
-                <div className="service-img-page">
-                    <img src={service_img} alt="warehouse services"/>
+                <div className="service-image">
+                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
+                        <img src={garage_logo} alt="logistic" className="service-image"/>
+                    </div>
                 </div>
             </div>
 

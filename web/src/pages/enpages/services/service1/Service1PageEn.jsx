@@ -5,7 +5,7 @@ import flag from '../../../../shared/assets/icons/united-kingdom.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
-import service_img from '../../../../shared/assets/images/headimg.png';
+import fulfillmetn_logo from '../../../../shared/assets/images/doors_logo.png';
 import '../../../mainpages/services/fulfillment/ServicePage.css';
 
 const Service1PageEn = () => {
@@ -81,8 +81,10 @@ const Service1PageEn = () => {
             </div>
             
 
-                <div className="service-img-page">
-                    <img src={service_img} alt="service"/>
+                <div className="service-image">
+                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
+                        <img src={fulfillmetn_logo} alt="logistic" className="service-image"/>
+                    </div>
                 </div>
             </div>
 
