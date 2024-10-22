@@ -78,9 +78,9 @@ const Service4PagePl = () => {
                     </ul>
                     <p>Nasza zespół ekspertów pomoże Ci efektywnie rozwiązać wszystkie kwestie związane z odprawą celną, zapewniając szybkie i profesjonalne usługi.</p>
                 </div>
-                <div className="service-image">
+                <div className="service-image-main-container">
                     <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
-                        <img src={envelope_logo} alt="logistic" className="service-image"/>
+                        <img src={envelope_logo} alt="logistic" className="service-image-desc"/>
                     </div>
                 </div>
             </div>

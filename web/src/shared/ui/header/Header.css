@@ -532,7 +532,7 @@
     
     .theme-icon.dark {
         background-image: url('../../assets/icons/moon.png');
-        background-size: cover; /* Ensure the background image covers the element */
+        background-size: cover; 
     }
     
     .toggle-switch {
@@ -549,10 +549,10 @@
     .toggle-switch::after {
         content: '';
         position: absolute;
-        top: 1px; /* Adjusted top position */
-        left: 1px; /* Adjusted left position */
-        width: 23px; /* Adjusted width */
-        height: 23px; /* Adjusted height */
+        top: 1px; 
+        left: 1px; 
+        width: 23px; 
+        height: 23px; 
         background-color: #fff;
         border-radius: 50%;
         transition: transform 0.3s ease;

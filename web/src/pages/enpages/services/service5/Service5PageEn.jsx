@@ -77,9 +77,9 @@ const Service5PageEn = () => {
                     </ul>
                     <p>These services help reduce costs, optimize logistics processes, and ensure the safety of goods during storage.</p>
                 </div>
-                <div className="service-image">
+                <div className="service-image-main-container">
                     <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
-                        <img src={garage_logo} alt="logistic" className="service-image"/>
+                        <img src={garage_logo} alt="logistic" className="service-image-desc"/>
                     </div>
                 </div>
             </div>

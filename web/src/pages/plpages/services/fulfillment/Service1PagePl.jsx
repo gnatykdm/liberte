@@ -82,9 +82,9 @@ const Service1PagePl = () => {
                 </ul>
             </div>
 
-                <div className="service-image">
+                <div className="service-image-main-container">
                     <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
-                        <img src={fulfillmetn_logo} alt="logistic" className="service-image"/>
+                        <img src={fulfillmetn_logo} alt="logistic" className="service-image-desc"/>
                     </div>
                 </div>
             </div>

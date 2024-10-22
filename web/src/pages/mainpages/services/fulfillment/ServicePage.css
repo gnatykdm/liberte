@@ -30,10 +30,15 @@
     color: #ffffff;
 }
 
-.service-image-desc {
+.service-image-main-container {
     justify-content: right;
-    margin-right: 250px;
+    margin-right: 150px;
     margin-top: 30px;
+}
+
+.service-image-desc {
+    width: 400px;
+    height: auto;
 }
 
 .logo-service-background-desc {
@@ -45,6 +50,23 @@
     .service-image-desc {
         width: 400px;
         height: auto;
+    }
+}
+
+@media (max-width: 1030px) {
+    .service-image-desc {
+        width: 350px;
+        height: auto;
+        margin-right: 0;
+    }
+
+    .service-container-about {
+        font-size: 23px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 60px;
+        margin-top: 15px;
     }
 }
 

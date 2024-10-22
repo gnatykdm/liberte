@@ -79,9 +79,9 @@ const Service2Page = () => {
                     </ul>
                     <p>Наша команда готова допомогти вам з усіма аспектами міжнародної доставки, щоб ваші вантажі завжди прибували вчасно та в цілості.</p>
                 </div>
-                <div className="service-image">
+                <div className="service-image-main-container">
                     <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
-                        <img src={international_delivery_logo} alt="logistic" className="service-image"/>
+                        <img src={international_delivery_logo} alt="logistic" className="service-image-desc"/>
                     </div>
                 </div>
             </div>

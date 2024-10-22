@@ -78,9 +78,9 @@ const Service3Page = () => {
                     </ul>
                     <p>Наша команда експертів допоможе вам ефективно вирішити всі питання, пов'язані з митним оформленням, забезпечуючи швидке та професійне обслуговування.</p>
                 </div>
-                <div className="service-image">
+                <div className="service-image-main-container">
                     <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
-                        <img src={envelope_logo} alt="logistic" className="service-image"/>
+                        <img src={envelope_logo} alt="logistic" className="service-image-desc"/>
                     </div>
                 </div>
             </div>

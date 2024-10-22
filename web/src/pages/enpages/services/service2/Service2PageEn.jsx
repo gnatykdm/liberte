@@ -76,9 +76,9 @@ const Service2PageEn = () => {
                     </ul>
                     <p>Our team is ready to assist you in all aspects of international delivery, ensuring that your cargo always arrives on time and intact.</p>
                 </div>
-                <div className="service-image">
+                <div className="service-image-main-container">
                     <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
-                        <img src={international_logo} alt="logistic" className="service-image"/>
+                        <img src={international_logo} alt="logistic" className="service-image-desc"/>
                     </div>
                 </div>
             </div>
