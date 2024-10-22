@@ -2,10 +2,6 @@ package com.liberte.controller;
 
 import com.liberte.model.dto.MessageDto;
 import com.liberte.model.dto.MobileMessageDto;
-import com.liberte.model.entity.MessageEntity;
-import com.liberte.model.entity.MessagePhoneEntity;
-import com.liberte.service.IMessageService;
-import com.liberte.service.IMobileMessageService;
 import com.liberte.util.IMailUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,12 +23,6 @@ import java.util.*;
 public class MessageController {
 
     @Autowired
-    private IMessageService messageService;
-
-    @Autowired
-    private IMobileMessageService mobileMessageService;
-
-    @Autowired
     private IMailUtil mailUtil;
     private Logger logger = LoggerFactory.getLogger(MessageController.class);
 
@@ -44,14 +34,11 @@ public class MessageController {
             return HttpStatus.BAD_REQUEST;
         }
 
-        MessageEntity message = new MessageEntity(m.getSenderName(), m.getSenderEmail(), m.getMessageTheme(), m.getMessageContent());
-        messageService.saveMessage(message);
-
         List<String> mailReceivers = readMailFile("mails.txt");
         String yourEmail = mailReceivers.isEmpty() ? "default_email@example.com" : mailReceivers.get(0);
 
         String emailContent = generateEmailContent(m);
-        mailUtil.sendMail(yourEmail, yourEmail, message.getMessageTheme(), emailContent);
+        mailUtil.sendMail(yourEmail, yourEmail, m.getMessageTheme(), emailContent);
 
         logger.info("MessageController: Message was sent from: " + m.getSenderEmail());
         return HttpStatus.OK;
@@ -65,8 +52,6 @@ public class MessageController {
             return HttpStatus.BAD_REQUEST;
         }
 
-        MessagePhoneEntity message = new MessagePhoneEntity(m.getSenderName(), m.getSenderPhone());
-        mobileMessageService.saveMobileMessage(message);
         List<String> mailReceivers = readMailFile("mails.txt");
         String yourEmail = mailReceivers.isEmpty() ? "default_email@example.com" : mailReceivers.get(0);
 
