@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import instagram_logo from '../../assets/icons/instagramwhite.png';
 import adress_logo from '../../assets/icons/location.png';
 import phone_logo from '../../assets/icons/phonewhite.png';
@@ -10,22 +10,46 @@ import arrow_logo from '../../assets/icons/right-arrow.png';
 import './Footer.css';
 
 // Reusable Footer Column Component
-const FooterColumn = ({ title, links, arrow }) => (
-  <div className="footer-column">
-    <div className="footer-column-name">
-      <h3>{title}</h3>
-      {arrow && <img src={arrow_logo} alt="arrow" width={15} height={15} className="footer-img" />}
-    </div>
-    <ul>
-      {links.map((link, index) => (
-        <li key={index}>
-          <Link to={link.path} className="li-link" onClick={window.scrollTo(0,0)}>{link.label}</Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-);
+const FooterColumn = ({ title, links, arrow }) => {
+  const location = useLocation();
 
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0); // Always scroll to top on link click
+  };
+
+  return (
+    <div className="footer-column">
+      <div className="footer-column-name">
+        <h3>{title}</h3>
+        {arrow && <img src={arrow_logo} alt="arrow" width={15} height={15} className="footer-img" />}
+      </div>
+      <ul>
+        {links.map((link, index) => (
+          <li key={index}>
+            <Link 
+              to={link.path} 
+              className="li-link" 
+              onClick={handleLinkClick}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+// Automatically scroll to top on location change
+const ScrollToTopOnLocationChange = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  return null;
+};
 
 const SocialMediaIcons = () => (
   <div className="social-media">
@@ -40,7 +64,6 @@ const SocialMediaIcons = () => (
 
 // Main Footer Component
 const Footer = ({ head, head2, services, about, contacts, main_link, about_link, contact_link, head3, service1_link, service2_link, service1, service2, service3, service4, service3_link, service4_link, service5_link, service5 }) => {
-
   const menuLinks = [
     { label: head, path: main_link },
     { label: contacts, path: contact_link },
@@ -63,6 +86,9 @@ const Footer = ({ head, head2, services, about, contacts, main_link, about_link,
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
       </Helmet>
 
+      {/* This component handles automatic scroll on path change */}
+      <ScrollToTopOnLocationChange />
+
       <div className="footer-container">
         <FooterColumn title={head2} links={menuLinks} arrow />
         <FooterColumn title={services} links={serviceLinks} arrow />
@@ -75,7 +101,7 @@ const Footer = ({ head, head2, services, about, contacts, main_link, about_link,
           <ul>
             <li><img src={mail_logo} alt="mail" /> manager@libertgroup.pl</li>
             <li><img src={phone_logo} alt="phone" /> +380 634 076 931 - viber</li>
-            <li><img src={phone_logo} alt="phone" /> +48 883 104 083 - whatsapp/telegram</li>
+            <li><img src={phone_logo} alt="phone" /> +48 883 104 082 - whatsapp/telegram</li>
             <li><img src={adress_logo} alt="address" /> Rzeszow, Przemysłowa 6 - Poland</li>
           </ul>
           <SocialMediaIcons />

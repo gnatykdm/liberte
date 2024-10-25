@@ -74,7 +74,7 @@ const Service2PagePl = () => {
                         <li>Osobiste oszczędności na dostawie: Dzięki naszej współpracy, otrzymujesz korzystniejsze ceny niż przy samodzielnej organizacji dostawy.</li>
                         <li>Jakość i szybkość: Zapewniamy dostawę bez kompromisów w zakresie jakości i szybkości. Czas dostawy wynosi od 2 do 14 dni roboczych, w zależności od kraju docelowego.</li>
                     </ul>
-                    <p>Nasza zespół jest gotowy, aby pomóc Ci we wszystkich aspektach międzynarodowej dostawy, aby Twoje ładunki zawsze dotarły na czas i w całości.</p>
+                    <p>Nasz zespół jest gotowy pomóc Ci we wszystkich aspektach międzynarodowej dostawy, aby Twoje przesyłki zawsze docierały na czas i w nienaruszonym stanie.</p>
                 </div>
                 <div className="service-image-main-container">
                     <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
@@ -86,7 +86,7 @@ const Service2PagePl = () => {
             <center>
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
-                    part2={"indywidualne podejście, aby uczynić międzynarodową dostawę jak najprostszą dla Ciebie."}
+                    part2={"indywidualne podejście, aby uczynić międzynarodową dostawę jak najprostszą dla Ciebie"}
                     order_call={"Zamówienie rozmowy"}
                     order={"Zamówienie rozmowy"}
                     name_type={"Twoje imię"}

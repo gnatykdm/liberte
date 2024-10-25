@@ -10,6 +10,7 @@ import poland_flag from '../../assets/icons/poland.png';
 import britain_flag from '../../assets/icons/united-kingdom.png';
 import sun from '../../assets/icons/sun.png';
 import moon from '../../assets/icons/moon.png';
+import libert_logo_white from '../../assets/images/libert_logo_white.png';
 import './Header.css';
 import { MobileMessage } from "../../../entity/messagedto/MobileMessage";
 import { MobileMessageDto } from "../../../entity/messagedto/MobileMessageDto";
@@ -106,52 +107,58 @@ const Header = ({
 
             <div className="header-container">
                 <div className="logo-section">
-                    <Link to={photo_link}><img src={libert_logo} alt="Libert Logo" className="logo" /></Link>
+                <Link to={photo_link}>
+                    <img src={isDarkMode ? libert_logo_white : libert_logo} alt="Libert Logo" className={`logo ${isDarkMode ? 'dark' : ''} ${isActiveLink(main_link)}`} /></Link>
+
                     <div className="language-switcher" onClick={() => toggleDropdown('isLanguageDropdownOpen')} ref={languageDropdownRef}>
                         <img src={image} alt="Current Flag" className="flag-icon" />
                         <img src={isDarkMode ? arrow_white : arrow_black} alt="Arrow" className={`arrow-icon ${isDarkMode ? 'dark' : ''}`} />
                         {dropdownStates.isLanguageDropdownOpen && (
-                            <div className="dropdown-menu">
-                                <div className="dropdown-item">
-                                    <img src={britain_flag} alt="kingdom" />
-                                    <Link to={languagelink_1} className="dropdown-language">English</Link>
-                                </div>
-                                <div className="dropdown-item">
-                                    <img src={ukraine_flag} alt="ukraine" />
-                                    <Link to={languagelink_2} className="dropdown-language">Українська</Link>
-                                </div>
-                                <div className="dropdown-item">
-                                    <img src={poland_flag} alt="poland" />
-                                    <Link to={languagelink_3} className="dropdown-language">Polski</Link>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
+                <div className="dropdown-menu">
+        <div className="dropdown-language">
+            {/* Array to hold language options */}
+            {[
+                { link: languagelink_1, flag: britain_flag, label: "English", alt: "UK Flag" },
+                { link: languagelink_2, flag: ukraine_flag, label: "Українська", alt: "Ukraine Flag" },
+                { link: languagelink_3, flag: poland_flag, label: "Polski", alt: "Poland Flag" }
+            ].map((language, index) => (
+                <Link key={index} to={language.link} className="dropdown-item">
+                    <img src={language.flag} alt={language.alt} />
+                    {language.label}
+                </Link>
+            ))}
+        </div>
+    </div>
+)}
+</div>
+</div>
+
 
                 <nav className="navigation">
                     <Link to={main_link} className={`nav-link ${isDarkMode ? 'dark' : ''} ${isActiveLink(main_link)}`}>{head}</Link>
                     <div className={`nav-link ${isDarkMode ? 'dark' : ''} ${isActiveLink('/services')}`} onClick={() => toggleDropdown('isServicesDropdownOpen')} ref={servicesDropdownRef}>
                         {services}
                         {dropdownStates.isServicesDropdownOpen && (
-                            <div className="dropdown-menu">
-                                <div className="dropdown-item-services">
-                                    <Link to={service2_link} className="service-dropdown-link">{service2}</Link>
-                                </div>
-                                <div className="dropdown-item-services">
-                                    <Link to={service3_link} className="service-dropdown-link">{service3}</Link>
-                                </div>
-                                <div className="dropdown-item-services">
-                                    <Link to={service4_link} className="service-dropdown-link">{service4}</Link>
-                                </div>
-                                <div className="dropdown-item-services">
-                                    <Link to={service5_link} className="service-dropdown-link">{service5}</Link>
-                                </div>
-                                <div className="dropdown-item-services">
-                                    <Link to={service1_link} className="service-dropdown-link">{service1}</Link>
-                                </div>
-                            </div>
-                        )}
+    <div className="dropdown-menu">
+        <div className="dropdown-item-services">
+            {/* Array to hold service options */}
+            {[
+                { link: service2_link, label: service2 },
+                { link: service3_link, label: service3 },
+                { link: service4_link, label: service4 },
+                { link: service5_link, label: service5 },
+                { link: service1_link, label: service1 }
+            ].map((service, index) => (
+                <div className="dropdown-item-services" key={index}>
+                    <Link to={service.link} className="service-dropdown-link">
+                        {service.label}
+                    </Link>
+                </div>
+            ))}
+        </div>
+    </div>
+)}
+
                     </div>
                     <Link to={about_link} className={`nav-link ${isDarkMode ? 'dark' : ''} ${isActiveLink(about_link)}`}>{about}</Link>
                     <Link to={contact_link} className={`nav-link ${isDarkMode ? 'dark' : ''} ${isActiveLink(contact_link)}`}>{contacts}</Link>

@@ -23,7 +23,7 @@ const ContactInfo = ({ contact, isDarkMode }) => {
                 <ul>
                     <li><img src={mail_logo} alt="mail" width={25} height={25} /> manager@libertgroup.pl</li>
                     <li><img src={phone_logo} alt="phone" width={25} height={25} /> +380 634 076 931 - Viber</li>
-                    <li><img src={phone_logo} alt="phone" width={25} height={25} /> +48 883 104 083 - WhatsApp/Telegram</li>
+                    <li><img src={phone_logo} alt="phone" width={25} height={25} /> +48 883 104 082 - WhatsApp/Telegram</li>
                     <li><img src={telegram_logo} alt="telegram" width={25} height={25} />
                         <a href="https://t.me/rybusik07" className="contact-link">Telegram</a>
                     </li>

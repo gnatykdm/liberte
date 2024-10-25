@@ -71,7 +71,7 @@ const MainEn = () => {
                     </div>
                     <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
                         <p>
-                            LIBERT Group offers two main types of services: <b className="some-cont">courier delivery</b> and <br/>
+                            LIBERT Group offers two main types of services: <b className="some-cont">international courier delivery</b> and <br/>
                             transport of <b className="some-cont">oversized cargo</b>. We strive to provide our clients with the highest quality services,
                             ensuring that every order meets your expectations.
                         </p>

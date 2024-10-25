@@ -40,6 +40,10 @@
     width: auto;
 }
 
+.logo.dark {
+    background: url("../../assets/images/libert_logo_white.png");
+}
+
 /* Language Switcher */
 .language-switcher {
     position: relative;
@@ -101,7 +105,7 @@
     position: absolute;
     top: 100%; /* Position below the parent element */
     left: 0;
-    width: 200px;
+    width: 180px;
     color: #ffffff;
     background-color: #000000;
     border: 3px solid #5156e5;
@@ -125,8 +129,7 @@
 }
 
 /* Styling for text link */
-.dropdown-language {
-    padding-left: 10px;          /* Add space between icon and text */
+.dropdown-language {       /* Add space between icon and text */
     text-decoration: none;
     color: #ffffff;
     transition: background-color 0.2 ease, color 0.2 ease;

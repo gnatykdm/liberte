@@ -74,7 +74,7 @@ const Service2PageEn = () => {
                         <li>Personal Savings on Delivery: Through our partnerships, you receive better rates than when organizing delivery on your own.</li>
                         <li>Quality and Speed: We ensure delivery without compromising quality and speed. Delivery time ranges from 2 to 14 working days, depending on the destination country.</li>
                     </ul>
-                    <p>Our team is ready to assist you in all aspects of international delivery, ensuring that your cargo always arrives on time and intact.</p>
+                    <p>Our team is ready to assist you with all aspects of international delivery, ensuring your shipments always arrive on time and in perfect condition.</p>
                 </div>
                 <div className="service-image-main-container">
                     <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
@@ -86,7 +86,7 @@ const Service2PageEn = () => {
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make international delivery as easy as possible for you."}
+                    part2={"a personalized approach to make international delivery as easy as possible for you"}
                     order_call={"Order a Call"}
                     order={"Order a Call"}
                     name_type={"Your Name"}

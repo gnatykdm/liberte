@@ -78,9 +78,7 @@ const Service5Page = () => {
                     <p>Ці послуги дозволяють знизити витрати, оптимізувати логістичні процеси та забезпечити безпеку товарів під час зберігання.</p>
                 </div>
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
                         <img src={garage_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
                 </div>
             </div>
 

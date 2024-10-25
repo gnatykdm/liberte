@@ -87,7 +87,7 @@ const Service5PageEn = () => {
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to simplify logistics for you."}
+                    part2={"a personalized approach to simplify logistics for you"}
                     order_call={"Order a Call"}
                     order={"Order a Call"}
                     name_type={"Your Name"}

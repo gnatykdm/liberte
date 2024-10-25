@@ -96,7 +96,9 @@
 
 .social-media {
     margin-top: 20px;
-    margin-right: 140px;
+    justify-content: left;
+    display: flex;
+    margin-left: 15px;
 }
 
 .social-media img {
@@ -127,7 +129,7 @@
     color: #ffffff;
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1420px) {
     .footer-container {
         margin-left: 30px;
     }
@@ -137,7 +139,9 @@
     }
 
     .social-media {
-        margin-right: 50px;
+        justify-content: left;
+        display: flex;
+        margin-left: 15px;
     }
 }
 
@@ -151,7 +155,9 @@
     }
 
     .social-media {
-        margin-right: 50px;
+        justify-content: left;
+        display: flex;
+        margin-left: 15px;
     }
 }
 

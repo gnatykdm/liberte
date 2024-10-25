@@ -87,7 +87,7 @@ const Service5PagePl = () => {
             <center>
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
-                    part2={"indywidualne podejście, aby uprościć logistykę dla Ciebie."}
+                    part2={"indywidualne podejście, aby uprościć logistykę dla Ciebie"}
                     order_call={"Zamówienie rozmowy"}
                     order={"Zamówienie rozmowy"}
                     name_type={"Twoje imię"}

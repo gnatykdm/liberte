@@ -32,8 +32,8 @@
 }
 
 .service-image-main-container {
-    justify-content: right;
-    margin-right: 150px;
+    justify-content: center;
+    margin-right: 220px;
     margin-top: 30px;
 }
 
@@ -91,7 +91,9 @@
     .service-image-desc {
         display: none;
         width: 0;
-        margin: 0;
+        background-color: none;
+        justify-content: center;
+        margin-right: 30px;
     }
 }
 
