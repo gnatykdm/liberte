@@ -59,6 +59,8 @@ const Service5PagePl = () => {
                 languagelink_2={"/service5"}
                 languagelink_3={"/service5/pl"}
                 photo_link={"/pl"}
+                order_call_sending={"wysyłanie wiadomości..."}
+                order_call_problem={"problem z wysyłaniem"}
             />
 
             <div className="some-age-info">
@@ -78,9 +80,7 @@ const Service5PagePl = () => {
                     <p>Te usługi pozwalają obniżyć koszty, zoptymalizować procesy logistyczne oraz zapewnić bezpieczeństwo towarów podczas przechowywania.</p>
                 </div>
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
                         <img src={garage_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
                 </div>
             </div>
 
@@ -95,6 +95,8 @@ const Service5PagePl = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Wiadomość wysłana"}
                     messageError={"Problem z wysłaniem"}
+                    order_call_sending={"wysyłanie wiadomości..."}
+                    order_call_problem={"problem z wysyłaniem"}
                 />
 
                 <Footer

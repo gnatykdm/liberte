@@ -60,6 +60,8 @@ const Service3Page = () => {
                 languagelink_2={"/service3"}
                 languagelink_3={"/service3/pl"}
                 photo_link={"/"}
+                order_call_sending={"відправка повідомлення..."}
+                order_call_problem={"проблема з відправкою"}
             />
 
             <div className="some-age-info">
@@ -96,6 +98,8 @@ const Service3Page = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Повідомлення Відправлено"}
                     messageError={"Проблема із відправкою"}
+                    order_call_sending={"відправка повідомлення..."}
+                    order_call_problem={"проблема з відправкою"}
                 />
 
                 <Footer

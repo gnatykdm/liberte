@@ -99,10 +99,22 @@ const Footer = ({ head, head2, services, about, contacts, main_link, about_link,
             <img src={arrow_logo} alt="arrow" width={15} height={15} className="footer-img" />
           </div>
           <ul>
-            <li><img src={mail_logo} alt="mail" /> manager@libertgroup.pl</li>
-            <li><img src={phone_logo} alt="phone" /> +380 634 076 931 - viber</li>
-            <li><img src={phone_logo} alt="phone" /> +48 883 104 082 - whatsapp/telegram</li>
-            <li><img src={adress_logo} alt="address" /> Rzeszow, Przemysłowa 6 - Poland</li>
+            <li>
+              <img src={mail_logo} alt="mail" />
+              <a href="mailto:manager@libertgroup.pl" className="footer-link">manager@libertgroup.pl</a>
+            </li>
+            <li>
+              <img src={phone_logo} alt="phone" />
+              <a href="tel:+380634076931" className="footer-link">+380 634 076 931 - Viber</a>
+            </li>
+            <li>
+              <img src={phone_logo} alt="phone" />
+              <a href="tel:+48883104082" className="footer-link">+48 883 104 082 - WhatsApp/Telegram</a>
+            </li>
+            <li>
+              <img src={adress_logo} alt="address" />
+              Rzeszow, Przemysłowa 6 - Poland
+            </li>
           </ul>
           <SocialMediaIcons />
         </div>

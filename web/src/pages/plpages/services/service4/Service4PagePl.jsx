@@ -59,6 +59,8 @@ const Service4PagePl = () => {
                 languagelink_2={"/service4"}
                 languagelink_3={"/service4/pl"}
                 photo_link={"/pl"}
+                order_call_sending={"wysyłanie wiadomości..."}
+                order_call_problem={"problem z wysyłaniem"}
             />
 
             <div className="some-age-info">
@@ -79,9 +81,7 @@ const Service4PagePl = () => {
                     <p>Nasza zespół ekspertów pomoże Ci efektywnie rozwiązać wszystkie kwestie związane z odprawą celną, zapewniając szybkie i profesjonalne usługi.</p>
                 </div>
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
                         <img src={envelope_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
                 </div>
             </div>
 
@@ -96,6 +96,8 @@ const Service4PagePl = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Wiadomość wysłana"}
                     messageError={"Problem z wysłaniem"}
+                    order_call_sending={"wysyłanie wiadomości..."}
+                    order_call_problem={"problem z wysyłaniem"}
                 />
 
                 <Footer

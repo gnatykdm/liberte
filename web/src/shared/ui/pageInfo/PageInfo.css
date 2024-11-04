@@ -4,13 +4,17 @@
 }
 
 .text {
-    font-family: 'Oswald', sans-serif; 
+    font-family: 'Montserrat', sans-serif; 
     font-size: 30px; 
+    letter-spacing: 2px; 
     font-weight: bold; 
     color: #000000; 
+    
     display: inline-block; 
     padding-bottom: 5px; 
+    line-height: 1.5; 
 }
+
 
 .text.dark {
     color: #ffffff;

@@ -59,6 +59,7 @@ const Service3PageEn = () => {
                 languagelink_2={"/service3"}
                 languagelink_3={"/service3/pl"}
                 photo_link={"/en"}
+                order_call_sending={"sending message..."}
             />
 
             <div className="some-age-info">
@@ -80,16 +81,14 @@ const Service3PageEn = () => {
                     
                 </div>
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
                         <img src={carbox_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
                 </div>
             </div>
 
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make logistics as simple as possible for you."}
+                    part2={"a personalized approach to make logistics as simple as possible for you"}
                     order_call={"Order a Call"}
                     order={"Order a Call"}
                     name_type={"Your Name"}
@@ -97,6 +96,7 @@ const Service3PageEn = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Message Sent"}
                     messageError={"Problem Sending"}
+                    order_call_sending={"sending message..."}
                 />
 
                 <Footer

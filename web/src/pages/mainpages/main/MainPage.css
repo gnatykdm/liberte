@@ -26,8 +26,9 @@
     margin-top: 50px;
 }
 
-.company-main-name-desc, .highlites {
-    font-family: 'Oswald' sans-serif;
+.company-main-name-desc,
+.highlites {
+    font-family: 'Oswald', sans-serif; /* Added comma for proper syntax */
     font-weight: bold;
     font-size: 70px;
     text-transform: uppercase;
@@ -44,7 +45,6 @@
     margin-right: 100px;
 }
 
-/* Highlite */
 .highlites {
     display: inline;
     color: #5156e5;
@@ -60,7 +60,7 @@
     color: #ffffff;
 }
 
-/* Style for the button */
+/* Button styles */
 .btn-main-desc {
     background-color: #5156e5;
     width: 400px;
@@ -74,7 +74,7 @@
     border: 2px solid #5156e5;
     border-radius: 40px;
     transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
-    display: flex; /* Ensures alignment for the link */
+    display: flex; 
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -86,66 +86,65 @@
     transform: scale(1.05);
 }
 
-/* Style for the link inside the button */
-.btn-main-desc .btn-link-desc {
-    text-decoration: none; /* Removes underline */
+/* Link inside the button */
+.btn-link-desc {
+    text-decoration: none; 
     text-transform: uppercase;
-    color: inherit; /* Inherit color from the parent button */
+    color: inherit; 
 }
 
-/* Optionally, style the link on hover for more control */
 .btn-main-desc:hover .btn-link-desc {
-    color: inherit; /* Keeps the color consistent with the button */
+    color: inherit; 
 }
 
-
-@media  (max-width: 1390px) {
-    .company-main-name-desc, .highlites {
-        font-family: 'Oswald' sans-serif;
-        font-weight: bold;
+/* Media Queries */
+@media (max-width: 1390px) {
+    .company-main-name-desc,
+    .highlites {
         font-size: 50px;
-        text-transform: uppercase;
-        line-height: 1.2;
+    }
+
+    .text-container-main {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-left: 5px;
+        max-width: 1000px;
+    }
+
+    .main-photo-desc {
+        height: 450px;
+    }    
+}
+
+@media (max-width: 1250px) {
+    .company-main-name-desc,
+    .highlites {
+        font-size: 40px;
     }
 
     .text-container-main {
         font-size: 15px;
-        line-height: 1.6;
-        margin-left: 5px;
-        max-width: 500px;
-        width: auto;
     }
 
     .main-photo-desc {
-        width: auto;
-        height: 450px;
-        margin-right: 100px;
-    }    
+        height: 400px;
+    }
 }
 
-@media (max-width: 1100px) {
-    .company-main-name-desc, .highlites {
-        font-family: 'Oswald' sans-serif;
-        font-weight: bold;
-        font-size: 40px;
-        text-transform: uppercase;
-        line-height: 1.2;
-    }
-
+@media (max-width: 1150px) {
     .text-container-main {
         font-size: 12px;
-        line-height: 1.6;
-        margin-left: 5px;
-    }
-
-    .main-photo-desc {
-        width: auto;
-        height: 400px;
-        margin-right: 100px;
     }
 }
 
-@media (max-width:769px) {
+@media (max-width: 1050px) {
+    .text-container-main {
+        font-size: 11px;
+    }
+}
+
+
+@media (max-width: 769px) {
     .main-photo-desc {
         display: none;
     }
@@ -154,37 +153,25 @@
         margin-left: 25px;
     }
 
-    .company-main-name-desc, .highlites {
-        font-family: 'Oswald' sans-serif;
-        font-weight: bold;
+    .company-main-name-desc,
+    .highlites {
         font-size: 35px;
-        text-transform: uppercase;
         line-height: 1.1;
     }
 
     .text-container-main {
-        font-size: 20px;
-        line-height: 1.6;
+        font-size: 15px;
+        max-width: 350px;
         margin-left: 0;
-        width: auto;
     }
     
     .btn-main-desc {
-        background-color: #5156e5;
         max-width: 95%;
         width: auto;
         margin-left: 0;
-        height: a;
+        height: auto; /* Corrected from 'a' to 'auto' */
         font-size: 18px;
-        font-weight: bold;
-        text-transform: uppercase;
-        align-content: center;
-        justify-content: center;
-        align-items: center;
-        color: #ffffff;
         padding: 10px;
-        border:#5156e5 4px solid;
-        border-radius: 40px;
-        transition: background-color 0.3s ease transform 0.3 ease color 0.3s ease;
+        border: 4px solid #5156e5; /* Improved border property */
     }
 }

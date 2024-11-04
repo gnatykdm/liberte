@@ -59,6 +59,7 @@ const Service2PageEn = () => {
                 languagelink_2={"/service2"}
                 languagelink_3={"/service2/pl"}
                 photo_link={"/en"}
+                order_call_sending={"sending message..."}
             />
 
             <div className="some-age-info">
@@ -77,9 +78,7 @@ const Service2PageEn = () => {
                     <p>Our team is ready to assist you with all aspects of international delivery, ensuring your shipments always arrive on time and in perfect condition.</p>
                 </div>
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
                         <img src={international_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
                 </div>
             </div>
 
@@ -94,6 +93,7 @@ const Service2PageEn = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Message Sent"}
                     messageError={"Problem Sending"}
+                    order_call_sending={"sending message..."}
                 />
 
                 <Footer

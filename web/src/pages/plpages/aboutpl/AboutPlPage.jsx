@@ -35,7 +35,7 @@ const AboutPlPage = () => {
                 about={"O nas"}
                 contacts={"Kontakt"}
                 call={"Zamówienie rozmowy"}
-                order={"Zamówienie"}
+                order={"Zamówienie rozmowy"}
                 social_networks={"Libert w mediach społecznościowych"}
                 name_type={"Twoje imię"}
                 tel_type={"Twój numer telefonu"}
@@ -59,6 +59,9 @@ const AboutPlPage = () => {
                 languagelink_2={"/about"}
                 languagelink_3={"/about/pl"}
                 photo_link={"/pl"}
+                order_call_sending={"wysyłanie wiadomości..."}
+                order_call_problem={"problem z wysyłaniem"}
+
             />
 
             <div className="some-age-info">
@@ -92,6 +95,8 @@ const AboutPlPage = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Wiadomość wysłana"}
                     messageError={"Problem z wysłaniem"}
+                    order_call_sending={"wysyłanie wiadomości..."}
+                    order_call_problem={"problem z wysyłaniem"}
                 />
 
                 <Footer

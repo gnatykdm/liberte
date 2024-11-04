@@ -1,9 +1,8 @@
 import axios from 'axios';
-import { MessageDto } from './MessageDto'; 
 
 export class MessageRequest {
     constructor() {
-        this.apiUrl = 'http://3.71.185.65:8080/3i7Xry7tEKF5ZtdzT8Wn1zXToUABR5JpjBpSfxmn8asEaBmoblFeS4yIfrHEWvk5/api/message/save';
+        this.apiUrl = 'http://libertgroup.pl:8080/3i7Xry7tEKF5ZtdzT8Wn1zXToUABR5JpjBpSfxmn8asEaBmoblFeS4yIfrHEWvk5/api/message/save';
     }
 
     async saveMessage(messageDto) {
@@ -13,6 +12,11 @@ export class MessageRequest {
                 senderEmail: messageDto.senderEmail,
                 messageTheme: messageDto.messageTheme,
                 messageContent: messageDto.messageContent
+            }, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                withCredentials: true, 
             });
 
             console.log('Message saved successfully:', response.data);

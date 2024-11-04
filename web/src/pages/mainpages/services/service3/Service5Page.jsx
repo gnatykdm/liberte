@@ -59,6 +59,8 @@ const Service5Page = () => {
                 languagelink_2={"/service5"}
                 languagelink_3={"/service5/pl"}
                 photo_link={"/"}
+                order_call_sending={"відправка повідомлення..."}
+                order_call_problem={"проблема з відправкою"}
             />
 
             <div className="some-age-info">
@@ -93,6 +95,8 @@ const Service5Page = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Повідомлення Відправлено"}
                     messageError={"Проблема із відправкою"}
+                    order_call_sending={"відправка повідомлення..."}
+                    order_call_problem={"проблема з відправкою"}
                 />
 
                 <Footer

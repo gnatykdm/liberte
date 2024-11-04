@@ -33,6 +33,7 @@
 
 .footer-column {
     flex: 1; 
+    margin-top: 3%;
 }
 
 .footer-column ul {
@@ -124,10 +125,11 @@
     font-size: 14px;
 }
 
-.li-link {
+.li-link, .footer-link {
     text-decoration: none;
     color: #ffffff;
 }
+
 
 @media (max-width: 1420px) {
     .footer-container {
@@ -145,7 +147,7 @@
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
     .footer-container {
         margin-left: 20px;
     }

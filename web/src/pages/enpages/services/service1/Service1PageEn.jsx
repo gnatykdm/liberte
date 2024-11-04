@@ -60,6 +60,7 @@ const Service1PageEn = () => {
                 languagelink_2={"/service1"}
                 languagelink_3={"/service1/pl"}
                 photo_link={"/en"}
+                order_call_sending={"sending message..."}
             />
 
             <div className="some-age-info">
@@ -68,30 +69,26 @@ const Service1PageEn = () => {
 
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
             <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
-                <p>As part of the fulfillment service, we offer:</p>
-                    <ul>
-                        <li>receiving parcels,</li>
-                        <li>quantity and quality control of goods,</li>
-                        <li>storage of products in the warehouse,</li>
-                        <li>order picking and packaging,</li>
-                        <li>printing of courier labels,</li>
-                        <li>shipment and delivery of parcels to end consumers,</li>
-                        <li>return processing.</li>
-                    </ul>
+            <p>As part of the fulfillment service, we offer:</p>
+<ul>
+    <li>📦 Storage of goods.</li>
+    <li>📦 Packaging and preparation for shipment.</li>
+    <li>📦 Delivery of the order to the end consumer.</li>
+    <li>📦 Processing of returns and customer support.</li>
+</ul>
+
             </div>
             
 
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
                         <img src={fulfillmetn_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
                 </div>
             </div>
 
             <center>
                 <OrderCall
                     part1={"Your satisfaction is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make logistics as simple as possible for you."}
+                    part2={"a personalized approach to make logistics as simple as possible for you"}
                     order_call={"Order a Call"}
                     order={"Order a Call"}
                     name_type={"Your Name"}

@@ -81,9 +81,7 @@ const Service3PagePl = () => {
                     
                 </div>
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
                         <img src={carbox_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
                 </div>
             </div>
 
@@ -98,6 +96,8 @@ const Service3PagePl = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Wiadomość wysłana"}
                     messageError={"Problem z wysłaniem"}
+                    order_call_sending={"wysyłanie wiadomości..."}
+                    order_call_problem={"problem z wysyłaniem"}
                 />
 
                 <Footer

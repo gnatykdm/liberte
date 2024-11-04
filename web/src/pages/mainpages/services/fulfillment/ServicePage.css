@@ -42,6 +42,10 @@
     height: auto;
 }
 
+.text-container-about li {
+    margin-top: 20px;
+}
+
 .logo-service-background-desc {
     margin-right: 160px;
     margin-top: 40px;
@@ -58,13 +62,13 @@
     }
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 1100px) {
     .service-image-main-container {
         margin-right: 100px;
     }
 
     .service-image-desc {
-        width: 300px;
+        width: 200px;
         height: auto;
     }
 }

@@ -28,86 +28,87 @@
     padding: 10px;
     border-radius: 40px;
     background-color: #ffffff;
-    position: relative; /* Required for absolute positioning of text */
-    overflow: hidden; /* Hide overflow of the image */
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease, border 0.5s ease;
+    border: #5156e5 1px solid;
 }
 
 .logo-background:hover {
-    background-color: #1c1b24; /* Set background color when hovered */
-    border: #5156e5 2px solid; /* Add border with color and thickness */
-    border-radius: 40px; /* Keep the same border radius when hovered */
+    background-color: #1c1b24;
 }
 
 .service-image {
     width: 300px;
     height: auto;
     object-fit: cover;
-    border-radius: 40px; /* Smooth transition for the image */
+    border-radius: 40px;
+    transition: opacity 0.5s ease;
 }
 
 .service-text {
-    cursor: pointer; /* Pointer cursor for clickable link */
-    color: #5156e5; /* Text color */
+    cursor: pointer;
+    color: #5156e5;
     position: absolute; 
     top: 50%; 
     left: 50%; 
-    transform: translate(-50%, -50%) scale(1); /* Center and initial scale */
+    transform: translate(-50%, -50%); 
     font-weight: bold; 
-    font-size: 35px; 
-    opacity: 0; /* Hidden by default */
-    text-decoration: none; /* Remove default underline from link */
-    transition: transform 0.3s ease; /* Smooth transitions */
-}
-
-.service-text:hover {
-    transform: scale(1.2); /* Additional scaling effect on hover */
+    font-size: 30px; 
+    opacity: 0; 
+    text-decoration: none; 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
 }
 
 .logo-background:hover .service-text {
-    opacity: 1; /* Make text visible on hover */
-    transform: translate(-50%, -50%) scale(1.2); /* Scale up on hover */
+    opacity: 1;
 }
 
 .service-text:hover {
-    color: #3d43d0; /* Change color on hover if desired */
+    color: #3d43d0; 
 }
 
 .logo-background:hover .service-image {
-    opacity: 0; /* Hide the image on hover */
-    background-color: #1c1b24; /* Set background color when hovered */
-    border: #5156e5 2px solid; /* Add border with color and thickness */
-    border-radius: 40px; /* Keep the same border radius */
-    transition: opacity 0.5s ease, background-color 0.5s ease, border 0.5s ease; /* Smooth transition for all properties */
+    opacity: 0;
 }
 
-/* Media queries (for mobile responsiveness) */
+@media (max-width: 1200px) {
+    .service-image {
+        width: 250px;
+    }
+
+    .logo-background {
+        width: 250px;
+    }
+}
+
 @media (max-width: 768px) {
     .service-content {
         display: flex;
     }
 
     .logo-background {
-        width: 170px; /* Adjust size for smaller screens */
-        height: 150px; /* Adjust height accordingly */
+        width: 170px; 
+        height: 150px; 
         border-radius: 30px;
-        padding-right: 25px; /* Adjust border-radius for smaller elements */
+        padding-right: 25px; 
     }
 
     .service-image {
         width: auto;
         height: 100%;
         object-fit: cover;
-        border-radius: 30px; /* Match border-radius */
+        border-radius: 30px; 
     }
 
     .service-text {
-        font-size: 16px; /* Adjust text size for smaller screens */
+        font-size: 16px; 
     }
 }
 
 @media (max-width: 450px) {
     .logo-background {
-        width: 120px; /* Further reduce size for very small screens */
+        width: 120px; 
         height: 120px;
         border-radius: 20px;
         margin: 0;
@@ -116,7 +117,7 @@
     }
 
     .service-text {
-        font-size: 16px; /* Further reduce text size */
+        font-size: 16px; 
     }
 
     .service-image {
@@ -126,14 +127,14 @@
 
 @media (max-width: 350px) {
     .logo-background {
-        width: 150px; /* Adjust for extra small screens */
+        width: 150px; 
         height: 170px;
         border-radius: 15px;
         display: flex;
     }
 
     .service-text {
-        font-size: 12px; /* Reduce text size for extra small screens */
+        font-size: 12px; 
     }
 
     .service-image {

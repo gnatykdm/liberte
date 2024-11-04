@@ -1,8 +1,8 @@
 import axios from 'axios';
- 
+
 export class MobileMessage {
     constructor() {
-        this.apiUrl = 'http://3.71.185.65:8080/3i7Xry7tEKF5ZtdzT8Wn1zXToUABR5JpjBpSfxmn8asEaBmoblFeS4yIfrHEWvk5/api/message/savemobile';
+        this.apiUrl = 'http://libertgroup.pl:8080/3i7Xry7tEKF5ZtdzT8Wn1zXToUABR5JpjBpSfxmn8asEaBmoblFeS4yIfrHEWvk5/api/message/savemobile';
     }
 
     async saveMessage(mobileMessageDto) {
@@ -10,6 +10,11 @@ export class MobileMessage {
             const response = await axios.post(this.apiUrl, {
                 senderName: mobileMessageDto.senderName,
                 senderPhone: mobileMessageDto.senderPhone
+            }, {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                withCredentials: true, 
             });
 
             console.log('Message saved successfully:', response.data);

@@ -61,6 +61,8 @@ const MainAboutUS = () => {
                 languagelink_2={"/about"}
                 languagelink_3={"/about/pl"}
                 photo_link={"/"}
+                order_call_sending={"відправка повідомлення..."}
+                order_call_problem={"проблема з відправкою"}
             />
 
             <div className="some-age-info">
@@ -94,6 +96,8 @@ const MainAboutUS = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Повідомлення Відправлено"}
                     messageError={"Проблема із відправкою"}
+                    order_call_sending={"відправка повідомлення..."}
+                    order_call_problem={"проблема з відправкою"}
                 />
 
             <Footer

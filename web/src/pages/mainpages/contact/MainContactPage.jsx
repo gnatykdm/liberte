@@ -63,6 +63,8 @@ const MainContactPage = () => {
                 languagelink_2={"/contact"}
                 languagelink_3={"/contact/pl"}
                 photo_link={"/"}
+                order_call_sending={"відправка повідомлення..."}
+                order_call_problem={"проблема з відправкою"}
             />
     
         <div className="some-age-info">

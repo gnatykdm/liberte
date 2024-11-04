@@ -59,6 +59,7 @@ const Service5PageEn = () => {
                 languagelink_2={"/service5"}
                 languagelink_3={"/service5/pl"}
                 photo_link={"/en"}
+                order_call_sending={"sending message..."}
             />
 
             <div className="some-age-info">
@@ -78,9 +79,7 @@ const Service5PageEn = () => {
                     <p>These services help reduce costs, optimize logistics processes, and ensure the safety of goods during storage.</p>
                 </div>
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
                         <img src={garage_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
                 </div>
             </div>
 
@@ -95,6 +94,7 @@ const Service5PageEn = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Message Sent"}
                     messageError={"Problem Sending"}
+                    order_call_sending={"sending message..."}
                 />
 
                 <Footer

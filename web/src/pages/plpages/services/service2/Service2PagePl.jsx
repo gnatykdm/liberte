@@ -77,9 +77,7 @@ const Service2PagePl = () => {
                     <p>Nasz zespół jest gotowy pomóc Ci we wszystkich aspektach międzynarodowej dostawy, aby Twoje przesyłki zawsze docierały na czas i w nienaruszonym stanie.</p>
                 </div>
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
                         <img src={international_delivery_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
                 </div>
             </div>
 
@@ -94,6 +92,8 @@ const Service2PagePl = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Wiadomość wysłana"}
                     messageError={"Problem z wysłaniem"}
+                    order_call_sending={"wysyłanie wiadomości..."}
+                    order_call_problem={"problem z wysyłaniem"}
                 />
 
             <Footer

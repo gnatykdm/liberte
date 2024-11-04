@@ -36,7 +36,7 @@ const MainPlPage = () => {
                 about={"O nas"}
                 contacts={"Kontakt"}
                 call={"Zamówienie rozmowy"}
-                order={"Zamówienie"}
+                order={"Zamówienie rozmowy"}
                 social_networks={"Libert w mediach społecznościowych"}
                 name_type={"Twoje imię"}
                 tel_type={"Twój numer telefonu"}
@@ -59,6 +59,8 @@ const MainPlPage = () => {
                 languagelink_1={"/en"}
                 languagelink_2={"/"}
                 languagelink_3={"/pl"}
+                order_call_sending={"wysyłanie wiadomości..."}
+                order_call_problem={"problem z wysyłaniem"}
             />
 
             <div className="main-content">
@@ -111,6 +113,8 @@ const MainPlPage = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Wiadomość wysłana"}
                     messageError={"Problem z wysłaniem"}
+                    order_call_sending={"wysyłanie wiadomości..."}
+                    order_call_problem={"problem z wysyłaniem"}
                 />
               <Footer
                 head="Główne menu"

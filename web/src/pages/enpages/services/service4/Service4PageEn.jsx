@@ -59,6 +59,7 @@ const Service4PageEn = () => {
                 languagelink_2={"/service4"}
                 languagelink_3={"/service4/pl"}
                 photo_link={"/en"}
+                order_call_sending={"sending message..."}
             />
 
             <div className="some-age-info">
@@ -79,16 +80,14 @@ const Service4PageEn = () => {
                     <p>Our team of experts will help you effectively resolve all matters related to customs clearance, ensuring fast and professional services.</p>
                 </div>
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
                         <img src={envelope_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
                 </div>
             </div>
 
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to simplify customs procedures for you."}
+                    part2={"a personalized approach to simplify customs procedures for you"}
                     order_call={"Order a Call"}
                     order={"Order a Call"}
                     name_type={"Your Name"}
@@ -96,6 +95,7 @@ const Service4PageEn = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Message Sent"}
                     messageError={"Problem Sending"}
+                    order_call_sending={"sending message..."}
                 />
 
                 <Footer

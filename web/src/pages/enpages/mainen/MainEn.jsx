@@ -60,6 +60,7 @@ const MainEn = () => {
                 languagelink_2={"/"}
                 languagelink_3={"/pl"}
                 photo_link={"/en"}
+                order_call_sending={"sending message..."}
             />
 
             <div className="main-content">
@@ -104,7 +105,7 @@ const MainEn = () => {
 
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make logistics as simple as possible for you."}
+                    part2={"a personalized approach to make logistics as simple as possible for you"}
                     order_call={"Order a Call"}
                     order={"Order a Call"}
                     name_type={"Your Name"}
@@ -112,6 +113,7 @@ const MainEn = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Message Sent"}
                     messageError={"Problem Sending"}
+                    order_call_sending={"sending message..."}
                 />
               <Footer
                 head="Main Menu"

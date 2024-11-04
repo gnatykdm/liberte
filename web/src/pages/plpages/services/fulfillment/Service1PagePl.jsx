@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import Header from '../../../../shared/ui/header/Header';
 import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
 import flag from '../../../../shared/assets/icons/poland.png';
@@ -10,7 +10,7 @@ import '../../../mainpages/services/fulfillment/ServicePage.css';
 
 const Service1PagePl = () => {
 
-   const [isDarkMode, setIsDarkMode] = useState(() => {
+    const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
     });
@@ -29,30 +29,29 @@ const Service1PagePl = () => {
                 <title>Libert - FulFillment</title>
             </Helmet>
 
-           
             <Header 
                 image={flag}
-                head={"Головна"}
-                services={"Послуги"} 
-                service_drop={"Негабаритні перевезення"}
-                about={"Про нас"}
-                contacts={"Контакти"}
-                call={"Замовити дзвінок"}
-                order={"Замовити"}
-                social_networks={"Libert у соціальних мережах"}
-                name_type={"Ваше ім'я"}
-                tel_type={"Ваш номер телефону"}
+                head={"Strona główna"}
+                services={"Usługi"} 
+                service_drop={"Transport ponadgabarytowy"}
+                about={"O nas"}
+                contacts={"Kontakt"}
+                call={"Zamów rozmowę"}
+                order={"Zamów"}
+                social_networks={"Libert w mediach społecznościowych"}
+                name_type={"Twoje imię"}
+                tel_type={"Twój numer telefonu"}
                 main_link={"/"}
                 about_link={"/about"}
                 contact_link={"/contact"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                messageStatus={"Повідомлення Відправлено"}
+                messageStatus={"Wiadomość wysłana"}
                 service1="FulFillment"
-                service2="Міжнародна кур'єрська доставка"
-                service3="Негабаритні перевезення"
-                service4="Послуги митного агенства"
-                service5="Складська Логістика"
+                service2="Międzynarodowa dostawa kurierska"
+                service3="Transport ponadgabarytowy"
+                service4="Usługi agencji celnej"
+                service5="Logistyka magazynowa"
                 service1_link={"/service1"}
                 service2_link={"/service2"}
                 service3_link={"/service3"}
@@ -62,6 +61,8 @@ const Service1PagePl = () => {
                 languagelink_2={"/service1"}
                 languagelink_3={"/service1/pl"}
                 photo_link={"/pl"}
+                order_call_sending={"wysyłanie wiadomości..."}
+                order_call_problem={"problem z wysyłaniem"}
             />
 
             <div className="some-age-info">
@@ -69,28 +70,23 @@ const Service1PagePl = () => {
             </div>
 
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
-            <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
-                <p>W ramach usługi fulfillment oferujemy:</p>
-                <ul>
-                    <li>odbiór paczek,</li>
-                    <li>kontrolę ilościową i jakościową towarów,</li>
-                    <li>przechowywanie produktów w magazynie,</li>
-                    <li>kompletowanie i pakowanie zamówień,</li>
-                    <li>drukowanie etykiet kurierskich,</li>
-                    <li>wysyłkę i dostawę paczek do klientów końcowych,</li>
-                    <li>obsługę zwrotów.</li>
-                </ul>
-            </div>
+                <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
+                    <p>W ramach usługi fulfillment oferujemy:</p>
+                    <ul>
+                        <li>📦 Przechowywanie towarów.</li>
+                        <li>📦 Pakowanie i przygotowanie do wysyłki.</li>
+                        <li>📦 Dostawę zamówienia do końcowego odbiorcy.</li>
+                        <li>📦 Obsługę zwrotów i wsparcie klienta.</li>
+                    </ul>
+                </div>
 
                 <div className="service-image-main-container">
-                    <div className={`logo-service-background-desc ${isDarkMode ? 'dark' : ''}`}>
-                        <img src={fulfillmetn_logo} alt="logistic" className="service-image-desc"/>
-                    </div>
+                    <img src={fulfillmetn_logo} alt="logistyka" className="service-image-desc"/>
                 </div>
             </div>
 
             <center>
-            <OrderCall
+                <OrderCall
                     part1={"Twoje zadowolenie to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
                     part2={"indywidualne podejście, aby logistyka była maksymalnie prosta dla Ciebie"}
                     order_call={"Zamów rozmowę"}
@@ -100,28 +96,28 @@ const Service1PagePl = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Wiadomość wysłana"}
                     messageError={"Problem z wysłaniem"}
-                    />
+                />
 
-            <Footer
-                head="Główne menu"
-                head2="Menu"
-                head3="Nasze kontakty"
-                services={"Usługi"}
-                contacts="Kontakt"
-                main_link="/pl"
-                about_link="/about/pl"
-                contact_link="/contact/pl"
-                about="O nas"
-                service1="FulFillment"
-                service2="Międzynarodowa dostawa kurierska"
-                service3="Transport ponadgabarytowy"
-                service4="Usługi agencji celnej"
-                service5="Logistyka magazynowa"
-                service1_link={"/service1/pl"}
-                service2_link={"/service2/pl"}
-                service3_link={"/service3/pl"}
-                service4_link={"/service4/pl"}
-                service5_link={"/service5/pl"}
+                <Footer
+                    head="Główne menu"
+                    head2="Menu"
+                    head3="Nasze kontakty"
+                    services={"Usługi"}
+                    contacts="Kontakt"
+                    main_link="/pl"
+                    about_link="/about/pl"
+                    contact_link="/contact/pl"
+                    about="O nas"
+                    service1="FulFillment"
+                    service2="Międzynarodowa dostawa kurierska"
+                    service3="Transport ponadgabarytowy"
+                    service4="Usługi agencji celnej"
+                    service5="Logistyka magazynowa"
+                    service1_link={"/service1/pl"}
+                    service2_link={"/service2/pl"}
+                    service3_link={"/service3/pl"}
+                    service4_link={"/service4/pl"}
+                    service5_link={"/service5/pl"}
                 />
             </center>
         </div>

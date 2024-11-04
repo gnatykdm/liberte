@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import logo from '../../assets/images/libertlogo-removebg-preview.png';
 import { MobileMessage } from "../../../entity/messagedto/MobileMessage";
 import { MobileMessageDto } from '../../../entity/messagedto/MobileMessageDto';
+import libert_logo_white from '../../assets/images/libert_logo_white.png';
 import './OrderCall.css';
 
 const OrderCall = ({ 
@@ -14,25 +15,28 @@ const OrderCall = ({
     tel_type, 
     isDarkMode, 
     messageSuccess, 
-    messageError 
+    messageError,
+    order_call_sending,
 }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [formData, setFormData] = useState({ name: '', phone: '' });
     const [messageStatus, setMessageStatus] = useState('');
     const [statusTimeout, setStatusTimeout] = useState(null);
-    const [isMessageSent, setIsMessageSent] = useState(false); // Добавляем состояние для отслеживания отправки
+    const [isMessageSent, setIsMessageSent] = useState(false);
+    const [isSending, setIsSending] = useState(false); 
 
     const messageService = new MobileMessage();
 
     const handleModalOpen = () => {
         setIsModalOpen(true);
-        setIsMessageSent(false); // Сбрасываем статус отправки при открытии модального окна
+        setIsMessageSent(false); 
     };
 
     const handleModalClose = () => {
         setIsModalOpen(false);
         setMessageStatus('');
         clearTimeout(statusTimeout);
+        setIsSending(false); 
     };
 
     const handleInputChange = (e) => {
@@ -46,20 +50,18 @@ const OrderCall = ({
 
         const messageDto = new MobileMessageDto(name, phone);
 
+        setIsSending(true); 
+
         try {
             await messageService.saveMessage(messageDto);
             setFormData({ name: '', phone: '' });
             setMessageStatus(messageSuccess);
-            setIsMessageSent(true); 
-
-            const timeoutId = setTimeout(() => {
-                setMessageStatus('');
-            }, 3000);
-
-            setStatusTimeout(timeoutId);
+            setIsMessageSent(true);
         } catch (error) {
             console.error("Error sending message:", error);
             setMessageStatus(messageError);
+        } finally {
+            setIsSending(false); 
 
             const timeoutId = setTimeout(() => {
                 setMessageStatus('');
@@ -82,7 +84,7 @@ const OrderCall = ({
             </Helmet>
 
             <div className="libert-logo">
-                <img src={logo} alt="Libert logo" />
+                <img src={isDarkMode ? libert_logo_white : logo} alt="Libert logo"/>
             </div>
 
             <div className={`order-call-content ${isDarkMode ? 'dark' : ''}`}>
@@ -101,41 +103,43 @@ const OrderCall = ({
 
             {isModalOpen && (
                 <div className="modal-overlay">
-                    <div className="modal modal-content" role="dialog" aria-modal="true">
+                    <div className="modal-content" role="dialog" aria-modal="true">
                         <button 
                             className="modal-close" 
                             onClick={handleModalClose}
                             aria-label="Close modal"
                         >×</button>
-                        {/* Условный рендеринг формы или сообщения об успешной отправке */}
                         {isMessageSent ? (
                             <div className="message-sent">
-                                <h4>{messageSuccess}</h4> {/* Сообщение вместо формы */}
+                                <h4>{messageSuccess}</h4> 
                             </div>
                         ) : (
                             <div className="message-order-sent-form">
                                 <h3>{order_call}</h3>
-                                <form onSubmit={handleSubmit}>
-                                <input
-                                    type="text-name"
-                                    name="name"
-                                    placeholder={name_type}
-                                    value={formData.name}
-                                    onChange={handleInputChange}
-                                    required
-                                    aria-label="Name"
-                                />
-                                <input
-                                    type="tel"
-                                    name="phone"
-                                    placeholder={tel_type}
-                                    value={formData.phone}
-                                    onChange={handleInputChange}
-                                    required
-                                    aria-label="Phone Number"
-                                />
-                                <button type="submit" className="order-button">{order}</button>
-                            </form>
+                                    <form onSubmit={handleSubmit}>
+                                        <input
+                                            type="text-name"
+                                            name="name"
+                                            placeholder={name_type}
+                                            value={formData.name}
+                                            onChange={handleInputChange}
+                                            required
+                                            aria-label="Name"
+                                        />
+                                        <input
+                                            type="tel"
+                                            name="phone"
+                                            placeholder={tel_type}
+                                            value={formData.phone}
+                                            onChange={handleInputChange}
+                                            required
+                                            aria-label="Phone Number"
+                                        />
+                                        <button type="submit" className="order-button">{order}</button>
+                                        {isSending && (<p className="order-call-sending">{order_call_sending}</p> 
+                                            )}
+                                    </form>
+                                
                             </div>
                         )}
                     </div>

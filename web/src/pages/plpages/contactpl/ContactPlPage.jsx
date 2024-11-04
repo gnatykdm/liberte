@@ -36,7 +36,7 @@ const ContactPlPage = () => {
                 about={"O nas"}
                 contacts={"Kontakt"}
                 call={"Zamówienie rozmowy"}
-                order={"Zamówienie"}
+                order={"Zamówienie rozmowy"}
                 social_networks={"Libert w mediach społecznościowych"}
                 name_type={"Twoje imię"}
                 tel_type={"Twój numer telefonu"}
@@ -60,6 +60,8 @@ const ContactPlPage = () => {
                 languagelink_2={"/contact"}
                 languagelink_3={"/contact/pl"}
                 photo_link={"/pl"}
+                order_call_sending={"wysyłanie wiadomości..."}
+                order_call_problem={"problem z wysyłaniem"}
             />
         
             <div className="some-age-info">

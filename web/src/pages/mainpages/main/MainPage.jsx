@@ -61,6 +61,8 @@ const MainPage = () => {
                 languagelink_2={"/"}
                 languagelink_3={"/pl"}
                 photo_link={"/"}
+                order_call_sending={"відправка повідомлення..."}
+                order_call_problem={"проблема з відправкою"}
             />
 
             <div className="main-content">
@@ -72,7 +74,7 @@ const MainPage = () => {
                     </div>
                     <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
                         <p>
-                            LIBERT Group надає два основні види послуг: <b className="some-cont">кур'єрську доставку</b>  і <br/>
+                            LIBERT Group надає два основні види послуг: <b className="some-cont">міжнародну кур'єрську доставку</b> і <br/>
                             перевезення <b className="some-cont">негабаритних вантажів</b>. Ми прагнемо забезпечити <br/> нашим клієнтам сервіс найвищої якості,
                             аби кожне перевезення відповідало вашим очікуванням.
                         </p>
@@ -90,7 +92,6 @@ const MainPage = () => {
 
                 <Services
                     isDarkMode={isDarkMode}
-                    service_name={"Міжнародна Доставка"}
                     service1_link={"/service1"}
                     service2_link={"/service3"}
                     service3_link={"/service4"}
@@ -112,6 +113,8 @@ const MainPage = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Повідомлення Відправлено"}
                     messageError={"Проблема із відправкою"}
+                    order_call_sending={"відправка повідомлення..."}
+                    order_call_problem={"проблема з відправкою"}
                 />
               <Footer
                 head="Головне меню"

@@ -36,7 +36,7 @@ const ContactEnPage = () => {
                 about={"About Us"}
                 contacts={"Contact"}
                 call={"Order a Call"}
-                order={"Order"}
+                order={"Order a Call"}
                 social_networks={"Libert on Social Media"}
                 name_type={"Your Name"}
                 tel_type={"Your Phone Number"}

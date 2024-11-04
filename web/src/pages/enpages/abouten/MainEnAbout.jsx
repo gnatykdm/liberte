@@ -59,6 +59,7 @@ const MainEnAbout = () => {
                 languagelink_2={"/about"}
                 languagelink_3={"/about/pl"}
                 photo_link={"/en"}
+                order_call_sending={"sending message..."}
             />
 
             <div className="some-age-info">
@@ -80,7 +81,7 @@ const MainEnAbout = () => {
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make logistics as easy as possible for you."}
+                    part2={"a personalized approach to make logistics as easy as possible for you"}
                     order_call={"Order a Call"}
                     order={"Order a Call"}
                     name_type={"Your Name"}
@@ -88,6 +89,7 @@ const MainEnAbout = () => {
                     isDarkMode={isDarkMode}
                     messageSuccess={"Message Sent"}
                     messageError={"Problem Sending"}
+                    order_call_sending={"sending message..."}
                 />
 
                 <Footer

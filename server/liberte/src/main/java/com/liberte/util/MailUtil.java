@@ -78,7 +78,7 @@ public class MailUtil implements IMailUtil {
         }
     }
 
-    private static List<String> readMailFile(String file) {
+    public static List<String> readMailFile(String file) {
         List<String> mails = new ArrayList<>();
         if (file == null) {
             throw new NullPointerException("File Name can't be null");
