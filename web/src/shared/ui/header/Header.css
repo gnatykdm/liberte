@@ -196,10 +196,10 @@ h3 {
     background-color: #5156e5;
     color: #fff;
     border: none;
-    width: auto;
-    height: 40px;
+    width: 220px;
+    height: auto;
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     border-radius: 10px;
     border: #5156e5 2px solid;
@@ -507,8 +507,8 @@ h3 {
         background-color: #5156e5;
         color: #fff;
         border: none;
-        width: auto;
-        height: 45px;
+        width: 200px;
+        height: auto;
         padding: 10px 20px;
         font-size: 14px;
         font-weight: 600;
@@ -569,10 +569,10 @@ h3 {
         background-color: #5156e5;
         color: #fff;
         border: none;
-        width: auto;
-        height: 45px;
+        width: 200px;
+        height: auto;
         padding: 10px 20px;
-        font-size: 10px;
+        font-size: 14px;
         font-weight: 600;
         border-radius: 10px;
         border: #5156e5 2px solid;
@@ -630,10 +630,10 @@ h3 {
         background-color: #5156e5;
         color: #fff;
         border: none;
-        width: auto;
-        height: 45px;
+        width: 185px;
+        height: auto;
         padding: 10px 20px;
-        font-size: 10px;
+        font-size: 13px;
         font-weight: 600;
         border-radius: 10px;
         border: #5156e5 2px solid;
@@ -705,7 +705,7 @@ h3 {
     }
     
     .toggle-switch.active::after {
-        transform: translateX(15px); /* Adjusted translation */
+        transform: translateX(15px); 
     }
     .mobile-nav-link {
         font-size: 16px;
@@ -717,6 +717,7 @@ h3 {
         font-size: 14px;
         padding: 8px;
     }
+    
 }
 
 @media (max-width: 480px) {
@@ -729,6 +730,14 @@ h3 {
     .dropdown-item-services-mobile {
         font-size: 12px;
         padding: 6px;
+    }
+
+    .header-actions {
+        margin: 0;
+    }
+
+    .theme-icon {
+        width: 20px;
     }
 }
 

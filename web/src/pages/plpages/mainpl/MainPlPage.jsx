@@ -35,8 +35,8 @@ const MainPlPage = () => {
                 service_drop={"Transport ponadgabarytowy"}
                 about={"O nas"}
                 contacts={"Kontakt"}
-                call={"Zamówienie rozmowy"}
-                order={"Zamówienie rozmowy"}
+                call={"Kontakt"}
+                order={"Kontakt"}
                 social_networks={"Libert w mediach społecznościowych"}
                 name_type={"Twoje imię"}
                 tel_type={"Twój numer telefonu"}
@@ -72,9 +72,9 @@ const MainPlPage = () => {
                     </div>
                     <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
                         <p>
-                            LIBERT Group oferuje dwa podstawowe rodzaje usług: <b className="some-cont">międzynarodową dostawe kurierską</b> i <br/>
+                            LIBERT Group oferuje dwa podstawowe rodzaje usług: <b className="some-cont">międzynarodową dostawę kurierską</b> i <br/>
                             transport <b className="some-cont">ponadgabarytowych ładunków</b>. Dążymy do zapewnienia <br/> naszym klientom usług najwyższej jakości,
-                            aby każde zlecenie spełniało Twoje oczekiwania.
+                            aby każde zlecenie spełniało twoje oczekiwania.
                         </p>
                     </div>
                     <button className="btn-main-desc">
@@ -105,9 +105,9 @@ const MainPlPage = () => {
 
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
-                    part2={"indywidualne podejście, aby logistyka była dla Ciebie jak najprostsza."}
-                    order_call={"Zamówienie rozmowy"}
-                    order={"Zamówienie rozmowy"}
+                    part2={"indywidualne podejście, aby logistyka była dla Ciebie jak najprostsza"}
+                    order_call={"Kontakt"}
+                    order={"Kontakt"}
                     name_type={"Twoje imię"}
                     tel_type={"Twój telefon"}
                     isDarkMode={isDarkMode}

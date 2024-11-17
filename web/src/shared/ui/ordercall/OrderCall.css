@@ -17,18 +17,19 @@
 
 .ordercall.dark {
     background-color: #1c1b24;
+    padding: 0;
 }
 
 .libert-logo img {
     max-width: 70%;
     height: auto;
+    margin-left: 20px;
 }
 
 .order-call-content {
     text-align: left;
-    margin-right: 50px;
     padding: 0;
-    font-size: 15px;
+    font-size: 17px;
     width: 100%;
 }
 
@@ -44,13 +45,12 @@
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 0;
-    height: 30px;
-    width: 200px;
-    margin-right: 20px;
+    height: 25px; 
+    width: 300px; 
     display: flex;
+    margin-right: 40px;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     border: #5156e5 2px solid;
 }
 
@@ -155,15 +155,76 @@ input[type="text-type"]:focus, input[type="tel-type"]:focus {
 
 @media (max-width: 1305px) {
     .order-call-content {
-        font-size: 12px;
+        font-size: 15px;
         width: 100%;
+    }
+
+    .order-call-button {
+        height: 20px; 
+        width: 355px; 
+        margin-right: 20px;
     }
 }
 
 @media (max-width: 1250px) {
+    .order-call-button {
+        height: 40px; 
+        width: 370px; 
+        margin-right: 30px;
+        font-size: 15px;
+    }
+
     .order-call-content {
-        font-size: 12px;
-        width: 100%;
+        font-size: 15px;
+        width: 180%;
+        margin-left: 40px;
+    }
+
+    .libert-logo img {
+        max-width: 90%;
+        height: auto;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 1175px) {
+    .order-call-button {
+        height: 40px; 
+        width: 300px; 
+        margin-right: 30px;
+        font-size: 15px;
+    }
+
+    .order-call-content {
+        font-size: 15px;
+        width: 300%;
+    }
+
+    .libert-logo img {
+        max-width: 100%;
+        height: auto;
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .order-call-content {
+        font-size: 15px;
+        width: 350%;
+        margin-left: 50px;
+    }
+
+    .order-call-button {
+        height: 30px; 
+        width: 750px; 
+        margin-right: 30px;
+        font-size: 14px;
+    }
+
+    .libert-logo img {
+        max-width: 150%;
+        height: auto;
+        margin-left: 20px;
     }
 }
 
@@ -178,7 +239,7 @@ input[type="text-type"]:focus, input[type="tel-type"]:focus {
 
     .libert-logo img {
         height: auto;
-        width: 400px;
+        max-width: 100%;
         margin-top: 5px;
         align-items: left;
     }
@@ -188,13 +249,10 @@ input[type="text-type"]:focus, input[type="tel-type"]:focus {
     }
 
     .order-call-button {
-        width: 250px;
-        padding: 15px;
-        font-size: 15px;
-        height: 30px;
-        margin-top: 0px;
-        border-radius: 15px;
-        margin-right: 20px;
+        height: 20px; 
+        width: 300px; 
+        margin-right: 30px;
+        font-size: 14px;
     }
 
     .modal-content {

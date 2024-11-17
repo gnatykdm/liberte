@@ -32,7 +32,7 @@ const Services = ({ isDarkMode, service1_name, service2_name, service3_name, ser
                 <div className={`service-logo ${isDarkMode ? 'dark' : ''}`}>
                     <Link to={service2_link} className="service-text-link">
                     <div className={`logo-background ${isDarkMode ? 'dark' : ''}`}>
-                        <img src={carbox_logo} alt="logistic" className="service-image" width={320} height={320}/>
+                        <img src={carbox_logo} alt="logistic" className="service-image" width={340} height={340}/>
                         <span className="service-text"><Link to={service2_link} className="service-text-link">{ service2_name }</Link></span>
                     </div>
                     </Link>
@@ -65,7 +65,7 @@ const Services = ({ isDarkMode, service1_name, service2_name, service3_name, ser
                         <img src={doors_logo} alt="logistic" className="service-image" width={320} height={320}/>
                         <span className="service-text"><Link to={service1_link} className="service-text-link">{ service1_name }</Link></span>
                     </div>
-                </Link>3
+                </Link>
                 </div>
             </div>
         </div>

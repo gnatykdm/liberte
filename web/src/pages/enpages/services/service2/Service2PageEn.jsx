@@ -34,8 +34,8 @@ const Service2PageEn = () => {
                 service_drop={"Oversized Transport"}
                 about={"About Us"}
                 contacts={"Contact"}
-                call={"Order a Call"}
-                order={"Order"}
+                call={"Contact"}
+                order={"Contact"}
                 social_networks={"Libert on Social Media"}
                 name_type={"Your Name"}
                 tel_type={"Your Phone Number"}
@@ -70,10 +70,10 @@ const Service2PageEn = () => {
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
                     <p>International courier delivery includes:</p>
                     <ul>
-                        <li>Courier Delivery: We offer services that combine accuracy, reliability, and a personalized approach for convenient logistics.</li>
-                        <li>Collaboration with Courier Companies: We work with Ukrainian and European partners, which allows us to reduce delivery costs.</li>
-                        <li>Personal Savings on Delivery: Through our partnerships, you receive better rates than when organizing delivery on your own.</li>
-                        <li>Quality and Speed: We ensure delivery without compromising quality and speed. Delivery time ranges from 2 to 14 working days, depending on the destination country.</li>
+                        <li><b className="some-cont">Courier Delivery:</b> We offer services that combine accuracy, reliability, and a personalized approach for convenient logistics.</li>
+                        <li><b className="some-cont">Collaboration with Courier Companies:</b> We work with Ukrainian and European partners, which allows us to reduce delivery costs.</li>
+                        <li><b className="some-cont">Personal Savings on Delivery:</b> Through our partnerships, you receive better rates than when organizing delivery on your own.</li>
+                        <li><b className="some-cont">Quality and Speed:</b> We ensure delivery without compromising quality and speed. Delivery time ranges from 2 to 14 working days, depending on the destination country.</li>
                     </ul>
                     <p>Our team is ready to assist you with all aspects of international delivery, ensuring your shipments always arrive on time and in perfect condition.</p>
                 </div>
@@ -86,8 +86,8 @@ const Service2PageEn = () => {
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
                     part2={"a personalized approach to make international delivery as easy as possible for you"}
-                    order_call={"Order a Call"}
-                    order={"Order a Call"}
+                    order_call={"Contact"}
+                    order={"Contact"}
                     name_type={"Your Name"}
                     tel_type={"Your Phone"}
                     isDarkMode={isDarkMode}

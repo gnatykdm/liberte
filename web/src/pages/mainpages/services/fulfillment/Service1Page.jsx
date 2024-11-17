@@ -47,7 +47,7 @@ const Service1Page = () => {
                 contact_link={"/contact"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                messageStatus={"Повідомлення Відправлено"}
+                messageStatus={"Повідомлення відправлено"}
                 service1="FulFillment"
                 service2="Міжнародна кур'єрська доставка"
                 service3="Негабаритні перевезення"
@@ -73,7 +73,7 @@ const Service1Page = () => {
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
             <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
             <p>В рамках послуги fulfillment ми пропонуємо:</p>
-        <ul>
+        <ul className="fullfilment-list-style">
             <li>📦 Зберігання товару.</li>
             <li>📦 Пакування та підготовку до відправки.</li>
             <li>📦 Доставку замовлення кінцевому споживачу.</li>
@@ -96,7 +96,7 @@ const Service1Page = () => {
                     name_type={"Ваше ім’я"}
                     tel_type={"Ваш телефон"}
                     isDarkMode={isDarkMode}
-                    messageSuccess={"Повідомлення надіслано"}
+                    messageSuccess={"Повідомлення відправлено"}
                     messageError={"Проблема з надсиланням"}
                     order_call_sending={"відправка повідомлення..."}
                     order_call_problem={"проблема з відправкою"}

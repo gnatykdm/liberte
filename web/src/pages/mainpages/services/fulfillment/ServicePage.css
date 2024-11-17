@@ -27,6 +27,10 @@
     margin-top: 15px;
 }
 
+.fullfilment-list-style {
+    list-style: none;
+}
+
 .service-container-about.dark {
     color: #ffffff;
 }
@@ -68,7 +72,7 @@
     }
 
     .service-image-desc {
-        width: 200px;
+        width: 300px;
         height: auto;
     }
 }

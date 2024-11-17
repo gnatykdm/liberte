@@ -44,7 +44,7 @@ const Service2Page = () => {
                 contact_link={"/contact"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                messageStatus={"Повідомлення Відправлено"}
+                messageStatus={"Повідомлення відправлено"}
                 service1="FulFillment"
                 service2="Міжнародна кур'єрська доставка"
                 service3="Негабаритні перевезення"
@@ -95,7 +95,7 @@ const Service2Page = () => {
                     name_type={"Ваше ім'я"}
                     tel_type={"Ваш телефон"}
                     isDarkMode={isDarkMode}
-                    messageSuccess={"Повідомлення Відправлено"}
+                    messageSuccess={"Повідомлення відправлено"}
                     messageError={"Проблема із відправкою"}
                     order_call_sending={"відправка повідомлення..."}
                     order_call_problem={"проблема з відправкою"}

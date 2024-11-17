@@ -3,30 +3,41 @@
     margin-left: 60px; 
 }
 
+.text-block.dark {
+    color: #5156e5;
+}
+
+.text-line-info {
+    position: relative;
+    display: inline-block;
+}
+
 .text {
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Oswald', sans-serif; 
     font-size: 30px; 
-    letter-spacing: 2px; 
+    letter-spacing: 3px; 
     font-weight: bold; 
     color: #000000; 
-    
     display: inline-block; 
     padding-bottom: 5px; 
     line-height: 1.5; 
 }
-
 
 .text.dark {
     color: #ffffff;
 }
 
 .line {
-    width: 20%; 
+    width: 100%; 
     height: 6px; 
     background-color: #5156e5; 
     position: absolute; 
     left: 0; 
     bottom: -10px; 
+}
+
+.text-block.dark .line {
+    background-color: #5156e5;
 }
 
 @media (max-width: 768px) {

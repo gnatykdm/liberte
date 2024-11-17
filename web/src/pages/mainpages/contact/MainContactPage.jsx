@@ -10,17 +10,16 @@ import Footer from "../../../shared/ui/footer/Footer";
 import './MainContactPage.css';
 
 const MainContactPage = () => {
-    // Ініціалізація стану темної теми з localStorage
     const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
-        return savedTheme === 'true'; // Перетворюємо значення на булевий тип
+        return savedTheme === 'true'; 
     });
 
     const toggleTheme = () => {
         setIsDarkMode(prevMode => {
-            const newMode = !prevMode; // Перемикаємо стан
-            localStorage.setItem('isDarkMode', newMode); // Зберігаємо новий стан у localStorage
-            return newMode; // Повертаємо новий стан
+            const newMode = !prevMode; 
+            localStorage.setItem('isDarkMode', newMode); 
+            return newMode; 
         });
     };
 
@@ -48,7 +47,7 @@ const MainContactPage = () => {
                 contact_link={"/contact"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                messageStatus={"Повідомлення Відправлено"}
+                messageStatus={"Повідомлення відправлено"}
                 service1="FulFillment"
                 service2="Міжнародна кур'єрська доставка"
                 service3="Негабаритні перевезення"
@@ -81,7 +80,7 @@ const MainContactPage = () => {
                     send={"Надіслати"}
                     isDarkMode={isDarkMode}
                     messageSending={"Відправка.."}
-                    messageOk={"Повідомлення Відправлено"}
+                    messageOk={"Повідомлення відправлено"}
                     messageError={"Проблема із відправкою"}
                 />
             </div>
@@ -91,7 +90,7 @@ const MainContactPage = () => {
         </div>            
     
         <div className="contact-info">
-                <ContactInfo contact={"Надаєте перевагу іншим методам зв'яку?"} isDarkMode={isDarkMode} />
+                <ContactInfo contact={"Надаєте перевагу іншим методам зв'язку?"} isDarkMode={isDarkMode} />
         </div>
         <center>
             <Footer

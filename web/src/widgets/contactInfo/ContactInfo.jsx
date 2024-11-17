@@ -21,24 +21,24 @@ const ContactInfo = ({ contact, isDarkMode }) => {
 
             <div className="contact-content">
                 <ul>
-                    <li>
-                        <img src={mail_logo} alt="mail" width={25} height={25} />
+                    <li className="contact-item">
+                        <img src={mail_logo} alt="mail" className="contact-icon mail-icon" width={25} height={25} />
                         <a href="mailto:manager@libertgroup.pl" className="contact-link">manager@libertgroup.pl</a>
                     </li>
-                    <li>
-                        <img src={phone_logo} alt="phone" width={25} height={25} />
+                    <li className="contact-item">
+                        <img src={phone_logo} alt="phone" className="contact-icon phone-icon" width={25} height={25} />
                         <a href="tel:+380634076931" className="contact-link">+380 634 076 931 - Viber</a>
                     </li>
-                    <li>
-                        <img src={phone_logo} alt="phone" width={25} height={25} />
+                    <li className="contact-item">
+                        <img src={phone_logo} alt="phone" className="contact-icon phone-icon" width={25} height={25} />
                         <a href="tel:+48883104082" className="contact-link">+48 883 104 082 - WhatsApp/Telegram</a> 
                     </li>
-                    <li>
-                        <img src={telegram_logo} alt="telegram" width={25} height={25} />
+                    <li className="contact-item">
+                        <img src={telegram_logo} alt="telegram" className="contact-icon telegram-icon" width={25} height={25} />
                         <a href="https://t.me/rybusik07" className="contact-link" target="_blank" rel="noopener noreferrer">Telegram</a>
                     </li>
-                    <li>
-                        <img src={instagram_logo} alt="instagram" width={25} height={25} />
+                    <li className="contact-item">
+                        <img src={instagram_logo} alt="instagram" className="contact-icon instagram-icon" width={25} height={25} />
                         <a href="https://www.instagram.com/libert.courier/" className="contact-link" target="_blank" rel="noopener noreferrer">Instagram</a>
                     </li>
                 </ul>

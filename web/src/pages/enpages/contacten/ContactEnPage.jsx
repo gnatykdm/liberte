@@ -35,8 +35,8 @@ const ContactEnPage = () => {
                 service_drop={"Oversized Transport"}
                 about={"About Us"}
                 contacts={"Contact"}
-                call={"Order a Call"}
-                order={"Order a Call"}
+                call={"Contact"}
+                order={"Contact"}
                 social_networks={"Libert on Social Media"}
                 name_type={"Your Name"}
                 tel_type={"Your Phone Number"}
@@ -45,7 +45,7 @@ const ContactEnPage = () => {
                 contact_link={"/contact/en"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                messageStatus={"Message Sent"}
+                messageStatus={"Message sent"}
                 service1="Fulfillment"
                 service2="International Courier Delivery"
                 service3="Oversized Transport"

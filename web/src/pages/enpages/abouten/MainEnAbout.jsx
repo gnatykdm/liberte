@@ -34,8 +34,8 @@ const MainEnAbout = () => {
                 service_drop={"Oversized Transport"}
                 about={"About Us"}
                 contacts={"Contact"}
-                call={"Order a Call"}
-                order={"Order"}
+                call={"Contact"}
+                order={"Contact"}
                 social_networks={"Libert on Social Media"}
                 name_type={"Your Name"}
                 tel_type={"Your Phone Number"}
@@ -44,7 +44,7 @@ const MainEnAbout = () => {
                 contact_link={"/contact/en"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                messageStatus={"Message Sent"}
+                messageStatus={"Message sent"}
                 service1="Fulfillment"
                 service2="International Courier Delivery"
                 service3="Oversized Transport"
@@ -82,12 +82,12 @@ const MainEnAbout = () => {
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
                     part2={"a personalized approach to make logistics as easy as possible for you"}
-                    order_call={"Order a Call"}
-                    order={"Order a Call"}
+                    order_call={"contact"}
+                    order={"Contact"}
                     name_type={"Your Name"}
                     tel_type={"Your Phone"}
                     isDarkMode={isDarkMode}
-                    messageSuccess={"Message Sent"}
+                    messageSuccess={"Message sent"}
                     messageError={"Problem Sending"}
                     order_call_sending={"sending message..."}
                 />

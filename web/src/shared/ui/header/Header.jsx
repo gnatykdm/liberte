@@ -12,9 +12,9 @@ import britain_flag from '../../assets/icons/united-kingdom.png';
 import sun from '../../assets/icons/sun.png';
 import moon from '../../assets/icons/moon.png';
 import libert_logo_white from '../../assets/images/libert_logo_white.png';
-import './Header.css';
 import { MobileMessage } from "../../../entity/messagedto/MobileMessage";
 import { MobileMessageDto } from "../../../entity/messagedto/MobileMessageDto";
+import './Header.css';
 
 const Header = ({ 
     image, head, services, photo_link, about, contacts, call, order, social_networks, name_type, tel_type, 
@@ -50,8 +50,12 @@ const Header = ({
     };
 
     const handleLinkClick = () => {
-       
+        setDropdownStates((prevState) => ({
+            ...prevState,
+            isMobileMenuOpen: false
+        }));
     };
+    
 
     const handleModalClose = () => setIsModalOpen(false);
 
@@ -232,55 +236,55 @@ const Header = ({
 
             {dropdownStates.isMobileMenuOpen && (
                 <div className="mobile-menu-overlay">
-                    <div className="mobile-menu">
-                        <button className="burger-menu" onClick={() => toggleDropdown('isMobileMenuOpen')}>
-                            <span className="burger-line"></span>
-                            <span className="burger-line"></span>
-                            <span className="burger-line"></span>
-                        </button>
-                        <nav className="mobile-navigation">
-                            <Link to={main_link} className={`mobile-nav-link ${isActiveLink(main_link)}`}>{head}</Link>
-                            <div className="mobile-nav-link dropdown-toggle" onClick={(e) => { e.stopPropagation(); toggleDropdown('isServicesDropdownOpen'); }}>
-                                {services}
-                                {dropdownStates.isServicesDropdownOpen && (
-                                    <div className="dropdown-menu-mobile show" ref={servicesDropdownRef}>
-                                        <div className="dropdown-item-services-mobile">
-                                            <Link to={service1_link} className="service-dropdown-link" onClick={handleLinkClick}>{service1}</Link>
-                                        </div>
-                                        <div className="dropdown-item-services-mobile">
-                                            <Link to={service2_link} className="service-dropdown-link" onClick={handleLinkClick}>{service2}</Link>
-                                        </div>
-                                        <div className="dropdown-item-services-mobile">
-                                            <Link to={service3_link} className="service-dropdown-link" onClick={handleLinkClick}>{service3}</Link>
-                                        </div>
-                                        <div className="dropdown-item-services-mobile">
-                                            <Link to={service4_link} className="service-dropdown-link" onClick={handleLinkClick}>{service4}</Link>
-                                        </div>
-                                        <div className="dropdown-item-services-mobile">
-                                            <Link to={service5_link} className="service-dropdown-link" onClick={handleLinkClick}>{service5}</Link>
-                                        </div>
+                <div className="mobile-menu">
+                    <button className="burger-menu" onClick={() => toggleDropdown('isMobileMenuOpen')}>
+                        <span className="burger-line"></span>
+                        <span className="burger-line"></span>
+                        <span className="burger-line"></span>
+                    </button>
+                    <nav className="mobile-navigation">
+                        <Link to={main_link} className={`mobile-nav-link ${isActiveLink(main_link)}`} onClick={handleLinkClick}>{head}</Link>
+                        <div className="mobile-nav-link dropdown-toggle" onClick={(e) => { e.stopPropagation(); toggleDropdown('isServicesDropdownOpen'); }}>
+                            {services}
+                            {dropdownStates.isServicesDropdownOpen && (
+                                <div className="dropdown-menu-mobile show" ref={servicesDropdownRef}>
+                                    <div className="dropdown-item-services-mobile">
+                                        <Link to={service1_link} className="service-dropdown-link" onClick={handleLinkClick}>{service1}</Link>
                                     </div>
-                                )}
-                            </div>
-                            <Link to={about_link} className={`mobile-nav-link ${isActiveLink(about_link)}`}>{about}</Link>
-                            <Link to={contact_link} className={`mobile-nav-link ${isActiveLink(contact_link)}`}>{contacts}</Link>
-                        </nav>
-                        <div className="mobile-modal-footer">
-                            <div className="mobile-modal-footer-description">{social_networks}</div>
-                            <div className="social-media-mobile">
-                                <a href="https://www.instagram.com/libert.courier/" target="_blank" rel="noopener noreferrer">
-                                    <img src={instagram_logo} alt="Instagram" />
-                                </a>
-                                <a href="https://t.me/rybusik07" target="_blank" rel="noopener noreferrer">
-                                    <img src={telegram_logo} alt="Telegram" />
-                                </a>
-                            </div>
-                            <div className="mobile-modal-footer-bottom">
-                                <p>2024 © Libert Group | All rights reserved.</p>
-                            </div>
+                                    <div className="dropdown-item-services-mobile">
+                                        <Link to={service2_link} className="service-dropdown-link" onClick={handleLinkClick}>{service2}</Link>
+                                    </div>
+                                    <div className="dropdown-item-services-mobile">
+                                        <Link to={service3_link} className="service-dropdown-link" onClick={handleLinkClick}>{service3}</Link>
+                                    </div>
+                                    <div className="dropdown-item-services-mobile">
+                                        <Link to={service4_link} className="service-dropdown-link" onClick={handleLinkClick}>{service4}</Link>
+                                    </div>
+                                    <div className="dropdown-item-services-mobile">
+                                        <Link to={service5_link} className="service-dropdown-link" onClick={handleLinkClick}>{service5}</Link>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                        <Link to={about_link} className={`mobile-nav-link ${isActiveLink(about_link)}`} onClick={handleLinkClick}>{about}</Link>
+                        <Link to={contact_link} className={`mobile-nav-link ${isActiveLink(contact_link)}`} onClick={handleLinkClick}>{contacts}</Link>
+                    </nav>
+                    <div className="mobile-modal-footer">
+                        <div className="mobile-modal-footer-description">{social_networks}</div>
+                        <div className="social-media-mobile">
+                            <a href="https://www.instagram.com/libert.courier/" target="_blank" rel="noopener noreferrer">
+                                <img src={instagram_logo} alt="Instagram" />
+                            </a>
+                            <a href="https://t.me/rybusik07" target="_blank" rel="noopener noreferrer">
+                                <img src={telegram_logo} alt="Telegram" />
+                            </a>
+                        </div>
+                        <div className="mobile-modal-footer-bottom">
+                            <p>2024 © Libert Group | All rights reserved.</p>
                         </div>
                     </div>
                 </div>
+            </div>            
             )}
         </header>
     );

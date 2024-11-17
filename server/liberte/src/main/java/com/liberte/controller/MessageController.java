@@ -22,6 +22,7 @@ public class MessageController {
 
     @Autowired
     private IMailUtil mailUtil;
+    private final String MAIL_SENDER = "manager@libertgroup.pl";
     private Logger logger = LoggerFactory.getLogger(MessageController.class);
 
     @PostMapping("/save")
@@ -37,7 +38,7 @@ public class MessageController {
         String emailContent = generateEmailContent(m);
 
         try {
-            mailUtil.sendMail(yourEmail, yourEmail, m.getMessageTheme(), emailContent);
+            mailUtil.sendMail(MAIL_SENDER, yourEmail, m.getMessageTheme(), emailContent);
         } catch (Exception e) {
             logger.error("Failed to send email: " + e.getMessage());
             return HttpStatus.INTERNAL_SERVER_ERROR;
@@ -60,7 +61,7 @@ public class MessageController {
         String emailContent = generateMobileEmailContent(m);
 
         try {
-            mailUtil.sendMail(yourEmail, yourEmail, "Терміновий Дзвінок - Libert-Site", emailContent);
+            mailUtil.sendMail(MAIL_SENDER, yourEmail, "Терміновий Дзвінок - Libert-Site", emailContent);
         } catch (Exception e) {
             logger.error("Failed to send mobile email: " + e.getMessage());
             return HttpStatus.INTERNAL_SERVER_ERROR;

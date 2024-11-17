@@ -35,8 +35,8 @@ const Service1PageEn = () => {
                 service_drop={"Oversized Transport"}
                 about={"About Us"}
                 contacts={"Contact"}
-                call={"Order a Call"}
-                order={"Order"}
+                call={"Contact"}
+                order={"Contact"}
                 social_networks={"Libert on Social Media"}
                 name_type={"Your Name"}
                 tel_type={"Your Phone Number"}
@@ -45,7 +45,7 @@ const Service1PageEn = () => {
                 contact_link={"/contact/en"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                messageStatus={"Message Sent"}
+                messageStatus={"Message sent"}
                 service1="Fulfillment"
                 service2="International Courier Delivery"
                 service3="Oversized Transport"
@@ -70,12 +70,12 @@ const Service1PageEn = () => {
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
             <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
             <p>As part of the fulfillment service, we offer:</p>
-<ul>
-    <li>📦 Storage of goods.</li>
-    <li>📦 Packaging and preparation for shipment.</li>
-    <li>📦 Delivery of the order to the end consumer.</li>
-    <li>📦 Processing of returns and customer support.</li>
-</ul>
+                <ul className="fullfilment-list-style">
+                    <li>📦 Storage of goods.</li>
+                    <li>📦 Packaging and preparation for shipment.</li>
+                    <li>📦 Delivery of the order to the end consumer.</li>
+                    <li>📦 Processing of returns and customer support.</li>
+                </ul>
 
             </div>
             
@@ -89,12 +89,12 @@ const Service1PageEn = () => {
                 <OrderCall
                     part1={"Your satisfaction is our goal. We ensure accuracy, reliability, and"}
                     part2={"a personalized approach to make logistics as simple as possible for you"}
-                    order_call={"Order a Call"}
-                    order={"Order a Call"}
+                    order_call={"Contactt"}
+                    order={"Contact"}
                     name_type={"Your Name"}
                     tel_type={"Your Phone"}
                     isDarkMode={isDarkMode}
-                    messageSuccess={"Message Sent"}
+                    messageSuccess={"Message sent"}
                     messageError={"Problem Sending"}
                 />
 

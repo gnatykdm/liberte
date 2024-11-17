@@ -36,14 +36,14 @@ const Service1PagePl = () => {
                 service_drop={"Transport ponadgabarytowy"}
                 about={"O nas"}
                 contacts={"Kontakt"}
-                call={"Zamów rozmowę"}
-                order={"Zamów"}
+                call={"Kontakt"}
+                order={"Kontakt"}
                 social_networks={"Libert w mediach społecznościowych"}
                 name_type={"Twoje imię"}
                 tel_type={"Twój numer telefonu"}
-                main_link={"/"}
-                about_link={"/about"}
-                contact_link={"/contact"}
+                main_link={"/pl"}
+                about_link={"/about/pl"}
+                contact_link={"/contact/pl"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
                 messageStatus={"Wiadomość wysłana"}
@@ -52,11 +52,11 @@ const Service1PagePl = () => {
                 service3="Transport ponadgabarytowy"
                 service4="Usługi agencji celnej"
                 service5="Logistyka magazynowa"
-                service1_link={"/service1"}
-                service2_link={"/service2"}
-                service3_link={"/service3"}
-                service4_link={"/service4"}
-                service5_link={"/service5"}
+                service1_link={"/service1/pl"}
+                service2_link={"/service2/pl"}
+                service3_link={"/service3/pl"}
+                service4_link={"/service4/pl"}
+                service5_link={"/service5/pl"}
                 languagelink_1={"/service1/en"}
                 languagelink_2={"/service1"}
                 languagelink_3={"/service1/pl"}
@@ -72,7 +72,7 @@ const Service1PagePl = () => {
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
                     <p>W ramach usługi fulfillment oferujemy:</p>
-                    <ul>
+                    <ul className="fullfilment-list-style">
                         <li>📦 Przechowywanie towarów.</li>
                         <li>📦 Pakowanie i przygotowanie do wysyłki.</li>
                         <li>📦 Dostawę zamówienia do końcowego odbiorcy.</li>
@@ -89,8 +89,8 @@ const Service1PagePl = () => {
                 <OrderCall
                     part1={"Twoje zadowolenie to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
                     part2={"indywidualne podejście, aby logistyka była maksymalnie prosta dla Ciebie"}
-                    order_call={"Zamów rozmowę"}
-                    order={"Zamów rozmowę"}
+                    order_call={"Kontakt"}
+                    order={"Kontakt"}
                     name_type={"Twoje imię"}
                     tel_type={"Twój telefon"}
                     isDarkMode={isDarkMode}

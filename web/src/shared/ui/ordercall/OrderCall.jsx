@@ -139,7 +139,6 @@ const OrderCall = ({
                                         {isSending && (<p className="order-call-sending">{order_call_sending}</p> 
                                             )}
                                     </form>
-                                
                             </div>
                         )}
                     </div>

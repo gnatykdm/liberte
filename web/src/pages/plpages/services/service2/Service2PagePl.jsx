@@ -34,8 +34,8 @@ const Service2PagePl = () => {
                 service_drop={"Transport ponadgabarytowy"}
                 about={"O nas"}
                 contacts={"Kontakt"}
-                call={"Zamówienie rozmowy"}
-                order={"Zamówienie"}
+                call={"Kontakt"}
+                order={"Kontakt"}
                 social_networks={"Libert w mediach społecznościowych"}
                 name_type={"Twoje imię"}
                 tel_type={"Twój numer telefonu"}
@@ -69,10 +69,10 @@ const Service2PagePl = () => {
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
                     <p>Międzynarodowa dostawa kurierska obejmuje:</p>
                     <ul>
-                        <li>Dostawę kurierską: Oferujemy usługi łączące dokładność, niezawodność i spersonalizowane podejście dla wygodnej logistyki.</li>
-                        <li>Współpracę z firmami kurierskimi: Współpracujemy z ukraińskimi i europejskimi partnerami, co pozwala na obniżenie kosztów dostawy.</li>
-                        <li>Osobiste oszczędności na dostawie: Dzięki naszej współpracy, otrzymujesz korzystniejsze ceny niż przy samodzielnej organizacji dostawy.</li>
-                        <li>Jakość i szybkość: Zapewniamy dostawę bez kompromisów w zakresie jakości i szybkości. Czas dostawy wynosi od 2 do 14 dni roboczych, w zależności od kraju docelowego.</li>
+                        <li><b className="some-cont">Dostawę kurierską:</b> Oferujemy usługi łączące dokładność, niezawodność i spersonalizowane podejście, aby zapewnić wygodną logistykę.</li>
+                        <li><b className="some-cont">Współpracę z firmami kurierskimi:</b> Współpracujemy z ukraińskimi i europejskimi partnerami, co pozwala na obniżenie kosztów dostawy.</li>
+                        <li><b className="some-cont">Oszczędności na dostawie:</b> Dzięki naszej współpracy otrzymujesz korzystniejsze ceny niż przy samodzielnej organizacji dostawy.</li>
+                        <li><b className="some-cont">Jakość i szybkość:</b> Zapewniamy dostawę bez kompromisów w zakresie jakości i szybkości. Czas dostawy wynosi od 2 do 14 dni roboczych, w zależności od kraju docelowego.</li>
                     </ul>
                     <p>Nasz zespół jest gotowy pomóc Ci we wszystkich aspektach międzynarodowej dostawy, aby Twoje przesyłki zawsze docierały na czas i w nienaruszonym stanie.</p>
                 </div>
@@ -85,8 +85,8 @@ const Service2PagePl = () => {
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
                     part2={"indywidualne podejście, aby uczynić międzynarodową dostawę jak najprostszą dla Ciebie"}
-                    order_call={"Zamówienie rozmowy"}
-                    order={"Zamówienie rozmowy"}
+                    order_call={"Kontakt"}
+                    order={"Kontakt"}
                     name_type={"Twoje imię"}
                     tel_type={"Twój telefon"}
                     isDarkMode={isDarkMode}

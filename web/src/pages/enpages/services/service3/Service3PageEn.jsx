@@ -34,8 +34,8 @@ const Service3PageEn = () => {
                 service_drop={"Oversized Transport"}
                 about={"About Us"}
                 contacts={"Contact"}
-                call={"Order a Call"}
-                order={"Order"}
+                call={"Contact"}
+                order={"Contact"}
                 social_networks={"Libert on Social Media"}
                 name_type={"Your Name"}
                 tel_type={"Your Phone Number"}
@@ -89,8 +89,8 @@ const Service3PageEn = () => {
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
                     part2={"a personalized approach to make logistics as simple as possible for you"}
-                    order_call={"Order a Call"}
-                    order={"Order a Call"}
+                    order_call={"Contact"}
+                    order={"Contact"}
                     name_type={"Your Name"}
                     tel_type={"Your Phone"}
                     isDarkMode={isDarkMode}

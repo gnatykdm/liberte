@@ -17,9 +17,9 @@ const MainAboutUS = () => {
 
     const toggleTheme = () => {
         setIsDarkMode(prevMode => {
-            const newMode = !prevMode; // Переключаем состояние
-            localStorage.setItem('isDarkMode', newMode); // Сохраняем новое состояние в localStorage
-            return newMode; // Возвращаем новое состояние
+            const newMode = !prevMode;
+            localStorage.setItem('isDarkMode', newMode);
+            return newMode; 
         });
     };
 
@@ -46,7 +46,7 @@ const MainAboutUS = () => {
                 contact_link={"/contact"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                messageStatus={"Повідомлення Відправлено"}
+                messageStatus={"Повідомлення відправлено"}
                 service1="FulFillment"
                 service2="Міжнародна кур'єрська доставка"
                 service3="Негабаритні перевезення"
@@ -94,7 +94,7 @@ const MainAboutUS = () => {
                     name_type={"Ваше ім'я"}
                     tel_type={"Ваш телефон"}
                     isDarkMode={isDarkMode}
-                    messageSuccess={"Повідомлення Відправлено"}
+                    messageSuccess={"Повідомлення відправлено"}
                     messageError={"Проблема із відправкою"}
                     order_call_sending={"відправка повідомлення..."}
                     order_call_problem={"проблема з відправкою"}

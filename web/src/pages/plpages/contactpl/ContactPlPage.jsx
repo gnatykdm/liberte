@@ -35,8 +35,8 @@ const ContactPlPage = () => {
                 service_drop={"Transport ponadgabarytowy"}
                 about={"O nas"}
                 contacts={"Kontakt"}
-                call={"Zamówienie rozmowy"}
-                order={"Zamówienie rozmowy"}
+                call={"Kontakt"}
+                order={"Kontakt"}
                 social_networks={"Libert w mediach społecznościowych"}
                 name_type={"Twoje imię"}
                 tel_type={"Twój numer telefonu"}

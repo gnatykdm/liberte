@@ -29,6 +29,9 @@ public class MailUtil implements IMailUtil {
     @Value("${mail.smtp.password}")
     private String PASSWORD;
 
+    @Value("${mail.smtp.port}")
+    private String PORT;
+
     private List<String> mailReceivers;
     private final Properties prop = new Properties();
     private final Logger logger = LoggerFactory.getLogger(MailUtil.class);
@@ -36,10 +39,11 @@ public class MailUtil implements IMailUtil {
     @PostConstruct
     public void init() {
         prop.put("mail.smtp.auth", "true");
-        prop.put("mail.smtp.starttls.enable", "true");
-        prop.put("mail.smtp.host", "smtp.gmail.com");
-        prop.put("mail.smtp.port", "587");
-        prop.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        prop.put("mail.smtp.starttls.enable", "false");
+        prop.put("mail.smtp.ssl.enable", "true");
+        prop.put("mail.smtp.host", HOST);
+        prop.put("mail.smtp.port", PORT);
+        prop.put("mail.smtp.ssl.trust", HOST);
 
         mailReceivers = readMailFile("mails.txt");
     }
@@ -48,6 +52,11 @@ public class MailUtil implements IMailUtil {
     public void sendMail(String from, String to, String theme, String content) {
         if (mailReceivers == null || mailReceivers.isEmpty()) {
             logger.error("No mail receivers loaded. Cannot send emails.");
+            return;
+        }
+
+        if (!from.equals(USERNAME)) {
+            logger.error("Sender email address does not match the authenticated username.");
             return;
         }
 
@@ -77,6 +86,7 @@ public class MailUtil implements IMailUtil {
             logger.error("Failed to send email: " + e.getMessage(), e);
         }
     }
+
 
     public static List<String> readMailFile(String file) {
         List<String> mails = new ArrayList<>();

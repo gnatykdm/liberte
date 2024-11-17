@@ -34,8 +34,8 @@ const Service5PagePl = () => {
                 service_drop={"Transport ponadgabarytowy"}
                 about={"O nas"}
                 contacts={"Kontakt"}
-                call={"Zamówienie rozmowy"}
-                order={"Zamówienie"}
+                call={"Kontakt"}
+                order={"Kontakt"}
                 social_networks={"Libert w mediach społecznościowych"}
                 name_type={"Twoje imię"}
                 tel_type={"Twój numer telefonu"}
@@ -88,8 +88,8 @@ const Service5PagePl = () => {
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
                     part2={"indywidualne podejście, aby uprościć logistykę dla Ciebie"}
-                    order_call={"Zamówienie rozmowy"}
-                    order={"Zamówienie rozmowy"}
+                    order_call={"Kontakt"}
+                    order={"Kontakt"}
                     name_type={"Twoje imię"}
                     tel_type={"Twój telefon"}
                     isDarkMode={isDarkMode}

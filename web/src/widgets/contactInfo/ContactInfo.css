@@ -1,4 +1,3 @@
-/* ContactInfo.css */
 .contact-info-desc {
     background-color: #000000; 
     padding: 25px; 
@@ -6,9 +5,9 @@
     text-align: left; 
     color: white; 
     width: 85%;
-    margin: 0 auto; /* Center the component */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .contact-info-desc.dark {
@@ -20,39 +19,39 @@
     font-size: 20px; 
     margin-bottom: 20px; 
     font-weight: bold; 
-    text-align: center; /* Center the text for better aesthetics */
+    text-align: center;
 }
 
 .contact-content ul {
     display: flex; 
     flex-direction: column;
     gap: 10px; 
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
+    list-style-type: none;
+    padding: 0;
 }
 
 .contact-content li {
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Center items vertically */
-    padding: 10px; /* Add padding for better touch targets */
-    border-radius: 10px; /* Rounded corners for list items */
-    transition: background-color 0.3s; /* Smooth transition for hover */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
 }
 
 .contact-content li:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .contact-content img {
     width: 25px; 
-    height: 25px; /* Ensure images are square */
-    margin-right: 10px; /* Space between image and text */
+    height: 25px;
+    margin-right: 10px;
 }
 
 .phone_number {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px; 
-    color: white; 
+    color: white;
 }
 
 .contact-link {
@@ -61,12 +60,31 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 16px; 
     margin-left: 10px;
-    transition: color 0.3s; /* Smooth transition for color */
+    transition: color 0.3s;
 }
 
-.contact-link:hover {
-    text-decoration: underline; 
-    color: hsl(238, 74%, 61%); /* Change color on hover for better visibility */
+.contact-item:hover .contact-link {
+    color: hsl(238, 74%, 61%);
+}
+
+.contact-icon {
+    transition: filter 0.3s ease;
+}
+
+.contact-item:hover .mail-icon {
+    content: url('../../shared/assets/icons/email-purple.png');
+}
+
+.contact-item:hover .phone-icon {
+    content: url('../../shared/assets/icons/phone-call-purple.png');
+}
+
+.contact-item:hover .telegram-icon {
+    content: url('../../shared/assets/icons/telegram-purple.png');
+}
+
+.contact-item:hover .instagram-icon {
+    content: url('../../shared/assets/icons/instagram-purple.png');
 }
 
 @media (max-width: 768px) {
