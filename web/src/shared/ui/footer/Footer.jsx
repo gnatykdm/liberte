@@ -71,11 +71,11 @@ const Footer = ({ head, head2, services, about, contacts, main_link, about_link,
   ];
 
   const serviceLinks = [
+    { label: service1, path: service1_link },
     { label: service2, path: service2_link },
     { label: service3, path: service3_link },
     { label: service4, path: service4_link },
     { label: service5, path: service5_link },
-    { label: service1, path: service1_link },
   ];
 
   return (

@@ -1,0 +1,114 @@
+/* Основные стили для контейнера слайдера */
+.photo-slider {
+    width: 100%;
+    max-width: 600px; /* Установим максимальную ширину слайдера */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-left: 50px;
+}
+
+/* Стили для слайдов */
+.slider-item {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Устанавливаем фиксированную высоту слайдера */
+}
+
+/* Стили для изображений */
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обеспечивает заполнение контейнера изображением */
+    display: block;
+    border-radius: 15px; /* Радиус округления углов для изображений */
+}
+
+/* Стили для стрелок */
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.custom-prev {
+    left: 10px;
+}
+
+.custom-next {
+    right: 10px;
+}
+
+.custom-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Скрываем стандартные стрелки */
+.slick-prev, .slick-next {
+    display: none !important;
+}
+
+/* Медиазапросы для адаптивности */
+
+/* Для экранов от 1024px и выше (обычные десктопы) */
+@media (max-width: 1280px) {
+    .photo-slider {
+        max-width: 500px;  /* Уменьшаем максимальную ширину слайдера для десктопов */
+        height: 350px;     /* Уменьшаем высоту слайдера */
+    }
+
+    .slider-item {
+        height: 350px;  /* Уменьшаем высоту слайда */
+    }
+
+    .slider-image {
+        border-radius: 10px; /* Уменьшаем радиус округления на больших экранах */
+    }
+
+    .custom-arrow {
+        font-size: 25px;  /* Уменьшаем размер стрелок */
+        padding: 8px;     /* Уменьшаем размер стрелок */
+    }
+}
+
+/* Для экранов от 1024px до 1440px */
+@media (max-width: 1440px) {
+    .photo-slider {
+        max-width: 550px;  /* Уменьшаем максимальную ширину слайдера для больших экранов */
+        height: 375px;     /* Уменьшаем высоту слайдера */
+    }
+
+    .slider-item {
+        height: 375px;  /* Уменьшаем высоту слайда */
+    }
+
+    .custom-arrow {
+        font-size: 28px;  /* Уменьшаем размер стрелок */
+        padding: 9px;     /* Уменьшаем размер стрелок */
+    }
+}
+
+/* Для экранов меньше 1024px (планшеты и мобильные устройства) */
+@media (max-width: 1024px) {
+    .photo-slider {
+        max-width: 100%;  /* Слайдер занимает всю ширину экрана */
+        height: 300px;    /* Уменьшаем высоту слайдера */
+    }
+
+    .slider-item {
+        height: 300px;  /* Уменьшаем высоту слайда */
+    }
+
+    .custom-arrow {
+        font-size: 20px;  /* Еще более мелкие стрелки для планшетов */
+        padding: 6px;     /* Уменьшаем стрелки */
+    }
+}

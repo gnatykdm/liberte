@@ -44,23 +44,24 @@ const Service4PageEn = () => {
                 contact_link={"/contact/en"}
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
-                messageStatus={"Message Sent"}
+                messageStatus={"Message sent"}
                 service1="Fulfillment"
-                service2="International Courier Delivery"
-                service3="Oversized Transport"
+                service2="Oversized Transport"
+                service3="International Courier Delivery"
                 service4="Customs Agency Services"
                 service5="Warehouse Logistics"
                 service1_link={"/service1/en"}
-                service2_link={"/service2/en"}
-                service3_link={"/service3/en"}
+                service2_link={"/service3/en"}
+                service3_link={"/service2/en"}
                 service4_link={"/service4/en"}
                 service5_link={"/service5/en"}
                 languagelink_1={"/service4/en"}
-                languagelink_2={"/service4"}
+                languagelink_2={"/service4/"}
                 languagelink_3={"/service4/pl"}
                 photo_link={"/en"}
                 order_call_sending={"sending message..."}
             />
+
 
             <div className="some-age-info">
                 <PageInfo text="Customs Agency Services" isDarkMode={isDarkMode} />
@@ -99,25 +100,28 @@ const Service4PageEn = () => {
                 />
 
                 <Footer
-                    head="Main Menu"
-                    head2="Menu"
-                    head3="Our Contacts"
-                    services={"Services"}
-                    contacts="Contact"
-                    main_link="/en"
-                    about_link="/about/en"
-                    contact_link="/contact/en"
-                    about="About Us"
-                    service1="Fulfillment"
-                    service2="International Courier Delivery"
-                    service3="Oversized Transport"
-                    service4="Customs Agency Services"
-                    service5="Warehouse Logistics"
-                    service1_link={"/service1/en"}
-                    service2_link={"/service2/en"}
-                    service3_link={"/service3/en"}
-                    service4_link={"/service4/en"}
-                    service5_link={"/service5/en"}
+                head="Main Menu"
+                head2="Menu"
+                head3="Our Contacts"
+                services={"Services"}
+                contacts="Contact"
+                main_link="/en"
+                about_link="/about/en"
+                contact_link="/contact/en"
+                about="About Us"
+                service1="Fulfillment"
+                service2="Oversized Transport"
+                service3="International Courier Delivery"
+                service4="Customs Agency Services"
+                service5="Warehouse Logistics"
+                service1_link={"/service1/en"}
+                service2_link={"/service3/en"}
+                service3_link={"/service2/en"}
+                service4_link={"/service4/en"}
+                service5_link={"/service5/en"}
+                languagelink_1={"/en"}
+                languagelink_2={"/"}
+                languagelink_3={"/pl"}
                 />
             </center>
         </div>

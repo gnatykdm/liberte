@@ -47,13 +47,13 @@ const MainEn = () => {
                 isDarkMode={isDarkMode}
                 messageStatus={"Message sent"}
                 service1="Fulfillment"
-                service2="International Courier Delivery"
-                service3="Oversized Transport"
+                service2="Oversized Transport"
+                service3="International Courier Delivery"
                 service4="Customs Agency Services"
                 service5="Warehouse Logistics"
                 service1_link={"/service1/en"}
-                service2_link={"/service2/en"}
-                service3_link={"/service3/en"}
+                service2_link={"/service3/en"}
+                service3_link={"/service2/en"}
                 service4_link={"/service4/en"}
                 service5_link={"/service5/en"}
                 languagelink_1={"/en"}
@@ -71,11 +71,9 @@ const MainEn = () => {
                         your business
                     </div>
                     <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
-                        <p>
-                            LIBERT Group offers two main types of services: <b className="some-cont">international courier delivery</b> and <br/>
-                            transport of <b className="some-cont">oversized cargo</b>. We strive to provide our clients with the highest quality services,
-                            ensuring that every order meets your expectations.
-                        </p>
+                    <p>
+                        We are among the leaders in the field of transporting <b className="some-cont">oversized cargo</b>. Due to the volume we provide to carriers, we have the lowest prices on the market. We transport everything from combines to infrastructure projects, including documentation support. Our completed projects are showcased on the <a href="https://civil-protection-humanitarian-aid.ec.europa.eu/news-stories/stories/assembling-future-providing-new-homes-ukrainians-displaced-war_en" target="_blank" rel="noopener noreferrer">European Commission</a> website.
+                    </p>
                     </div>
                     <button className="btn-main-desc">
                         <Link to="/contact/en" style={{ textDecoration: 'none', color: '#ffffff' }}>
@@ -92,14 +90,14 @@ const MainEn = () => {
                 isDarkMode={isDarkMode}
                 service1_link={"/service1/en"}
                 service2_link={"/service3/en"}
-                service3_link={"/service4/en"}
-                service4_link={"/service5/en"}
-                service5_link={"/service2/en"}
+                service3_link={"/service2/en"}
+                service4_link={"/service4/en"}
+                service5_link={"/service5/en"}
                 service1_name={"FULFILLMENT"}
                 service2_name={"Oversized transportation"}
-                service3_name={"Customs agency services"}
-                service4_name={"Warehouse logistics"}
-                service5_name={"International courier delivery"}
+                service3_name={"International courier delivery"}
+                service4_name={"Customs agency services"}
+                service5_name={"Warehouse logistics"}
             />
 
 
@@ -126,13 +124,13 @@ const MainEn = () => {
                 contact_link="/contact/en"
                 about="About Us"
                 service1="Fulfillment"
-                service2="International Courier Delivery"
-                service3="Oversized Transport"
+                service2="Oversized Transport"
+                service3="International Courier Delivery"
                 service4="Customs Agency Services"
                 service5="Warehouse Logistics"
                 service1_link={"/service1/en"}
-                service2_link={"/service2/en"}
-                service3_link={"/service3/en"}
+                service2_link={"/service3/en"}
+                service3_link={"/service2/en"}
                 service4_link={"/service4/en"}
                 service5_link={"/service5/en"}
                 languagelink_1={"/en"}

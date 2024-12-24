@@ -49,17 +49,17 @@ const MainContactPage = () => {
                 isDarkMode={isDarkMode}
                 messageStatus={"Повідомлення відправлено"}
                 service1="FulFillment"
-                service2="Міжнародна кур'єрська доставка"
-                service3="Негабаритні перевезення"
+                service2="Негабаритні перевезення"
+                service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
-                service5="Складська Логістика"
+                service5="Складська логістика"
                 service1_link={"/service1"}
-                service2_link={"/service2"}
-                service3_link={"/service3"}
+                service2_link={"/service3"}
+                service3_link={"/service2"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
                 languagelink_1={"/contact/en"}
-                languagelink_2={"/contact"}
+                languagelink_2={"/contact/"}
                 languagelink_3={"/contact/pl"}
                 photo_link={"/"}
                 order_call_sending={"відправка повідомлення..."}
@@ -93,7 +93,7 @@ const MainContactPage = () => {
                 <ContactInfo contact={"Надаєте перевагу іншим методам зв'язку?"} isDarkMode={isDarkMode} />
         </div>
         <center>
-            <Footer
+        <Footer
                 head="Головне меню"
                 head2="Меню"
                 head3="Наші контакти"
@@ -104,13 +104,13 @@ const MainContactPage = () => {
                 contact_link="/contact"
                 about="Про Нас"
                 service1="FulFillment"
-                service2="Міжнародна кур'єрська доставка"
-                service3="Негабаритні перевезення"
+                service2="Негабаритні перевезення"
+                service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
                 service5="Складська Логістика"
                 service1_link={"/service1"}
-                service2_link={"/service2"}
-                service3_link={"/service3"}
+                service2_link={"/service3"}
+                service3_link={"/service2"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
                 />

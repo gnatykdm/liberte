@@ -48,17 +48,17 @@ const MainAboutUS = () => {
                 isDarkMode={isDarkMode}
                 messageStatus={"Повідомлення відправлено"}
                 service1="FulFillment"
-                service2="Міжнародна кур'єрська доставка"
-                service3="Негабаритні перевезення"
+                service2="Негабаритні перевезення"
+                service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
-                service5="Складська Логістика"
+                service5="Складська логістика"
                 service1_link={"/service1"}
-                service2_link={"/service2"}
-                service3_link={"/service3"}
+                service2_link={"/service3"}
+                service3_link={"/service2"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
                 languagelink_1={"/about/en"}
-                languagelink_2={"/about"}
+                languagelink_2={"/about/"}
                 languagelink_3={"/about/pl"}
                 photo_link={"/"}
                 order_call_sending={"відправка повідомлення..."}
@@ -100,7 +100,7 @@ const MainAboutUS = () => {
                     order_call_problem={"проблема з відправкою"}
                 />
 
-            <Footer
+                <Footer
                 head="Головне меню"
                 head2="Меню"
                 head3="Наші контакти"
@@ -111,13 +111,13 @@ const MainAboutUS = () => {
                 contact_link="/contact"
                 about="Про Нас"
                 service1="FulFillment"
-                service2="Міжнародна кур'єрська доставка"
-                service3="Негабаритні перевезення"
+                service2="Негабаритні перевезення"
+                service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
                 service5="Складська Логістика"
                 service1_link={"/service1"}
-                service2_link={"/service2"}
-                service3_link={"/service3"}
+                service2_link={"/service3"}
+                service3_link={"/service2"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
                 />

@@ -47,13 +47,13 @@ const MainPlPage = () => {
                 isDarkMode={isDarkMode}
                 messageStatus={"Wiadomość wysłana"}
                 service1="FulFillment"
-                service2="Międzynarodowa dostawa kurierska"
-                service3="Transport ponadgabarytowy"
+                service2="Transport ponadgabarytowy"
+                service3="Międzynarodowa dostawa kurierska"
                 service4="Usługi agencji celnej"
                 service5="Logistyka magazynowa"
                 service1_link={"/service1/pl"}
-                service2_link={"/service2/pl"}
-                service3_link={"/service3/pl"}
+                service2_link={"/service3/pl"}
+                service3_link={"/service2/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
                 languagelink_1={"/en"}
@@ -61,6 +61,7 @@ const MainPlPage = () => {
                 languagelink_3={"/pl"}
                 order_call_sending={"wysyłanie wiadomości..."}
                 order_call_problem={"problem z wysyłaniem"}
+                photo_link={"/pl"}
             />
 
             <div className="main-content">
@@ -71,11 +72,9 @@ const MainPlPage = () => {
                         Twojego biznesu
                     </div>
                     <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
-                        <p>
-                            LIBERT Group oferuje dwa podstawowe rodzaje usług: <b className="some-cont">międzynarodową dostawę kurierską</b> i <br/>
-                            transport <b className="some-cont">ponadgabarytowych ładunków</b>. Dążymy do zapewnienia <br/> naszym klientom usług najwyższej jakości,
-                            aby każde zlecenie spełniało twoje oczekiwania.
-                        </p>
+                    <p>
+                        Jesteśmy jednym z liderów w dziedzinie transportu <b className="some-cont">ładunków ponadgabarytowych</b>. Dzięki wolumenowi, który zapewniamy przewoźnikom, mamy najniższe ceny na rynku. Transportujemy wszystko, od kombajnów po projekty infrastrukturalne, w tym wsparcie dokumentacyjne. Zrealizowane przez nas projekty są prezentowane na stronie <a href="https://civil-protection-humanitarian-aid.ec.europa.eu/news-stories/stories/assembling-future-providing-new-homes-ukrainians-displaced-war_en" target="_blank" rel="noopener noreferrer">Europejskiej Komisji</a>.
+                    </p>
                     </div>
                     <button className="btn-main-desc">
                         <Link to="/contact" style={{ textDecoration: 'none', color: '#ffffff' }}>
@@ -92,14 +91,14 @@ const MainPlPage = () => {
                 isDarkMode={isDarkMode}
                 service1_link={"/service1/pl"}
                 service2_link={"/service3/pl"}
-                service3_link={"/service4/pl"}
-                service4_link={"/service5/pl"}
-                service5_link={"/service2/pl"}
+                service3_link={"/service2/pl"}
+                service4_link={"/service4/pl"}
+                service5_link={"/service5/pl"}
                 service1_name={"FULFILLMENT"}
                 service2_name={"Transport ponadgabarytowy"}
-                service3_name={"Usługi agencji celnej"}
-                service4_name={"Logistyka magazynowa"}
-                service5_name={"Międzynarodowa dostawa kurierska"}
+                service3_name={"Międzynarodowa dostawa kurierska"}
+                service4_name={"Usługi agencji celnej"}
+                service5_name={"Logistyka magazynowa"}
             />
 
 
@@ -127,13 +126,13 @@ const MainPlPage = () => {
                 contact_link="/contact/pl"
                 about="O nas"
                 service1="FulFillment"
-                service2="Międzynarodowa dostawa kurierska"
-                service3="Transport ponadgabarytowy"
+                service2="Transport ponadgabarytowy"
+                service3="Międzynarodowa dostawa kurierska"
                 service4="Usługi agencji celnej"
                 service5="Logistyka magazynowa"
                 service1_link={"/service1/pl"}
-                service2_link={"/service2/pl"}
-                service3_link={"/service3/pl"}
+                service2_link={"/service3/pl"}
+                service3_link={"/service2/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
                 languagelink_1={"/en"}

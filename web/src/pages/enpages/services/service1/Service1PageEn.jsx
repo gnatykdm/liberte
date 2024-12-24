@@ -47,21 +47,22 @@ const Service1PageEn = () => {
                 isDarkMode={isDarkMode}
                 messageStatus={"Message sent"}
                 service1="Fulfillment"
-                service2="International Courier Delivery"
-                service3="Oversized Transport"
+                service2="Oversized Transport"
+                service3="International Courier Delivery"
                 service4="Customs Agency Services"
                 service5="Warehouse Logistics"
                 service1_link={"/service1/en"}
-                service2_link={"/service2/en"}
-                service3_link={"/service3/en"}
+                service2_link={"/service3/en"}
+                service3_link={"/service2/en"}
                 service4_link={"/service4/en"}
                 service5_link={"/service5/en"}
                 languagelink_1={"/service1/en"}
-                languagelink_2={"/service1"}
+                languagelink_2={"/service1/"}
                 languagelink_3={"/service1/pl"}
                 photo_link={"/en"}
                 order_call_sending={"sending message..."}
             />
+
 
             <div className="some-age-info">
                 <PageInfo text="FULFILLMENT" isDarkMode={isDarkMode} />
@@ -70,13 +71,14 @@ const Service1PageEn = () => {
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
             <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
             <p>As part of the fulfillment service, we offer:</p>
-                <ul className="fullfilment-list-style">
-                    <li>📦 Storage of goods.</li>
-                    <li>📦 Packaging and preparation for shipment.</li>
-                    <li>📦 Delivery of the order to the end consumer.</li>
-                    <li>📦 Processing of returns and customer support.</li>
-                </ul>
-
+            <ul className="fullfilment-list-style">
+                <li>📦 Delivery to our licensed customs warehouse in Europe</li>
+                <li>📦 Customs clearance of goods</li>
+                <li>📦 Storage of goods</li>
+                <li>📦 Packaging and preparation for shipping</li>
+                <li>📦 Delivery of orders to end customers</li>
+                <li>📦 Returns processing and customer support</li>
+            </ul>
             </div>
             
 
@@ -98,7 +100,7 @@ const Service1PageEn = () => {
                     messageError={"Problem Sending"}
                 />
 
-            <Footer
+                <Footer
                 head="Main Menu"
                 head2="Menu"
                 head3="Our Contacts"
@@ -109,15 +111,18 @@ const Service1PageEn = () => {
                 contact_link="/contact/en"
                 about="About Us"
                 service1="Fulfillment"
-                service2="International Courier Delivery"
-                service3="Oversized Transport"
+                service2="Oversized Transport"
+                service3="International Courier Delivery"
                 service4="Customs Agency Services"
                 service5="Warehouse Logistics"
                 service1_link={"/service1/en"}
-                service2_link={"/service2/en"}
-                service3_link={"/service3/en"}
+                service2_link={"/service3/en"}
+                service3_link={"/service2/en"}
                 service4_link={"/service4/en"}
                 service5_link={"/service5/en"}
+                languagelink_1={"/en"}
+                languagelink_2={"/"}
+                languagelink_3={"/pl"}
                 />
             </center>
         </div>

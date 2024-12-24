@@ -5,7 +5,7 @@ import flag from '../../../../shared/assets/icons/poland.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
-import carbox_logo from '../../../../shared/assets/images/carbox_logo.png';
+import PhotoSlider from '../../../../shared/ui/slider/PhotoSlider';
 
 const Service3PagePl = () => {
        const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -27,7 +27,6 @@ const Service3PagePl = () => {
                 <title>Libert - Transport ponadgabarytowy</title>
             </Helmet>
 
-
             <Header 
                 image={flag}
                 head={"Strona główna"}
@@ -47,18 +46,20 @@ const Service3PagePl = () => {
                 isDarkMode={isDarkMode}
                 messageStatus={"Wiadomość wysłana"}
                 service1="FulFillment"
-                service2="Międzynarodowa dostawa kurierska"
-                service3="Transport ponadgabarytowy"
+                service2="Transport ponadgabarytowy"
+                service3="Międzynarodowa dostawa kurierska"
                 service4="Usługi agencji celnej"
                 service5="Logistyka magazynowa"
                 service1_link={"/service1/pl"}
-                service2_link={"/service2/pl"}
-                service3_link={"/service3/pl"}
+                service2_link={"/service3/pl"}
+                service3_link={"/service2/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
                 languagelink_1={"/service3/en"}
-                languagelink_2={"/service3"}
+                languagelink_2={"/service3/"}
                 languagelink_3={"/service3/pl"}
+                order_call_sending={"wysyłanie wiadomości..."}
+                order_call_problem={"problem z wysyłaniem"}
                 photo_link={"/pl"}
             />
 
@@ -81,7 +82,7 @@ const Service3PagePl = () => {
                     
                 </div>
                 <div className="service-image-main-container">
-                        <img src={carbox_logo} alt="logistic" className="service-image-desc"/>
+                        <PhotoSlider/>
                 </div>
             </div>
 
@@ -111,15 +112,19 @@ const Service3PagePl = () => {
                 contact_link="/contact/pl"
                 about="O nas"
                 service1="FulFillment"
-                service2="Międzynarodowa dostawa kurierska"
-                service3="Transport ponadgabarytowy"
+                service2="Transport ponadgabarytowy"
+                service3="Międzynarodowa dostawa kurierska"
                 service4="Usługi agencji celnej"
                 service5="Logistyka magazynowa"
                 service1_link={"/service1/pl"}
-                service2_link={"/service2/pl"}
-                service3_link={"/service3/pl"}
+                service2_link={"/service3/pl"}
+                service3_link={"/service2/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
+                languagelink_1={"/en"}
+                languagelink_2={"/"}
+                languagelink_3={"/pl"}
+                photo_link={"/pl"}
                 />
             </center>
         </div>

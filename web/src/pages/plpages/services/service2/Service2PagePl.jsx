@@ -46,18 +46,20 @@ const Service2PagePl = () => {
                 isDarkMode={isDarkMode}
                 messageStatus={"Wiadomość wysłana"}
                 service1="FulFillment"
-                service2="Międzynarodowa dostawa kurierska"
-                service3="Transport ponadgabarytowy"
+                service2="Transport ponadgabarytowy"
+                service3="Międzynarodowa dostawa kurierska"
                 service4="Usługi agencji celnej"
                 service5="Logistyka magazynowa"
                 service1_link={"/service1/pl"}
-                service2_link={"/service2/pl"}
-                service3_link={"/service3/pl"}
+                service2_link={"/service3/pl"}
+                service3_link={"/service2/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
                 languagelink_1={"/service2/en"}
-                languagelink_2={"/service2"}
+                languagelink_2={"/service2/"}
                 languagelink_3={"/service2/pl"}
+                order_call_sending={"wysyłanie wiadomości..."}
+                order_call_problem={"problem z wysyłaniem"}
                 photo_link={"/pl"}
             />
 
@@ -96,7 +98,7 @@ const Service2PagePl = () => {
                     order_call_problem={"problem z wysyłaniem"}
                 />
 
-            <Footer
+                <Footer
                 head="Główne menu"
                 head2="Menu"
                 head3="Nasze kontakty"
@@ -107,15 +109,19 @@ const Service2PagePl = () => {
                 contact_link="/contact/pl"
                 about="O nas"
                 service1="FulFillment"
-                service2="Międzynarodowa dostawa kurierska"
-                service3="Transport ponadgabarytowy"
+                service2="Transport ponadgabarytowy"
+                service3="Międzynarodowa dostawa kurierska"
                 service4="Usługi agencji celnej"
                 service5="Logistyka magazynowa"
                 service1_link={"/service1/pl"}
-                service2_link={"/service2/pl"}
-                service3_link={"/service3/pl"}
+                service2_link={"/service3/pl"}
+                service3_link={"/service2/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
+                languagelink_1={"/en"}
+                languagelink_2={"/"}
+                languagelink_3={"/pl"}
+                photo_link={"/pl"}
                 />
             </center>
         </div>

@@ -156,11 +156,11 @@ const Header = ({
                             <div className="dropdown-menu">
                                 <div className="dropdown-item-services">
                                     {[
+                                        { link: service1_link, label: service1 },
                                         { link: service2_link, label: service2 },
                                         { link: service3_link, label: service3 },
                                         { link: service4_link, label: service4 },
-                                        { link: service5_link, label: service5 },
-                                        { link: service1_link, label: service1 }
+                                        { link: service5_link, label: service5 }
                                     ].map((service, index) => (
                                         <div className="dropdown-item-services" key={index}>
                                             <Link to={service.link} className="service-dropdown-link">

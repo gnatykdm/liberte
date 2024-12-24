@@ -48,13 +48,13 @@ const MainPage = () => {
                 isDarkMode={isDarkMode}
                 messageStatus={"Повідомлення відправлено"}
                 service1="FulFillment"
-                service2="Міжнародна кур'єрська доставка"
-                service3="Негабаритні перевезення"
+                service2="Негабаритні перевезення"
+                service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
-                service5="Складська Логістика"
+                service5="Складська логістика"
                 service1_link={"/service1"}
-                service2_link={"/service2"}
-                service3_link={"/service3"}
+                service2_link={"/service3"}
+                service3_link={"/service2"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
                 languagelink_1={"/en"}
@@ -73,11 +73,13 @@ const MainPage = () => {
                         вашого бізнесу
                     </div>
                     <div className={`text-container-main ${isDarkMode ? 'dark' : ''}`}>
-                        <p>
-                            LIBERT Group надає два основні види послуг: <b className="some-cont">міжнародну кур'єрську доставку</b> і <br/>
-                            перевезення <b className="some-cont">негабаритних вантажів</b>. Ми прагнемо забезпечити <br/> нашим клієнтам сервіс найвищої якості,
-                            аби кожне перевезення відповідало вашим очікуванням.
-                        </p>
+                    <p>
+                        Ми є одними з лідерів у сфері перевезення <b className="some-cont">негабаритних вантажів</b>. 
+                        За рахунок об'єму, який даємо перевізникам, маємо найнижчі ціни на ринку. Перевозимо від 
+                        комбайнів, закінчуючи інфраструктурними проектами, включно з документальним супроводом. 
+                        За нас говорять реалізовані нами проекти на сайті 
+                         <a href="https://civil-protection-humanitarian-aid.ec.europa.eu/news-stories/stories/assembling-future-providing-new-homes-ukrainians-displaced-war_en" target="_blank" rel="noopener noreferrer"> Єврокомісії</a>.
+                    </p>
                     </div>
                     <button className="btn-main-desc">
                         <Link to="/contact" style={{ textDecoration: 'none', color: '#ffffff' }}>
@@ -94,14 +96,14 @@ const MainPage = () => {
                     isDarkMode={isDarkMode}
                     service1_link={"/service1"}
                     service2_link={"/service3"}
-                    service3_link={"/service4"}
-                    service4_link={"/service5"}
-                    service5_link={"/service2"}
+                    service3_link={"/service2"}
+                    service4_link={"/service4"}
+                    service5_link={"/service5"}
                     service1_name={"FULFILLMENT"}
                     service2_name={"Негабаритні перевезення"}
-                    service3_name={"Послуги митного агентства"}
-                    service4_name={"Складська логістика"}
-                    service5_name={"Міжнародна кур'єрьска доставка"}
+                    service3_name={"Міжнародна кур'єрська доставка"}
+                    service4_name={"Послуги митного агентства"}
+                    service5_name={"Складська логістика"}
                  />
                 <OrderCall
                     part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}
@@ -127,20 +129,18 @@ const MainPage = () => {
                 contact_link="/contact"
                 about="Про Нас"
                 service1="FulFillment"
-                service2="Міжнародна кур'єрська доставка"
-                service3="Негабаритні перевезення"
+                service2="Негабаритні перевезення"
+                service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
                 service5="Складська Логістика"
                 service1_link={"/service1"}
-                service2_link={"/service2"}
-                service3_link={"/service3"}
+                service2_link={"/service3"}
+                service3_link={"/service2"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
                 />
-
             </center>
         </div>
     );
 };
-
 export default MainPage;

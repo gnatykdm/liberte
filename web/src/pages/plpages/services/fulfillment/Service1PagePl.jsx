@@ -48,21 +48,21 @@ const Service1PagePl = () => {
                 isDarkMode={isDarkMode}
                 messageStatus={"Wiadomość wysłana"}
                 service1="FulFillment"
-                service2="Międzynarodowa dostawa kurierska"
-                service3="Transport ponadgabarytowy"
+                service2="Transport ponadgabarytowy"
+                service3="Międzynarodowa dostawa kurierska"
                 service4="Usługi agencji celnej"
                 service5="Logistyka magazynowa"
                 service1_link={"/service1/pl"}
-                service2_link={"/service2/pl"}
-                service3_link={"/service3/pl"}
+                service2_link={"/service3/pl"}
+                service3_link={"/service2/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
                 languagelink_1={"/service1/en"}
-                languagelink_2={"/service1"}
+                languagelink_2={"/service1/"}
                 languagelink_3={"/service1/pl"}
-                photo_link={"/pl"}
                 order_call_sending={"wysyłanie wiadomości..."}
                 order_call_problem={"problem z wysyłaniem"}
+                photo_link={"/pl"}
             />
 
             <div className="some-age-info">
@@ -73,11 +73,13 @@ const Service1PagePl = () => {
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
                     <p>W ramach usługi fulfillment oferujemy:</p>
                     <ul className="fullfilment-list-style">
-                        <li>📦 Przechowywanie towarów.</li>
-                        <li>📦 Pakowanie i przygotowanie do wysyłki.</li>
-                        <li>📦 Dostawę zamówienia do końcowego odbiorcy.</li>
-                        <li>📦 Obsługę zwrotów i wsparcie klienta.</li>
-                    </ul>
+                        <li>📦 Dostawę do naszego licencjonowanego magazynu celnego w Europie</li>
+                        <li>📦 Odprawę celną towaru</li>
+                        <li>📦 Przechowywanie towaru</li>
+                        <li>📦 Pakowanie i przygotowanie do wysyłki</li>
+                        <li>📦 Dostawę zamówienia do klienta końcowego</li>
+                        <li>📦 Obsługę zwrotów i wsparcie klienta</li>
+            </ul>
                 </div>
 
                 <div className="service-image-main-container">
@@ -99,25 +101,29 @@ const Service1PagePl = () => {
                 />
 
                 <Footer
-                    head="Główne menu"
-                    head2="Menu"
-                    head3="Nasze kontakty"
-                    services={"Usługi"}
-                    contacts="Kontakt"
-                    main_link="/pl"
-                    about_link="/about/pl"
-                    contact_link="/contact/pl"
-                    about="O nas"
-                    service1="FulFillment"
-                    service2="Międzynarodowa dostawa kurierska"
-                    service3="Transport ponadgabarytowy"
-                    service4="Usługi agencji celnej"
-                    service5="Logistyka magazynowa"
-                    service1_link={"/service1/pl"}
-                    service2_link={"/service2/pl"}
-                    service3_link={"/service3/pl"}
-                    service4_link={"/service4/pl"}
-                    service5_link={"/service5/pl"}
+                head="Główne menu"
+                head2="Menu"
+                head3="Nasze kontakty"
+                services={"Usługi"}
+                contacts="Kontakt"
+                main_link="/pl"
+                about_link="/about/pl"
+                contact_link="/contact/pl"
+                about="O nas"
+                service1="FulFillment"
+                service2="Transport ponadgabarytowy"
+                service3="Międzynarodowa dostawa kurierska"
+                service4="Usługi agencji celnej"
+                service5="Logistyka magazynowa"
+                service1_link={"/service1/pl"}
+                service2_link={"/service3/pl"}
+                service3_link={"/service2/pl"}
+                service4_link={"/service4/pl"}
+                service5_link={"/service5/pl"}
+                languagelink_1={"/en"}
+                languagelink_2={"/"}
+                languagelink_3={"/pl"}
+                photo_link={"/pl"}
                 />
             </center>
         </div>

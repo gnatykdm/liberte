@@ -1,7 +1,7 @@
 import React, { useState } from 'react'; 
 import Header from '../../../../shared/ui/header/Header';
 import OrderCall from '../../../../shared/ui/ordercall/OrderCall';
-import flag from '../../../../shared/assets/icons/ukraine.png';
+import ukraine_flag from '../../../../shared/assets/icons/ukraine.png';
 import Footer from '../../../../shared/ui/footer/Footer';
 import PageInfo from '../../../../shared/ui/pageInfo/PageInfo';
 import { Helmet } from 'react-helmet';
@@ -28,7 +28,7 @@ const Service3Page = () => {
             </Helmet>
 
             <Header 
-                image={flag}
+                image={ukraine_flag}
                 head={"Головна"}
                 services={"Послуги"} 
                 service_drop={"Негабаритні перевезення"}
@@ -46,17 +46,17 @@ const Service3Page = () => {
                 isDarkMode={isDarkMode}
                 messageStatus={"Повідомлення відправлено"}
                 service1="FulFillment"
-                service2="Міжнародна кур'єрська доставка"
-                service3="Негабаритні перевезення"
+                service2="Негабаритні перевезення"
+                service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
-                service5="Складська Логістика"
+                service5="Складська логістика"
                 service1_link={"/service1"}
-                service2_link={"/service2"}
-                service3_link={"/service3"}
+                service2_link={"/service3"}
+                service3_link={"/service2"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
                 languagelink_1={"/service4/en"}
-                languagelink_2={"/service4"}
+                languagelink_2={"/service4/"}
                 languagelink_3={"/service4/pl"}
                 photo_link={"/"}
                 order_call_sending={"відправка повідомлення..."}
@@ -111,13 +111,13 @@ const Service3Page = () => {
                 contact_link="/contact"
                 about="Про Нас"
                 service1="FulFillment"
-                service2="Міжнародна кур'єрська доставка"
-                service3="Негабаритні перевезення"
+                service2="Негабаритні перевезення"
+                service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
                 service5="Складська Логістика"
                 service1_link={"/service1"}
-                service2_link={"/service2"}
-                service3_link={"/service3"}
+                service2_link={"/service3"}
+                service3_link={"/service2"}
                 service4_link={"/service4"}
                 service5_link={"/service5"}
                 />
