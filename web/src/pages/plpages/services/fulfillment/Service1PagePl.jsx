@@ -26,7 +26,25 @@ const Service1PagePl = () => {
     return (
         <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - FulFillment</title>
+                <title>Libert - Fulfillment</title>
+                
+                {/* SEO Meta Tags */}
+                <meta name="description" content="Usługa fulfillment w firmie Libert: dostawa, odprawa celna, przechowywanie, pakowanie, wysyłka, oraz obsługa zwrotów." />
+                <meta name="keywords" content="Fulfillment, Dostawa, Odprawa celna, Przechowywanie, Pakowanie, Logistyka, Wysyłka, Obsługa zwrotów" />
+                <meta name="robots" content="index, follow" />
+
+                {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="Libert - Fulfillment" />
+                <meta property="og:description" content="Usługi fulfillment w firmie Libert: sprawna dostawa, odprawa celna, przechowywanie towarów i wsparcie dla klientów." />
+                <meta property="og:image" content={fulfillmetn_logo} />
+                <meta property="og:url" content="https://www.libertgroup.pl/service1/pl" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Meta Tags */}
+                <meta name="twitter:title" content="Libert - Fulfillment" />
+                <meta name="twitter:description" content="Usługi fulfillment w firmie Libert: logistyka, dostawa, odprawa celna, pakowanie, i obsługa zwrotów." />
+                <meta name="twitter:image" content={fulfillmetn_logo} />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
 
             <Header 
@@ -79,7 +97,7 @@ const Service1PagePl = () => {
                         <li>📦 Pakowanie i przygotowanie do wysyłki</li>
                         <li>📦 Dostawę zamówienia do klienta końcowego</li>
                         <li>📦 Obsługę zwrotów i wsparcie klienta</li>
-            </ul>
+                    </ul>
                 </div>
 
                 <div className="service-image-main-container">
@@ -101,29 +119,29 @@ const Service1PagePl = () => {
                 />
 
                 <Footer
-                head="Główne menu"
-                head2="Menu"
-                head3="Nasze kontakty"
-                services={"Usługi"}
-                contacts="Kontakt"
-                main_link="/pl"
-                about_link="/about/pl"
-                contact_link="/contact/pl"
-                about="O nas"
-                service1="FulFillment"
-                service2="Transport ponadgabarytowy"
-                service3="Międzynarodowa dostawa kurierska"
-                service4="Usługi agencji celnej"
-                service5="Logistyka magazynowa"
-                service1_link={"/service1/pl"}
-                service2_link={"/service3/pl"}
-                service3_link={"/service2/pl"}
-                service4_link={"/service4/pl"}
-                service5_link={"/service5/pl"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
-                photo_link={"/pl"}
+                    head="Główne menu"
+                    head2="Menu"
+                    head3="Nasze kontakty"
+                    services={"Usługi"}
+                    contacts="Kontakt"
+                    main_link="/pl"
+                    about_link="/about/pl"
+                    contact_link="/contact/pl"
+                    about="O nas"
+                    service1="FulFillment"
+                    service2="Transport ponadgabarytowy"
+                    service3="Międzynarodowa dostawa kurierska"
+                    service4="Usługi agencji celnej"
+                    service5="Logistyka magazynowa"
+                    service1_link={"/service1/pl"}
+                    service2_link={"/service3/pl"}
+                    service3_link={"/service2/pl"}
+                    service4_link={"/service4/pl"}
+                    service5_link={"/service5/pl"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
+                    photo_link={"/pl"}
                 />
             </center>
         </div>

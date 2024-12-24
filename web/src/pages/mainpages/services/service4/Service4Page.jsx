@@ -25,6 +25,12 @@ const Service3Page = () => {
         <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - Послуги митного агентства</title>
+                <meta name="description" content="Послуги митного агентства, включаючи митне оформлення, консультації та перевірку документів, а також митне оформлення для B2B та C2C." />
+                <meta name="keywords" content="митні послуги, митне оформлення, консультації, митний агент, розмитнення, B2B, B2C, C2C" />
+                <meta property="og:title" content="Libert - Послуги митного агентства" />
+                <meta property="og:description" content="Послуги митного агентства, включаючи митне оформлення, консультації та перевірку документів, а також митне оформлення для B2B та C2C." />
+                <meta property="og:image" content={envelope_logo} />
+                <meta property="og:url" content="https://libertgroup.pl/service3" />
             </Helmet>
 
             <Header 
@@ -78,10 +84,10 @@ const Service3Page = () => {
                         <li>митне оформлення для B2B та B2C,</li>
                         <li>розмитнення C2C (клієнт-клієнт).</li>
                     </ul>
-                    <p>Наша команда експертів допоможе вам ефективно вирішити всі питання, пов'язані з митним оформленням, забезпечуючи швидке та професійне обслуговування.</p>
+                    <p>Наша команда експертів допоможе вам ефективно вирішити всі питання, що виникають під час митного оформлення, забезпечуючи швидке та професійне обслуговування.</p>
                 </div>
                 <div className="service-image-main-container">
-                        <img src={envelope_logo} alt="logistic" className="service-image-desc"/>
+                    <img src={envelope_logo} alt="Logo of the customs agency" className="service-image-desc"/>
                 </div>
             </div>
 
@@ -101,28 +107,29 @@ const Service3Page = () => {
                 />
 
                 <Footer
-                head="Головне меню"
-                head2="Меню"
-                head3="Наші контакти"
-                services={"Послуги"}
-                contacts="Контакти"
-                main_link="/"
-                about_link="/about"
-                contact_link="/contact"
-                about="Про Нас"
-                service1="FulFillment"
-                service2="Негабаритні перевезення"
-                service3="Міжнародна кур'єрська доставка"
-                service4="Послуги митного агенства"
-                service5="Складська Логістика"
-                service1_link={"/service1"}
-                service2_link={"/service3"}
-                service3_link={"/service2"}
-                service4_link={"/service4"}
-                service5_link={"/service5"}
+                    head="Головне меню"
+                    head2="Меню"
+                    head3="Наші контакти"
+                    services={"Послуги"}
+                    contacts="Контакти"
+                    main_link="/"
+                    about_link="/about"
+                    contact_link="/contact"
+                    about="Про Нас"
+                    service1="FulFillment"
+                    service2="Негабаритні перевезення"
+                    service3="Міжнародна кур'єрська доставка"
+                    service4="Послуги митного агенства"
+                    service5="Складська Логістика"
+                    service1_link={"/service1"}
+                    service2_link={"/service3"}
+                    service3_link={"/service2"}
+                    service4_link={"/service4"}
+                    service5_link={"/service5"}
                 />
             </center>
         </div>
     );
 }
+
 export default Service3Page;

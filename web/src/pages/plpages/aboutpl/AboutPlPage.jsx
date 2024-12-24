@@ -1,11 +1,12 @@
 import React, { useState } from 'react'; 
-import Header from '../../../shared/ui/header/Header';
-import OrderCall from '../../../shared/ui/ordercall/OrderCall';
-import Footer from '../../../shared/ui/footer/Footer';
-import PageInfo from '../../../shared/ui/pageInfo/PageInfo';
-import flag from '../../../shared/assets/icons/poland.png';
-import MainMap from '../../../shared/ui/map/MainMap';
-import { Helmet } from 'react-helmet';
+import Header from '../../../shared/ui/header/Header'; 
+import OrderCall from '../../../shared/ui/ordercall/OrderCall'; 
+import Footer from '../../../shared/ui/footer/Footer'; 
+import PageInfo from '../../../shared/ui/pageInfo/PageInfo'; 
+import flag from '../../../shared/assets/icons/poland.png'; 
+import MainMap from '../../../shared/ui/map/MainMap'; 
+import { Helmet } from 'react-helmet'; 
+import { Link } from 'react-router-dom';
 
 const AboutPlPage = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -25,6 +26,16 @@ const AboutPlPage = () => {
         <div className={`main-about-us-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - O nas</title>
+                <meta name="description" content="LIBERT Group to zespół profesjonalistów, którzy oferują kompleksowe rozwiązania logistyczne, w tym międzynarodową dostawę kurierską, transport ponadgabarytowy i usługi agencji celnej." />
+                <meta name="keywords" content="logistyka, transport ponadgabarytowy, międzynarodowa dostawa, agencja celna, usługi logistyczne" />
+                <meta property="og:title" content="Libert - O nas" />
+                <meta property="og:description" content="LIBERT Group specjalizuje się w transporcie ponadgabarytowym, dostawie kurierskiej oraz kompleksowych usługach agencji celnej." />
+                <meta property="og:image" content={flag} />
+                <meta property="og:url" content="https://www.libertgroup.pl/about/pl" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Libert - O nas" />
+                <meta name="twitter:description" content="LIBERT Group specjalizuje się w transporcie ponadgabarytowym, dostawie kurierskiej oraz kompleksowych usługach agencji celnej." />
+                <meta name="twitter:image" content={flag} />
             </Helmet>
 
             <Header 
@@ -83,7 +94,6 @@ const AboutPlPage = () => {
             </div>
 
             <center>
-                
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
                     part2={"indywidualne podejście, aby logistyka była dla Ciebie jak najprostsza"}
@@ -99,29 +109,29 @@ const AboutPlPage = () => {
                 />
 
                 <Footer
-                head="Główne menu"
-                head2="Menu"
-                head3="Nasze kontakty"
-                services={"Usługi"}
-                contacts="Kontakt"
-                main_link="/pl"
-                about_link="/about/pl"
-                contact_link="/contact/pl"
-                about="O nas"
-                service1="FulFillment"
-                service2="Transport ponadgabarytowy"
-                service3="Międzynarodowa dostawa kurierska"
-                service4="Usługi agencji celnej"
-                service5="Logistyka magazynowa"
-                service1_link={"/service1/pl"}
-                service2_link={"/service3/pl"}
-                service3_link={"/service2/pl"}
-                service4_link={"/service4/pl"}
-                service5_link={"/service5/pl"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
-                photo_link={"/pl"}
+                    head="Główne menu"
+                    head2="Menu"
+                    head3="Nasze kontakty"
+                    services={"Usługi"}
+                    contacts="Kontakt"
+                    main_link="/pl"
+                    about_link="/about/pl"
+                    contact_link="/contact/pl"
+                    about="O nas"
+                    service1="FulFillment"
+                    service2="Transport ponadgabarytowy"
+                    service3="Międzynarodowa dostawa kurierska"
+                    service4="Usługi agencji celnej"
+                    service5="Logistyka magazynowa"
+                    service1_link={"/service1/pl"}
+                    service2_link={"/service3/pl"}
+                    service3_link={"/service2/pl"}
+                    service4_link={"/service4/pl"}
+                    service5_link={"/service5/pl"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
+                    photo_link={"/pl"}
                 />
             </center>
         </div>

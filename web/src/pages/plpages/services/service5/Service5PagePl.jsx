@@ -25,6 +25,15 @@ const Service5PagePl = () => {
         <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - Logistyka magazynowa</title>
+                <meta name="description" content="Usługi logistyki magazynowej, w tym magazyny z licencją celną, przechowywanie towarów, pakowanie, ubezpieczenie towarów." />
+                <meta name="keywords" content="logistyka magazynowa, magazyny celne, przechowywanie towarów, pakowanie, ubezpieczenie towarów" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Libert - Logistyka magazynowa" />
+                <meta property="og:description" content="Oferujemy usługi logistyki magazynowej, w tym magazyny celne, przechowywanie towarów, pakowanie, oraz ubezpieczenie." />
+                <meta property="og:image" content={garage_logo} />
+                <meta property="og:url" content="https://www.libertgroup.pl/service5/pl" />
+                <meta property="og:type" content="website" />
+                <html lang="pl" />
             </Helmet>
 
             <Header 
@@ -55,9 +64,9 @@ const Service5PagePl = () => {
                 service3_link={"/service2/pl"}
                 service4_link={"/service4/pl"}
                 service5_link={"/service5/pl"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
+                languagelink_1={"/service5/en"}
+                languagelink_2={"/service5/"}
+                languagelink_3={"/service5/pl"}
                 order_call_sending={"wysyłanie wiadomości..."}
                 order_call_problem={"problem z wysyłaniem"}
                 photo_link={"/pl"}
@@ -71,23 +80,23 @@ const Service5PagePl = () => {
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
                     <p>Logistyka magazynowa obejmuje następujące usługi:</p>
                     <ul>
-                        <li>magazyny z licencją celną w Polsce,</li>
-                        <li>przechowywanie towarów bez konieczności płacenia cła i podatków do momentu ich zwolnienia do swobodnego obrotu,</li>
-                        <li>etykietowanie, pakowanie i przepakowywanie towarów zgodnie z wymaganiami kraju przeznaczenia,</li>
-                        <li>zarządzanie numerami partii, serii i terminami przydatności towarów, które są przechowywane,</li>
-                        <li>ubezpieczenie towarów na czas przechowywania.</li>
+                        <li>Magazyny z licencją celną w Polsce,</li>
+                        <li>Przechowywanie towarów bez konieczności płacenia cła i podatków do momentu ich zwolnienia do swobodnego obrotu,</li>
+                        <li>Etykietowanie, pakowanie i przepakowywanie towarów zgodnie z wymaganiami kraju przeznaczenia,</li>
+                        <li>Zarządzanie numerami partii, serii i terminami przydatności towarów, które są przechowywane,</li>
+                        <li>Ubezpieczenie towarów na czas przechowywania.</li>
                     </ul>
                     <p>Te usługi pozwalają obniżyć koszty, zoptymalizować procesy logistyczne oraz zapewnić bezpieczeństwo towarów podczas przechowywania.</p>
                 </div>
                 <div className="service-image-main-container">
-                        <img src={garage_logo} alt="logistic" className="service-image-desc"/>
+                    <img src={garage_logo} alt="Usługi logistyki magazynowej" className="service-image-desc"/>
                 </div>
             </div>
 
             <center>
                 <OrderCall
-                    part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
-                    part2={"indywidualne podejście, aby uprościć logistykę dla Ciebie"}
+                    part1={"Twoje bezpieczeństwo to nasz priorytet. Zapewniamy dokładność, niezawodność oraz"}
+                    part2={"indywidualne podejście, by uprościć logistykę."}
                     order_call={"Kontakt"}
                     order={"Kontakt"}
                     name_type={"Twoje imię"}
@@ -100,32 +109,33 @@ const Service5PagePl = () => {
                 />
 
                 <Footer
-                head="Główne menu"
-                head2="Menu"
-                head3="Nasze kontakty"
-                services={"Usługi"}
-                contacts="Kontakt"
-                main_link="/pl"
-                about_link="/about/pl"
-                contact_link="/contact/pl"
-                about="O nas"
-                service1="FulFillment"
-                service2="Transport ponadgabarytowy"
-                service3="Międzynarodowa dostawa kurierska"
-                service4="Usługi agencji celnej"
-                service5="Logistyka magazynowa"
-                service1_link={"/service1/pl"}
-                service2_link={"/service3/pl"}
-                service3_link={"/service2/pl"}
-                service4_link={"/service4/pl"}
-                service5_link={"/service5/pl"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
-                photo_link={"/pl"}
+                    head="Główne menu"
+                    head2="Menu"
+                    head3="Nasze kontakty"
+                    services={"Usługi"}
+                    contacts="Kontakt"
+                    main_link="/pl"
+                    about_link="/about/pl"
+                    contact_link="/contact/pl"
+                    about="O nas"
+                    service1="FulFillment"
+                    service2="Transport ponadgabarytowy"
+                    service3="Międzynarodowa dostawa kurierska"
+                    service4="Usługi agencji celnej"
+                    service5="Logistyka magazynowa"
+                    service1_link={"/service1/pl"}
+                    service2_link={"/service3/pl"}
+                    service3_link={"/service2/pl"}
+                    service4_link={"/service4/pl"}
+                    service5_link={"/service5/pl"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
+                    photo_link={"/pl"}
                 />
             </center>
         </div>
     );
 }
+
 export default Service5PagePl;

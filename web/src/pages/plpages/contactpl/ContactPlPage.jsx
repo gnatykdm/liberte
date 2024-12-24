@@ -26,8 +26,19 @@ const ContactPlPage = () => {
         <div className={`main-contact-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - Kontakty</title>
+                <meta name="description" content="Skontaktuj się z nami i dowiedz się więcej o usługach transportowych, logistyce oraz rozwiązaniach magazynowych w Polsce." />
+                <meta name="keywords" content="kontakty, transport, logistyka, magazynowanie, fulfillment, usługi kurierskie, agencja celna" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Libert - Kontakty" />
+                <meta property="og:description" content="Skontaktuj się z nami, aby uzyskać więcej informacji na temat naszych usług transportowych i logistycznych." />
+                <meta property="og:image" content={flag} />
+                <meta property="og:url" content="https://www.libertgroup.pl/contact/pl" />
+                <meta name="twitter:title" content="Libert - Kontakty" />
+                <meta name="twitter:description" content="Skontaktuj się z nami i dowiedz się więcej o usługach transportowych, logistyce oraz rozwiązaniach magazynowych." />
+                <meta name="twitter:image" content={flag} />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
-        
+
             <Header 
                 image={flag}
                 head={"Strona główna"}
@@ -93,29 +104,29 @@ const ContactPlPage = () => {
                 </div>
         
                 <Footer
-                head="Główne menu"
-                head2="Menu"
-                head3="Nasze kontakty"
-                services={"Usługi"}
-                contacts="Kontakt"
-                main_link="/pl"
-                about_link="/about/pl"
-                contact_link="/contact/pl"
-                about="O nas"
-                service1="FulFillment"
-                service2="Transport ponadgabarytowy"
-                service3="Międzynarodowa dostawa kurierska"
-                service4="Usługi agencji celnej"
-                service5="Logistyka magazynowa"
-                service1_link={"/service1/pl"}
-                service2_link={"/service3/pl"}
-                service3_link={"/service2/pl"}
-                service4_link={"/service4/pl"}
-                service5_link={"/service5/pl"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
-                photo_link={"/pl"}
+                    head="Główne menu"
+                    head2="Menu"
+                    head3="Nasze kontakty"
+                    services={"Usługi"}
+                    contacts="Kontakt"
+                    main_link="/pl"
+                    about_link="/about/pl"
+                    contact_link="/contact/pl"
+                    about="O nas"
+                    service1="FulFillment"
+                    service2="Transport ponadgabarytowy"
+                    service3="Międzynarodowa dostawa kurierska"
+                    service4="Usługi agencji celnej"
+                    service5="Logistyka magazynowa"
+                    service1_link={"/service1/pl"}
+                    service2_link={"/service3/pl"}
+                    service3_link={"/service2/pl"}
+                    service4_link={"/service4/pl"}
+                    service5_link={"/service5/pl"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
+                    photo_link={"/pl"}
                 />
             </center>
         </div>    

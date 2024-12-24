@@ -25,6 +25,15 @@ const Service4PagePl = () => {
         <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - Usługi Agencji Celnej</title>
+                <meta name="description" content="Profesjonalna obsługa celna: odprawa celna importu, eksportu, tranzytu, konsultacje i reprezentacja. Zapewniamy szybkie i profesjonalne usługi." />
+                <meta name="keywords" content="usługi agencji celnej, odprawa celna, import, eksport, tranzyt, konsultacje celne" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Libert - Usługi Agencji Celnej" />
+                <meta property="og:description" content="Oferujemy kompleksowe usługi agencji celnej: odprawa celna, konsultacje i reprezentacja, odprawa B2B, B2C, C2C." />
+                <meta property="og:image" content={envelope_logo} />
+                <meta property="og:url" content="https://www.libertgroup.pl/service4/pl" />
+                <meta property="og:type" content="website" />
+                <html lang="pl" />
             </Helmet>
 
             <Header 
@@ -71,24 +80,24 @@ const Service4PagePl = () => {
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
                     <p>Usługi agencji celnej obejmują:</p>
                     <ul>
-                        <li>odprawa celna importu, eksportu i tranzytu we wszystkich procedurach celnych,</li>
-                        <li>konsultacja i weryfikacja dokumentów,</li>
-                        <li>usługa obowiązkowych informacji taryfowych – konsultacje i reprezentacja,</li>
-                        <li>oferujemy odprawę dla osób prawnych/fizycznych,</li>
-                        <li>odprawa celna dla B2B i B2C,</li>
-                        <li>odprawa C2C (klient-klient).</li>
+                        <li>Odprawa celna importu, eksportu i tranzytu we wszystkich procedurach celnych,</li>
+                        <li>Konsultacja i weryfikacja dokumentów,</li>
+                        <li>Usługa obowiązkowych informacji taryfowych – konsultacje i reprezentacja,</li>
+                        <li>Oferujemy odprawę dla osób prawnych/fizycznych,</li>
+                        <li>Odprawa celna dla B2B i B2C,</li>
+                        <li>Odprawa C2C (klient-klient).</li>
                     </ul>
-                    <p>Nasza zespół ekspertów pomoże Ci efektywnie rozwiązać wszystkie kwestie związane z odprawą celną, zapewniając szybkie i profesjonalne usługi.</p>
+                    <p>Nasz zespół ekspertów pomoże Ci efektywnie rozwiązać wszelkie kwestie związane z odprawą celną, zapewniając szybkie i profesjonalne usługi.</p>
                 </div>
                 <div className="service-image-main-container">
-                        <img src={envelope_logo} alt="logistic" className="service-image-desc"/>
+                    <img src={envelope_logo} alt="Logo agencji celnej" className="service-image-desc"/>
                 </div>
             </div>
 
             <center>
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
-                    part2={"indywidualne podejście, aby uprościć procedury celne dla Ciebie"}
+                    part2={"indywidualne podejście, aby uprościć procedury celne dla Ciebie."}
                     order_call={"Kontakt"}
                     order={"Kontakt"}
                     name_type={"Twoje imię"}
@@ -101,32 +110,33 @@ const Service4PagePl = () => {
                 />
 
                 <Footer
-                head="Główne menu"
-                head2="Menu"
-                head3="Nasze kontakty"
-                services={"Usługi"}
-                contacts="Kontakt"
-                main_link="/pl"
-                about_link="/about/pl"
-                contact_link="/contact/pl"
-                about="O nas"
-                service1="FulFillment"
-                service2="Transport ponadgabarytowy"
-                service3="Międzynarodowa dostawa kurierska"
-                service4="Usługi agencji celnej"
-                service5="Logistyka magazynowa"
-                service1_link={"/service1/pl"}
-                service2_link={"/service3/pl"}
-                service3_link={"/service2/pl"}
-                service4_link={"/service4/pl"}
-                service5_link={"/service5/pl"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
-                photo_link={"/pl"}
+                    head="Główne menu"
+                    head2="Menu"
+                    head3="Nasze kontakty"
+                    services={"Usługi"}
+                    contacts="Kontakt"
+                    main_link="/pl"
+                    about_link="/about/pl"
+                    contact_link="/contact/pl"
+                    about="O nas"
+                    service1="FulFillment"
+                    service2="Transport ponadgabarytowy"
+                    service3="Międzynarodowa dostawa kurierska"
+                    service4="Usługi agencji celnej"
+                    service5="Logistyka magazynowa"
+                    service1_link={"/service1/pl"}
+                    service2_link={"/service3/pl"}
+                    service3_link={"/service2/pl"}
+                    service4_link={"/service4/pl"}
+                    service5_link={"/service5/pl"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
+                    photo_link={"/pl"}
                 />
             </center>
         </div>
     );
 }
+
 export default Service4PagePl;

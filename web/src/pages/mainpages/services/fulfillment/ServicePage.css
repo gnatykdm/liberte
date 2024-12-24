@@ -1,7 +1,7 @@
 .service-page {
     margin: 0;
     padding: 0;
-    background-color: #dbdde0;
+    background-color: #f0f4f8;
     overflow-x: hidden;
 }
 
@@ -19,7 +19,7 @@
 
 .service-container-about {
     font-size: 23px;
-    max-width: 650px;
+    max-width: 950px;
     width: auto;
     display: flex;
     flex-direction: column;
@@ -39,6 +39,7 @@
     justify-content: center;
     margin-right: 220px;
     margin-top: 30px;
+    max-width: 70%;
 }
 
 .service-image-desc {
@@ -84,7 +85,7 @@
     }
 
     .text-container-about {
-        max-width: 900px;
+        max-width: 90%;
         width: auto;
         justify-content: center;
         font-size: 15px;
@@ -103,29 +104,9 @@
         justify-content: center;
         margin-right: 30px;
     }
-}
 
-@media (max-width:768px) {
-    .map {
+    .service-image-main-container {
         display: none;
     }
-
-    .text-container-about {
-        max-width: 900px;
-        width: auto;
-        justify-content: center;
-        font-size: 15px;
-        margin-left: 20px;
-        margin-top: 20px;
-    }
-
-    .service-container-about {
-        width: 1000px;
-    }
-
-    .service-image-desc {
-        display: none;
-        width: 2;
-        margin: 0;
-    }
 }
+

@@ -25,6 +25,12 @@ const Service4PageEn = () => {
         <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - Customs Agency Services</title>
+                <meta name="description" content="Customs Agency Services including customs clearance, consultation, document verification, and B2B/B2C/C2C services." />
+                <meta name="keywords" content="customs agency, customs clearance, B2B services, C2C clearance, import/export, logistics services" />
+                <meta property="og:title" content="Libert - Customs Agency Services" />
+                <meta property="og:description" content="Customs Agency Services including customs clearance, consultation, document verification, and B2B/B2C/C2C services." />
+                <meta property="og:image" content={envelope_logo} />
+                <meta property="og:url" content="https://libertgroup.pl/service4/en" />
             </Helmet>
 
             <Header 
@@ -62,7 +68,6 @@ const Service4PageEn = () => {
                 order_call_sending={"sending message..."}
             />
 
-
             <div className="some-age-info">
                 <PageInfo text="Customs Agency Services" isDarkMode={isDarkMode} />
             </div>
@@ -81,14 +86,14 @@ const Service4PageEn = () => {
                     <p>Our team of experts will help you effectively resolve all matters related to customs clearance, ensuring fast and professional services.</p>
                 </div>
                 <div className="service-image-main-container">
-                        <img src={envelope_logo} alt="logistic" className="service-image-desc"/>
+                    <img src={envelope_logo} alt="Customs agency logistics" className="service-image-desc"/>
                 </div>
             </div>
 
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to simplify customs procedures for you"}
+                    part2={"a personalized approach to simplify customs procedures for you."}
                     order_call={"Contact"}
                     order={"Contact"}
                     name_type={"Your Name"}
@@ -100,28 +105,28 @@ const Service4PageEn = () => {
                 />
 
                 <Footer
-                head="Main Menu"
-                head2="Menu"
-                head3="Our Contacts"
-                services={"Services"}
-                contacts="Contact"
-                main_link="/en"
-                about_link="/about/en"
-                contact_link="/contact/en"
-                about="About Us"
-                service1="Fulfillment"
-                service2="Oversized Transport"
-                service3="International Courier Delivery"
-                service4="Customs Agency Services"
-                service5="Warehouse Logistics"
-                service1_link={"/service1/en"}
-                service2_link={"/service3/en"}
-                service3_link={"/service2/en"}
-                service4_link={"/service4/en"}
-                service5_link={"/service5/en"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
+                    head="Main Menu"
+                    head2="Menu"
+                    head3="Our Contacts"
+                    services={"Services"}
+                    contacts="Contact"
+                    main_link="/en"
+                    about_link="/about/en"
+                    contact_link="/contact/en"
+                    about="About Us"
+                    service1="Fulfillment"
+                    service2="Oversized Transport"
+                    service3="International Courier Delivery"
+                    service4="Customs Agency Services"
+                    service5="Warehouse Logistics"
+                    service1_link={"/service1/en"}
+                    service2_link={"/service3/en"}
+                    service3_link={"/service2/en"}
+                    service4_link={"/service4/en"}
+                    service5_link={"/service5/en"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
                 />
             </center>
         </div>

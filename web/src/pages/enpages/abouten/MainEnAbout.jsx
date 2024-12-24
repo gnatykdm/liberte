@@ -1,11 +1,12 @@
 import React, { useState } from 'react'; 
-import Header from '../../../shared/ui/header/Header';
-import OrderCall from '../../../shared/ui/ordercall/OrderCall';
-import Footer from '../../../shared/ui/footer/Footer';
-import PageInfo from '../../../shared/ui/pageInfo/PageInfo';
-import flag from '../../../shared/assets/icons/united-kingdom.png';
-import MainMap from '../../../shared/ui/map/MainMap';
-import { Helmet } from 'react-helmet';
+import Header from '../../../shared/ui/header/Header'; 
+import OrderCall from '../../../shared/ui/ordercall/OrderCall'; 
+import Footer from '../../../shared/ui/footer/Footer'; 
+import PageInfo from '../../../shared/ui/pageInfo/PageInfo'; 
+import flag from '../../../shared/assets/icons/united-kingdom.png'; 
+import MainMap from '../../../shared/ui/map/MainMap'; 
+import { Helmet } from 'react-helmet'; 
+import { Link } from 'react-router-dom';
 
 const MainEnAbout = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -25,6 +26,16 @@ const MainEnAbout = () => {
         <div className={`main-about-us-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - About Us</title>
+                <meta name="description" content="LIBERT Group offers a full range of logistics solutions including international courier delivery, oversized cargo transport, and comprehensive customs agency services." />
+                <meta name="keywords" content="logistics, oversized transport, international courier, customs agency services, warehouse logistics" />
+                <meta property="og:title" content="Libert - About Us" />
+                <meta property="og:description" content="LIBERT Group specializes in international courier services, oversized cargo transport, and customs agency services." />
+                <meta property="og:image" content={flag} />
+                <meta property="og:url" content="https://www.libertgroup.pl/about/en" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Libert - About Us" />
+                <meta name="twitter:description" content="LIBERT Group specializes in international courier services, oversized cargo transport, and customs agency services." />
+                <meta name="twitter:image" content={flag} />
             </Helmet>
 
             <Header 
@@ -56,12 +67,11 @@ const MainEnAbout = () => {
                 service4_link={"/service4/en"}
                 service5_link={"/service5/en"}
                 languagelink_1={"/about/en"}
-                languagelink_2={"/about/"}
+                languagelink_2={"/about"}
                 languagelink_3={"/about/pl"}
                 photo_link={"/en"}
                 order_call_sending={"sending message..."}
             />
-
 
             <div className="some-age-info">
                 <PageInfo text="About the Company" isDarkMode={isDarkMode} />
@@ -94,28 +104,28 @@ const MainEnAbout = () => {
                 />
 
                 <Footer
-                head="Main Menu"
-                head2="Menu"
-                head3="Our Contacts"
-                services={"Services"}
-                contacts="Contact"
-                main_link="/en"
-                about_link="/about/en"
-                contact_link="/contact/en"
-                about="About Us"
-                service1="Fulfillment"
-                service2="Oversized Transport"
-                service3="International Courier Delivery"
-                service4="Customs Agency Services"
-                service5="Warehouse Logistics"
-                service1_link={"/service1/en"}
-                service2_link={"/service3/en"}
-                service3_link={"/service2/en"}
-                service4_link={"/service4/en"}
-                service5_link={"/service5/en"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
+                    head="Main Menu"
+                    head2="Menu"
+                    head3="Our Contacts"
+                    services={"Services"}
+                    contacts="Contact"
+                    main_link="/en"
+                    about_link="/about/en"
+                    contact_link="/contact/en"
+                    about="About Us"
+                    service1="Fulfillment"
+                    service2="Oversized Transport"
+                    service3="International Courier Delivery"
+                    service4="Customs Agency Services"
+                    service5="Warehouse Logistics"
+                    service1_link={"/service1/en"}
+                    service2_link={"/service3/en"}
+                    service3_link={"/service2/en"}
+                    service4_link={"/service4/en"}
+                    service5_link={"/service5/en"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
                 />
             </center>
         </div>

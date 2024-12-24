@@ -25,12 +25,23 @@ const MainContactPage = () => {
 
     return (
         <div className={`main-contact-page ${isDarkMode ? 'dark' : ''}`}>
-        <Helmet>
-            <title>Libert - Контакти</title>
-        </Helmet>
+            <Helmet>
+                <title>Libert - Контакти</title>
+                <meta name="description" content="Контактуйте з компанією Libert для отримання послуг з негабаритних перевезень, міжнародної кур'єрської доставки, митних послуг та складської логістики." />
+                <meta name="keywords" content="Контакти, негабаритні перевезення, міжнародна доставка, митні послуги, складська логістика, Україна, Libert" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Libert - Контакти" />
+                <meta property="og:description" content="Зв'язатись з компанією Libert для отримання послуг у галузі транспортування, логістики та митних послуг." />
+                <meta property="og:image" content={ukraine_flag} />
+                <meta property="og:url" content="https://www.libertgroup.pl/contact" />
+                <meta name="twitter:title" content="Libert - Контакти" />
+                <meta name="twitter:description" content="Зв'язатись з компанією Libert для транспортування, логістики та митних послуг." />
+                <meta name="twitter:image" content={ukraine_flag} />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
     
 
-        <Header 
+            <Header 
                 image={ukraine_flag}
                 head={"Головна"}
                 services={"Послуги"} 
@@ -66,56 +77,56 @@ const MainContactPage = () => {
                 order_call_problem={"проблема з відправкою"}
             />
     
-        <div className="some-age-info">
-            <PageInfo text="Контакти" isDarkMode={isDarkMode} />
-        </div>
-        <div className="main-contact">
-            <div className="contact-form">
-                <MessageForm
-                    header={"Надішліть нам повідомлення"}
-                    name_type={"Ваше ім'я"}
-                    email_type={"Електронна пошта"}
-                    message_content={"Тема повідомлення"}
-                    message_type={"Повідомлення..."}
-                    send={"Надіслати"}
-                    isDarkMode={isDarkMode}
-                    messageSending={"Відправка.."}
-                    messageOk={"Повідомлення відправлено"}
-                    messageError={"Проблема із відправкою"}
-                />
+            <div className="some-age-info">
+                <PageInfo text="Контакти" isDarkMode={isDarkMode} />
             </div>
-            <div className="map-contact">
-                <MainMap />
-            </div>
-        </div>            
+            <div className="main-contact">
+                <div className="contact-form">
+                    <MessageForm
+                        header={"Надішліть нам повідомлення"}
+                        name_type={"Ваше ім'я"}
+                        email_type={"Електронна пошта"}
+                        message_content={"Тема повідомлення"}
+                        message_type={"Повідомлення..."}
+                        send={"Надіслати"}
+                        isDarkMode={isDarkMode}
+                        messageSending={"Відправка.."}
+                        messageOk={"Повідомлення відправлено"}
+                        messageError={"Проблема із відправкою"}
+                    />
+                </div>
+                <div className="map-contact">
+                    <MainMap />
+                </div>
+            </div>            
     
-        <div className="contact-info">
+            <div className="contact-info">
                 <ContactInfo contact={"Надаєте перевагу іншим методам зв'язку?"} isDarkMode={isDarkMode} />
-        </div>
-        <center>
-        <Footer
-                head="Головне меню"
-                head2="Меню"
-                head3="Наші контакти"
-                services={"Послуги"}
-                contacts="Контакти"
-                main_link="/"
-                about_link="/about"
-                contact_link="/contact"
-                about="Про Нас"
-                service1="FulFillment"
-                service2="Негабаритні перевезення"
-                service3="Міжнародна кур'єрська доставка"
-                service4="Послуги митного агенства"
-                service5="Складська Логістика"
-                service1_link={"/service1"}
-                service2_link={"/service3"}
-                service3_link={"/service2"}
-                service4_link={"/service4"}
-                service5_link={"/service5"}
+            </div>
+            <center>
+                <Footer
+                    head="Головне меню"
+                    head2="Меню"
+                    head3="Наші контакти"
+                    services={"Послуги"}
+                    contacts="Контакти"
+                    main_link="/"
+                    about_link="/about"
+                    contact_link="/contact"
+                    about="Про Нас"
+                    service1="FulFillment"
+                    service2="Негабаритні перевезення"
+                    service3="Міжнародна кур'єрська доставка"
+                    service4="Послуги митного агенства"
+                    service5="Складська Логістика"
+                    service1_link={"/service1"}
+                    service2_link={"/service3"}
+                    service3_link={"/service2"}
+                    service4_link={"/service4"}
+                    service5_link={"/service5"}
                 />
-        </center>
-    </div>    
+            </center>
+        </div>    
     );
 }
 

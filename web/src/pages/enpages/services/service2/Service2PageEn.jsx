@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'; 
 import Header from '../../../../shared/ui/header/Header';
 import flag from '../../../../shared/assets/icons/united-kingdom.png';
@@ -24,8 +25,35 @@ const Service2PageEn = () => {
     return (
         <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
-                <title>Libert - International Courier Delivery</title>
-            </Helmet>
+    <title>Libert - International Courier Delivery Services</title>
+
+    {/* Meta Description for SEO */}
+    <meta name="description" content="Libert offers fast, reliable, and cost-effective international courier delivery services for all your shipments. Partnering with top courier companies, we provide a personalized approach and competitive rates to ensure timely and safe delivery worldwide." />
+
+    {/* Meta Keywords for SEO */}
+    <meta name="keywords" content="international courier delivery, fast delivery service, international shipping, logistics, affordable courier services, international shipments, shipping worldwide, global delivery service, courier partnerships, reliable delivery" />
+
+    {/* Open Graph Meta Tags for social media sharing */}
+    <meta property="og:title" content="Libert - International Courier Delivery Services" />
+    <meta property="og:description" content="Libert offers fast, reliable, and cost-effective international courier delivery services, ensuring your shipments arrive safely and on time at the best rates." />
+    <meta property="og:url" content="https://www.libertgroup.pl/service2/en" />
+    <meta property="og:type" content="website" />
+
+    {/* Twitter Card Meta Tags for Twitter sharing */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Libert - International Courier Delivery Services" />
+    <meta name="twitter:description" content="Fast and reliable international courier delivery services by Libert. Get affordable rates and personalized service for timely global deliveries." />
+    <meta name="twitter:image" content="https://yourwebsite.com/path/to/your/image.jpg" />
+
+    {/* Additional Meta Tags for accessibility */}
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Libert Courier Services" />
+
+    {/* Charset and Viewport for better accessibility and mobile responsiveness */}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</Helmet>
+
 
             <Header 
                 image={flag}
@@ -62,7 +90,6 @@ const Service2PageEn = () => {
                 order_call_sending={"sending message..."}
             />
 
-
             <div className="some-age-info">
                 <PageInfo text="International Courier Delivery" isDarkMode={isDarkMode} />
             </div>    
@@ -79,7 +106,7 @@ const Service2PageEn = () => {
                     <p>Our team is ready to assist you with all aspects of international delivery, ensuring your shipments always arrive on time and in perfect condition.</p>
                 </div>
                 <div className="service-image-main-container">
-                        <img src={international_logo} alt="logistic" className="service-image-desc"/>
+                    <img src={international_logo} alt="international courier delivery logistics" className="service-image-desc"/>
                 </div>
             </div>
 
@@ -98,28 +125,28 @@ const Service2PageEn = () => {
                 />
 
                 <Footer
-                head="Main Menu"
-                head2="Menu"
-                head3="Our Contacts"
-                services={"Services"}
-                contacts="Contact"
-                main_link="/en"
-                about_link="/about/en"
-                contact_link="/contact/en"
-                about="About Us"
-                service1="Fulfillment"
-                service2="Oversized Transport"
-                service3="International Courier Delivery"
-                service4="Customs Agency Services"
-                service5="Warehouse Logistics"
-                service1_link={"/service1/en"}
-                service2_link={"/service3/en"}
-                service3_link={"/service2/en"}
-                service4_link={"/service4/en"}
-                service5_link={"/service5/en"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
+                    head="Main Menu"
+                    head2="Menu"
+                    head3="Our Contacts"
+                    services={"Services"}
+                    contacts="Contact"
+                    main_link="/en"
+                    about_link="/about/en"
+                    contact_link="/contact/en"
+                    about="About Us"
+                    service1="Fulfillment"
+                    service2="Oversized Transport"
+                    service3="International Courier Delivery"
+                    service4="Customs Agency Services"
+                    service5="Warehouse Logistics"
+                    service1_link={"/service1/en"}
+                    service2_link={"/service3/en"}
+                    service3_link={"/service2/en"}
+                    service4_link={"/service4/en"}
+                    service5_link={"/service5/en"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
                 />
             </center>
         </div>

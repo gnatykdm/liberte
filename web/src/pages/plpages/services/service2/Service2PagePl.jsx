@@ -24,9 +24,23 @@ const Service2PagePl = () => {
     return (
         <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
+                {/* Title and meta tags for SEO */}
                 <title>Libert - Międzynarodowa dostawa kurierska</title>
+                <meta name="description" content="Libert oferuje szybkie, niezawodne i kosztowo efektywne usługi międzynarodowej dostawy kurierskiej z Ukrainy i na całym świecie. Skorzystaj z indywidualnych rozwiązań logistycznych i konkurencyjnych cen." />
+                <meta name="keywords" content="międzynarodowa dostawa, dostawa kurierska, szybka dostawa, międzynarodowe przesyłki, logistyka, usługi kurierskie" />
+                
+                {/* Open Graph and Twitter cards for social media sharing */}
+                <meta property="og:title" content="Libert - Międzynarodowa dostawa kurierska" />
+                <meta property="og:description" content="Libert oferuje szybkie, niezawodne i kosztowo efektywne usługi międzynarodowej dostawy kurierskiej. Skorzystaj z najlepszych stawek i terminowych dostaw." />
+                <meta property="og:url" content="https://libertgroup.pl/service2/pl" />
+                <meta property="og:type" content="website" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Libert - Międzynarodowa dostawa kurierska" />
+                <meta name="twitter:description" content="Usługi międzynarodowej dostawy kurierskiej od Libert. Gwarantujemy szybkie dostawy i atrakcyjne ceny." />
             </Helmet>
 
+            {/* Header */}
             <Header 
                 image={flag}
                 head={"Strona główna"}
@@ -63,10 +77,12 @@ const Service2PagePl = () => {
                 photo_link={"/pl"}
             />
 
+            {/* Page Info */}
             <div className="some-age-info">
                 <PageInfo text="Międzynarodowa dostawa kurierska" isDarkMode={isDarkMode} />
             </div>
             
+            {/* Service Description */}
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
                     <p>Międzynarodowa dostawa kurierska obejmuje:</p>
@@ -79,10 +95,11 @@ const Service2PagePl = () => {
                     <p>Nasz zespół jest gotowy pomóc Ci we wszystkich aspektach międzynarodowej dostawy, aby Twoje przesyłki zawsze docierały na czas i w nienaruszonym stanie.</p>
                 </div>
                 <div className="service-image-main-container">
-                        <img src={international_delivery_logo} alt="logistic" className="service-image-desc"/>
+                    <img src={international_delivery_logo} alt="logistic" className="service-image-desc"/>
                 </div>
             </div>
 
+            {/* Order Call Section */}
             <center>
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
@@ -98,33 +115,35 @@ const Service2PagePl = () => {
                     order_call_problem={"problem z wysyłaniem"}
                 />
 
+                {/* Footer */}
                 <Footer
-                head="Główne menu"
-                head2="Menu"
-                head3="Nasze kontakty"
-                services={"Usługi"}
-                contacts="Kontakt"
-                main_link="/pl"
-                about_link="/about/pl"
-                contact_link="/contact/pl"
-                about="O nas"
-                service1="FulFillment"
-                service2="Transport ponadgabarytowy"
-                service3="Międzynarodowa dostawa kurierska"
-                service4="Usługi agencji celnej"
-                service5="Logistyka magazynowa"
-                service1_link={"/service1/pl"}
-                service2_link={"/service3/pl"}
-                service3_link={"/service2/pl"}
-                service4_link={"/service4/pl"}
-                service5_link={"/service5/pl"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
-                photo_link={"/pl"}
+                    head="Główne menu"
+                    head2="Menu"
+                    head3="Nasze kontakty"
+                    services={"Usługi"}
+                    contacts="Kontakt"
+                    main_link="/pl"
+                    about_link="/about/pl"
+                    contact_link="/contact/pl"
+                    about="O nas"
+                    service1="FulFillment"
+                    service2="Transport ponadgabarytowy"
+                    service3="Międzynarodowa dostawa kurierska"
+                    service4="Usługi agencji celnej"
+                    service5="Logistyka magazynowa"
+                    service1_link={"/service1/pl"}
+                    service2_link={"/service3/pl"}
+                    service3_link={"/service2/pl"}
+                    service4_link={"/service4/pl"}
+                    service5_link={"/service5/pl"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
+                    photo_link={"/pl"}
                 />
             </center>
         </div>
     );
-}
+};
+
 export default Service2PagePl;

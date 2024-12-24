@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import PhotoSlider from '../../../../shared/ui/slider/PhotoSlider';
 
 const Service3PagePl = () => {
-       const [isDarkMode, setIsDarkMode] = useState(() => {
+    const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
     });
@@ -22,9 +22,27 @@ const Service3PagePl = () => {
     };
 
     return (
-            <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
+        <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - Transport ponadgabarytowy</title>
+
+                {/* SEO Meta Tags */}
+                <meta name="description" content="Oferujemy usługi transportu ładunków ponadgabarytowych, w tym kombajny, obiekty infrastrukturalne i inne. Zapewniamy pełne rozwiązania logistyczne, planowanie tras i organizację eskorty." />
+                <meta name="keywords" content="transport ponadgabarytowy, usługi transportowe, przewóz ładunków, transport z eskortą, transport specjalistyczny, planowanie tras" />
+                <meta name="robots" content="index, follow" />
+
+                {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="Libert - Transport ponadgabarytowy" />
+                <meta property="og:description" content="Oferujemy transport ponadgabarytowy oraz pełne rozwiązania logistyczne, takie jak uzyskiwanie zezwoleń i organizowanie eskorty ładunków." />
+                <meta property="og:image" content={flag} />
+                <meta property="og:url" content="https://www.libertgroup.pl/service3/pl" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Meta Tags */}
+                <meta name="twitter:title" content="Libert - Transport ponadgabarytowy" />
+                <meta name="twitter:description" content="Zajmujemy się transportem ładunków ponadgabarytowych, zapewniając bezpieczeństwo i terminową realizację. Zaufaj naszym profesjonalnym usługom." />
+                <meta name="twitter:image" content={flag} />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
 
             <Header 
@@ -79,15 +97,15 @@ const Service3PagePl = () => {
                         Nasze wieloletnie doświadczenie pozwala nam szybko rozwiązywać wszelkie problemy związane z transportem ładunków ponadgabarytowych, przestrzegając międzynarodowych standardów bezpieczeństwa i jakości.
                         Zaufaj nam z Twoim ładunkiem – gwarantujemy niezawodność, profesjonalizm i terminowe realizowanie zobowiązań.
                     </p>
-                    
                 </div>
+
                 <div className="service-image-main-container">
-                        <PhotoSlider/>
+                    <PhotoSlider />
                 </div>
             </div>
 
             <center>
-            <OrderCall
+                <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
                     part2={"indywidualne podejście, aby logistyka była dla Ciebie jak najprostsza"}
                     order_call={"Kontakt"}
@@ -100,34 +118,34 @@ const Service3PagePl = () => {
                     order_call_sending={"wysyłanie wiadomości..."}
                     order_call_problem={"problem z wysyłaniem"}
                 />
-
                 <Footer
-                head="Główne menu"
-                head2="Menu"
-                head3="Nasze kontakty"
-                services={"Usługi"}
-                contacts="Kontakt"
-                main_link="/pl"
-                about_link="/about/pl"
-                contact_link="/contact/pl"
-                about="O nas"
-                service1="FulFillment"
-                service2="Transport ponadgabarytowy"
-                service3="Międzynarodowa dostawa kurierska"
-                service4="Usługi agencji celnej"
-                service5="Logistyka magazynowa"
-                service1_link={"/service1/pl"}
-                service2_link={"/service3/pl"}
-                service3_link={"/service2/pl"}
-                service4_link={"/service4/pl"}
-                service5_link={"/service5/pl"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
-                photo_link={"/pl"}
+                    head="Główne menu"
+                    head2="Menu"
+                    head3="Nasze kontakty"
+                    services={"Usługi"}
+                    contacts="Kontakt"
+                    main_link="/pl"
+                    about_link="/about/pl"
+                    contact_link="/contact/pl"
+                    about="O nas"
+                    service1="FulFillment"
+                    service2="Transport ponadgabarytowy"
+                    service3="Międzynarodowa dostawa kurierska"
+                    service4="Usługi agencji celnej"
+                    service5="Logistyka magazynowa"
+                    service1_link={"/service1/pl"}
+                    service2_link={"/service3/pl"}
+                    service3_link={"/service2/pl"}
+                    service4_link={"/service4/pl"}
+                    service5_link={"/service5/pl"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
+                    photo_link={"/pl"}
                 />
             </center>
         </div>
     );
 }
+
 export default Service3PagePl;

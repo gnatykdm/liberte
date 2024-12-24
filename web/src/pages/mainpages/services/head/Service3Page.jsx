@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import PhotoSlider from '../../../../shared/ui/slider/PhotoSlider';
 
 const Service3Page = () => {
-       const [isDarkMode, setIsDarkMode] = useState(() => {
+    const [isDarkMode, setIsDarkMode] = useState(() => {
         const savedTheme = localStorage.getItem('isDarkMode');
         return savedTheme === 'true'; 
     });
@@ -22,11 +22,28 @@ const Service3Page = () => {
     };
 
     return (
-            <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
+        <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - Негабаритні перевезення</title>
-            </Helmet>
+                
+                {/* SEO Meta Tags */}
+                <meta name="description" content="Послуги з транспортування негабаритних вантажів, включаючи комбайни та інфраструктурні об'єкти. Ми забезпечуємо логістичні рішення та супровід вантажів." />
+                <meta name="keywords" content="Негабаритні перевезення, транспорт, логістика, перевезення комбайнів, інфраструктурні об'єкти, супровід вантажів" />
+                <meta name="robots" content="index, follow" />
 
+                {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="Libert - Негабаритні перевезення" />
+                <meta property="og:description" content="Ми надаємо послуги з транспортування негабаритних вантажів та документального супроводу, гарантуючи надійність і своєчасність." />
+                <meta property="og:image" content={ukraine_flag} />
+                <meta property="og:url" content="https://www.libertgroup.pl/service3" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Meta Tags */}
+                <meta name="twitter:title" content="Libert - Негабаритні перевезення" />
+                <meta name="twitter:description" content="Надаємо послуги з транспортування негабаритних вантажів. Гарантуємо надійність, професіоналізм і своєчасне виконання зобов'язань." />
+                <meta name="twitter:image" content={ukraine_flag} />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
 
             <Header 
                 image={ukraine_flag}
@@ -71,24 +88,23 @@ const Service3Page = () => {
             <div className={`service-content-about ${isDarkMode ? 'dark' : ''}`}>
                 <div className={`text-container-about ${isDarkMode ? 'dark' : ''}`}>
                     <p>
-                    Надаємо послуги з транспортування негабаритних вантажів та документального супроводу.
-                    Перевозимо від комбайнів до інфраструктурних об’єктів. За нас говорять реалізовані проекти на сайті Єврокомісії.
-                    Забезпечуємо повний цикл логістичних рішень, включаючи узгодження дозволів, планування маршрутів, а також організацію супроводу вантажів спеціалізованими транспортними засобами. 
+                        Надаємо послуги з транспортування негабаритних вантажів та документального супроводу.
+                        Перевозимо від комбайнів до інфраструктурних об’єктів. За нас говорять реалізовані проекти на сайті Єврокомісії.
+                        Забезпечуємо повний цикл логістичних рішень, включаючи узгодження дозволів, планування маршрутів, а також організацію супроводу вантажів спеціалізованими транспортними засобами.
                     </p>
 
                     <p>
                         Наш багаторічний досвід дозволяє оперативно вирішувати будь-які питання, пов'язані з транспортуванням негабариту, дотримуючись міжнародних стандартів безпеки та якості.
                         Довірте нам свій вантаж – ми гарантуємо надійність, професіоналізм та своєчасне виконання зобов'язань.
                     </p>
-                    
                 </div>
                 <div className="service-image-main-container">
-                        <PhotoSlider></PhotoSlider>
+                    <PhotoSlider />
                 </div>
             </div>
 
             <center>
-            <OrderCall
+                <OrderCall
                     part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}
                     part2={"індивідуальний підхід, щоб зробити логістику максимально простою для вас"}
                     order_call={"Замовити дзвінок"}
@@ -103,28 +119,29 @@ const Service3Page = () => {
                 />
 
                 <Footer
-                head="Головне меню"
-                head2="Меню"
-                head3="Наші контакти"
-                services={"Послуги"}
-                contacts="Контакти"
-                main_link="/"
-                about_link="/about"
-                contact_link="/contact"
-                about="Про Нас"
-                service1="FulFillment"
-                service2="Міжнародна кур'єрська доставка"
-                service3="Негабаритні перевезення"
-                service4="Послуги митного агенства"
-                service5="Складська Логістика"
-                service1_link={"/service1"}
-                service2_link={"/service2"}
-                service3_link={"/service3"}
-                service4_link={"/service4"}
-                service5_link={"/service5"}
+                    head="Головне меню"
+                    head2="Меню"
+                    head3="Наші контакти"
+                    services={"Послуги"}
+                    contacts="Контакти"
+                    main_link="/"
+                    about_link="/about"
+                    contact_link="/contact"
+                    about="Про Нас"
+                    service1="FulFillment"
+                    service2="Міжнародна кур'єрська доставка"
+                    service3="Негабаритні перевезення"
+                    service4="Послуги митного агенства"
+                    service5="Складська Логістика"
+                    service1_link={"/service1"}
+                    service2_link={"/service2"}
+                    service3_link={"/service3"}
+                    service4_link={"/service4"}
+                    service5_link={"/service5"}
                 />
             </center>
         </div>
     );
-}
+};
+
 export default Service3Page;

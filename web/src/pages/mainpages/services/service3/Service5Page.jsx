@@ -25,6 +25,24 @@ const Service5Page = () => {
         <div className={`service-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - Складська логістика</title>
+
+                {/* SEO Meta Tags */}
+                <meta name="description" content="Послуги складської логістики: митно-ліцензійні склади, зберігання товарів, пакування, страхування та інші логістичні рішення для вашого бізнесу." />
+                <meta name="keywords" content="складська логістика, митно-ліцензійні склади, зберігання товарів, логістичні послуги, страхування товарів" />
+                <meta name="robots" content="index, follow" />
+
+                {/* Open Graph Meta Tags */}
+                <meta property="og:title" content="Libert - Складська логістика" />
+                <meta property="og:description" content="Послуги складської логістики для вашого бізнесу, включаючи митно-ліцензійні склади, пакування та страхування товарів." />
+                <meta property="og:image" content={garage_logo} />
+                <meta property="og:url" content="https://www.libertgroup.pl/service5" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Meta Tags */}
+                <meta name="twitter:title" content="Libert - Складська логістика" />
+                <meta name="twitter:description" content="Ми пропонуємо складські логістичні послуги для вашого бізнесу. Дізнайтесь більше про митно-ліцензійні склади, зберігання та пакування товарів." />
+                <meta name="twitter:image" content={garage_logo} />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
 
             <Header 
@@ -80,7 +98,7 @@ const Service5Page = () => {
                     <p>Ці послуги дозволяють знизити витрати, оптимізувати логістичні процеси та забезпечити безпеку товарів під час зберігання.</p>
                 </div>
                 <div className="service-image-main-container">
-                        <img src={garage_logo} alt="logistic" className="service-image-desc"/>
+                        <img src={garage_logo} alt="Логотип складської логістики" className="service-image-desc"/>
                 </div>
             </div>
 
@@ -124,4 +142,5 @@ const Service5Page = () => {
         </div>
     );
 }
+
 export default Service5Page;

@@ -26,6 +26,17 @@ const ContactEnPage = () => {
         <div className={`main-contact-page ${isDarkMode ? 'dark' : ''}`}>
             <Helmet>
                 <title>Libert - Contacts</title>
+                <meta name="description" content="Contact Libert for fulfillment, oversized transport, international courier delivery, customs agency services, and warehouse logistics." />
+                <meta name="keywords" content="contact, oversized transport, fulfillment, international courier, customs services, logistics, warehouse, UK, Libert" />
+                <meta name="robots" content="index, follow" />
+                <meta property="og:title" content="Libert - Contacts" />
+                <meta property="og:description" content="Contact Libert for logistics services, oversized transport, and warehouse solutions." />
+                <meta property="og:image" content={flag} />
+                <meta property="og:url" content="https://www.libertgroup.pl/contact/en" />
+                <meta name="twitter:title" content="Libert - Contacts" />
+                <meta name="twitter:description" content="Get in touch with Libert for transport and logistics services." />
+                <meta name="twitter:image" content={flag} />
+                <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
         
             <Header 
@@ -63,7 +74,6 @@ const ContactEnPage = () => {
                 order_call_sending={"sending message..."}
             />
 
-        
             <div className="some-age-info">
                 <PageInfo text="Contacts" isDarkMode={isDarkMode} />
             </div>
@@ -93,28 +103,28 @@ const ContactEnPage = () => {
                 </div>
         
                 <Footer
-                head="Main Menu"
-                head2="Menu"
-                head3="Our Contacts"
-                services={"Services"}
-                contacts="Contact"
-                main_link="/en"
-                about_link="/about/en"
-                contact_link="/contact/en"
-                about="About Us"
-                service1="Fulfillment"
-                service2="Oversized Transport"
-                service3="International Courier Delivery"
-                service4="Customs Agency Services"
-                service5="Warehouse Logistics"
-                service1_link={"/service1/en"}
-                service2_link={"/service3/en"}
-                service3_link={"/service2/en"}
-                service4_link={"/service4/en"}
-                service5_link={"/service5/en"}
-                languagelink_1={"/en"}
-                languagelink_2={"/"}
-                languagelink_3={"/pl"}
+                    head="Main Menu"
+                    head2="Menu"
+                    head3="Our Contacts"
+                    services={"Services"}
+                    contacts="Contact"
+                    main_link="/en"
+                    about_link="/about/en"
+                    contact_link="/contact/en"
+                    about="About Us"
+                    service1="Fulfillment"
+                    service2="Oversized Transport"
+                    service3="International Courier Delivery"
+                    service4="Customs Agency Services"
+                    service5="Warehouse Logistics"
+                    service1_link={"/service1/en"}
+                    service2_link={"/service3/en"}
+                    service3_link={"/service2/en"}
+                    service4_link={"/service4/en"}
+                    service5_link={"/service5/en"}
+                    languagelink_1={"/en"}
+                    languagelink_2={"/"}
+                    languagelink_3={"/pl"}
                 />
             </center>
         </div>    
