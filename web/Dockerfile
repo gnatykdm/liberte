@@ -16,11 +16,7 @@ FROM nginx:alpine
 
 RUN apk add --no-cache certbot certbot-nginx openssl
 
-RUN mkdir -p /etc/letsencrypt /var/www/certbot /etc/letsencrypt/conf
-
 COPY --from=build /react-docker-example/build /usr/share/nginx/html
-
-COPY ./nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80 443
 
