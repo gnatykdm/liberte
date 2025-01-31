@@ -1,0 +1,51 @@
+version: "3.8"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: backend
+    restart: always
+    ports:
+      - "443:8080"  # Exposes HTTPS on port 443
+    volumes:
+      - certbot_conf:/etc/letsencrypt  # SSL certificates storage
+    environment:
+      - SERVER_PORT=8080
+      - SERVER_SSL_ENABLED=true
+      - SERVER_SSL_KEY_STORE_TYPE=PKCS12
+      - SERVER_SSL_KEY_STORE=/etc/letsencrypt/live/libertgroup.pl/keystore.p12
+      - SERVER_SSL_KEY_STORE_PASSWORD=changeit
+      - SERVER_SSL_KEY_ALIAS=tomcat
+      - SERVER_SSL_KEY_CERTIFICATE_CHAIN=/etc/letsencrypt/live/libertgroup.pl/chain.pem
+      - SERVER_SSL_KEY=/etc/letsencrypt/live/libertgroup.pl/privkey.pem
+    depends_on:
+      - certbot
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot_www:/var/www/certbot
+      - certbot_conf:/etc/letsencrypt
+    entrypoint: >
+      /bin/sh -c "
+      certbot certonly --standalone --non-interactive --agree-tos --email your-email@example.com -d libertgroup.pl --keep-until-expiring;
+      openssl pkcs12 -export -in /etc/letsencrypt/live/libertgroup.pl/fullchain.pem \
+                     -inkey /etc/letsencrypt/live/libertgroup.pl/privkey.pem \
+                     -out /etc/letsencrypt/live/libertgroup.pl/keystore.p12 \
+                     -password pass:changeit;
+      while :; do sleep 12h & wait $${!}; certbot renew;
+      openssl pkcs12 -export -in /etc/letsencrypt/live/libertgroup.pl/fullchain.pem \
+                     -inkey /etc/letsencrypt/live/libertgroup.pl/privkey.pem \
+                     -out /etc/letsencrypt/live/libertgroup.pl/keystore.p12 \
+                     -password pass:changeit;
+      docker restart backend;
+      done"
+    depends_on:
+      - backend
+
+volumes:
+  certbot_www:
+  certbot_conf:
