@@ -156,8 +156,8 @@ const Header = ({
                             <div className="dropdown-menu">
                                 <div className="dropdown-item-services">
                                     {[
-                                        { link: service1_link, label: service1 },
                                         { link: service2_link, label: service2 },
+                                        { link: service1_link, label: service1 },
                                         { link: service3_link, label: service3 },
                                         { link: service4_link, label: service4 },
                                         { link: service5_link, label: service5 }
@@ -272,7 +272,7 @@ const Header = ({
                     <div className="mobile-modal-footer">
                         <div className="mobile-modal-footer-description">{social_networks}</div>
                         <div className="social-media-mobile">
-                            <a href="https://www.instagram.com/libert.courier/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/libert.group?igsh=MW5uN296NzBhYzB3bQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                                 <img src={instagram_logo} alt="Instagram" />
                             </a>
                             <a href="https://t.me/rybusik07" target="_blank" rel="noopener noreferrer">

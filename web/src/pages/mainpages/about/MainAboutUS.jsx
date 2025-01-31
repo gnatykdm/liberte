@@ -38,6 +38,7 @@ const MainAboutUS = () => {
                 <meta name="twitter:title" content="Libert - Про нас" />
                 <meta name="twitter:description" content="LIBERT Group спеціалізується на міжнародній кур'єрській доставці, транспортуванні негабаритних вантажів і митному оформленні." />
                 <meta name="twitter:image" content={ukraine_flag} />
+                <meta name="robots" content="index, follow" />
             </Helmet>
 
             <Header 
@@ -58,7 +59,7 @@ const MainAboutUS = () => {
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
                 messageStatus={"Повідомлення відправлено"}
-                service1="FulFillment"
+                service1="Fulfillment"
                 service2="Негабаритні перевезення"
                 service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
@@ -98,7 +99,7 @@ const MainAboutUS = () => {
             <center>
                 <OrderCall
                     part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}
-                    part2={"індивідуальний підхід, щоб зробити логістику максимально простою для вас"}
+                    part2={"індивідуальний підхід, щоб зробити логістику максимально простою."}
                     order_call={"Замовити дзвінок"}
                     order={"Замовити дзвінок"}
                     name_type={"Ваше ім'я"}
@@ -120,13 +121,13 @@ const MainAboutUS = () => {
                     about_link="/about"
                     contact_link="/contact"
                     about="Про Нас"
-                    service1="FulFillment"
-                    service2="Негабаритні перевезення"
+                    service1="Негабаритні перевезення"
+                    service2="Fulfillment"
                     service3="Міжнародна кур'єрська доставка"
                     service4="Послуги митного агенства"
                     service5="Складська Логістика"
-                    service1_link={"/service1"}
-                    service2_link={"/service3"}
+                    service1_link={"/service3"}
+                    service2_link={"/service1"}
                     service3_link={"/service2"}
                     service4_link={"/service4"}
                     service5_link={"/service5"}

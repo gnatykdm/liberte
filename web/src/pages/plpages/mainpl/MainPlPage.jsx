@@ -37,6 +37,7 @@ const MainPlPage = () => {
                 <meta name="twitter:title" content="Libert - Strona główna | Rozwiązania logistyczne" />
                 <meta name="twitter:description" content="Libert oferuje usługi transportu ładunków ponadgabarytowych, fulfillment, dostaw kurierskich, logistyki magazynowej i inne. Zapewniamy niezawodne, tanie rozwiązania logistyczne dla Twojego biznesu." />
                 <meta name="twitter:image" content={main_photo} />
+                <meta name="robots" content="index, follow" />
             </Helmet>
 
             <Header 
@@ -117,7 +118,7 @@ const MainPlPage = () => {
 
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
-                    part2={"indywidualne podejście, aby logistyka była dla Ciebie jak najprostsza"}
+                    part2={"indywidualne podejście, aby logistyka była dla Ciebie jak najprostsza."}
                     order_call={"Kontakt"}
                     order={"Kontakt"}
                     name_type={"Twoje imię"}
@@ -139,13 +140,13 @@ const MainPlPage = () => {
                     about_link="/about/pl"
                     contact_link="/contact/pl"
                     about="O nas"
-                    service1="Fulfillment"
-                    service2="Transport ponadgabarytowy"
+                    service1="Transport ponadgabarytowy"
+                    service2="Fulfillment"
                     service3="Międzynarodowa dostawa kurierska"
                     service4="Usługi agencji celnej"
                     service5="Logistyka magazynowa"
-                    service1_link={"/service1/pl"}
-                    service2_link={"/service3/pl"}
+                    service1_link={"/service3/pl"}
+                    service2_link={"/service1/pl"}
                     service3_link={"/service2/pl"}
                     service4_link={"/service4/pl"}
                     service5_link={"/service5/pl"}

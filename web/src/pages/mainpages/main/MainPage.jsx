@@ -109,20 +109,20 @@ const MainPage = () => {
             <center>
                 <Services
                     isDarkMode={isDarkMode}
-                    service1_link={"/service1"}
-                    service2_link={"/service3"}
+                    service1_link={"/service3"}
+                    service2_link={"/service1"}
                     service3_link={"/service2"}
                     service4_link={"/service4"}
                     service5_link={"/service5"}
-                    service1_name={"FULFILLMENT"}
-                    service2_name={"Негабаритні перевезення"}
+                    service1_name={"Негабаритні перевезення"}
+                    service2_name={"Fulfillment"}
                     service3_name={"Міжнародна кур'єрська доставка"}
                     service4_name={"Послуги митного агентства"}
                     service5_name={"Складська логістика"}
                 />
                 <OrderCall
                     part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}
-                    part2={"індивідуальний підхід, щоб зробити логістику максимально простою для вас"}
+                    part2={"індивідуальний підхід, щоб зробити логістику максимально простою."}
                     order_call={"Замовити дзвінок"}
                     order={"Замовити дзвінок"}
                     name_type={"Ваше ім'я"}
@@ -143,13 +143,13 @@ const MainPage = () => {
                     about_link="/about"
                     contact_link="/contact"
                     about="Про Нас"
-                    service1="FulFillment"
-                    service2="Негабаритні перевезення"
+                    service1="Негабаритні перевезення"
+                    service2="Fulfillment"
                     service3="Міжнародна кур'єрська доставка"
                     service4="Послуги митного агенства"
                     service5="Складська Логістика"
-                    service1_link={"/service1"}
-                    service2_link={"/service3"}
+                    service1_link={"/service3"}
+                    service2_link={"/service1"}
                     service3_link={"/service2"}
                     service4_link={"/service4"}
                     service5_link={"/service5"}

@@ -6,7 +6,6 @@ import PageInfo from '../../../shared/ui/pageInfo/PageInfo';
 import flag from '../../../shared/assets/icons/united-kingdom.png'; 
 import MainMap from '../../../shared/ui/map/MainMap'; 
 import { Helmet } from 'react-helmet'; 
-import { Link } from 'react-router-dom';
 
 const MainEnAbout = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -36,6 +35,7 @@ const MainEnAbout = () => {
                 <meta name="twitter:title" content="Libert - About Us" />
                 <meta name="twitter:description" content="LIBERT Group specializes in international courier services, oversized cargo transport, and customs agency services." />
                 <meta name="twitter:image" content={flag} />
+                <meta name="robots" content="index, follow" />
             </Helmet>
 
             <Header 
@@ -92,7 +92,7 @@ const MainEnAbout = () => {
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make logistics as easy as possible for you"}
+                    part2={"a personalized approach to make logistics as easy as possible."}
                     order_call={"contact"}
                     order={"Contact"}
                     name_type={"Your Name"}
@@ -113,13 +113,13 @@ const MainEnAbout = () => {
                     about_link="/about/en"
                     contact_link="/contact/en"
                     about="About Us"
-                    service1="Fulfillment"
-                    service2="Oversized Transport"
+                    service1="Oversized Transport"
+                    service2="Fulfillment"
                     service3="International Courier Delivery"
                     service4="Customs Agency Services"
                     service5="Warehouse Logistics"
-                    service1_link={"/service1/en"}
-                    service2_link={"/service3/en"}
+                    service1_link={"/service3/en"}
+                    service2_link={"/service1/en"}
                     service3_link={"/service2/en"}
                     service4_link={"/service4/en"}
                     service5_link={"/service5/en"}

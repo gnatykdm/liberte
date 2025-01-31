@@ -105,7 +105,7 @@ const Service3PageEn = () => {
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make logistics as simple as possible for you"}
+                    part2={"a personalized approach to make logistics as simple as possible."}
                     order_call={"Contact"}
                     order={"Contact"}
                     name_type={"Your Name"}
@@ -126,13 +126,13 @@ const Service3PageEn = () => {
                     about_link="/about/en"
                     contact_link="/contact/en"
                     about="About Us"
-                    service1="Fulfillment"
-                    service2="Oversized Transport"
+                    service1="Oversized Transport"
+                    service2="Fulfillment"
                     service3="International Courier Delivery"
                     service4="Customs Agency Services"
                     service5="Warehouse Logistics"
-                    service1_link={"/service1/en"}
-                    service2_link={"/service3/en"}
+                    service1_link={"/service3/en"}
+                    service2_link={"/service1/en"}
                     service3_link={"/service2/en"}
                     service4_link={"/service4/en"}
                     service5_link={"/service5/en"}

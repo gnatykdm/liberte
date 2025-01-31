@@ -59,7 +59,7 @@ const MainContactPage = () => {
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
                 messageStatus={"Повідомлення відправлено"}
-                service1="FulFillment"
+                service1="Fulfillment"
                 service2="Негабаритні перевезення"
                 service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
@@ -114,13 +114,13 @@ const MainContactPage = () => {
                     about_link="/about"
                     contact_link="/contact"
                     about="Про Нас"
-                    service1="FulFillment"
-                    service2="Негабаритні перевезення"
+                    service1="Негабаритні перевезення"
+                    service2="Fulfillment"
                     service3="Міжнародна кур'єрська доставка"
                     service4="Послуги митного агенства"
                     service5="Складська Логістика"
-                    service1_link={"/service1"}
-                    service2_link={"/service3"}
+                    service1_link={"/service3"}
+                    service2_link={"/service1"}
                     service3_link={"/service2"}
                     service4_link={"/service4"}
                     service5_link={"/service5"}

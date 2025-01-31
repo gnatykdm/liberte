@@ -63,7 +63,7 @@ const Service3Page = () => {
                 toggleTheme={toggleTheme} 
                 isDarkMode={isDarkMode}
                 messageStatus={"Повідомлення відправлено"}
-                service1="FulFillment"
+                service1="Fulfillment"
                 service2="Негабаритні перевезення"
                 service3="Міжнародна кур'єрська доставка"
                 service4="Послуги митного агенства"
@@ -106,7 +106,7 @@ const Service3Page = () => {
             <center>
                 <OrderCall
                     part1={"Ваш спокій — наша мета. Ми забезпечуємо точність, надійність та"}
-                    part2={"індивідуальний підхід, щоб зробити логістику максимально простою для вас"}
+                    part2={"індивідуальний підхід, щоб зробити логістику максимально простою."}
                     order_call={"Замовити дзвінок"}
                     order={"Замовити дзвінок"}
                     name_type={"Ваше ім'я"}
@@ -128,14 +128,14 @@ const Service3Page = () => {
                     about_link="/about"
                     contact_link="/contact"
                     about="Про Нас"
-                    service1="FulFillment"
+                    service1="Негабаритні перевезення"
                     service2="Міжнародна кур'єрська доставка"
-                    service3="Негабаритні перевезення"
+                    service3="Fulfillment"
                     service4="Послуги митного агенства"
                     service5="Складська Логістика"
-                    service1_link={"/service1"}
+                    service1_link={"/service3"}
                     service2_link={"/service2"}
-                    service3_link={"/service3"}
+                    service3_link={"/service1"}
                     service4_link={"/service4"}
                     service5_link={"/service5"}
                 />

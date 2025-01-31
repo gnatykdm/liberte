@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /admin/
-Disallow: /login/
+Disallow:
 
 Sitemap: https://libertgroup.pl/sitemap.xml

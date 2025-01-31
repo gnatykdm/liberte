@@ -11,10 +11,9 @@ import './Footer.css';
 
 // Reusable Footer Column Component
 const FooterColumn = ({ title, links, arrow }) => {
-  const location = useLocation();
 
   const handleLinkClick = () => {
-    window.scrollTo(0, 0); // Always scroll to top on link click
+    window.scrollTo(0, 0); 
   };
 
   return (
@@ -53,7 +52,7 @@ const ScrollToTopOnLocationChange = () => {
 
 const SocialMediaIcons = () => (
   <div className="social-media">
-    <a href="https://www.instagram.com/libert.courier/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <a href="https://www.instagram.com/libert.group?igsh=MW5uN296NzBhYzB3bQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
       <img src={instagram_logo} alt="Instagram" />
     </a>
     <a href="https://t.me/rybusik07" target="_blank" rel="noopener noreferrer" aria-label="Telegram">

@@ -88,7 +88,7 @@ const OrderCall = ({
             </div>
 
             <div className={`order-call-content ${isDarkMode ? 'dark' : ''}`}>
-                <p>{part1} <br /> {part2}.</p>
+                <p>{part1} <br /> {part2}</p>
             </div>
 
             <div 

@@ -43,7 +43,6 @@ const Service2PageEn = () => {
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Libert - International Courier Delivery Services" />
     <meta name="twitter:description" content="Fast and reliable international courier delivery services by Libert. Get affordable rates and personalized service for timely global deliveries." />
-    <meta name="twitter:image" content="https://yourwebsite.com/path/to/your/image.jpg" />
 
     {/* Additional Meta Tags for accessibility */}
     <meta name="robots" content="index, follow" />
@@ -113,7 +112,7 @@ const Service2PageEn = () => {
             <center>
                 <OrderCall
                     part1={"Your safety is our goal. We ensure accuracy, reliability, and"}
-                    part2={"a personalized approach to make international delivery as easy as possible for you"}
+                    part2={"a personalized approach to make international delivery as easy as possible."}
                     order_call={"Contact"}
                     order={"Contact"}
                     name_type={"Your Name"}
@@ -134,13 +133,13 @@ const Service2PageEn = () => {
                     about_link="/about/en"
                     contact_link="/contact/en"
                     about="About Us"
-                    service1="Fulfillment"
-                    service2="Oversized Transport"
+                    service1="Oversized Transport"
+                    service2="Fulfillment"
                     service3="International Courier Delivery"
                     service4="Customs Agency Services"
                     service5="Warehouse Logistics"
-                    service1_link={"/service1/en"}
-                    service2_link={"/service3/en"}
+                    service1_link={"/service3/en"}
+                    service2_link={"/service1/en"}
                     service3_link={"/service2/en"}
                     service4_link={"/service4/en"}
                     service5_link={"/service5/en"}

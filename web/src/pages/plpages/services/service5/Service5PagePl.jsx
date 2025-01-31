@@ -118,13 +118,13 @@ const Service5PagePl = () => {
                     about_link="/about/pl"
                     contact_link="/contact/pl"
                     about="O nas"
-                    service1="FulFillment"
-                    service2="Transport ponadgabarytowy"
+                    service1="Transport ponadgabarytowy"
+                    service2="Fulfillment"
                     service3="Międzynarodowa dostawa kurierska"
                     service4="Usługi agencji celnej"
                     service5="Logistyka magazynowa"
-                    service1_link={"/service1/pl"}
-                    service2_link={"/service3/pl"}
+                    service1_link={"/service3/pl"}
+                    service2_link={"/service1/pl"}
                     service3_link={"/service2/pl"}
                     service4_link={"/service4/pl"}
                     service5_link={"/service5/pl"}

@@ -34,6 +34,7 @@ const Service2PagePl = () => {
                 <meta property="og:description" content="Libert oferuje szybkie, niezawodne i kosztowo efektywne usługi międzynarodowej dostawy kurierskiej. Skorzystaj z najlepszych stawek i terminowych dostaw." />
                 <meta property="og:url" content="https://libertgroup.pl/service2/pl" />
                 <meta property="og:type" content="website" />
+                <meta name="robots" content="index, follow" />
 
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Libert - Międzynarodowa dostawa kurierska" />
@@ -103,7 +104,7 @@ const Service2PagePl = () => {
             <center>
                 <OrderCall
                     part1={"Twoje bezpieczeństwo to nasz cel. Zapewniamy dokładność, niezawodność oraz"}
-                    part2={"indywidualne podejście, aby uczynić międzynarodową dostawę jak najprostszą dla Ciebie"}
+                    part2={"indywidualne podejście, aby uczynić międzynarodową dostawę jak najprostszą dla ciebie."}
                     order_call={"Kontakt"}
                     order={"Kontakt"}
                     name_type={"Twoje imię"}
@@ -126,13 +127,13 @@ const Service2PagePl = () => {
                     about_link="/about/pl"
                     contact_link="/contact/pl"
                     about="O nas"
-                    service1="FulFillment"
-                    service2="Transport ponadgabarytowy"
+                    service1="Transport ponadgabarytowy"
+                    service2="Fulfillment"
                     service3="Międzynarodowa dostawa kurierska"
                     service4="Usługi agencji celnej"
                     service5="Logistyka magazynowa"
-                    service1_link={"/service1/pl"}
-                    service2_link={"/service3/pl"}
+                    service1_link={"/service3/pl"}
+                    service2_link={"/service1/pl"}
                     service3_link={"/service2/pl"}
                     service4_link={"/service4/pl"}
                     service5_link={"/service5/pl"}
