@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export class MobileMessage {
     constructor() {
-        this.apiUrl = 'https://backend:8443/api/message/savemobile';
+        this.apiUrl = '/api/message/savemobile';
     }
 
     async saveMessage(mobileMessageDto) {
