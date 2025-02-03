@@ -4,6 +4,7 @@ com\liberte\model\dto\MessageDto.class
 com\liberte\util\MailUtil$1.class
 com\liberte\util\MailUtil.class
 com\liberte\LiberteApplication.class
+com\liberte\config\RequestFilter.class
 com\liberte\model\dto\MobileMessageDto.class
 com\liberte\util\IMailUtil.class
 com\liberte\config\WebConfig.class
