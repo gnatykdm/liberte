@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export class MobileMessage {
     constructor() {
-        this.apiUrl = 'https://libertgroup.pl:8080/3i7Xry7tEKF5ZtdzT8Wn1zXToUABR5JpjBpSfxmn8asEaBmoblFeS4yIfrHEWvk5/api/message/savemobile';
+        this.apiUrl = 'https://backend:8443/api/message/savemobile';
     }
 
     async saveMessage(mobileMessageDto) {
