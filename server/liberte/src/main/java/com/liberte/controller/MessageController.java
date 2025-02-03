@@ -14,7 +14,7 @@ import java.util.List;
 import static com.liberte.util.MailUtil.readMailFile;
 
 @RestController
-@RequestMapping("/api/message")
+@RequestMapping("/message")
 public class MessageController {
 
     @Autowired
