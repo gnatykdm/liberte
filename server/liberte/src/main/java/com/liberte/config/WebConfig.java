@@ -12,11 +12,12 @@ public class WebConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/3i7Xry7tEKF5ZtdzT8Wn1zXToUABR5JpjBpSfxmn8asEaBmoblFeS4yIfrHEWvk5/api/**")
-                        .allowedOrigins("https://libertgroup.pl")
+                registry.addMapping("/api/**")
+                        .allowedOrigins("*")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
-                        .allowCredentials(true);
+                        .allowCredentials(false);
+
             }
         };
     }
